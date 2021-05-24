@@ -1,2 +1,2 @@
 # VDX-Java-UI
-An Java Edition UI design for Bedrock Edition.
+An Bedrock Edition resource pack with Java Edition UI design.

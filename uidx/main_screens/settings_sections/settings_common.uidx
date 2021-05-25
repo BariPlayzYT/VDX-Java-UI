@@ -43,6 +43,20 @@
     ]
   },
 
+  "dropdown_radio_50@settings_common_dx.dropdown_radio_base": {
+    "size": [ 50, 20 ],
+    "$radio_texture_default": "common_buttons_dx.50_default",
+    "$radio_texture_hover": "common_buttons_dx.50_hover",
+    "$radio_texture_locked": "common_buttons_dx.50_locked"
+  },
+
+  "dropdown_radio_100@settings_common_dx.dropdown_radio_base": {
+    "size": [ 100, 20 ],
+    "$radio_texture_default": "common_buttons_dx.100_default",
+    "$radio_texture_hover": "common_buttons_dx.100_hover",
+    "$radio_texture_locked": "common_buttons_dx.100_locked"
+  },
+
   "dropdown_radio_130@settings_common_dx.dropdown_radio_base": {
     "size": [ 130, 20 ],
     "$radio_texture_default": "common_buttons_dx.130_default",
@@ -186,6 +200,11 @@
     ]
   },
 
+  "option_slider_120@settings_common_dx.option_slider_base": {
+    "size": [ 120, 20 ],
+    "$locked_texture": "common_buttons_dx.120_locked"
+  },
+
   "option_slider_150@settings_common_dx.option_slider_base": {
     "size": [ 150, 20 ],
     "$locked_texture": "common_buttons_dx.150_locked"
@@ -316,6 +335,34 @@
         }
       }
     ]
+  },
+
+  "option_toggle_20@settings_common_dx.option_toggle_base": {
+    "size": [ 20, 20 ],
+    "$toggle_texture_default": "common_buttons_dx.20_default",
+    "$toggle_texture_hover": "common_buttons_dx.20_hover",
+    "$toggle_texture_locked": "common_buttons_dx.20_locked"
+  },
+
+  "option_toggle_40@settings_common_dx.option_toggle_base": {
+    "size": [ 40, 20 ],
+    "$toggle_texture_default": "common_buttons_dx.40_default",
+    "$toggle_texture_hover": "common_buttons_dx.40_hover",
+    "$toggle_texture_locked": "common_buttons_dx.40_locked"
+  },
+
+  "option_toggle_50@settings_common_dx.option_toggle_base": {
+    "size": [ 50, 20 ],
+    "$toggle_texture_default": "common_buttons_dx.50_default",
+    "$toggle_texture_hover": "common_buttons_dx.50_hover",
+    "$toggle_texture_locked": "common_buttons_dx.50_locked"
+  },
+
+  "option_toggle_100@settings_common_dx.option_toggle_base": {
+    "size": [ 100, 20 ],
+    "$toggle_texture_default": "common_buttons_dx.100_default",
+    "$toggle_texture_hover": "common_buttons_dx.100_hover",
+    "$toggle_texture_locked": "common_buttons_dx.100_locked"
   },
 
   "option_toggle_150@settings_common_dx.option_toggle_base": {

@@ -16,6 +16,8 @@
   },
 
   "multiline_text_edit_box@common.multiline_text_edit_box": {
+    "$text_edit_box_label_anchor_point": "top_left",
+    "$text_edit_box_label_anchor_point|default": "top_left",
     "$text_background_locked|default": "$text_background_default",
     "$text_background_locked": "$text_background_default",
     "controls": [

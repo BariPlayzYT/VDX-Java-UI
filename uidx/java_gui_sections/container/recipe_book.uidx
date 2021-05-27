@@ -240,12 +240,27 @@
 
   /*//// Main Panel ////*/
 
-  "recipe_button_default@java_gui_common.crisxolt_image_panel": {
-    "$texture": "assets/minecraft/textures/gui/recipe_button",
-    "$uv_size": [ 20, 18 ]
+  "recipe_button_default@recipe_book_java_dx.recipe_book_base": {
+    "texture": "assets/minecraft/textures/gui/recipe_button",
+    "size": [ 20, 18 ],
+    "variables": [
+      { "requires": "($recipe_button_resolution = 256x)",  "$recipe_book_uv": [ 54, 231 ],    "$recipe_book_uv_size": [ 20, 18 ] },
+      { "requires": "($recipe_button_resolution = 512x)",  "$recipe_book_uv": [ 108, 462 ],   "$recipe_book_uv_size": [ 40, 36 ] },
+      { "requires": "($recipe_button_resolution = 1024x)", "$recipe_book_uv": [ 216, 924 ],   "$recipe_book_uv_size": [ 80, 72 ] },
+      { "requires": "($recipe_button_resolution = 2048x)", "$recipe_book_uv": [ 432, 1848 ],  "$recipe_book_uv_size": [ 160, 144 ] },
+      { "requires": "($recipe_button_resolution = 4096x)", "$recipe_book_uv": [ 864, 3696 ],  "$recipe_book_uv_size": [ 320, 288 ] },
+      { "requires": "($recipe_button_resolution = 8192x)", "$recipe_book_uv": [ 1728, 7392 ], "$recipe_book_uv_size": [ 640, 576 ] }
+    ]
   },
 
   "recipe_button_hover@recipe_book_java_dx.recipe_button_default": {
-    "$uv": [ 0, -19 ]
+    "variables": [
+      { "requires": "($recipe_button_resolution = 256x)",  "$recipe_book_uv": [ 0, 19 ],  "$recipe_book_uv_size": [ 20, 18 ] },
+      { "requires": "($recipe_button_resolution = 512x)",  "$recipe_book_uv": [ 0, 38 ],  "$recipe_book_uv_size": [ 40, 36 ] },
+      { "requires": "($recipe_button_resolution = 1024x)", "$recipe_book_uv": [ 0, 76 ],  "$recipe_book_uv_size": [ 80, 72 ] },
+      { "requires": "($recipe_button_resolution = 2048x)", "$recipe_book_uv": [ 0, 152 ], "$recipe_book_uv_size": [ 160, 144 ] },
+      { "requires": "($recipe_button_resolution = 4096x)", "$recipe_book_uv": [ 0, 304 ], "$recipe_book_uv_size": [ 320, 288 ] },
+      { "requires": "($recipe_button_resolution = 8192x)", "$recipe_book_uv": [ 0, 608 ], "$recipe_book_uv_size": [ 640, 576 ] }
+    ]
   }
 }

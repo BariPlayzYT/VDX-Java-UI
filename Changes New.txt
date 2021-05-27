@@ -8,10 +8,11 @@ v1.0.0 (The New Beginning Update) [27/05/2021]
 [-] Automatic adjustment for HD GUI Textures due Render Dragon visual issues.
 [Changes]
 [*] HUD Screen now has fully compatible with modified scoreboard sidebar from other resource packs.
-[*] RTX options are now visible only if you are on your Windows 10 computer. I did it so that you wouldn't feel bad if you use your mobile device. :(
+[*] RTX options are now visible only if you are on your Windows 10 computer. I did it so that you
+    wouldn't feel bad if you use your mobile device. :(
     > However, if you are on your Windows 10 computer, you must have a dedicated graphics card installed to use these options.
 [*] Fixed the issue with "Add Server" button.
 [*] Fixed visual bugs for main buttons (In Windows 10 with Render dragon).
 [*] Every dropdown options are now replaced by simple toggles.
-[*] For the most important thing: the text of Log errors at the top is no longer displayed if you have activated the Log options in Profile,
-    because everything is fixed and optimized for testing with other Add-Ons/Resource Packs! ;D
+[*] For the most important thing: the text of Log errors at the top is no longer displayed if you have activated
+    the Log options in Profile, because everything is fixed and optimized for testing with other Add-Ons/Resource Packs! ;D

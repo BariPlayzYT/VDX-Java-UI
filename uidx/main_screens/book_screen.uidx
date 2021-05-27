@@ -307,7 +307,6 @@
               "left_book_grid": {
                 "type": "panel",
                 "size": [ 292, 180 ],
-                "clips_children": true,
                 "controls": [
                   { "prev_button@book_dx.prev_button": {} },
                   { "next_button@book_dx.next_button": {} },

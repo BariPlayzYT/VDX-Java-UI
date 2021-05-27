@@ -100,11 +100,11 @@
         "hotbar_parent": {
           "type": "panel",
           "size": [ 18, 18 ],
-          "layer": 11,
           "controls": [
-            { "item_icon@hud.hotbar_hud_item_icon": { "size": [ 16, 16 ] } },
+            { "item_icon@hud.hotbar_hud_item_icon": { "layer": 9, "size": [ 16, 16 ] } },
             {
               "item_count@common.stack_count_label": {
+                "layer": 11,
                 "$item_collection_name": "$hotbar_collection_name",
                 "$stack_count_collection_name": "$hotbar_collection_name",
                 "bindings": [
@@ -116,10 +116,17 @@
                 ]
               }
             },
-            { "item_dura@hud.item_durability": {} },
+            {
+              "item_dura@common_durability_dx.durability_bar": {
+                "layer": 10,
+                "$durability_bar_required|default": true,
+                "$item_renderer_size": [ 16, 16 ],
+                "$item_collection_name": "$hotbar_collection_name"
+              }
+            },
             {
               "container_item_lock_overlay@hud.container_item_lock_overlay": {
-                "layer": 6,
+                "layer": 12,
                 "size": [ 16, 16 ]
               }
             }

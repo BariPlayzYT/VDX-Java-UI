@@ -1,18 +1,67 @@
 {
   "namespace": "video_dx",
 
+  /*//// Disabled Buttons with hover text ////*/
+  
+  "hover_text_button_panel@common.button": {
+    "layer": 30,
+    "locked_control": "locked",
+    "sound_volume": 0.0,
+    "sound_pitch": 0.0,
+    "$is_last_button|default": false,
+    "$pressed_button_name": "unset",
+    "controls": [
+      { "default@": { } },
+      { 
+        "hover@common_dx.hover_text_panel": {
+          "$hover_text_size": [ 150, "default" ]
+        }
+      },
+      { "pressed@": { } },
+      { "locked@": { } }
+    ],
+    "bindings": [
+      {
+        "binding_name": "(not #raytracing_enabled)",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  /*//// Hover Text Panels ////*/
+
+  "graphics_fancy_hover_text@common_dx.hover_text_label": {
+    "line_padding": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 4, 2 ],
+    "size": [ 165, "default" ],
+    "text": "options.graphics.fancy.tooltip"
+  },
+
+  "graphics_fast_hover_text@common_dx.hover_text_label": {
+    "line_padding": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 4, 2 ],
+    "size": [ 197, "default" ],
+    "text": "options.graphics.fast.tooltip"
+  },
+
   /*//// Button tab ////*/
   
   "more_options_button@settings_dx.button_tab": {
-    "$button_text": "createWorldScreen.advanced",
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
+    "ignored":"(not $win10_edition)",
+    "$button_text": "options.raytracing",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
     "$toggle_name": "video_options",
     "$tab_view_binding_name": "advanced_toggle",
     "$toggle_group_forced_index": 1
   },
 
   "main_options_button@settings_dx.button_tab": {
+    "ignored":"(not $win10_edition)",
     "$unchecked_control": "common_buttons_dx.200_default",
     "$unchecked_hover_control": "common_buttons_dx.200_hover",
     "size": [ 200, 20 ],
@@ -90,74 +139,8 @@
           "controls": [
             {
               "advanced_label@settings_dx.base_label": {
-                "text": "createWorldScreen.advanced",
+                "text": "options.raytracing",
                 "offset": [ 0, 14 ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "panel_0": {
-          "type": "panel",
-          "size": [ 310, 25 ],
-          "controls": [
-            {
-              "fancy_leaves_toggle@settings_common_dx.option_toggle_150": {
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "enabled": "(not $pocket_edition)",
-                "$option_label": "item.leaves.name",
-                "$toggle_off_text": "options.graphics.fast",
-                "$toggle_on_text": "options.graphics.fancy",
-                "$option_binding_name": "#transparent_leaves",
-                "$option_enabled_binding_name": "#transparent_leaves_enabled",
-                "$toggle_name": "transparent_leaves"
-              }
-            },
-            {
-              "fancy_clouds_toggle@settings_common_dx.option_toggle_150": {
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "$option_label": "options.fancyskies",
-                "$option_binding_name": "#fancy_skies",
-                "$option_enabled_binding_name": "#fancy_skies_enabled",
-                "$toggle_name": "fancy_skies"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "panel_1": {
-          "type": "panel",
-          "size": [ 310, 25 ],
-          "controls": [
-            {
-              "fancy_bubbles_toggle@settings_common_dx.option_toggle_150": {
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "$option_label": "options.bubbleparticles",
-                "$option_binding_name": "#bubble_particles",
-                "$option_enabled_binding_name": "#bubble_particles_enabled",
-                "$toggle_name": "bubble_particles"
-              }
-            },
-            {
-              "option_toggle_screen_animations@settings_common_dx.option_toggle_150": {
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "ignored": "($is_holographic)",
-                "$option_label": "options.screenAnimations",
-                "$option_binding_name": "#screen_animations",
-                "$option_enabled_binding_name": "#screen_animations_enabled",
-                "$toggle_name": "screen_animations",
-                "bindings": [
-                  {
-                    "binding_name": "#screen_animations_visible",
-                    "binding_name_override": "#visible"
-                  }
-                ]
               }
             }
           ]
@@ -165,28 +148,24 @@
       },
       /*//// RTX sections ////*/
       {
-        "line": {
-          "type": "panel",
-          "size": [ "100%", 25 ],
-          "controls": [
-            {
-              "object_name": {
-                "type": "image",
-                "texture": "textures/uidx/global/white",
-                "layer": 5,
-                "size": [ "100%-20px", 1 ],
-                "anchor_from": "center",
-                "anchor_to": "center"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "panel_2": {
+        "rtx_panel_0": {
           "type": "panel",
           "size": [ 310, 25 ],
-          "controls": [
+          "controls": [/* 
+            {
+              "raytracing_render_distance_disabled@video_dx.hover_text_button_panel": {
+                "size": [ 310, 20 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$hover_panel_text": "#rtx_disabled_option_upsell_tooltip_text",
+                "bindings": [
+                  {
+                    "binding_name": "(not #raytracing_render_distance_enabled)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }, */
             {
               "raytracing_render_distance_slider@settings_common_dx.option_slider_310": {
                 "anchor_from": "top_left",
@@ -208,10 +187,38 @@
         }
       },
       {
-        "panel": {
+        "rtx_panel_1": {
           "type": "panel",
           "size": [ "100%", 25 ],
-          "controls": [
+          "controls": [/* 
+            {
+              "raytracing_toggle_disabled@video_dx.hover_text_button_panel": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "$hover_panel_text": "#rtx_disabled_option_upsell_tooltip_text",
+                "bindings": [
+                  {
+                    "binding_name": "(not #raytracing_enabled)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "upscaling_toggle_disabled@video_dx.hover_text_button_panel": {
+                "size": [ 150, 20 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$hover_panel_text": "#rtx_disabled_option_upsell_tooltip_text",
+                "bindings": [
+                  {
+                    "binding_name": "(not #graphics_upscaling_enabled)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }, */
             {
               "raytracing_toggle@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_left",
@@ -282,6 +289,9 @@
           "controls": [
             {
               "graphics_toggle@settings_common_dx.option_toggle_150": {
+                "$hover_text_checked_label_control":"video_dx.graphics_fancy_hover_text",
+                "$hover_text_label_control": "video_dx.graphics_fast_hover_text",
+                "$has_checked_hover_text": true,
                 "$ignore_hover_text": false,
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
@@ -489,10 +499,74 @@
               }
             },
             {
-              "more_options_button@video_dx.more_options_button": {
-                "size": [ 150, 20 ],
+              "option_toggle_screen_animations@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_right",
-                "anchor_to": "top_right"
+                "anchor_to": "top_right",
+                "ignored": "($is_holographic)",
+                "$option_label": "options.screenAnimations",
+                "$option_binding_name": "#screen_animations",
+                "$option_enabled_binding_name": "#screen_animations_enabled",
+                "$toggle_name": "screen_animations",
+                "bindings": [
+                  {
+                    "binding_name": "#screen_animations_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_7": {
+          "type": "panel",
+          "size": [ 310, 25 ],
+          "controls": [
+            {
+              "fancy_leaves_toggle@settings_common_dx.option_toggle_150": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "enabled": "(not $pocket_edition)",
+                "$option_label": "item.leaves.name",
+                "$toggle_off_text": "options.graphics.fast",
+                "$toggle_on_text": "options.graphics.fancy",
+                "$option_binding_name": "#transparent_leaves",
+                "$option_enabled_binding_name": "#transparent_leaves_enabled",
+                "$toggle_name": "transparent_leaves"
+              }
+            },
+            {
+              "fancy_clouds_toggle@settings_common_dx.option_toggle_150": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "$option_label": "options.fancyskies",
+                "$option_binding_name": "#fancy_skies",
+                "$option_enabled_binding_name": "#fancy_skies_enabled",
+                "$toggle_name": "fancy_skies"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_8": {
+          "type": "panel",
+          "size": [ 310, 25 ],
+          "controls": [
+            {
+              "fancy_bubbles_toggle@settings_common_dx.option_toggle_150": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "options.bubbleparticles",
+                "$option_binding_name": "#bubble_particles",
+                "$option_enabled_binding_name": "#bubble_particles_enabled",
+                "$toggle_name": "bubble_particles"
+              }
+            },
+            {
+              "more_options_button@video_dx.more_options_button": {
+
               }
             }
           ]
@@ -542,11 +616,22 @@
     "controls": [
       {
         "main@common_menus_dx.java_edition_menu_panel_template": {
+          "ignored":"$win10_edition",
           "$top_content": "video_dx.video_label",
           "$bottom_content": "video_dx.video_bottom_content",
         
           "$scrolling_content": "video_dx.video_stack_panel",
-          "$scroll_view_port_size": [ 324, "100%" ],
+          "$scroll_view_port_size": [ 324, "100%" ]
+        }
+      },
+      {
+        "main_with_rtx@common_menus_dx.java_edition_menu_panel_template": {
+          "ignored":"(not $win10_edition)",
+          "$top_content": "video_dx.video_label",
+          "$bottom_content": "video_dx.video_bottom_content",
+        
+          "$scrolling_content": "video_dx.video_stack_panel",
+          "$scroll_view_port_size": [ 324, "100%" ], 
           "bindings": [
             {
               "binding_type": "view",
@@ -559,6 +644,7 @@
       },
       {
         "advanced_screen_panel@video_dx.advanced_screen_panel": {
+          "ignored":"(not $win10_edition)",
           "bindings": [
             {
               "binding_type": "view",
@@ -571,6 +657,7 @@
       },
       {
         "main_bg_panel@settings_dx.bg_panel": {
+          "ignored":"(not $win10_edition)",
           "bindings": [
             {
               "binding_type": "view",

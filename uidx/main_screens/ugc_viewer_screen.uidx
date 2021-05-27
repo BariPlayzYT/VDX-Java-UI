@@ -7,7 +7,6 @@
 
   "seed_grid_items_main@ugc_viewer_dx.seed_grid_items": {
     "$grid_item_type": "stack_panel",
-    "$item_mode": "seed_items",
     "$grid_item_size": [ 220, "100%c" ],
     "$button_size": [ 220, 38 ],
     "anchor_from": "top_middle",
@@ -15,14 +14,12 @@
     "offset": [ 0, 2 ],
     "layer": 2,
     "$ignore_select_button": true,
-    "$toggle_name": "seed_toggle_items",
     "$collection_name": "ugc_items",
     "$item_control": "ugc_viewer_dx.seed_items_buttons_panel"
   },
 
   "seed_grid_items_bottom@ugc_viewer_dx.seed_grid_items": {
     "$grid_item_type": "panel",
-    "$item_mode": "seed_items",
     "$grid_item_size": [ "100%", "100%" ],
     "$collection_name": "ugc_items",
     "$bottom_grid_item_template": "ugc_viewer_dx.ugc_bottom_buttons",
@@ -299,6 +296,8 @@
   },
   
   "main_screen_panel@common_menus_dx.java_edition_menu_panel_template": {
+    "$item_mode": "seed_items",
+    "$toggle_name": "seed_toggle_items",
     "$scroll_view_port_size": [ 260, "100%" ],
     "$top_content": "ugc_viewer_dx.seed_picker_top_content",
     "$top_content_size": [ "100%", 48 ],

@@ -58,13 +58,26 @@
           ]
         }
       },
-      { "default@$text_background_default": {} },
-      { "hover@$text_background_hover": {} },
-      { "pressed@$text_background_hover": {} }
+      { "default@$text_background_default": { "layer": 2 } },
+      { 
+        "hover@$text_background_hover": {
+          "$ignore_hover_text|default": true,
+          "layer": 3,
+          "controls": [
+            {
+              "hover_text_panel@common_dx.hover_text_panel": {
+                "ignored": "$ignore_hover_text"
+              }
+            }
+          ]
+        }
+      },
+      { "pressed@$text_background_hover": { "layer": 3 } }
     ]
   },
 
   "text_edit_box_label@common.text_edit_box_label": {
+    "layer": 4,
     "font_type": "normal",
     "font_scale_factor": 1.0,
     "line_padding": -1.0,
@@ -85,7 +98,7 @@
     "controls": [
       {
         "place_holder_control@$place_holder_control": {
-          "layer": 1,
+          "layer": 4,
           "shadow": true,
           "size": "$text_edit_box_label_size",
           "offset": "$text_edit_box_label_offset",
@@ -156,6 +169,333 @@
           ],
           "bindings": "$grid_bindings"
         }
+      }
+    ]
+  },
+
+  /* Inventory Panel */
+
+  "root_panel@common.root_panel": {
+    "$durability_bar_control": "common_durability_dx.durability_bar"
+  },
+
+  /*//// Inventory Panel Bottom Half ////*/
+
+  "inventory_panel_bottom_half": {
+    "type": "panel",
+    "size": [ 162, 88 ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [ 7, -7 ],
+    "$with_label|default": true,
+    "$background_images": "java_gui_common.cell_image",
+    "$highlight_control": "common_dx.highlight_slot_panel",
+    "controls": [
+      {
+        "inventory_label@common.section_heading_label": {
+          "ignored": "(not $with_label)",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 1, 0 ],
+          "layer": 2,
+          "text": "container.inventory"
+        }
+      },
+      {
+        "inventory_grid": {
+          "type": "grid",
+          "size": [ 162, 54 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 0, -22 ],
+          "grid_dimensions": [ 9, 3 ],
+          "grid_item_template": "common.grid_item_for_inventory",
+          "collection_name": "inventory_items"
+        }
+      },
+      {
+        "hotbar_grid@common.hotbar_grid_template": {
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 0, 0 ],
+          "layer": 2
+        }
+      }
+    ]
+  },
+
+  /*//// Selected Icon ////*/
+
+  "inventory_selected_icon_button@common.inventory_selected_icon_button": {
+    "controls": [
+      { "default@common_dx.inventory_icon_panel": {} },
+      { "pressed@common_dx.inventory_icon_panel": {} },
+      { "hover@common_dx.inventory_icon_panel": {} }
+    ]
+  },
+
+  "inventory_icon_panel": {
+    "type": "panel",
+    "controls": [
+      { 
+        "selected_item_icon@common.inventory_selected_icon": {
+          "size": [ 16, 16 ],
+          "offset": [ 0, 0 ],
+          "controls": [
+            { "selected_item_lock_overlay@common.inventory_selected_item_lock_overlay": { "size": [ 24, 24 ] } },
+            { 
+              "durability_bar_grabbed@common_durability_dx.durability_bar": {
+                "$item_renderer_size": [ 16, 16 ],
+                "$is_grabbed": true,
+                "$total_amount": "#selected_item_durability_total_amount",
+                "$current_amount": "#selected_item_durability_current_amount",
+                "bindings": [
+                  {
+                    "binding_name": "$total_amount"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ($total_amount = 0))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { 
+        "selected_stack_size_text@common.inventory_selected_stack_size_text": {
+          "color": "$item_stack_count_color",
+          "offset": [ 1, 2 ]
+        }
+      },
+      {
+        "hover_text@common.hover_text": {
+          "layer": 59,
+          "bindings": [
+            {
+              "binding_name": "#using_touch",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Highlight Control ////*/
+
+  "item_hover_text_label@common_dx.hover_text_label": {
+    //"line_padding": 2.0,
+    "text": "#hover_text",
+    "bindings": [
+      {
+        "binding_name": "#hover_text",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      }
+    ]
+  },
+
+  "highlight_slot_panel": {
+    "type": "panel",
+    "offset": "$item_renderer_offset",
+    "$highlight_slot_image|default": "java_gui_common.highlight_slot",
+    "$hover_text_alpha": 0.9375,
+    "controls": [
+      { "highlight_slot_image@$highlight_slot_image": { } },
+      {
+        "custom_hover_text@common_dx.hover_text_panel": {
+          "$hover_text_label_control": "common_dx.item_hover_text_label",
+          "variables": [
+            {
+              "requires": "($touch)",
+              "$hover_offset": [ 2, -18 ]
+            },
+            {
+              "requires": "(not $touch)",
+              "$hover_offset": [ 0, 0 ]
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "(not (#hover_text = ''))",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Hover Text ////*/
+
+  "hover_text_label": {
+    "type": "label",
+    "offset": [ 4, 3 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 155,
+    "color": "$hover_panel_text_color",
+    "$hover_panel_text_color|default": [ 1.0, 1.0, 1.0 ],
+    "text": "$hover_panel_text",
+    "shadow": true,
+    "follows_cursor": true,
+    "size": "$hover_text_size",
+    "$hover_text_size|default": [ "default", "default" ],
+    "$hover_panel_text|default": "",
+    "bindings": [
+      {
+        "binding_name": "$hover_panel_text"
+      }
+    ]
+  },
+
+  "hover_text_image": {
+    "type": "image",
+    "size": [ "100%c+8px", "100%c+6px" ],
+    "color": [ 1.0, 1.0, 1.0, 1.0 ],
+    "$hover_text_texture|default": "textures/uidx/hover_text/text_panel_purple",
+    "$hover_text_alpha|default": 0.9375,
+    "alpha": "$hover_text_alpha",
+    "texture": "$hover_text_texture",
+    "layer": 150,
+    "anchor_from": "$hover_anchor_from",
+    "anchor_to": "$hover_anchor_to",
+    "$hover_anchor_from|default": "top_left",
+    "$hover_anchor_to|default": "top_left",
+    "offset": "$hover_text_offset",
+    "$hover_text_offset|default": [ 14.5, -6.5 ],
+    "$hover_text_label_control|default": "common_dx.hover_text_label",
+    "$hover_text_texture_bindings|default": [],
+    "bindings": "$hover_text_texture_bindings",
+    "controls": [
+      { "text@$hover_text_label_control": { } }
+    ]
+  },
+
+  "hover_text_button": {
+    "type": "button",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "locked_control": "",
+    "layer": -10,
+    "size": [ 1, 1 ],
+    "offset": [ 10000, 10000 ],
+    "follows_cursor": true,
+    "consume_hover_events": false,
+    "always_handle_pointer": true,
+    "focus_enabled": false,
+    "focus_magnet_enabled": false,
+    "controls": [
+      { "hover@common_dx.hover_text_image": {} }
+    ]
+  },
+
+  "hover_text_panel": {
+    "type": "panel",
+    "allow_clipping": false,
+    "controls": [
+      { "hover_text_button@common_dx.hover_text_button": { "ignored": "($touch)" } },
+      { "hover_text_image@common_dx.hover_text_image": { "ignored": "(not $touch)" } }
+    ]
+  },
+
+  /*//// Inventory Cell Images Bindings ////*/
+
+  "container_cell_images": {
+    "type": "panel",
+    "$cell_images_binding_condition": "visible",
+    "$cell_binding_name": "#container_item_background",
+    "bindings": [
+      {
+        "binding_name": "$cell_binding_name",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "$cell_images_binding_condition"
+      }
+    ]
+  },
+
+  "cell_image_recipe_panel": {
+    "type": "panel",
+    "$texture_image|default": "common.empty_panel",
+    "controls": [
+      { "texture@$texture_image": { } }
+    ]
+  },
+
+  "cell_image_0@common_dx.cell_image_recipe_panel": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$background_image_control_name",
+        "resolve_sibling_scope": true,
+        "source_property_name": "($cell_binding_name = 0)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "cell_image_1@common_dx.cell_image_recipe_panel": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$background_image_control_name",
+        "resolve_sibling_scope": true,
+        "source_property_name": "($cell_binding_name = 1)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "cell_image_2@common_dx.cell_image_recipe_panel": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$background_image_control_name",
+        "resolve_sibling_scope": true,
+        "source_property_name": "($cell_binding_name = 2)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "cell_image_3@common_dx.cell_image_recipe_panel": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$background_image_control_name",
+        "resolve_sibling_scope": true,
+        "source_property_name": "($cell_binding_name = 3)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "cell_image_4@common_dx.cell_image_recipe_panel": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$background_image_control_name",
+        "resolve_sibling_scope": true,
+        "source_property_name": "($cell_binding_name = 4)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "cell_image_5@common_dx.cell_image_recipe_panel": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$background_image_control_name",
+        "resolve_sibling_scope": true,
+        "source_property_name": "($cell_binding_name = 5)",
+        "target_property_name": "#visible"
       }
     ]
   }

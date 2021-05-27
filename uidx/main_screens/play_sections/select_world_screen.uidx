@@ -406,6 +406,8 @@
   /*////// PANELS //////*/
 
   "select_world_screen_panel@common_menus_dx.java_edition_menu_panel_template": {
+    "$item_mode": "local_world",
+    "$toggle_name": "local_world_toggle_items",
     "$scroll_view_port_size": [ 300, "100%" ],
     "$top_content": "select_wolrd_dx.world_top_bar",
     "$scrolling_content": "select_wolrd_dx.worlds_stack_panel",

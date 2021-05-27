@@ -35,6 +35,38 @@
     "$right_button_texture": "main_button_310_java_dx.main_button_right_locked"
   },
 
+  /*//// Main Button 240 ////*/
+  
+  "main_button_240@common_buttons_dx.main_button_200": {
+    "size": [ 240, 20 ],
+    "controls": [
+      { "default@common_buttons_dx.240_default": { } },
+      { "hover@common_buttons_dx.240_hover": { } },
+      { "pressed@common_buttons_dx.240_pressed": { } },
+      { "locked@common_buttons_dx.240_locked": { } }
+    ]
+  },
+
+  "240_default@common_buttons_dx.default_base": {
+    "$left_button_texture": "main_button_240_java_dx.main_button_left_default",
+    "$right_button_texture": "main_button_240_java_dx.main_button_right_default"
+  },
+
+  "240_hover@common_buttons_dx.hover_base": {
+    "$left_button_texture": "main_button_240_java_dx.main_button_left_hover",
+    "$right_button_texture": "main_button_240_java_dx.main_button_right_hover"
+  },
+
+  "240_pressed@common_buttons_dx.pressed_base": {
+    "$left_button_texture": "main_button_240_java_dx.main_button_left_hover",
+    "$right_button_texture": "main_button_240_java_dx.main_button_right_hover"
+  },
+
+  "240_locked@common_buttons_dx.locked_base": {
+    "$left_button_texture": "main_button_240_java_dx.main_button_left_locked",
+    "$right_button_texture": "main_button_240_java_dx.main_button_right_locked"
+  },
+
   /*//// Main Button 220 ////*/
   
   "main_button_220@common_buttons_dx.main_button_200": {
@@ -290,6 +322,38 @@
     "$right_button_texture": "main_button_90_java_dx.main_button_right_locked"
   },
 
+  /*//// Main Button 90 ////*/
+  
+  "main_button_88@common_buttons_dx.main_button_200": {
+    "size": [ 88, 20 ],
+    "controls": [
+      { "default@common_buttons_dx.88_default": { } },
+      { "hover@common_buttons_dx.88_hover": { } },
+      { "pressed@common_buttons_dx.88_pressed": { } },
+      { "locked@common_buttons_dx.88_locked": { } }
+    ]
+  },
+
+  "88_default@common_buttons_dx.default_base": {
+    "$left_button_texture": "main_button_88_java_dx.main_button_left_default",
+    "$right_button_texture": "main_button_88_java_dx.main_button_right_default"
+  },
+
+  "88_hover@common_buttons_dx.hover_base": {
+    "$left_button_texture": "main_button_88_java_dx.main_button_left_hover",
+    "$right_button_texture": "main_button_88_java_dx.main_button_right_hover"
+  },
+
+  "88_pressed@common_buttons_dx.pressed_base": {
+    "$left_button_texture": "main_button_88_java_dx.main_button_left_hover",
+    "$right_button_texture": "main_button_88_java_dx.main_button_right_hover"
+  },
+
+  "88_locked@common_buttons_dx.locked_base": {
+    "$left_button_texture": "main_button_88_java_dx.main_button_left_locked",
+    "$right_button_texture": "main_button_88_java_dx.main_button_right_locked"
+  },
+
   /*//// Main Button 74 ////*/
   
   "main_button_74@common_buttons_dx.main_button_200": {
@@ -516,6 +580,7 @@
   },
 
   "hover_base@common_buttons_dx.button_panel": {
+    "$has_hover_text": true,
     "$text_color": "$main_menu_button_hover_color"
   },
 
@@ -534,7 +599,22 @@
     "$ignore_right_texture|default": false,
     "$left_button_texture|default": "",
     "$right_button_texture|default": "",
+    "$ignore_hover_text|default": true,
+    "$has_hover_text": false,
     "controls": [
+      {
+        "hover_binding": {
+          "type": "panel",
+          "ignored": "(not $has_hover_text)",
+          "controls": [
+            {
+              "hover_text_panel@common_dx.hover_text_panel": {
+                "ignored": "$ignore_hover_text"
+              }
+            }
+          ]
+        }
+      },
       { "button_content@$button_content": { "layer": 3 } },
       {
         "button_stack_panel": {

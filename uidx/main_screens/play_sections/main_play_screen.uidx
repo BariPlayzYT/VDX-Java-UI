@@ -6,29 +6,35 @@
   /*////// TAB BUTTONS //////*/
 
   "button_tab@common_toggles_dx.main_button_toggle": {
-    "$unchecked_control": "common_buttons_dx.20_default",
-    "$unchecked_hover_control": "common_buttons_dx.20_hover",
-    "$checked_control": "common_buttons_dx.20_hover",
-    "$checked_hover_control": "common_buttons_dx.20_hover",
+    "layer": 100,
 
     "size": [ 20, 20 ],
     "$toggle_name": "navigation_tab"
   },
 
   "worlds_navigation_tab@play_dx.button_tab": {
-    "$button_text": "S",
+    "$unchecked_control": "java_gui_common.world_default",
+    "$unchecked_hover_control": "java_gui_common.world_hover",
+    "$checked_control": "java_gui_common.world_hover",
+    "$checked_hover_control": "java_gui_common.world_hover",
     "$tab_view_binding_name": "world_navigation_tab_toggle",
     "$toggle_group_forced_index": 0
   },
 
   "friends_navigation_tab@play_dx.button_tab": {
-    "$button_text": "R",
+    "$unchecked_control": "java_gui_common.realms_default",
+    "$unchecked_hover_control": "java_gui_common.realms_hover",
+    "$checked_control": "java_gui_common.realms_hover",
+    "$checked_hover_control": "java_gui_common.realms_hover",
     "$tab_view_binding_name": "friends_navigation_tab_toggle",
     "$toggle_group_forced_index": 1
   },
 
   "server_navigation_tab@play_dx.button_tab": {
-    "$button_text": "M",
+    "$unchecked_control": "java_gui_common.server_default",
+    "$unchecked_hover_control": "java_gui_common.server_hover",
+    "$checked_control": "java_gui_common.server_hover",
+    "$checked_hover_control": "java_gui_common.server_hover",
     "$tab_view_binding_name": "server_navigation_tab_toggle",
     "$toggle_group_forced_index": 2
   },
@@ -57,37 +63,53 @@
   },
 
   /*////// SCREEN //////*/
+
+  "button_tabs": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", 20 ],
+    "controls": [
+      {
+        "padding_0": {
+          "type": "panel",
+          "size": [ 17, 20 ]
+        }
+      },
+      { "worlds_navigation_tab@play_dx.worlds_navigation_tab": { } },
+      {
+        "padding_0": {
+          "type": "panel",
+          "size": [ 4, 20 ]
+        }
+      },
+      { "realms_navigation_tab@play_dx.friends_navigation_tab": { } },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [ 4, 20 ]
+        }
+      },
+      { "multiplayer_navigation_tab@play_dx.server_navigation_tab": { } },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [ "fill", 20 ]
+        }
+      }
+    ]
+  },
   
   "play_screen_content": {
     "type": "panel",
     "$middle_clips_children": false,
     "controls": [
       {
-        "button_tabs": {
-          "type": "stack_panel",
-          "orientation": "horizontal",
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [ 17, 6 ],
-          "size": [ 68, 20 ],
-          "layer": 50,
-          "controls": [
-            { "worlds_navigation_tab@play_dx.worlds_navigation_tab": { } },
-            {
-              "padding_0": {
-                "type": "panel",
-                "size": [ 4, 4 ]
-              }
-            },
-            { "server_navigation_tab@play_dx.server_navigation_tab": { } },
-            {
-              "padding_1": {
-                "type": "panel",
-                "size": [ 4, 4 ]
-              }
-            },
-            { "friends_navigation_tab@play_dx.friends_navigation_tab": { } }
-          ]
+        "button_tabs@common_screens_dx.horizontal_safezone_screen": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 6 ],
+          "size": [ "100%", 20 ],
+          "$panel_content": "play_dx.button_tabs"
         }
       },
       {

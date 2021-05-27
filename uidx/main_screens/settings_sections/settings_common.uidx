@@ -21,6 +21,8 @@
   /*//// Option Dropdown Radio ////*/
 
   "dropdown_radio_base@settings_common.option_generic": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
     "$custom_button_content|default": "settings_common_dx.button_label_with_value",
     "controls": [
       { 
@@ -285,8 +287,16 @@
   },
   
   "toggle_checked_hover@settings_common_dx.toggle_unchecked": {
+    "$has_checked_hover_text|default": false,
     "$toggle_value_text": "$toggle_on_text",
-    "$toggle_texture": "$toggle_texture_hover"
+    "$toggle_texture": "$toggle_texture_hover",
+    "variables": [
+      {
+        "requires": "$has_checked_hover_text",
+        "$hover_text_checked_label_control|default": "common.empty_panel",
+        "$hover_text_label_control": "$hover_text_checked_label_control"
+      }
+    ]
   },
   
   "toggle_checked_locked@settings_common_dx.toggle_unchecked": {
@@ -377,6 +387,13 @@
     "$toggle_texture_default": "common_buttons_dx.200_default",
     "$toggle_texture_hover": "common_buttons_dx.200_hover",
     "$toggle_texture_locked": "common_buttons_dx.200_locked"
+  },
+
+  "option_toggle_240@settings_common_dx.option_toggle_base": {
+    "size": [ 240, 20 ],
+    "$toggle_texture_default": "common_buttons_dx.240_default",
+    "$toggle_texture_hover": "common_buttons_dx.240_hover",
+    "$toggle_texture_locked": "common_buttons_dx.240_locked"
   },
 
   "option_toggle_310@settings_common_dx.option_toggle_base": {

@@ -419,8 +419,8 @@
           "$toggle_binding_type": "collection",
           "$toggle_state_binding_name": "#option_toggle_state",
 
-          "$toggle_enabled_binding_type": "global",
-          "$toggle_enabled_binding_name": "#can_edit_permissions",
+          //"$toggle_enabled_binding_type": "global",
+          "$option_enabled_binding_name": "#can_edit_permissions",
     
 					"$toggle_tts_header_binding_type": "collection",
 					"$toggle_tts_header_binding_collection_name": "permissions_collection",

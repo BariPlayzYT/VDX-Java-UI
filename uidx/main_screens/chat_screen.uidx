@@ -279,6 +279,7 @@
     "type": "stack_panel",
     "orientation": "horizontal",
     "size": [ "100%c", 12 ],
+    "ignored": "(not $touch)",
     "controls": [
       {
         "chat_previous_message_button@chat_dx.black_button": {
@@ -380,7 +381,6 @@
         "back_button@chat_dx.black_button": {
           "$button_text": "gui.exit",
           "$pressed_button_name": "button.menu_exit",
-          //"ignored": "(not $touch)",
           "focus_enabled": false,
           "size": [ 80, 20 ]
         }
@@ -510,9 +510,10 @@
           ]
         }
       },
-      { "separator_send@chat_dx.chat_bottom_separator": { "bindings": [ { "binding_name": "#send_button_visible", "binding_name_override": "#visible" } ] } },
+      { "separator_send@chat_dx.chat_bottom_separator": { "ignored": "(not $touch)", "bindings": [ { "binding_name": "#send_button_visible", "binding_name_override": "#visible" } ] } },
       { 
         "send_button@chat_dx.black_button": {
+          "ignored": "(not $touch)",
           "size": [ 36, "100%" ],
           "$pressed_button_name": "button.send",
           "$button_content": "chat_dx.send_image",

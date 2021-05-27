@@ -104,7 +104,6 @@
       { "stacked_row_2@start_dx.stacked_row": { "controls": [ { "feedback_button@pause_dx.feedback_button": {} },  { "show_player_list_toggle@pause_dx.show_player_list_toggle": {} } ] } },
       { "stacked_row_3@start_dx.stacked_row": { "controls": [ { "settings_button@start_dx.settings_button": {} }, { "invite_players_button@pause_dx.invite_players_button": {} } ] } },
       { "stacked_row_4@start_dx.stacked_row": { "controls": [ { "quit_button@pause_dx.quit_button": {} } ] } },
-      { "stacked_row_gamepad_helpers@start_dx.stacked_row": { "size": [ 200, "fill" ], "controls": [ { "gamepad_helpers@start.gamepad_helpers": {} } ] } },
       { "padding_3": { "type": "panel", "size": [ "100%", 10 ] } }
     ]
   },

@@ -52,7 +52,7 @@
     "collection_name": "$grid_axis_collection_name",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "size": [ 242, 22 ],
+    "size": [ 243, 22 ],
     "$text_edit_box_enabled_binding_type": "collection",
     "$text_edit_box_grid_collection_name": "$grid_axis_collection_name",
     "$text_edit_box_content_binding_type": "collection",
@@ -60,33 +60,53 @@
     "$text_box_name": "$grid_axis_edit_box_name",
     "controls": [
       {
-        "x@structure_editor_dx.text_edit_box_base": {
+        "x_panel": {
+          "type": "panel",
+          "size": [ 81, 22 ],
           "grid_position": [ 0, 0 ],
-          "size": [ 81, 22 ],
-          "anchor_from": "right_middle",
-          "anchor_to": "right_middle",
-          "$text_box_text_color": "$x_axis_text_color",
-          "max_length": 3
+          "controls": [
+            {
+              "x@structure_editor_dx.text_edit_box_base": {
+                "size": [ 81, 22 ],
+                "$text_box_text_color": "$x_axis_text_color",
+                "max_length": 3
+              }
+            }
+          ]
         }
       },
       {
-        "y@structure_editor_dx.text_edit_box_base": {
+        "y_panel": {
+          "type": "panel",
+          "size": [ 81, 22 ],
           "grid_position": [ 1, 0 ],
-          "size": [ 81, 22 ],
-          "anchor_from": "right_middle",
-          "anchor_to": "right_middle",
-          "$text_box_text_color": "$y_axis_text_color",
-          "max_length": 3
+          "controls": [
+            {
+              "y@structure_editor_dx.text_edit_box_base": {
+                "offset": [ -1, 0 ],
+                "size": [ 81, 22 ],
+                "$text_box_text_color": "$y_axis_text_color",
+                "max_length": 3
+              }
+            }
+          ]
         }
       },
       {
-        "z@structure_editor_dx.text_edit_box_base": {
-          "grid_position": [ 2, 0 ],
+        "z_panel": {
+          "type": "panel",
           "size": [ 81, 22 ],
-          "anchor_from": "right_middle",
-          "anchor_to": "right_middle",
-          "$text_box_text_color": "$z_axis_text_color",
-          "max_length": 3
+          "grid_position": [ 2, 0 ],
+          "controls": [
+            {
+              "z@structure_editor_dx.text_edit_box_base": {
+                "offset": [ -2, 0 ],
+                "size": [ 82, 22 ],
+                "$text_box_text_color": "$z_axis_text_color",
+                "max_length": 3
+              }
+            }
+          ]
         }
       }
     ]

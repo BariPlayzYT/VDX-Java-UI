@@ -6,10 +6,13 @@
   /*//// Resources ////*/
 
   "panel_toggle@common_toggles_dx.toggle_panel": {
-    "ignored": "(not $is_play_screen)",
+    "size": [ "100%", "100%" ],
+    "ignored": "$middle_clips_children",
     "$sound_name": "null",
     "$toggle_focus_enabled": false,
-    "layer": 1
+    "$tab_view_binding_name": "($item_mode + _000 + _toggle)",
+    "$toggle_group_forced_index": 0,
+    "layer": -5
   },
 
   /*//// Main scroll panel ////*/
@@ -29,7 +32,6 @@
     "$bg|default": "java_gui_common.options_background",
     "$bg_middle|default": "java_gui_common.options_background_middle",
     /* Misc */
-    "$is_play_screen": false,
     "$middle_clips_children|default": true,
 
     "controls": [
@@ -47,7 +49,7 @@
           "size": "$top_content_size",
           "layer": 40,
           "controls": [
-            { "horizontal_stack_panel@common_screens_dx.horizontal_safezone_screen": { "$panel_content": "$top_content", "layer": 3 } },
+            { "horizontal_stack_panel@common_screens_dx.horizontal_safezone_screen": { "$panel_content": "$top_content", "layer": 45 } },
             { "panel_toggle@common_menus_dx.panel_toggle": {} }
           ]
         }
@@ -67,7 +69,7 @@
           "size": "$bottom_content_size",
           "layer": 40,
           "controls": [
-            { "horizontal_stack_panel@common_screens_dx.horizontal_safezone_screen": { "$panel_content": "$bottom_content", "layer": 3 } },
+            { "horizontal_stack_panel@common_screens_dx.horizontal_safezone_screen": { "$panel_content": "$bottom_content", "layer": 45 } },
             { "panel_toggle@common_menus_dx.panel_toggle": {} }
           ]
         }

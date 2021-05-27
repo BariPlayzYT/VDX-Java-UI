@@ -56,7 +56,7 @@
           "controls": [
             {
               "scrolling_content@$scrolling_content": {
-                "layer": 1,
+                "layer": 2,
                 "$scrolling_content_anchor_from|default": "top_left",
                 "$scrolling_content_anchor_to|default": "top_left",
                 "anchor_from": "$scrolling_content_anchor_from",

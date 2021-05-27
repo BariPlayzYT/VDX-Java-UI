@@ -29,16 +29,16 @@
       { "object_panel_content@$object_panel_content": { } },
       { "player_list_grid_image@player_list_dx.player_list_grid_image": { "texture": "textures/uidx/player_list/player_list_grid" } },
       {
-        "permission_button@common.button": {
+        "player_info_button@common.button": {
           "size": [ 111, 9 ],
           "layer": 2,
-          "$pressed_button_name": "button.menu_permission",
+          "$pressed_button_name": "button.player_profile_card",
           "bindings": [
             {
               "binding_type": "collection_details",
               "binding_collection_name": "players_collection"
             }
-          ],
+          ]/* ,
           "controls": [
             {
               "hover": {
@@ -48,6 +48,172 @@
                 "size": [ 111, 8 ],
                 "alpha": 0.25,
                 "texture": "textures/uidx/global/white"
+              }
+            }
+          ] */
+        }
+      },
+      {
+        "permission_button@common.button": {
+          "size": [ 8, 8 ],
+          "offset": [ -6, 0 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "layer": 3,
+          "$pressed_button_name": "button.menu_permission",
+          "bindings": [
+            {
+              "binding_name": "(not #list_has_display_objective)",
+              "binding_name_override": "#visible"
+            },
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "players_collection"
+            }
+          ],
+          "controls": [
+            {
+              "default@common.empty_panel": {
+                "controls": [
+                  {
+                    "operator_icon@realms_java_dx.op_icon_default": {
+                      "layer": 3,
+                      "size": [ 8, 8 ],
+                      "bindings": [
+                        {
+                          "binding_name": "(#player_permission_level_icon_texture = 'textures/ui/permissions_op_crown')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "players_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "user_icon@realms_java_dx.user_icon_default": {
+                      "layer": 3,
+                      "size": [ 8, 8 ],
+                      "bindings": [
+                        {
+                          "binding_name": "(#player_permission_level_icon_texture = 'textures/ui/permissions_member_star')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "players_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "visitor_icon@realms_java_dx.user_icon_default": {
+                      "layer": 3,
+                      "size": [ 8, 8 ],
+                      "bindings": [
+                        {
+                          "binding_name": "(#player_permission_level_icon_texture = 'textures/ui/permissions_visitor_hand')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "players_collection"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "hover@common.empty_panel": {
+                "controls": [
+                  {
+                    "operator_icon@realms_java_dx.op_icon_hover": {
+                      "layer": 3,
+                      "size": [ 8, 8 ],
+                      "bindings": [
+                        {
+                          "binding_name": "(#player_permission_level_icon_texture = 'textures/ui/permissions_op_crown')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "players_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "user_icon@realms_java_dx.user_icon_hover": {
+                      "layer": 3,
+                      "size": [ 8, 8 ],
+                      "bindings": [
+                        {
+                          "binding_name": "(#player_permission_level_icon_texture = 'textures/ui/permissions_member_star')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "players_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "visitor_icon@realms_java_dx.user_icon_hover": {
+                      "layer": 3,
+                      "size": [ 8, 8 ],
+                      "bindings": [
+                        {
+                          "binding_name": "(#player_permission_level_icon_texture = 'textures/ui/permissions_visitor_hand')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "players_collection"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "pressed@common.empty_panel": {
+                "controls": [
+                  {
+                    "operator_icon@realms_java_dx.op_icon_hover": {
+                      "layer": 3,
+                      "size": [ 8, 8 ],
+                      "bindings": [
+                        {
+                          "binding_name": "(#player_permission_level_icon_texture = 'textures/ui/permissions_op_crown')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "players_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "user_icon@realms_java_dx.user_icon_hover": {
+                      "layer": 3,
+                      "size": [ 8, 8 ],
+                      "bindings": [
+                        {
+                          "binding_name": "(#player_permission_level_icon_texture = 'textures/ui/permissions_member_star')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "players_collection"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "visitor_icon@realms_java_dx.user_icon_hover": {
+                      "layer": 3,
+                      "size": [ 8, 8 ],
+                      "bindings": [
+                        {
+                          "binding_name": "(#player_permission_level_icon_texture = 'textures/ui/permissions_visitor_hand')",
+                          "binding_name_override": "#visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "players_collection"
+                        }
+                      ]
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -277,37 +443,7 @@
       {
         "permission_level_panel": {
           "type": "panel",
-          "size": [ 8, 8 ],
-          "controls": [
-            {
-              "operator_icon@realms_java_dx.op_icon_default": {
-                "layer": 3,
-                "size": [ 8, 8 ],
-                "bindings": [
-                  {
-                    "binding_name": "(#player_permission_level_icon_texture = 'textures/ui/permissions_op_crown')",
-                    "binding_name_override": "#visible",
-                    "binding_type": "collection",
-                    "binding_collection_name": "players_collection"
-                  }
-                ]
-              }
-            },
-            {
-              "user_icon@realms_java_dx.user_icon_default": {
-                "layer": 3,
-                "size": [ 8, 8 ],
-                "bindings": [
-                  {
-                    "binding_name": "(#player_permission_level_icon_texture = 'textures/ui/permissions_member_star')",
-                    "binding_name_override": "#visible",
-                    "binding_type": "collection",
-                    "binding_collection_name": "players_collection"
-                  }
-                ]
-              }
-            }
-          ]
+          "size": [ 8, 8 ]
         }
       }
     ]
@@ -488,6 +624,26 @@
     "anchor_to": "bottom_middle",
     "offset": [ 0, -20 ],
     "controls": [
+      {
+        "permission_button@common_buttons_dx.main_button_200": {
+          "$button_text": "permissions.title",
+          "offset": [ 0, -24 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "layer": 3,
+          "$pressed_button_name": "button.menu_permission",
+          "bindings": [
+            {
+              "binding_name": "(#list_has_display_objective)",
+              "binding_name_override": "#visible"
+            },
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "players_collection"
+            }
+          ]
+        }
+      },
       {
         "main_panel_list_toggle@pause_dx.main_panel_list_toggle": {}
       }

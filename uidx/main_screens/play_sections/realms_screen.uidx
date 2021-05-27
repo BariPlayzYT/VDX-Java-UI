@@ -242,7 +242,15 @@
                         },
                         {
                           "hover@common.empty_panel": {
+                            "$hover_panel_text": "action.interact.edit",
+                            "$hover_text_texture": "textures/uidx/hover_text/text_panel",
                             "controls": [
+                              {
+                                "hover_text_panel@common_dx.hover_text_panel": {
+                                  "anchor_from": "top_right",
+                                  "anchor_to": "top_right"
+                                }
+                              },
                               { "configure_icon_hover@realms_java_dx.configure_icon_hover": { } }
                             ]
                           }
@@ -297,7 +305,15 @@
                         },
                         {
                           "hover@common.empty_panel": {
+                            "$hover_panel_text": "progressScreen.dialog.button.leave",
+                            "$hover_text_texture": "textures/uidx/hover_text/text_panel",
                             "controls": [
+                              {
+                                "hover_text_panel@common_dx.hover_text_panel": {
+                                  "anchor_from": "top_right",
+                                  "anchor_to": "top_right"
+                                }
+                              },
                               { "leave_icon_hover@realms_java_dx.leave_icon_hover": { } }
                             ]
                           }
@@ -342,7 +358,15 @@
       },
       {
         "hover@common.empty_panel": {
+          "$hover_panel_text": "options.on",
+          "$hover_text_texture": "textures/uidx/hover_text/text_panel",
           "controls": [
+            {
+              "hover_text_panel@common_dx.hover_text_panel": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right"
+              }
+            },
             { "on_icon@realms_java_dx.on_icon": { "layer": 1 } }
           ]
         }
@@ -371,7 +395,15 @@
       },
       {
         "hover@common.empty_panel": {
+          "$hover_panel_text": "options.off",
+          "$hover_text_texture": "textures/uidx/hover_text/text_panel",
           "controls": [
+            {
+              "hover_text_panel@common_dx.hover_text_panel": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right"
+              }
+            },
             { "off_icon@realms_java_dx.off_icon": { "layer": 1 } }
           ]
         }
@@ -400,7 +432,15 @@
       },
       {
         "hover@common.empty_panel": {
+          "$hover_panel_text": "playscreen.realmExpired",
+          "$hover_text_texture": "textures/uidx/hover_text/text_panel",
           "controls": [
+            {
+              "hover_text_panel@common_dx.hover_text_panel": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right"
+              }
+            },
             { "expired_icon@realms_java_dx.expired_icon": { "layer": 1 } }
           ]
         }
@@ -531,7 +571,16 @@
       {
         "hover": {
           "type": "panel",
+          "$hover_panel_text": "invite.notification.title",
+          "$hover_text_label_control": "play_realms_dx.invites_hover_text",
+          "$hover_text_texture": "textures/uidx/hover_text/text_panel",
           "controls": [
+            {
+              "hover_text_panel@common_dx.hover_text_panel": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right"
+              }
+            },
             {
               "icon@realms_java_dx.invitation_icons_more_hover": {
                 "visible": "#realms_notification_button_visible",
@@ -585,6 +634,48 @@
               }
             },
             { "border_and_bg@play_realms_dx.invite_border_and_bg": { "layer": 1 } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "invites_hover_text": {
+    "type": "panel",
+    "size": [ "100%cm", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 4, 3 ],
+    "controls": [
+      {
+        "new_invites_text@common_dx.hover_text_label": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 0 ],
+          "size": [ "default", "default" ],
+          "text": "mco.invites.pending",
+          "bindings": [
+            {
+              "binding_name": "#realms_notification_button_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "no_invites_text@common_dx.hover_text_label": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 0 ],
+          "size": [ "default", "default" ],
+          "text": "mco.invites.nopending",
+          "bindings": [
+            {
+              "binding_name": "(not #realms_notification_button_visible)",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
           ]
         }
       }
@@ -949,6 +1040,8 @@
   /*////// PANELS //////*/
 
   "play_realms_screen_panel@common_menus_dx.java_edition_menu_panel_template": {
+    "$item_mode": "realms_grid_items",
+    "$toggle_name": "realms_toggle_items",
     "$scroll_view_port_size": [ 316, "100%" ],
     "$top_content": "play_realms_dx.realms_top_bar",
     "$scrolling_content": "play_realms_dx.realms_stack_panel",

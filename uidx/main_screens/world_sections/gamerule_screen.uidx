@@ -107,7 +107,7 @@
     "size": [ 220, "100%c" ],
     "$categorie_shadow": true,
     "$ignore_hover_text": false,
-    //"$hover_text_label_control": "gamerule_dx.gamerule_hover_text",
+    "$hover_text_label_control": "gamerule_dx.gamerule_hover_text",
     "controls": [
       { 
         "players_categorie_label@controls_dx.categories_text_panel": {

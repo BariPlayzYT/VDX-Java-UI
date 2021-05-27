@@ -12,14 +12,12 @@
 
   "local_world_items_main@cris_play_grid_items.local_world_grid_items": {
     "$grid_item_type": "stack_panel",
-    "$item_mode": "local_world",
     "$grid_item_size": [ 270, "100%c" ],
     "$button_size": [ 270, 36 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "offset": [ 0, 2 ],
     "layer": 2,
-    "$toggle_name": "local_world_toggle_items",
     "$collection_name": "local_worlds",
     "$custom_to_button_id": "button.menu_start_local_world",
     "$item_control": "common_play_grid_dx.play_item_buttons_panel"
@@ -27,7 +25,6 @@
 
   "local_world_items_bottom@cris_play_grid_items.local_world_grid_items": {
     "$grid_item_type": "panel",
-    "$item_mode": "local_world",
     "$grid_item_size": [ "100%", "100%" ],
     "$collection_name": "local_worlds",
     "$bottom_grid_item_template": "select_wolrd_dx.play_bottom_buttons",
@@ -38,14 +35,12 @@
 
   "servers_items_main@cris_play_grid_items.first_part_grid_items": {
     "$grid_item_type": "stack_panel",
-    "$item_mode": "multiplayer_grid_items",
     "$grid_item_size": [ 304, "100%c" ],
     "$button_size": [ 304, 36 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "offset": [ 0, 2 ],
     "layer": 2,
-    "$toggle_name": "server_grid_toggle",
     "$collection_name": "third_party_server_network_worlds",
     "$custom_to_button_id": "button.menu_network_world_item",
     "$item_control": "common_play_grid_dx.play_item_buttons_panel"
@@ -53,14 +48,12 @@
 
   "more_servers_items_main@cris_play_grid_items.second_part_grid_items": {
     "$grid_item_type": "stack_panel",
-    "$item_mode": "multiplayer_grid_items",
     "$grid_item_size": [ 304, "100%c" ],
     "$button_size": [ 304, 36 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "offset": [ 0, 2 ],
     "layer": 2,
-    "$toggle_name": "server_grid_toggle",
     "$collection_name": "servers_network_worlds",
     "$custom_to_button_id": "button.menu_network_world_item",
     "$item_control": "common_play_grid_dx.play_item_buttons_panel"
@@ -68,14 +61,12 @@
 
   "lan_items_main@cris_play_grid_items.third_part_grid_items": {
     "$grid_item_type": "stack_panel",
-    "$item_mode": "multiplayer_grid_items",
     "$grid_item_size": [ 304, "100%c" ],
     "$button_size": [ 304, 36 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "offset": [ 0, 0 ],
     "layer": 2,
-    "$toggle_name": "server_grid_toggle",
     "$collection_name": "lan_network_worlds",
     "$custom_to_button_id": "button.menu_network_world_item",
     "$item_control": "common_play_grid_dx.play_item_buttons_panel"
@@ -83,14 +74,12 @@
 
   "friends_items_main@cris_play_grid_items.fourth_part_grid_items": {
     "$grid_item_type": "stack_panel",
-    "$item_mode": "multiplayer_grid_items",
     "$grid_item_size": [ 304, "100%c" ],
     "$button_size": [ 304, 36 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "offset": [ 0, 0 ],
     "layer": 2,
-    "$toggle_name": "server_grid_toggle",
     "$collection_name": "friends_network_worlds",
     "$custom_to_button_id": "button.menu_network_world_item",
     "$item_control": "common_play_grid_dx.play_item_buttons_panel"
@@ -98,7 +87,6 @@
 
   "servers_items_bottom@cris_play_grid_items.first_part_grid_items": {
     "$grid_item_type": "panel",
-    "$item_mode": "multiplayer_grid_items",
     "$grid_item_size": [ "100%", "100%" ],
     "$collection_name": "third_party_server_network_worlds",
     "$bottom_grid_item_template": "play_multiplayer_dx.alt_server_bottom_buttons",
@@ -107,7 +95,6 @@
 
   "more_servers_items_bottom@cris_play_grid_items.second_part_grid_items": {
     "$grid_item_type": "panel",
-    "$item_mode": "multiplayer_grid_items",
     "$grid_item_size": [ "100%", "100%" ],
     "$collection_name": "servers_network_worlds",
     "$bottom_grid_item_template": "play_multiplayer_dx.server_bottom_buttons",
@@ -116,7 +103,6 @@
 
   "lan_items_bottom@cris_play_grid_items.third_part_grid_items": {
     "$grid_item_type": "panel",
-    "$item_mode": "multiplayer_grid_items",
     "$grid_item_size": [ "100%", "100%" ],
     "$collection_name": "lan_network_worlds",
     "$bottom_grid_item_template": "play_multiplayer_dx.alt_server_bottom_buttons",
@@ -125,7 +111,6 @@
 
   "friends_items_bottom@cris_play_grid_items.fourth_part_grid_items": {
     "$grid_item_type": "panel",
-    "$item_mode": "multiplayer_grid_items",
     "$grid_item_size": [ "100%", "100%" ],
     "$collection_name": "friends_network_worlds",
     "$bottom_grid_item_template": "play_multiplayer_dx.alt_server_bottom_buttons",
@@ -136,14 +121,12 @@
 
   "personal_realms_items_main@cris_play_grid_items.first_part_grid_items": {
     "$grid_item_type": "stack_panel",
-    "$item_mode": "realms_grid_items",
     "$grid_item_size": [ 300, "100%c" ],
     "$button_size": [ 300, 36 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "offset": [ 0, 2 ],
     "layer": 2,
-    "$toggle_name": "realms_toggle_items",
     "$collection_name": "personal_realms",
     "$custom_to_button_id": "button.menu_start_realms_world",
     "$grid_item_template": "common_play_grid_dx.alt_play_main_buttons",
@@ -152,14 +135,12 @@
 
   "realms_items_main@cris_play_grid_items.second_part_grid_items": {
     "$grid_item_type": "stack_panel",
-    "$item_mode": "realms_grid_items",
     "$grid_item_size": [ 300, "100%c" ],
     "$button_size": [ 300, 36 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "offset": [ 0, 0 ],
     "layer": 2,
-    "$toggle_name": "realms_toggle_items",
     "$collection_name": "friends_realms",
     "$custom_to_button_id": "button.menu_start_realms_world",
     "$grid_item_template": "common_play_grid_dx.alt_play_main_buttons",
@@ -168,7 +149,6 @@
 
   "personal_realms_items_bottom@cris_play_grid_items.first_part_grid_items": {
     "$grid_item_type": "panel",
-    "$item_mode": "realms_grid_items",
     "$grid_item_size": [ "100%", "100%" ],
     "$collection_name": "personal_realms",
     "$bottom_grid_item_template": "play_realms_dx.realms_bottom_buttons",
@@ -177,7 +157,6 @@
 
   "realms_items_bottom@cris_play_grid_items.second_part_grid_items": {
     "$grid_item_type": "panel",
-    "$item_mode": "realms_grid_items",
     "$grid_item_size": [ "100%", "100%" ],
     "$collection_name": "friends_realms",
     "$bottom_grid_item_template": "play_realms_dx.realms_bottom_buttons",

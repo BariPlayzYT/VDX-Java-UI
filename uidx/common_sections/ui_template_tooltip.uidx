@@ -91,7 +91,14 @@
       },
       { 
         "gamepad_helper_b@common_tooltip_dx.gamepad_helper_b": {
-          "$desc_panel_content": "inventory_dx.close_button"
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#gamepad_helper_visible",
+              "binding_name_override": "#visible",
+              "binding_condition": "none"
+            }
+          ]
         }
       },
       {

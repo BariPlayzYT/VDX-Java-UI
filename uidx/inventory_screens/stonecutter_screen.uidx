@@ -146,6 +146,7 @@
   
   "stonecutter_panel@common_dx.root_panel": {
     "controls": [
+      { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "dialog_bg_stonecutter@stonecutter_java_dx.dialog_bg_stonecutter": { "layer": 1 } },
       { "stonecutter_panel_top_half@stonecutter_dx.stonecutter_panel_top_half": { } },
       {

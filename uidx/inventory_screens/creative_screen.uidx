@@ -807,6 +807,7 @@
   "creative_panel@common_dx.root_panel": {
     "size": [ 195, 136 ],
     "controls": [
+      { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "tab_items_content@creative_dx.tab_items_content": { } },
       { "tab_inventory@creative_dx.tab_inventory": { } },
       { "tab_front_navigation_panel@creative_dx.tab_front_navigation_panel": { } },

@@ -370,6 +370,17 @@
       { "sidebar@scoreboard.scoreboard_sidebar": {} },
       { "chat_stack_panel@hud_chat_dx.chat_stack_panel": {} },
       { "boss_health_main_panel@CrisXolt_bars_dx.boss_health_main_panel": {} },
+      {
+        "hud_title_text_area": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+              "hud_title_text": "hud_title_text@hud.hud_title_text"
+            }
+          }
+        }
+      },
       { "auto_save@hud_resources_dx.auto_save": {} }
     ]
   }

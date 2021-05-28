@@ -180,6 +180,7 @@
 
   "anvil_panel@common_dx.root_panel": {
     "controls": [
+      { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "dialog_bg_anvil@anvil_java_dx.dialog_bg_anvil": { "layer": 1 } },
       { "anvil_panel_top_half@anvil_dx.anvil_panel_top_half": { } },
       {

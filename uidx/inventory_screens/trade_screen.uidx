@@ -182,6 +182,7 @@
   
   "trade_panel@common_dx.root_panel": {
     "controls": [
+      { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "dialog_bg_trade@villager_java_dx.dialog_bg_trade": { "layer": 1 } },
       { "trade_panel_top_half@trade_dx.trade_panel_top_half": { } },
       {

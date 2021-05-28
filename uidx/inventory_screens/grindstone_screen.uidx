@@ -76,6 +76,7 @@
   
   "grindstone_panel@common_dx.root_panel": {
     "controls": [
+      { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "dialog_bg_grindstone@grindstone_java_dx.dialog_bg_grindstone": { "layer": 1 } },
       { "grindstone_panel_top_half@grindstone_dx.grindstone_panel_top_half": { } },
       {

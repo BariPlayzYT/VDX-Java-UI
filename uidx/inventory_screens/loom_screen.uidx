@@ -257,6 +257,7 @@
   
   "loom_panel@common_dx.root_panel": {
     "controls": [
+      { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "dialog_bg_loom@loom_java_dx.dialog_bg_loom": { "layer": 1 } },
       { "loom_panel_top_half@loom_dx.loom_panel_top_half": { } },
       {

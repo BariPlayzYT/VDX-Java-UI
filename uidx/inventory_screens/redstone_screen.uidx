@@ -53,6 +53,7 @@
     "$screen_dimensions|default": [ 176, 166 ],
     "size": "$screen_dimensions",
     "controls": [
+      { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "redstone_dialog_bg@$redstone_dialog_bg": { "layer": 1 } },
       { "redstone_panel_top_half@$redstone_panel_top_half": { } },
       {

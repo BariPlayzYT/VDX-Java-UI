@@ -250,6 +250,7 @@
 
   "cartography_panel@common_dx.root_panel": {
     "controls": [
+      { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "dialog_bg_cartography@cartography_table_java_dx.dialog_bg_cartography": { "layer": 1 } },
       { "cartography_panel_top_half@cartography_dx.cartography_panel_top_half": { } },
       {

@@ -46,6 +46,7 @@
     "$background_images": "java_gui_common.cell_image",
     "$highlight_control": "common_dx.highlight_slot_panel",
     "controls": [
+      { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "dialog_bg_chest@$chest_dialog_bg": { "layer": 1 } },
       { "chest_panel_top_half@$chest_panel_top_half": { } },
       {

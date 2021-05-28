@@ -94,6 +94,7 @@
 
   "furnace_panel@common_dx.root_panel": {
     "controls": [
+      { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "dialog_bg_furnace@$furnace_dialog_bg": { "layer": 1 } },
       { "furnace_panel_top_half@furnace_dx.furnace_panel_top_half": { } },
       {

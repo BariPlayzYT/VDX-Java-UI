@@ -411,6 +411,7 @@
   "player_inventory@common_dx.root_panel": {
     "size": [ 176, 166 ],
     "controls": [
+      { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "dialog_bg_inventory@inventory_java_dx.dialog_bg_inventory": { "layer": 1 } },
       { "inventory_panel_top_half@inventory_dx.inventory_panel_top_half": { } },
       {
@@ -423,13 +424,9 @@
     ]
   },
 
-  "close_button": {
+  "close_button_panel": {
     "type": "panel",
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "size": [ "100%+27px", 16 ],
-    "offset": [ -16, -3 ],
-    "layer": -2,
+    "size": [ "100%", "100%" ],
     "bindings": [
       {
         "binding_name": "#close_button_visible",
@@ -440,28 +437,21 @@
       {
         "close_button@chat_dx.black_button": {
           "$pressed_button_name": "button.menu_exit",
-          "$button_content": "inventory_dx.close_icon_hold",
-          "size": [ "100%", 16 ]
+          "$button_content": "inventory_dx.close_icon",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ 20, 4 ],
+          "size": [ 16, 16 ]
         }
       }
     ]
   },
-
-  "close_icon_hold": {
-    "type": "panel",
-    "size": [ "100%", 16 ],
-    "controls": [
-      {
-        "close_icon": {
-          "type": "image",
-          "layer": 3,
-          "size": [ 16, 16 ],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "texture": "textures/uidx/icons/close"
-        }
-      }
-    ]
+  
+  "close_icon": {
+    "type": "image",
+    "layer": 3,
+    "size": [ 16, 16 ],
+    "texture": "textures/uidx/icons/close"
   },
 
   /*//// Panels ////*/

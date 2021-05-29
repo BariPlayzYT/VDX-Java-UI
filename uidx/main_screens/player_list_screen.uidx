@@ -7,24 +7,24 @@
 
   "player_list_grid_image": {
     "type": "image",
-    "size": [ 123, 9 ],
+    "size": [ "100%", 9 ],
     "anchor_to": "top_left",
     "anchor_from": "top_left",
     "layer": 1
   },
 
   "player_list_scrolling_panel@common_scroll_dx.scrolling_panel": {
-    "size": [ 123, 162 ],
+    "size": [ "100%", 162 ],
     "anchor_to": "top_middle",
     "anchor_from": "top_middle",
-    "$scroll_view_port_size": [ 123, "100%" ],
+    "$scroll_view_port_size": [ "100%", "100%" ],
     "$scroll_box_image_control": "chat_dx.scroll_box",
     "$scroll_size": [ 4, "100%" ]
   },
 
   "object_grid_item": {
     "type": "panel",
-    "size": [ 123, 9 ],
+    "size": [ "100%", 9 ],
     "controls": [
       { "object_panel_content@$object_panel_content": { } },
       { "player_list_grid_image@player_list_dx.player_list_grid_image": { "texture": "textures/uidx/player_list/player_list_grid" } },
@@ -229,13 +229,13 @@
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "offset": [ 0, 20 ],
-    "size": [ 123, 267 ],
+    "size": [ 200, 267 ],
     "controls": [
       {
         "top_panel": {
           "type": "panel",
           "layer": 1,
-          "size": [ 123, 11 ],
+          "size": [ "100%", 11 ],
           "controls": [
             {
               "players_label": {
@@ -256,7 +256,7 @@
             {
               "panel@player_list_dx.player_list_grid_image": {
                 "texture": "textures/uidx/player_list/player_list",
-                "size": [ 123, 11 ],
+                "size": [ "100%", 11 ],
                 "layer": 1
               }
             }
@@ -266,7 +266,7 @@
       {
         "normal_list_panel": {
           "type": "panel",
-          "size": [ 123, "100%c" ],
+          "size": [ "100%", "100%c" ],
           "controls": [
             {
               "player_list_scrolling_panel@player_list_dx.player_list_scrolling_panel": {
@@ -286,7 +286,7 @@
         "scoreboard_top_panel": {
           "type": "panel",
           "layer": 1,
-          "size": [ 123, 11 ],
+          "size": [ "100%", 11 ],
           "controls": [
             {
               "list_objective_label@scoreboard.list_objective_label": {
@@ -301,7 +301,7 @@
             {
               "panel@player_list_dx.player_list_grid_image": {
                 "texture": "textures/uidx/player_list/player_list_score",
-                "size": [ 123, 11 ],
+                "size": [ "100%", 11 ],
                 "layer": 1
               }
             }
@@ -317,7 +317,7 @@
       {
         "score_list_panel": {
           "type": "panel",
-          "size": [ 123, "100%c" ],
+          "size": [ "100%", "100%c" ],
           "controls": [
             {
               "player_list_scrolling_panel@player_list_dx.player_list_scrolling_panel": {
@@ -340,7 +340,7 @@
 
   "players_grid_panel": {
     "type": "panel",
-    "size": [ 123, "100%c" ],
+    "size": [ "100%", "100%c" ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "controls": [
@@ -362,7 +362,7 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "offset": [ 6, 0 ],
-    "size": [ 111, 8 ],
+    "size": [ "100%-12px", 8 ],
     "controls": [
       {
         "player_pic_panel": {
@@ -453,7 +453,7 @@
 
   "players_grid_score_panel": {
     "type": "stack_panel",
-    "size": [ 123, "100%c" ],
+    "size": [ "100%", "100%c" ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "$object_panel_content": "player_list_dx.player_grid_score_stack_panel",

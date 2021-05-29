@@ -7,8 +7,25 @@
   
   "slider@common.slider": {
     "$locked_texture|default": "",
+    "$slider_content|default": "common_slider_dx.slider_content",
     "controls": [
       { "slider_box@common_slider_dx.slider_box": { } },
+      { "slider_content@$slider_content": { } },
+      { 
+        "slider_bg@$locked_texture": {
+          "$button_content": "common.empty_panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ -4, 0 ],
+          "layer": 1
+        }
+      }
+    ]
+  },
+
+  "slider_content": {
+    "type": "panel",
+    "controls": [
       { "slider_bar_default@common_slider_dx.slider_bar_default": {} },
       { "slider_bar_hover@common_slider_dx.slider_bar_hover": {} },
       {
@@ -30,15 +47,6 @@
               }
             }
           ]
-        }
-      },
-      { 
-        "slider_bg@$locked_texture": {
-          "$button_content": "common.empty_panel",
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [ -4, 0 ],
-          "layer": 1
         }
       }
     ]
@@ -75,7 +83,7 @@
           "controls": [
             {
               "option_label_default@common_buttons_dx.button_label": {
-                "layer": 4,
+                "layer": 5,
                 "text": "$option_label",
                 "bindings": "$label_bindings"
               }

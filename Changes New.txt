@@ -1,6 +1,6 @@
 v1.0.0 (The New Beginning Update) [27/05/2021]
 [Removes]
-[-] Profile Screen with Character Editor.
+[-] Profile Screen with Character Editor. (Will be added later).
 [-] Invitational Screen.
 [-] Realms Settings
 [-] Compatibility for AgentMindStorm's Music+/Music Player UI Lite Resource Pack. (Will be added later).

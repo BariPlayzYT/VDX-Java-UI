@@ -625,12 +625,6 @@
                         },
                         {
                           "binding_collection_name": "$button_collection_name",
-                          "binding_name": "(not #report_generating)",
-                          "binding_name_override": "#enabled",
-                          "binding_type": "collection"
-                        },
-                        {
-                          "binding_collection_name": "$button_collection_name",
                           "binding_name": "#report_button_visible",
                           "binding_name_override": "#visible",
                           "binding_type": "collection"

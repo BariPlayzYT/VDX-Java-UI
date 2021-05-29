@@ -22,6 +22,30 @@
           "size": [ 310, 25 ],
           "controls": [
             {
+              "text_background_opacity_slider@settings_common_dx.option_slider_310": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "#text_background_opacity_slider_label",
+                "$slider_name": "text_background_opacity",
+                "$slider_value_binding_name": "#text_background_opacity",
+                "$slider_tts_text_value": "#text_background_opacity_text_value",
+                "$option_enabled_binding_name": "#text_background_opacity_enabled",
+                "$label_bindings": [
+                  {
+                    "binding_name": "$option_label"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_1": {
+          "type": "panel",
+          "size": [ 310, 25 ],
+          "controls": [
+            {
               "option_toggle0@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
@@ -47,7 +71,7 @@
         }
       },
       {
-        "panel_1": {
+        "panel_2": {
           "type": "panel",
           "size": [ 310, 25 ],
           "controls": [
@@ -71,30 +95,6 @@
                 "$option_binding_name": "#enable_open_chat_message",
                 "$option_enabled_binding_name": "#enable_open_chat_message_enabled",
                 "$toggle_name": "enable_open_chat_message"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "panel_2": {
-          "type": "panel",
-          "size": [ 310, 25 ],
-          "controls": [
-            {
-              "text_background_opacity_slider@settings_common_dx.option_slider_310": {
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "$option_label": "#text_background_opacity_slider_label",
-                "$slider_name": "text_background_opacity",
-                "$slider_value_binding_name": "#text_background_opacity",
-                "$slider_tts_text_value": "#text_background_opacity_text_value",
-                "$option_enabled_binding_name": "#text_background_opacity_enabled",
-                "$label_bindings": [
-                  {
-                    "binding_name": "$option_label"
-                  }
-                ]
               }
             }
           ]

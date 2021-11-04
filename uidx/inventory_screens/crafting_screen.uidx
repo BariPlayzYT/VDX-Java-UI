@@ -59,10 +59,13 @@
     "offset": [ 28, 5 ],
     "controls": [
       {
-        "crafting_label@crafting.crafting_label": {
+        "crafting_label@common_dx.global_label": {
+          "text": "container.crafting",
+          "color": "$vdx_container_title_text_color",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [ 0, 0 ],
+          "layer": 2,
           "size": [ "default", 10 ]
         }
       },

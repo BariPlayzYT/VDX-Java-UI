@@ -106,7 +106,7 @@
     "type": "stack_panel",
     "size": [ 220, "100%c" ],
     "$categorie_shadow": true,
-    "$ignore_hover_text": false,
+    "$hover_content": "common_dx.hover_text_panel",
     "$hover_text_label_control": "gamerule_dx.gamerule_hover_text",
     "controls": [
       { 
@@ -447,6 +447,30 @@
                 "$option_binding_name": "#tnt_explodes",
                 "$option_enabled_binding_name": "#tnt_explodes_enabled",
                 "$toggle_name": "tnt_explodes",
+                "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                "$toggle_binding_condition": "always_when_visible"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "respawn_block_explodes_panel@start_dx.stacked_row": {
+          "ignored": "$education_edition",
+          "controls": [
+            {
+              "respawn_blocks_explode_toggle@settings_common_dx.option_toggle_alt": {
+                "$gamerule_command_text": "respawnblocksexplode",
+                "$default_value_text": "true",
+                "size": [ 220, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$tts_section_header": "createWorldScreen.worldSettings",
+                "ignored": "$education_edition",
+                "$option_label": "createWorldScreen.respawnblocksexplode",
+                "$option_binding_name": "#respawn_blocks_explode",
+                "$option_enabled_binding_name": "#respawn_blocks_explode_enabled",
+                "$toggle_name": "respawn_blocks_explode",
                 "$focus_override_right": "FOCUS_OVERRIDE_STOP",
                 "$toggle_binding_condition": "always_when_visible"
               }

@@ -9,10 +9,7 @@
       {
         "requires": "$desktop_screen",
         "$screen_content": "chest_dx.center_screen",
-        "$screen_bg_content": "chest_dx.full_screen",
-        "$use_loading_bars": false,
-        "$screen_animations": [ ],
-        "$background_animations": [ ]
+        "$screen_bg_content": "chest_dx.full_screen"
       },
       {
         "requires": "$pocket_screen",
@@ -29,10 +26,7 @@
       {
         "requires": "$desktop_screen",
         "$screen_content": "chest_dx.center_screen",
-        "$screen_bg_content": "chest_dx.full_screen",
-        "$use_loading_bars": false,
-        "$screen_animations": [ ],
-        "$background_animations": [ ]
+        "$screen_bg_content": "chest_dx.full_screen"
       },
       {
         "requires": "$pocket_screen",
@@ -49,10 +43,7 @@
       {
         "requires": "$desktop_screen",
         "$screen_content": "chest_dx.center_screen",
-        "$screen_bg_content": "chest_dx.full_screen",
-        "$use_loading_bars": false,
-        "$screen_animations": [ ],
-        "$background_animations": [ ]
+        "$screen_bg_content": "chest_dx.full_screen"
       },
       {
         "requires": "$pocket_screen",
@@ -69,10 +60,7 @@
       {
         "requires": "$desktop_screen",
         "$screen_content": "chest_dx.center_screen",
-        "$screen_bg_content": "chest_dx.full_screen",
-        "$use_loading_bars": false,
-        "$screen_animations": [ ],
-        "$background_animations": [ ]
+        "$screen_bg_content": "chest_dx.full_screen"
       },
       {
         "requires": "$pocket_screen",
@@ -89,10 +77,7 @@
       {
         "requires": "$desktop_screen",
         "$screen_content": "chest_dx.center_screen",
-        "$screen_bg_content": "chest_dx.full_screen",
-        "$use_loading_bars": false,
-        "$screen_animations": [ ],
-        "$background_animations": [ ]
+        "$screen_bg_content": "chest_dx.full_screen"
       },
       {
         "requires": "$pocket_screen",

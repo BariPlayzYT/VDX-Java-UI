@@ -10,8 +10,10 @@
     "size": [ 16, 16 ],
     "controls": [
       {
-        "stack_count_label@trade2.stack_count_label": {
+        "stack_count_label@common_dx.global_label": {
           "layer": 2,
+          "shadow": true,
+          "color": "$item_stack_count_color",
           "text": "#trade_item_count",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
@@ -63,8 +65,10 @@
         }
       },
       {
-        "second_stack_count_label@trade2.stack_count_label": {
+        "second_stack_count_label@common_dx.global_label": {
           "layer": 2,
+          "shadow": true,
+          "color": "$item_stack_count_color",
           "text": "#second_trade_item_count",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
@@ -134,8 +138,10 @@
                 ],
                 "controls": [
                   {
-                    "stack_count_label@trade2.stack_count_label": {
+                    "stack_count_label@common_dx.global_label": {
                       "layer": 2,
+                      "shadow": true,
+                      "color": "$item_stack_count_color",
                       "text": "#trade_item_count",
                       "anchor_from": "bottom_right",
                       "anchor_to": "bottom_right",
@@ -173,55 +179,65 @@
                   },
                   { 
                     "hover_button@trade2.hover_button": {
+                      "hover_control": "hover_text_panels",
                       "controls": [ 
                         {
-                          "hover_text@common_dx.hover_text_panel": {
-                            "$hover_text_label_control": "trade2_dx.trade_hover_text_label",
-                            "variables": [
+                          "hover_text_panels": {
+                            "type": "panel",
+                            "controls": [
                               {
-                                "requires": "($touch)",
-                                "$hover_offset": [ 2, -18 ]
+                                "hover_text_panel@common_dx.hover_text_panel": {
+                                  "ignored": "(not $hover_text_shadow)",
+                                  "$hover_text_label_control": "trade2_dx.trade_hover_text_label",
+                                  "variables": [
+                                    {
+                                      "requires": "($touch)",
+                                      "$hover_offset": [ 2, -18 ]
+                                    },
+                                    {
+                                      "requires": "(not $touch)",
+                                      "$hover_offset": [ 0, 0 ]
+                                    }
+                                  ],
+                                  "$hover_text_texture_bindings": [
+                                    {
+                                      "binding_type": "collection_details"
+                                    },
+                                    {
+                                      "binding_name": "(not (#hover_text = ''))",
+                                      "binding_name_override": "#visible",
+                                      "binding_collection_name": "$trade_item_collection_name"
+                                    }
+                                  ],
+                                  "bindings": [
+                                    {
+                                      "binding_type": "collection_details"
+                                    },
+                                    {
+                                      "binding_name": "#hover_text",
+                                      "binding_condition": "visible"
+                                    }
+                                  ]
+                                }
                               },
                               {
-                                "requires": "(not $touch)",
-                                "$hover_offset": [ 0, 0 ]
-                              }
-                            ],
-                            "$hover_text_texture_bindings": [
-                              {
-                                "binding_type": "collection_details"
-                              },
-                              {
-                                "binding_name": "(not (#hover_text = ''))",
-                                "binding_name_override": "#visible",
-                                "binding_collection_name": "$trade_item_collection_name"
-                              }
-                            ],
-                            "bindings": [
-                              {
-                                "binding_type": "collection_details"
-                              },
-                              {
-                                "binding_name": "#hover_text",
-                                "binding_condition": "visible"
+                                "hover_text@common.hover_text": {
+                                  "ignored": "$hover_text_shadow",
+                                  "layer": 200,
+                                  "bindings": [
+                                    {
+                                      "binding_type": "collection_details"
+                                    },
+                                    {
+                                      "binding_name": "#hover_text",
+                                      "binding_condition": "visible"
+                                    }
+                                  ]
+                                }
                               }
                             ]
                           }
-                        }/* 
-                        {
-                          "hover_text@common.hover_text": {
-                            "layer": 200,
-                            "bindings": [
-                              {
-                                "binding_type": "collection_details"
-                              },
-                              {
-                                "binding_name": "#hover_text",
-                                "binding_condition": "visible"
-                              }
-                            ]
-                          }
-                        } */
+                        }
                       ]
                     }
                   }
@@ -346,6 +362,96 @@
     ]
   },
 
+  "tier_label@common_dx.global_label": {
+    "color": "$trade_tier_name_color",
+    "text": "#tier_name",
+    "bindings": [
+      {
+        "binding_name": "#tier_name",
+        "binding_type": "collection",
+        "binding_collection_name": "$collection_name"
+      },
+      {
+        "binding_name": "#is_tier_unlocked",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$collection_name",
+        "binding_condition": "always"
+      }
+    ]
+  },
+
+  "tier_label_locked@common_dx.global_label": {
+    "color": "$trade_tier_name_locked_color",
+    "text": "#tier_name",
+    "bindings": [
+      {
+        "binding_name": "#tier_name",
+        "binding_type": "collection",
+        "binding_collection_name": "$collection_name"
+      },
+      {
+        "binding_name": "(not #is_tier_unlocked)",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$collection_name",
+        "binding_condition": "always"
+      }
+    ]
+  },
+
+  "tier_stack_panel_with_text@trade2.tier_stack_panel": {
+    "size": "$input_size",
+    "controls": [/* 
+      {
+        "padding": {
+          "type": "panel",
+          "size": [ 0, 2 ]
+        }
+      },
+      {
+        "tier_label_holder": {
+          "type": "panel",
+          "size": [ "100%", "100%cm" ],
+          "controls": [
+            {
+              "tier_label@trade2_dx.tier_label": {
+                "size": [ "100%", "default" ],
+                "color": [ 1.0, 1.0, 1.0 ],
+                "offset": [ 2, 0 ],
+                "layer": 2
+              }
+            },
+            {
+              "tier_label_locked@trade2_dx.tier_label_locked": {
+                "color": [ 0.17, 0.17, 0.17 ],
+                "size": [ "100%", "default" ],
+                "offset": [ 2, 0 ],
+                "layer": 2
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#show_level",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }, */
+      {
+        "trade_toggle_stack_panel@trade2.trade_toggle_stack_panel": {
+          "size": [ 88, "default" ],
+          "$toggle_control_name|default": "trade2_dx.trade_toggle_panel",
+          "factory": {
+            "name": "selected_pack_factory",
+            "control_name": "$toggle_control_name"
+          }
+        }
+      }
+    ]
+  },
+
   "tier_stack_panel@trade2.tier_stack_panel": {
     "size": "$input_size",
     "controls": [
@@ -371,7 +477,7 @@
           "size": [ 88, "default" ],
           "factory": {
             "name": "selected_pack_factory",
-            "control_name": "trade2_dx.tier_stack_panel"
+            "control_name": "trade2_dx.tier_stack_panel_with_text"
           }
         }
       }
@@ -384,7 +490,7 @@
     "offset": [ 5, 18 ],
     "size": [ 95, 140 ],
     "$scroll_size": [ 6, 140 ],
-    "$scroll_view_port_size": [ 88, 140 ],
+    "$scroll_view_port_size": [ 89, 140 ],
     "$scrolling_pane_size": [ "100%", "100%" ],
     "$scroll_box_image_control": "villager2_java_dx.scroll_box",
     "$scrolling_content": "trade2_dx.scroll_inner_input_panel",
@@ -399,7 +505,8 @@
     "layer": 5,
     "controls": [
       {
-        "villager_name_label@trade2.villager_name_label": {
+        "villager_name_label@common_dx.global_label": {
+          "color": "$vdx_container_title_text_color",
           "text": "action.interact.trade",
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
@@ -697,10 +804,19 @@
     "$highlight_control": "common_dx.highlight_slot_panel",
     "controls": [
       {
-        "villager_name_label@trade2.villager_name_label": {
+        "villager_name_label@common_dx.global_label": {
+          "color": "$vdx_container_title_text_color",
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
-          "offset": [ 0, 5 ]
+          "offset": [ 0, 5 ],
+          "layer": 1,
+          "text": "#name_label",
+          "bindings": [
+            {
+              "binding_name": "#name_label",
+              "binding_condition": "always_when_visible"
+            }
+          ]
         }
       },
       { "exp_progress_bar@trade2_dx.exp_progress_bar": { } },
@@ -716,6 +832,7 @@
       },
       {
         "result_item_slot@trade2_dx.result_item_slot": {
+          "$highlight_slot_image": "java_gui_common.highlight_slot_output",
           "size": [ 26, 26 ],
           "offset": [ 115, 32 ]
         }

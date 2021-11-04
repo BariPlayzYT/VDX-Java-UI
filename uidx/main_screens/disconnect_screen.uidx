@@ -52,6 +52,50 @@
 
   /*///// Main /////*/
 
+  "disconnect_screen_text@common_dx.global_label": {
+    "color": "$loading_text_color",
+    "size": [ "default", 50 ],
+    "max_size": [ "100% - 20px", 50 ],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "layer": 2,
+    "shadow": false
+  },
+
+  "disconnect_text@disconnect_dx.disconnect_screen_text": {
+    "text": "#disconnect_text",
+    "bindings": [
+      {
+        "binding_name": "#disconnect_text"
+      },
+      {
+        "binding_name": "#tts_dialog_body",
+        "binding_condition": "once"
+      }
+    ],
+    "property_bag": {
+      "#tts_dialog_body": "#disconnect_text"
+    }
+  },
+
+  "disconnect_title_text@disconnect_dx.disconnect_screen_text": {
+    "size": [ "default", 20 ],
+    "max_size": [ "100% - 20px", 20 ],
+    "text": "#title_text",
+    "bindings": [
+      {
+        "binding_name": "#title_text"
+      },
+      {
+        "binding_name": "#tts_dialog_title",
+        "binding_condition": "once"
+      }
+    ],
+    "property_bag": {
+      "#tts_dialog_title": "#title_text"
+    }
+  },
+
   "main_panel": {
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
@@ -65,10 +109,9 @@
           "size": [ "100%", 10 ],
           "controls": [
             { 
-              "disconnect_title_text@disconnect.disconnect_title_text": {
+              "disconnect_title_text@disconnect_dx.disconnect_title_text": {
                 "size": [ "default", 10 ],
-                "shadow": true,
-                "offset": [ 0, 0 ]
+                "shadow": true
               }
             }
           ]
@@ -86,12 +129,11 @@
           "size": [ "100%", "100%c+8px" ],
           "controls": [
             { 
-              "disconnect_text@disconnect.disconnect_text": {
+              "disconnect_text@disconnect_dx.disconnect_text": {
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "color": "$loading_text_color",
-                "shadow": true,
-                "offset": [ 0, 0 ]
+                "shadow": true
               }
             }
           ]

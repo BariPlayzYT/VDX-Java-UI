@@ -55,6 +55,7 @@
   "slider_box@common.slider_box": {
     "size": [ 8, 20 ],
     "layer": 2,
+    "$hover_content": "common.empty_panel",
     "controls": [
       { "default@common_buttons_dx.8_default": { "size": [ 8, 20 ] } },
       { "hover@common_buttons_dx.8_hover": { "size": [ 8, 20 ] } },
@@ -70,6 +71,8 @@
     "size": [ "100%+8px", 20 ],
     "$button_content": "",
     "$text_color": "$main_menu_button_default_color",
+    "$hover_content|default": "common.empty_panel",
+    "$is_hover": false,
     "controls": [
       {
         "default_panel": {
@@ -90,9 +93,14 @@
             }
           ]
         }
+      },
+      {
+        "hover_content@$hover_content": {
+          "ignored": "(not $is_hover)"
+        }
       }
     ]
   },
 
-  "slider_bar_hover@common_slider_dx.slider_bar_default": { "$text_color": "$main_menu_button_hover_color" }
+  "slider_bar_hover@common_slider_dx.slider_bar_default": { "$text_color": "$main_menu_button_hover_color", "$is_hover": true  }
 }

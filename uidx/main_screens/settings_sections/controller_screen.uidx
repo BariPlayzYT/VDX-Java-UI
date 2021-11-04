@@ -219,6 +219,55 @@
           "size": [ 310, 25 ],
           "controls": [
             {
+              "gamepad_cursor_sensitivity_option_slider@settings_common_dx.option_slider_310": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "#gamepad_cursor_sensitivity_slider_label",
+                "$slider_name": "gamepad_cursor_sensitivity",
+                "$slider_value_binding_name": "#gamepad_cursor_sensitivity",
+                "$slider_tts_text_value": "#gamepad_cursor_sensitivity_text_value",
+                "$option_enabled_binding_name": "#gamepad_cursor_sensitivity_enabled",
+                "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                "$label_bindings": [
+                  {
+                    "binding_name": "$option_label"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_2": {
+          "type": "panel",
+          "size": [ 310, 25 ],
+          "controls": [
+            {
+              "option_slider_damen@settings_common_dx.option_slider_310": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "#spyglass_gamepad_dampening_slider_label",
+                "$slider_name": "spyglass_gamepad_dampening",
+                "$slider_value_binding_name": "#spyglass_gamepad_dampening",
+                "$slider_tts_text_value": "#spyglass_gamepad_dampening_text_value",
+                "$option_enabled_binding_name": "#keyboard_mouse_sensitivity_enabled",
+                "$label_bindings": [
+                  {
+                    "binding_name": "$option_label"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_3": {
+          "type": "panel",
+          "size": [ 310, 25 ],
+          "controls": [
+            {
               "option_toggle9@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
@@ -242,7 +291,7 @@
         }
       },
       {
-        "panel_2": {
+        "panel_4": {
           "type": "panel",
           "size": [ 310, 25 ],
           "controls": [

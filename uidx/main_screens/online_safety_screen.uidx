@@ -18,8 +18,7 @@
           "layer": 55,
           "controls": [
             {
-              "title_text": {
-                "type": "label",
+              "title_text@common_dx.global_label": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "offset": [ 0, 29 ],
@@ -29,8 +28,7 @@
               }
             },
             {
-              "message_text": {
-                "type": "label",
+              "message_text@common_dx.global_label": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "offset": [ 0, 69 ],
@@ -74,8 +72,7 @@
                           }
                         },
                         {
-                          "option_text": {
-                            "type": "label",
+                          "option_text@common_dx.global_label": {
                             "anchor_from": "top_left",
                             "anchor_to": "top_left",
                             "offset": [ 24, 5 ],

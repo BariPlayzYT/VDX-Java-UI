@@ -23,6 +23,13 @@
                 "layer": 10,
                 "anchor_from": "center",
                 "anchor_to": "center",
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@common.screen_exit_size_animation_push",
+                  "@common.screen_exit_size_animation_pop",
+                  "@common.screen_entrance_size_animation_push",
+                  "@common.screen_entrance_size_animation_pop"
+                ],
                 "bindings": [
                   {
                     "binding_name": "#entity_id"
@@ -129,7 +136,16 @@
     "$background_images": "java_gui_common.cell_image",
     "$highlight_control": "common_dx.highlight_slot_panel",
     "controls": [
-      { "horse_label@horse.horse_label": { "offset": [ 8, 5 ], "layer": 5 } },
+      { 
+        "horse_label@common_dx.global_label": {
+          "offset": [ 8, 5 ],
+          "layer": 5,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "text": "$container_title",
+          "color": "$vdx_container_title_text_color"
+        }
+      },
       { "inv_panel@horse_dx.inv_panel": { } },
       { "equipment@horse_dx.equip_panel": { "layer": 5 } },
       { "renderer@horse_dx.horse_renderer": { "layer": 5 } }

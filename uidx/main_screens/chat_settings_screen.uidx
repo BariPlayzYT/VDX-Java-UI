@@ -4,6 +4,51 @@
   "namespace": "chat_settings_dx",
 
   /*//// Dropdown Toggles ////*/
+  
+  "button_label_with_value_for_font_type": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ "100%c", "100% - 9px" ],
+    "$option_label_text_color|default": "$text_color",
+    "$colon_needed|default": true,
+    "$only_value|default": false,
+    "layer": 2,
+    "controls": [
+      {
+        "button_label@common_buttons_dx.button_label": {
+          "ignored": "$only_value",
+          "text": "$option_label",
+          "color": "$option_label_text_color"
+        }
+      },
+      {
+        "colon@common_buttons_dx.button_label": {
+          "ignored": "($only_value or (not $colon_needed))",
+          "text": ": "
+        }
+      },
+      {
+        "separator@common_buttons_dx.button_label": {
+          "ignored": "$colon_needed",
+          "text": " "
+        }
+      },
+      {
+        "value_label@common_buttons_dx.button_label": {
+          "$radio_label_font_type|default": "default",
+          "font_type": "smooth",
+          "text": "$toggle_value_text",
+          "bindings": [
+            {
+              "binding_name": "$toggle_value_text"
+            }
+          ]
+        }
+      }
+    ]
+  },
 
   "font_type_option": {
     "type": "panel",
@@ -19,6 +64,7 @@
           "$radio_label_text": "typeface.notoSans",
           "$radio_label_font_type": "smooth",
           "$toggle_value_text": "$radio_label_text",
+          "$custom_button_content": "chat_settings_dx.button_label_with_value_for_font_type",
           "bindings": [
             {
               "binding_name": "#typeface_radio_notoSans",
@@ -306,7 +352,8 @@
     "size": [ "100%", "100%" ],
     "controls": [
       {
-        "title_label@settings_dx.options_label": {
+        "title_label@common_dx.global_label": {
+          "shadow": true,
           "layer": 2,
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",

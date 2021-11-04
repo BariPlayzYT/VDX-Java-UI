@@ -20,7 +20,7 @@
   "button_content@host_options.button_content": {
     "controls": [
       {
-        "button_label@host_options.button_label": {
+        "button_label@host_options_dx.button_label": {
           "$button_text_color|default": "$text_color",
           "$button_label_anchor_from": "left_middle",
           "$button_label_anchor_to": "left_middle",
@@ -39,6 +39,34 @@
           "layer": 8,
           "size": "$glyph_size"
         }
+      }
+    ]
+  },
+
+  "button_label@common_dx.global_label": {
+    "text": "$button_text",
+    "$button_label_shadow|default": false,
+    "shadow": "$button_label_shadow",
+    "$button_label_anchor_from|default": "center",
+    "$button_label_anchor_to|default": "center",
+    "$button_label_offset|default": [ 0, 0 ],
+    "anchor_from": "$button_label_anchor_from",
+    "anchor_to": "$button_label_anchor_to",
+    "offset": "$button_label_offset",
+    "color": "$button_text_color",
+
+    // For text bindings
+    "$button_text_binding_type|default": "none",
+    "$button_binding_condition|default": "none",
+    "$button_text_grid_collection_name|default": "",
+
+    "bindings": [
+      {
+        "binding_type": "$button_text_binding_type",
+        "binding_condition": "$button_binding_condition",
+        "binding_collection_name": "$button_text_grid_collection_name",
+        "binding_name": "$button_text",
+        "binding_name_override": "$button_text"
       }
     ]
   },
@@ -121,7 +149,7 @@
           "size": [ "fill", "100%" ],
           "controls": [
             {
-              "gamertag@pause.player_gamertag": {
+              "gamertag@pause_dx.player_gamertag": {
                 "offset": [ 4, 0 ],
                 "shadow": true,
                 "color": "$text_color"

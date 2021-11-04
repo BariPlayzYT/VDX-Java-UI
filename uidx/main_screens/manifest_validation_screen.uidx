@@ -15,7 +15,7 @@
         }
       },
       {
-        "errors@manifest_validation.pack_error_item": {}
+        "errors@manifest_validation.pack_error_item": { }
       },
       {
         "end_panel": {

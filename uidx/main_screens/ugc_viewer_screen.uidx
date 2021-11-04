@@ -205,8 +205,7 @@
                 "size": [ "fill", "100%" ],
                 "controls": [
                   {
-                    "seed_name_label": {
-                      "type": "label",
+                    "seed_name_label@common_dx.global_label": {
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "offset": [ 0, 14 ],

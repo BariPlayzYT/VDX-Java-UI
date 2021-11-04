@@ -182,14 +182,21 @@
           "type": "panel",
           "controls": [
             {
-              "creative_label@crafting.creative_label": {
+              "creative_label@common_dx.global_label": {
                 "size": [ 162, 10 ],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "text_alignment": "left",
                 "shadow": true,
                 "offset": [ 25, 13 ],
-                "color": [ 1.0, 1.0, 1.0 ]
+                "color": [ 1.0, 1.0, 1.0 ],
+                "layer": 2,
+                "text": "#tab_label_text",
+                "bindings": [
+                  {
+                    "binding_name": "#tab_label_text"
+                  }
+                ]
               }
             }
           ],
@@ -422,37 +429,45 @@
     "renderer": "inventory_item_renderer",
     "layer": 16,
     "size": [ 16, 16 ],
-    "offset": [ 9, 5 ]
+    "offset": [ 9, 5 ],
+    "$number_aux_index": 65536,
+    "property_bag": {
+      "#item_id_aux": "($object_item_id * $number_aux_index)"
+    }
   },
 
   "search_icon@recipe_book_dx.item_renderer": {
-    "property_bag": {
-      "#item_id_aux": 22633472
-    }
+    "$object_item_id": 391  //  Compass - ID: 391
   },
 
   "construction_icon@recipe_book_dx.item_renderer": {
-    "property_bag": {
-      "#item_id_aux": 2949120
-    }
-  },
-
-  "construction_alt_icon@recipe_book_dx.item_renderer": {
-    "property_bag": {
-      "#item_id_aux": 3080192
-    }
+    "$object_item_id": 45, //  Block of Brick - ID: 45
+    "controls": [
+      {
+        "overlay": {
+          "type": "image",
+          "layer": 17,
+          "size": [ 16, 16 ],
+          "texture": "textures/ui/block_overlay"
+        }
+      }
+    ]
   },
 
   "equipment_icon@recipe_book_dx.item_renderer": {
-    "property_bag": {
-      "#item_id_aux": 18555891
-    }
+    "$object_item_id": 322 //  Golden Sword - ID: 322
   },
 
   "equipment_alt_icon@recipe_book_dx.item_renderer": {
-    "property_bag": {
-      "#item_id_aux": 16933472
-    }
+    "$object_item_id": 298 //  Iron Axe - ID: 298
+  },
+
+  "miscellaneous_icon@recipe_book_dx.item_renderer": {
+    "$object_item_id": 373 //  Redstone Dust - ID: 373
+  },
+
+  "nature_icon@recipe_book_dx.item_renderer": {
+    "$object_item_id": 257 //  Apple - ID: 257
   },
 
   "equipment_recipe_icon": {
@@ -480,39 +495,26 @@
     ]
   },
 
-  "miscellaneous_icon@recipe_book_dx.item_renderer": {
-    "property_bag": {
-      "#item_id_aux": 21700000
-    }
-  },
-
-  "search_2_icon@recipe_book_dx.item_renderer": {
-    "property_bag": {
-      "#item_id_aux": 22755891
-    }
-  },
-
-  "nature_icon@recipe_book_dx.item_renderer": {
-    "property_bag": {
-      "#item_id_aux": 17055891
-    }
-  },
-
   "survival_inv_icon": {
     "type": "panel",
-    "layer": 16,
     "size": [ 16, 16 ],
     "offset": [ 9, 5 ],
     "controls": [
       {
+        "overlay": {
+          "type": "image",
+          "layer": 17,
+          "size": [ 16, 16 ],
+          "texture": "textures/ui/chest_icon"
+        }
+      },
+      {
         "survival_inv_icon@recipe_book_dx.item_renderer": {
           "offset": [ 0, 0 ],
-          "layer": 15,
+          "layer": 16,
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "property_bag": {
-            "#item_id_aux": 3538944
-          }
+          "$object_item_id": 54 //  Chest - ID: 54
         }
       }
     ]

@@ -598,7 +598,7 @@
                   "size": [ 150, 20 ],
                   "anchor_from": "top_left",
                   "anchor_to": "top_left",
-                  "$ignore_separator": true,
+                  "$colon_needed": false,
                   "$option_label": "selectWorld.allowCommands",
                   "$option_binding_name": "#allow_cheats",
                   "$option_enabled_binding_name": "#allow_cheats_enabled",

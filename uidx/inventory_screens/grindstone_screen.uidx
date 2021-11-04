@@ -10,7 +10,9 @@
     "$highlight_control": "common_dx.highlight_slot_panel",
     "controls": [
       {
-        "title_label@grindstone.title_label": {
+        "title_label@common_dx.global_label": {
+          "color": "$vdx_container_title_text_color",
+          "text": "container.repairAndDisenchant",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [ 8, 5 ]

@@ -5,8 +5,7 @@
 
   /*//// Text Panel ////*/
 
-  "minecraft_text": {
-    "type": "label",
+  "minecraft_text@common_dx.global_label": {
     "color": "$main_header_text_color",
     "shadow": true,
     "text": "Minecraft "
@@ -45,7 +44,7 @@
           ]
         }
       },
-      { "project_text@start_dx.project_text": { } },
+      //{ "project_text@start_dx.project_text": { } },
       { "fill": { "type": "panel", "size": [ "fill", 10 ] } },
       { "copyright_text@start_dx.copyright_text": { } }
     ]
@@ -65,7 +64,7 @@
       { "title_panel_image_bown@start_dx.title_panel_image": { "layer": 2, "offset": [ 0, 1 ] } },
       { "title_panel_image_left@start_dx.title_panel_image": { "layer": 3, "offset": [ -1, 0 ] } },
       { "title_panel_image_right@start_dx.title_panel_image": { "layer": 4, "offset": [ 1, 0 ] } },
-      //{ "edition@java_gui_common.edition_image": { "layer": 6, "offset": [ 88, 37 ], "anchor_from": "top_left", "anchor_to": "top_left" } },
+      { "edition@java_gui_common.edition_image": { "layer": 6, "offset": [ 88, 37 ], "anchor_from": "top_left", "anchor_to": "top_left" } },
       { "splash_text@common_art.splash_text": { "layer": 10, "offset": [ -8, 10 ] } }
     ]
   },

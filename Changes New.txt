@@ -1,3 +1,35 @@
+v1.1.0  [31/10/2021]
+[Additions]
+[+] Realms Setting for Java UI
+[Changes]
+[*] The Java UI design is now fixed to look as similar and accurate as possible.
+[*] Bug fixes HUD Screen UI codes.
+[*] The size of the player renderer in the HUD is now fixed based on the device you are using.
+[*] Chat UI design has been fixed to look like Original for Mixed UI and PvP UI
+
+v1.0.4  [30/09/2021]
+[Additions]
+[+] Dialog Screens template!
+[Changes]
+[*] Updated for v1.17.30 and for the latest Beta version.
+[*] Chat messages position now will have by default (top_left) when you use Mobile device, even in Java UI.
+[*] Removed jukebox text BG in Mixed UI and PvP UI, due Galaxite server incompatibility.
+
+v1.0.3  [14/08/2021]
+[Changes]
+[*] Added compatibility for Beta 1.17.30.21, fixing some bugs that don't allow you to play.
+
+v1.0.2 [24/07/2021]
+[Additions]
+[+] Profile Screen with Character Editor is now back again!
+[+] Corner mode for Structure Block (It works).
+[Removes]
+[-] 3D Export mode for Structure Block, but you can still export and save files in the "Save" mode pressing the "+" button.
+[Changes]
+[*] Bug fixes for HUD screen.
+[*] Updated UI for Structure Block.
+[*] Updated Hive Server HUD support.
+
 v1.0.0 (The New Beginning Update) [27/05/2021]
 [Removes]
 [-] Profile Screen with Character Editor. (Will be added later).

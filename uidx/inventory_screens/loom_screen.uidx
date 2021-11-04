@@ -214,7 +214,9 @@
     "$highlight_control": "common_dx.highlight_slot_panel",
     "controls": [
       {
-        "loom_label@loom.loom_label": {
+        "loom_label@common_dx.global_label": {
+          "color": "$vdx_container_title_text_color",
+          "text": "container.loom",
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "offset": [ 8, 3 ]

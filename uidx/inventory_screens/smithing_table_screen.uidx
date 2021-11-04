@@ -84,7 +84,9 @@
     "layer": 4,
     "controls": [
       { 
-        "upgrade_label@smithing_table.upgrade_label": {
+        "upgrade_label@common_dx.global_label": {
+          "text": "container.smithing_table.upgrade",
+          "color": "$vdx_container_title_text_color",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [ 60, 19 ]

@@ -562,13 +562,21 @@
     "controls": [
       { "dialog_bg_tab_items@creative_inv_java_dx.dialog_bg_tab_items": { "layer": 1 } },
       {
-        "creative_label@crafting.creative_label": {
+        "creative_label@common_dx.global_label": {
+          "color": "$vdx_container_title_text_color",
           "layer": 4,
           "size": [ 162, 10 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "text_alignment": "left",
-          "offset": [ 8, 5 ]
+          "offset": [ 8, 5 ],
+          "text": "#tab_label_text",
+          "shadow": false,
+          "bindings": [
+            {
+              "binding_name": "#tab_label_text"
+            }
+          ]
         }
       }
     ],
@@ -585,7 +593,8 @@
     "controls": [
       { "dialog_bg_tab_item_search@creative_inv_java_dx.dialog_bg_tab_item_search": { "layer": 1 } },
       {
-        "creative_label@crafting.creative_label": {
+        "creative_label@common_dx.global_label": {
+          "color": "$vdx_container_title_text_color",
           "layer": 4,
           "size": [ 72, 10 ],
           "text": "itemGroup.search",
@@ -620,7 +629,7 @@
           "anchor_from": "top_right",
           "anchor_to": "top_right",
           "offset": [ -8, 18 ],
-          "layer": 20,
+          "layer": 6,
           "bindings": [
             {
               "binding_name": "(#recipe_book_total_items < 46)",
@@ -652,7 +661,7 @@
           "color": "$creative_scroll_viewport_bg_color",
           "size": "$bg_size",
           "offset": "$bg_offset",
-          "layer": 12,
+          "layer": 5,
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "$bg_size": [ 160, 88 ],
@@ -663,10 +672,10 @@
         "scrolling_panel@common_scroll_dx.scrolling_panel": {
           "size": [ 180, 112 ],
           "offset": [ 8, 17 ],
-          "layer": 16,
+          "layer": 6,
           "$scroll_size": [ 12, 110 ],
           "$scroll_track_offset": [ -1, 1 ],
-          "$scroll_view_port_size": [ 160, 88 ],
+          "$scroll_view_port_size": [ 161, 88 ],
           "$scroll_view_port_offset": [ 1, 1 ],
           "$scroll_grid_size": [ 162, "100%c-2px" ],
           "$scroll_grid_offset": [ -1, -1 ],
@@ -793,7 +802,7 @@
       },
       { 
         "gamepad_helper_select@common_tooltip_dx.gamepad_helper_select": {
-          "offset": [ 27, -3 ],
+          "offset": [ 33, -7 ],
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
           "$hide_description": true

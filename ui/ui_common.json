@@ -58,5 +58,13 @@
         }
       }
     ]
+  },
+
+  "screen_panel/popup_dialog_factory": {
+    "control_ids": {
+      "modal_dialog_popup": "@common_dialogs_dx.modal_dialog_popup",
+      "storage_dependency_popup": "@storage_management_popup.storage_dependency_modal",
+      "storage_sharing_popup": "@storage_management_popup.sharing_popup_content"
+    }
   }
 }

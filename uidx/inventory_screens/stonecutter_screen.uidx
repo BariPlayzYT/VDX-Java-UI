@@ -115,7 +115,9 @@
     "$highlight_control": "common_dx.highlight_slot_panel",
     "controls": [
       {
-        "stonecutter_label@stonecutter.stonecutter_label": {
+        "stonecutter_label@common_dx.global_label": {
+          "text": "container.stonecutter",
+          "color": "$vdx_container_title_text_color",
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "offset": [ 8, 3 ]

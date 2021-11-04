@@ -7,10 +7,7 @@
         "requires": "$desktop_screen",
         "$screen_content": "enchanting_dx.center_screen",
         "$screen_bg_content": "enchanting_dx.full_screen",
-        "$gamepad_cursor": true,
-        "$use_loading_bars": false,
-        "$screen_animations": [ ],
-        "$background_animations": [ ]
+        "$gamepad_cursor": true
       },
       {
         "requires": "$pocket_screen",

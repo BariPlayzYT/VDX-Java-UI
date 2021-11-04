@@ -20,8 +20,7 @@
     ]
   },
 
-  "you_died_label": {
-    "type": "label",
+  "you_died_label@common_dx.global_label": {
     "color": "$death_text_color",
     "offset": [ 0, -51 ],
     "anchor_from": "center",
@@ -46,16 +45,14 @@
           "size": [ "100%c", 10 ],
           "controls": [
             {
-              "score_label": {
-                "type": "label",
+              "score_label@common_dx.global_label": {
                 "shadow": true,
                 "text": "deathScreen.score",
                 "size": [ "default", 10 ]
               }
             },
             {
-              "separator_label": {
-                "type": "label",
+              "separator_label@common_dx.global_label": {
                 "shadow": true,
                 "text": ":",
                 "size": [ "default", 10 ]
@@ -68,8 +65,7 @@
               }
             },
             {
-              "score_number_label": {
-                "type": "label",
+              "score_number_label@common_dx.global_label": {
                 "shadow": true,
                 "color": "$e_color_format",
                 "text": "&e0",

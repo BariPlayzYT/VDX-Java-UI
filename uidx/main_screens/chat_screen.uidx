@@ -3,6 +3,51 @@
 {
   "namespace": "chat_dx",
 
+  /*//// Chat Stack Panel ////*/
+
+  "chat_stack_panel": {
+    "type": "stack_panel",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "fill_padding": {
+          "type": "panel",
+          "size": [ 1, "fill" ],
+          "ignored": "$touch"
+        }
+      },
+      { "message_panel@chat_dx.message_panel": { } },
+      {
+        "bottom_padding": {
+          "type": "panel",
+          "size": [ 1, 40 ],
+          "ignored": "$touch"
+        }
+      },
+      {
+        "bottom_fill_padding": {
+          "type": "panel",
+          "size": [ 1, "fill" ],
+          "ignored": "(not $touch)"
+        }
+      }/* ,
+      {
+        "tooltip_padding": {
+          "type": "panel",
+          "size": [ "100%", 26 ],
+          "bindings": [
+            {
+              "binding_name": "#is_using_gamepad",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      } */
+    ]
+  },
+
   /*//// BG Base ////*/
 
   "chat_bg": {
@@ -26,7 +71,7 @@
       {
         "auto_complete_grid": {
           "type": "grid",
-          "grid_item_template": "chat_dx.auto_complete_panel_contents_with_item",
+          "grid_item_template": "chat_dx.je_auto_complete_panel_contents_with_item",
           "grid_fill_direction": "vertical",
           "collection_name": "auto_complete",
           "anchor_from": "bottom_left",
@@ -44,32 +89,15 @@
     ]
   },
 
-  "auto_complete_panel_contents_with_item": {
+  "je_auto_complete_panel_contents_with_item": {
     "type": "panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "size": [ "100%", 9 ],
+    "$item_collection_name": "auto_complete",
     "controls": [
       {
-        "auto_complete_item_renderer@common.item_renderer": {
-          "size": [ 8, 8 ],
-          "offset": [ 2, 0 ],
-          "anchor_from": "left_middle",
-          "anchor_to": "left_middle",
-          "layer": 2,
-          "bindings": [
-            {
-              "binding_name": "#auto_complete_item",
-              "binding_type": "collection",
-              "binding_name_override": "#item_id_aux",
-              "binding_collection_name": "auto_complete"
-            }
-          ]
-        }
-      },
-      {
-        "text": {
-          "type": "label",
+        "text@common_dx.global_label": {
           "color": "$chat_text_color",
           "offset": [ 2, 0 ],
           "anchor_from": "left_middle",
@@ -116,7 +144,7 @@
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
     "size": "$chat_size",
-    "offset": [ 0, -41 ],
+    "offset": [ 0, -40 ],
     "controls": [
       {
         "chat_messages_bg": {
@@ -186,8 +214,7 @@
 
   /*//// Buttons ////*/
 
-  "button_label": {
-    "type": "label",
+  "button_label@common_dx.global_label": {
     "text": "$button_text",
     "offset": "$text_offset",
     "$button_text_binding_type|default": "none",
@@ -379,6 +406,7 @@
       },
       { 
         "back_button@chat_dx.black_button": {
+          "ignored": "(not $touch)",
           "$button_text": "gui.exit",
           "$pressed_button_name": "button.menu_exit",
           "focus_enabled": false,
@@ -510,10 +538,9 @@
           ]
         }
       },
-      { "separator_send@chat_dx.chat_bottom_separator": { "ignored": "(not $touch)", "bindings": [ { "binding_name": "#send_button_visible", "binding_name_override": "#visible" } ] } },
+      { "separator_send@chat_dx.chat_bottom_separator": { "bindings": [ { "binding_name": "#send_button_visible", "binding_name_override": "#visible" } ] } },
       { 
         "send_button@chat_dx.black_button": {
-          "ignored": "(not $touch)",
           "size": [ 36, "100%" ],
           "$pressed_button_name": "button.send",
           "$button_content": "chat_dx.send_image",
@@ -535,7 +562,7 @@
     "controls": [
       { "top_buttons@chat_dx.top_buttons": { } },
       { "bottom_panel@chat_dx.bottom_panel": { } },
-      { "message_panel@chat_dx.message_panel": { } },
+      { "chat_stack_panel@chat_dx.chat_stack_panel": { } },
       { "auto_complete_panel@chat_dx.auto_complete_panel": { } },
       { "host_main_panel@host_options_dx.host_panel": { "layer": 20 } },
       {

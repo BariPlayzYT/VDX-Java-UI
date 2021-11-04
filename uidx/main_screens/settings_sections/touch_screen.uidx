@@ -53,6 +53,30 @@
           "size": [ 310, 25 ],
           "controls": [
             {
+              "option_slider_damen@settings_common_dx.option_slider_310": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "#spyglass_touch_dampening_slider_label",
+                "$slider_name": "spyglass_touch_dampening",
+                "$slider_value_binding_name": "#spyglass_touch_dampening",
+                "$slider_tts_text_value": "#spyglass_touch_dampening_text_value",
+                "$option_enabled_binding_name": "#touch_sensitivity_enabled",
+                "$label_bindings": [
+                  {
+                    "binding_name": "$option_label"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_2": {
+          "type": "panel",
+          "size": [ 310, 25 ],
+          "controls": [
+            {
               "option_toggle_2@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
@@ -76,7 +100,7 @@
         }
       },
       {
-        "panel_2": {
+        "panel_3": {
           "type": "panel",
           "size": [ 310, 25 ],
           "controls": [
@@ -104,7 +128,7 @@
         }
       },
       {
-        "panel_3": {
+        "panel_4": {
           "type": "panel",
           "size": [ 310, 25 ],
           "controls": [
@@ -132,7 +156,7 @@
         }
       },
       {
-        "panel_4": {
+        "panel_5": {
           "type": "panel",
           "size": [ 310, 25 ],
           "controls": [

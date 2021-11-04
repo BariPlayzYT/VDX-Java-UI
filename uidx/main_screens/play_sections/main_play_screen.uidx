@@ -49,9 +49,8 @@
     "size": [ 270, "100%c" ]
   },
 
-  "base_label": {
+  "base_label@common_dx.global_label": {
     "size": [ "default", 10 ],
-    "type": "label",
     "shadow": true,
     "color": "$main_menu_button_default_color"
   },
@@ -82,11 +81,12 @@
           "size": [ 4, 20 ]
         }
       },
-      { "realms_navigation_tab@play_dx.friends_navigation_tab": { } },
+      { "realms_navigation_tab@play_dx.friends_navigation_tab": { "ignored": "$pre_release" } },
       {
         "padding_1": {
           "type": "panel",
-          "size": [ 4, 20 ]
+          "size": [ 4, 20 ],
+          "ignored": "$pre_release"
         }
       },
       { "multiplayer_navigation_tab@play_dx.server_navigation_tab": { } },

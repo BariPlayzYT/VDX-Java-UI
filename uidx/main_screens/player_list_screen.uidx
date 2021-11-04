@@ -428,7 +428,7 @@
           "size": [ "fill", 8 ],
           "controls": [
             {
-              "player_gamertag@pause.player_gamertag": {
+              "player_gamertag@pause_dx.player_gamertag": {
                 "layer": 3,
                 "color": [ 0.6667, 0.6667, 0.6667 ],
                 "anchor_to": "top_left",

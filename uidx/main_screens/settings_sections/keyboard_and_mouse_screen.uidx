@@ -359,6 +359,30 @@
           "size": [ 310, 25 ],
           "controls": [
             {
+              "option_slider_damen@settings_common_dx.option_slider_310": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "#spyglass_mouse_dampening_slider_label",
+                "$slider_name": "spyglass_mouse_dampening",
+                "$slider_value_binding_name": "#spyglass_mouse_dampening",
+                "$slider_tts_text_value": "#spyglass_mouse_dampening_text_value",
+                "$option_enabled_binding_name": "#keyboard_mouse_sensitivity_enabled",
+                "$label_bindings": [
+                  {
+                    "binding_name": "$option_label"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_2": {
+          "type": "panel",
+          "size": [ 310, 25 ],
+          "controls": [
+            {
               "option_toggle_full_keyboard_gameplay@settings_common_dx.option_toggle_310": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",

@@ -130,6 +130,38 @@
     "$left_button_texture": "main_button_200_java_dx.main_button_locked"
   },
 
+  /*//// Main Button 158 ////*/
+  
+  "main_button_158@common_buttons_dx.main_button_200": {
+    "size": [ 158, 20 ],
+    "controls": [
+      { "default@common_buttons_dx.158_default": { } },
+      { "hover@common_buttons_dx.158_hover": { } },
+      { "pressed@common_buttons_dx.158_pressed": { } },
+      { "locked@common_buttons_dx.158_locked": { } }
+    ]
+  },
+
+  "158_default@common_buttons_dx.default_base": {
+    "$left_button_texture": "main_button_158_java_dx.main_button_left_default",
+    "$right_button_texture": "main_button_158_java_dx.main_button_right_default"
+  },
+
+  "158_hover@common_buttons_dx.hover_base": {
+    "$left_button_texture": "main_button_158_java_dx.main_button_left_hover",
+    "$right_button_texture": "main_button_158_java_dx.main_button_right_hover"
+  },
+
+  "158_pressed@common_buttons_dx.pressed_base": {
+    "$left_button_texture": "main_button_158_java_dx.main_button_left_hover",
+    "$right_button_texture": "main_button_158_java_dx.main_button_right_hover"
+  },
+
+  "158_locked@common_buttons_dx.locked_base": {
+    "$left_button_texture": "main_button_158_java_dx.main_button_left_locked",
+    "$right_button_texture": "main_button_158_java_dx.main_button_right_locked"
+  },
+
   /*//// Main Button 150 ////*/
   
   "main_button_150@common_buttons_dx.main_button_200": {
@@ -322,7 +354,7 @@
     "$right_button_texture": "main_button_90_java_dx.main_button_right_locked"
   },
 
-  /*//// Main Button 90 ////*/
+  /*//// Main Button 88 ////*/
   
   "main_button_88@common_buttons_dx.main_button_200": {
     "size": [ 88, 20 ],
@@ -416,6 +448,38 @@
   "72_locked@common_buttons_dx.locked_base": {
     "$left_button_texture": "main_button_72_java_dx.main_button_left_locked",
     "$right_button_texture": "main_button_72_java_dx.main_button_right_locked"
+  },
+
+  /*//// Main Button 70 ////*/
+  
+  "main_button_70@common_buttons_dx.main_button_200": {
+    "size": [ 70, 20 ],
+    "controls": [
+      { "default@common_buttons_dx.70_default": { } },
+      { "hover@common_buttons_dx.70_hover": { } },
+      { "pressed@common_buttons_dx.70_pressed": { } },
+      { "locked@common_buttons_dx.70_locked": { } }
+    ]
+  },
+
+  "70_default@common_buttons_dx.default_base": {
+    "$left_button_texture": "main_button_70_java_dx.main_button_left_default",
+    "$right_button_texture": "main_button_70_java_dx.main_button_right_default"
+  },
+
+  "70_hover@common_buttons_dx.hover_base": {
+    "$left_button_texture": "main_button_70_java_dx.main_button_left_hover",
+    "$right_button_texture": "main_button_70_java_dx.main_button_right_hover"
+  },
+
+  "70_pressed@common_buttons_dx.pressed_base": {
+    "$left_button_texture": "main_button_70_java_dx.main_button_left_hover",
+    "$right_button_texture": "main_button_70_java_dx.main_button_right_hover"
+  },
+
+  "70_locked@common_buttons_dx.locked_base": {
+    "$left_button_texture": "main_button_70_java_dx.main_button_left_locked",
+    "$right_button_texture": "main_button_70_java_dx.main_button_right_locked"
   },
 
   /*//// Main Button 50 ////*/
@@ -580,7 +644,7 @@
   },
 
   "hover_base@common_buttons_dx.button_panel": {
-    "$has_hover_text": true,
+    "$is_hover": true,
     "$text_color": "$main_menu_button_hover_color"
   },
 
@@ -596,23 +660,15 @@
     "type": "panel",
     "size": [ "100%", 20 ],
     "$button_content|default": "common_buttons_dx.button_label",
+    "$hover_content|default": "common.empty_panel",
     "$ignore_right_texture|default": false,
     "$left_button_texture|default": "",
     "$right_button_texture|default": "",
-    "$ignore_hover_text|default": true,
-    "$has_hover_text": false,
+    "$is_hover": false,
     "controls": [
       {
-        "hover_binding": {
-          "type": "panel",
-          "ignored": "(not $has_hover_text)",
-          "controls": [
-            {
-              "hover_text_panel@common_dx.hover_text_panel": {
-                "ignored": "$ignore_hover_text"
-              }
-            }
-          ]
+        "hover_content@$hover_content": {
+          "ignored": "(not $is_hover)"
         }
       },
       { "button_content@$button_content": { "layer": 3 } },
@@ -633,13 +689,10 @@
     ]
   },
 
-  "button_label": {
-    "type": "label",
+  "button_label@common_dx.global_label": {
     "shadow": true,
     "size": [ "default", "default" ],
-    "$text_font_type|default": "default",
     "color": "$text_color",
-    "font_type": "$text_font_type",
     "text": "$button_text"
   }
 }

@@ -120,6 +120,12 @@
     "$toggle_group_forced_index": 111
   },
 
+  "realms_navigation_tab@settings_dx.game_navigation_tab": {
+    "$button_text": "",
+    "$tab_view_binding_name": "realms_tab_toggle",
+    "$toggle_group_forced_index": 111
+  },
+
   "null_navigation_tab@settings_dx.button_tab": {
     "$is_back_button": true,
     "$button_text": "gui.done",
@@ -194,12 +200,11 @@
   
   /*//// Label ////*/
 
-  "base_label": {
+  "base_label@common_dx.global_label": {
     "size": [ "default", 10 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "layer": 5,
-    "type": "label",
     "shadow": true,
     "color": "$main_menu_button_default_color"
   },
@@ -260,6 +265,13 @@
             {
               "game_navigation_tab@settings_dx.game_navigation_tab": {
                 "ignored": "(not $include_world_section)",
+                "anchor_from": "top_right",
+                "anchor_to": "top_right"
+              }
+            },
+            {
+              "realms_navigation_tab@settings_dx.realms_navigation_tab": {
+                "ignored": "(not $include_realm_section)",
                 "anchor_from": "top_right",
                 "anchor_to": "top_right"
               }
@@ -467,7 +479,7 @@
     "anchor_to": "bottom_middle",
     "size": [ "100%-4px", 10 ],
     "controls": [
-      { "pack_label@start_dx.minecraft_text": { "color": [ 0.5, 0.5, 0.5 ], "text": "Vanilla DX: Java UI v1.0" } },
+      { "pack_label@start_dx.minecraft_text": { "color": [ 0.5, 0.5, 0.5 ], "text": "Vanilla DX: Java UI v1.1.0" } },
       { "fill_panel": { "type": "panel", "size": [ "fill", 10 ] } },
       { "author_label@start_dx.minecraft_text": { "color": [ 0.5, 0.5, 0.5 ], "text": "\u0042y @\u0043ris\u0058olt" } }
     ]
@@ -627,6 +639,19 @@
             {
               "binding_type": "view",
               "source_control_name": "game_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "realms_game_screen@realms_game_world_dx.main_screen_content": {
+          "ignored": "(not $include_realm_section)",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "realms_tab_toggle",
               "source_property_name": "#toggle_state",
               "target_property_name": "#visible"
             }

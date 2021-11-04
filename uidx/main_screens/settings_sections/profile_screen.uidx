@@ -190,8 +190,7 @@
               }
             },
             {
-              "gamertag_label": {
-                "type": "label",
+              "gamertag_label@common_dx.global_label": {
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
                 "offset": [ 80, 0 ],
@@ -619,8 +618,7 @@
           "layer": 5,
           "controls": [
             {
-              "build_id_label": {
-                "type": "label",
+              "build_id_label@common_dx.global_label": {
                 "color": "$body_text_color",
                 "offset": [ 2, 0 ],
                 "anchor_from": "top_left",
@@ -634,8 +632,7 @@
               }
             },
             {
-              "protocol_version_label": {
-                "type": "label",
+              "protocol_version_label@common_dx.global_label": {
                 "color": "$body_text_color",
                 "offset": [ 2, 0 ],
                 "anchor_from": "top_left",
@@ -649,8 +646,7 @@
               }
             },
             {
-              "device_id_label": {
-                "type": "label",
+              "device_id_label@common_dx.global_label": {
                 "size": [ "100%", "default" ],
                 "color": "$body_text_color",
                 "offset": [ 2, 0 ],
@@ -665,8 +661,7 @@
               }
             },
             {
-              "MinecraftAccount_id_label": {
-                "type": "label",
+              "MinecraftAccount_id_label@common_dx.global_label": {
                 "color": "$body_text_color",
                 "offset": [ 2, 0 ],
                 "size": [ "100%", "default" ],
@@ -681,8 +676,7 @@
               }
             },
             {
-              "commerce_id_label": {
-                "type": "label",
+              "commerce_id_label@common_dx.global_label": {
                 "color": "$body_text_color",
                 "offset": [ 2, 0 ],
                 "size": [ "100%", "default" ],
@@ -697,8 +691,7 @@
               }
             },
             {
-              "account_transfer_status_label": {
-                "type": "label",
+              "account_transfer_status_label@common_dx.global_label": {
                 "color": "$body_text_color",
                 "offset": [ 2, 0 ],
                 "size": [ "100%", "default" ],
@@ -713,8 +706,7 @@
               }
             },
             {
-              "build_date_label": {
-                "type": "label",
+              "build_date_label@common_dx.global_label": {
                 "color": "$body_text_color",
                 "offset": [ 2, 0 ],
                 "anchor_from": "top_left",
@@ -728,8 +720,7 @@
               }
             },
             {
-              "world_converter_label": {
-                "type": "label",
+              "world_converter_label@common_dx.global_label": {
                 "color": "$body_text_color",
                 "offset": [ 2, 0 ],
                 "anchor_from": "top_left",

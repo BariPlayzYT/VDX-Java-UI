@@ -192,11 +192,7 @@
                       ]
                     }
                   },
-                  {
-                    "bar_and_track@common_menus_dx.scroll_bar_and_track": {
-                      "size": "$scroll_size"
-                    }
-                  }
+                  { "bar_and_track@common_menus_dx.scroll_bar_and_track_contained": { } }
                 ]
               }
             }
@@ -242,30 +238,79 @@
     ]
   },
   
-  "scroll_bar_and_track@common.scroll_bar_and_track": {
+  "scroll_bar_and_track": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
     "size": "$scroll_view_port_size",
     "anchor_from": "center",
     "anchor_to": "center",
+    "clips_children": false,
     "controls": [
+      {
+        "fill_panel": {
+          "type": "panel",
+          "size": [ "100%-6px", "100%" ]
+        }
+      },
       {
         "centered_panel": {
           "type": "panel",
-          "size": "$scroll_size",
+          "size": [ 7, "100%" ],
+          "clips_children": true,
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
           "controls": [
             {
               "track@common.scrollbar_track": {
+                "size": [ 6, "100%" ],
                 "layer": 20,
-                "anchor_from": "center",
-                "anchor_to": "center"
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle"
               }
             },
             {
               "scroll_box@common.scroll_box": {
+                "size": [ 6, "100%" ],
                 "layer": 25,
-                "anchor_from": "center",
-                "anchor_to": "center"
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "scroll_bar_and_track_contained": {
+    "type": "panel",
+    "size": [ 6, "100%" ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "clips_children": false,
+    "controls": [
+      {
+        "centered_panel": {
+          "type": "panel",
+          "size": [ 7, "100%" ],
+          "clips_children": true,
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "controls": [
+            {
+              "track@common.scrollbar_track": {
+                "size": [ 6, "100%" ],
+                "layer": 20,
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle"
+              }
+            },
+            {
+              "scroll_box@common.scroll_box": {
+                "size": [ 6, "100%" ],
+                "layer": 25,
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle"
               }
             }
           ]

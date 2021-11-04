@@ -8,10 +8,14 @@
     "layer": 4,
     "controls": [
       {
-        "chest_label@chest.chest_label": {
+        "chest_label@common_dx.global_label": {
+          "text": "$container_title",
+          "color": "$vdx_container_title_text_color",
           "offset": [ 8, 5 ],
+          "size": [ "90%", "default" ],
           "anchor_from": "top_left",
-          "anchor_to": "top_left"
+          "anchor_to": "top_left",
+          "layer": 2
         }
       },
       {
@@ -27,10 +31,14 @@
     "layer": 4,
     "controls": [
       {
-        "chest_label@chest.chest_label": {
+        "chest_label@common_dx.global_label": {
+          "text": "$container_title",
+          "color": "$vdx_container_title_text_color",
           "offset": [ 8, 5 ],
+          "size": [ "90%", "default" ],
           "anchor_from": "top_left",
-          "anchor_to": "top_left"
+          "anchor_to": "top_left",
+          "layer": 2
         }
       },
       {

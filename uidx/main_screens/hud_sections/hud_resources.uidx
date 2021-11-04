@@ -5,8 +5,7 @@
 
   /*//// XP Bar and Level Number. Created By @CrisXolt since fall 2016 ////*/
 
-  "xp_number_label": {
-    "type": "label",
+  "xp_number_label@common_dx.global_label": {
     "shadow": false,
     "text": "#level_number",
     "color": "$experience_text_color",

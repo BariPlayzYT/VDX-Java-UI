@@ -137,7 +137,6 @@
   },
 
   /*//// Panels ////*/
-
   
   "trade_item_slotB_cell_image@villager_java_dx.trade_item_slotB_cell_image": {
     "size": [ 18, 18 ],
@@ -159,7 +158,8 @@
     "layer": 4,
     "controls": [
       {
-        "villager_name_label@common.section_heading_label": {
+        "villager_name_label@common_dx.global_label": {
+          "color": "$vdx_container_title_text_color",
           "text": "$villager_name",
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",

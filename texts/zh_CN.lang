@@ -108,9 +108,9 @@ gamerule.category.drops=§l掉落
 gamerule.category.updates=§l世界更新
 gamerule.category.misc=§l杂项
 
-## Raid Texts Input
-raid.name=袭击
-raid.progress=剩余敌人:
+##  Raid Texts Input (Don't change unless you know what you are doing)
+raid.name=Raid	#
+raid.progress=Mobs remaining:	#
 
 ## Raid Texts Output
 bar.event.raid.name=袭击

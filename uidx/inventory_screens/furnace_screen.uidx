@@ -53,7 +53,16 @@
     "layer": 8,
     "$highlight_control": "common_dx.highlight_slot_panel",
     "controls": [
-      { "furnace_label@furnace.furnace_label": { "offset": [ 0, 5 ] } },
+      { 
+        "furnace_label@common_dx.global_label": {
+          "offset": [ 0, 5 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "color": "$vdx_container_title_text_color",
+          "text": "$container_title",
+          "layer": 2
+        }
+      },
       { 
         "arrow@$arrow_texture": {
           "size": [ 24, 17 ],

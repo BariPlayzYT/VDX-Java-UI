@@ -42,8 +42,7 @@
 
   /*//// Boss Collection ////*/
 
-  "bar_name": {
-    "type": "label",
+  "bar_name@common_dx.global_label": {
     "color": "$boss_name_text_color",
     "text": "#bossName",
     "anchor_from": "top_middle",

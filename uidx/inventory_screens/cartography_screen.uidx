@@ -159,8 +159,7 @@
     "size": [ 60, 60 ],
     "controls": [
       {
-        "map_name_label": {
-          "type": "label",
+        "map_name_label@common_dx.global_label": {
           "text": "map.name",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
@@ -175,10 +174,15 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [ 0, 12 ],
+          "$text_edit_box_label_offset": [ 3, 0 ],
           "$text_background_default": "chat_dx.chat_bg",
           "$text_background_hover": "chat_dx.text_edit_hover",
+          "$text_background_locked": "common.empty_panel",
           "layer": 6,
-          "size": [ "100%", 12 ]
+          "size": [ "100%", 12 ],
+          "controls": [
+            { "custom_panel@common_dx.custom_text_edit_panel": { } }
+          ]
         }
       }
     ]
@@ -189,7 +193,9 @@
     "layer": 4,
     "controls": [
       {
-        "title_label@cartography.title_label": {
+        "title_label@common_dx.global_label": {
+          "text": "tile.cartography_table.name",
+          "color": "$vdx_container_title_text_color",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [ 8, 3 ]

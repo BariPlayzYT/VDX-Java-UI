@@ -171,7 +171,16 @@
     "$background_images": "java_gui_common.cell_image",
     "$highlight_control": "common_dx.highlight_slot_panel",
     "controls": [
-      { "brewing_label@brewing_stand.brewing_label": { "offset": [ 0, 5 ] } },
+      { 
+        "brewing_label@common_dx.global_label": {
+          "offset": [ 0, 5 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "text": "$container_title",
+          "color": "$vdx_container_title_text_color",
+          "layer": 2
+        }
+      },
       { "brewing_fuel_slot@brewing_stand_dx.brewing_fuel_slot": { } },
       { "brewing_input_slot@brewing_stand_dx.brewing_input_slot": { } },
       { "brewing_output_slots@brewing_stand_dx.brewing_output_slots": { } },

@@ -14,17 +14,42 @@
           "controls": [
             { "bg@inventory_java_dx.mob_effect_bg": { "layer": 1 } },
             { 
-              "name@mob_effect.effect_name": {
+              "name@common_dx.global_label": {
                 "offset": [ 28, 5 ],
-                "layer": 3
+                "layer": 3,
+                "color": "$dark_button_default_text_color",
+                "shadow": true,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "text_alignment": "left",
+                "text": "#mob_effect_name",
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_name": "#mob_effect_name",
+                    "binding_collection_name": "mob_effects_collection",
+                    "binding_condition": "visible"
+                  }
+                ]
               }
             },
             { 
-              "timer@mob_effect.effect_timer": {
+              "timer@common_dx.global_label": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "offset": [ 28, 15 ],
-                "layer": 3
+                "layer": 3,
+                "text": "#mob_effect_timer",
+                "color": "$dark_button_secondary_default_text_color",
+                "text_alignment": "left",
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_name": "#mob_effect_timer",
+                    "binding_collection_name": "mob_effects_collection",
+                    "binding_condition": "always_when_visible"
+                  }
+                ]
               }
             },
             { 

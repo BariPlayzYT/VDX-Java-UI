@@ -56,5 +56,57 @@
         }
       }
     ]
+  },
+
+  "horizontal_left_safezone_screen": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", "100%" ],
+    "$panel_content|default": "",
+    "$left_safezone_panel_content|default": "common.empty_panel",
+    "controls": [
+      {
+        "left_safezone": {
+          "type": "panel",
+          "size": "$left_horizontal_safezone_size",
+          "controls": [
+            { "panel_content@$left_safezone_panel_content": { } }
+          ]
+        }
+      },
+      { 
+        "middle_safezone": {
+          "type": "panel",
+          "size": [ "fill", "100%" ],
+          "controls": [
+            { "panel_content@$panel_content": { } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "horizontal_right_safezone_screen": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", "100%" ],
+    "$panel_content|default": "",
+    "controls": [
+      { 
+        "middle_safezone": {
+          "type": "panel",
+          "size": [ "fill", "100%" ],
+          "controls": [
+            { "panel_content@$panel_content": { } }
+          ]
+        }
+      },
+      {
+        "right_safezone": {
+          "type": "panel",
+          "size": "$right_horizontal_safezone_size"
+        }
+      }
+    ]
   }
 }

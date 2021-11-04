@@ -11,10 +11,7 @@
         "$redstone_dialog_bg": "hopper_java_dx.dialog_bg_hopper",
         "$redstone_panel_top_half": "redstone_dx.hopper_panel_top_half",
         "$screen_content": "redstone_dx.center_screen",
-        "$screen_bg_content": "redstone_dx.full_screen",
-        "$use_loading_bars": false,
-        "$screen_animations": [ ],
-        "$background_animations": [ ]
+        "$screen_bg_content": "redstone_dx.full_screen"
       },
       {
         "requires": "$pocket_screen",
@@ -32,10 +29,7 @@
         "$redstone_dialog_bg": "dispenser_java_dx.dialog_bg_dispenser",
         "$redstone_panel_top_half": "redstone_dx.dispenser_panel_top_half",
         "$screen_content": "redstone_dx.center_screen",
-        "$screen_bg_content": "redstone_dx.full_screen",
-        "$use_loading_bars": false,
-        "$screen_animations": [ ],
-        "$background_animations": [ ]
+        "$screen_bg_content": "redstone_dx.full_screen"
       },
       {
         "requires": "$pocket_screen",
@@ -53,10 +47,7 @@
         "$redstone_dialog_bg": "dropper_java_dx.dialog_bg_dropper",
         "$redstone_panel_top_half": "redstone_dx.dispenser_panel_top_half",
         "$screen_content": "redstone_dx.center_screen",
-        "$screen_bg_content": "redstone_dx.full_screen",
-        "$use_loading_bars": false,
-        "$screen_animations": [ ],
-        "$background_animations": [ ]
+        "$screen_bg_content": "redstone_dx.full_screen"
       },
       {
         "requires": "$pocket_screen",

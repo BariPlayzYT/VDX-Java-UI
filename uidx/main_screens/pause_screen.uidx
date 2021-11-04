@@ -118,12 +118,12 @@
     "offset": [ -2, 2 ],
     "controls": [
       {
-        "server_store_button@common.button": {
-          "$pressed_button_name": "button.menu_server_store",
+        "store_button@common.button": {
+          "$pressed_button_name": "button.menu_store",
           "size": [ 20, 20 ],
           "bindings": [
             {
-              "binding_name": "#server_store_button_visible",
+              "binding_name": "#store_button_visible",
               "binding_name_override": "#visible",
               "binding_type": "global"
             }
@@ -141,7 +141,7 @@
           "size": [ 20, 4 ],
           "bindings": [
             {
-              "binding_name": "#server_store_button_visible",
+              "binding_name": "#store_button_visible",
               "binding_name_override": "#visible",
               "binding_type": "global"
             }
@@ -207,14 +207,29 @@
     ]
   },
 
+  "player_gamertag@common_dx.global_label": {
+    "color": "$main_header_text_color",
+    "text": "#gamertag",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "size": [ "100%", 10 ],
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#gamertag",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
+      }
+    ]
+  },
+
   /*////// PANELS //////*/
 
   "main_panel": {
     "type": "panel",
     "controls": [
       { 
-        "game_menu_label": {
-          "type": "label",
+        "game_menu_label@common_dx.global_label": {
           "offset": [ 0, "13%" ],
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",

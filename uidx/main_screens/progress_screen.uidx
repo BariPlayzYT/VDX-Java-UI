@@ -71,7 +71,11 @@
     "size": [ "100%", 10 ],
     "controls": [
       {
-        "pointer_text_tip_panel@progress.progress_bar_text": {
+        "pointer_text_tip_panel@common_dx.global_label": {
+          "text": "#progress_text",
+          "bindings": [
+            { "binding_name": "#progress_text" }
+          ],
           "localize": false,
           "shadow": true,
           "anchor_from": "bottom_middle",
@@ -86,7 +90,7 @@
     ]
   },
 
-  "progress_title_text@progress.progress_screen_text": {
+  "progress_title_text@common_dx.global_label": {
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "size": [ "default", 20 ],
@@ -94,7 +98,6 @@
     "max_size": [ "100% - 8px", 20 ],
     "offset": [ 0, 69 ],
     "text": "#title_text",
-    "font_size": "medium",
     "bindings": [
       {
         "binding_name": "#title_text"
@@ -226,7 +229,8 @@
     "controls": [
       { "progress_title_text@progress_dx.progress_title_text": {} },
       {
-        "progress_bar_text@progress.progress_bar_text": {
+        "progress_bar_text@common_dx.global_label": {
+          "color": "$loading_text_color",
           "shadow": true,
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
@@ -267,7 +271,8 @@
     "controls": [
       { "progress_title_text@progress_dx.progress_title_text": {} },
       {
-        "progress_bar_text@progress.progress_bar_text": {
+        "progress_bar_text@common_dx.global_label": {
+          "color": "$loading_text_color",
           "shadow": true,
           "offset": [ 0, 93 ],
           "text": "#progress_text",

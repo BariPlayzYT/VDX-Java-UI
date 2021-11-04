@@ -33,16 +33,14 @@
     "$number_text|default": "",
     "controls": [
       {
-        "number_label": {
-          "type": "label",
+        "number_label@common_dx.global_label": {
           "text": "$number_text",
           "shadow": true,
           "size": [ "default", 10 ]
         }
       },
       {
-        "percentage_label": {
-          "type": "label",
+        "percentage_label@common_dx.global_label": {
           "text": "vdx.loading.percentage",
           "shadow": true,
           "size": [ "default", 10 ]
@@ -150,8 +148,7 @@
     ]
   },
 
-  "loading_label": {
-    "type": "label",
+  "loading_label@common_dx.global_label": {
     "shadow": true,
     "text": "$loading_text",
     "size": [ "default", 10 ],

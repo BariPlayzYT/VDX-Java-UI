@@ -54,6 +54,7 @@
   /*//// 2x2 Crafting panel ////*/
 
   "crafting_cell_images@common_dx.container_cell_images": {
+    "$cell_images_binding_condition": "always",
     "controls": [
       { "cell_red_slot@inventory_dx.cell_red_slot": {} },
       { "cell_red_slot_overlay@inventory_dx.cell_red_slot_overlay": {} },
@@ -107,10 +108,13 @@
     "$highlight_slot_image": "inventory_dx.highlight_slot_image",
     "controls": [
       {
-        "crafting_label@crafting.crafting_label": {
+        "crafting_label@common_dx.global_label": {
+          "text": "container.crafting",
+          "color": "$vdx_container_title_text_color",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [ 0, 0 ],
+          "layer": 2,
           "size": [ "default", 10 ]
         }
       },
@@ -436,6 +440,7 @@
     "controls": [
       {
         "close_button@chat_dx.black_button": {
+          "ignored": "(not $touch)",
           "$pressed_button_name": "button.menu_exit",
           "$button_content": "inventory_dx.close_icon",
           "anchor_from": "top_right",

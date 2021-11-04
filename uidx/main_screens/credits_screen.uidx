@@ -10,8 +10,7 @@
     "size": [ "100%", 12 ]
   },
 
-  "base_label": {
-    "type": "label",
+  "base_label@common_dx.global_label": {
     "size": [ "100%", "default" ],
     "shadow": true,
     "font_scale_factor": 1.0,

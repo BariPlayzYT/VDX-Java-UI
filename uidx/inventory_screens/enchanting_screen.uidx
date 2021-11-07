@@ -212,7 +212,7 @@
     "offset": [ 34, 46 ],
     "controls": [
       {
-        "lapis@common.container_item": {
+        "lapis@container_item_dx.container_item": {
           "grid_position": [ 0, 0 ],
           "$cell_overlay_ref": "enchanting_dx.lapis_icon",
           "$item_collection_name": "enchanting_lapis_items",
@@ -227,7 +227,7 @@
     "offset": [ 14, 46 ],
     "controls": [
       {
-        "item_slot@common.container_item": {
+        "item_slot@container_item_dx.container_item": {
           "grid_position": [ 0, 0 ],
           "$item_collection_name": "enchanting_input_items"
         }
@@ -381,7 +381,7 @@
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
     "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
-      { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
+      { "inventory_selected_icon_button@selected_icon_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
       { "enchanting_panel@enchanting_dx.enchanting_panel": { } }
     ]

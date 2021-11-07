@@ -69,7 +69,9 @@
   "recipe_grid_input@anvil_dx.recipe_grid": {
     "controls": [
       {
-        "input_item_slot@anvil.anvil_item_slot": {
+        "input_item_slot@container_item_dx.container_item": {
+          "anchor_to": "center",
+          "anchor_from": "center",
           "grid_position": [ 0, 0 ],
           "$item_collection_name": "anvil_input_items",
           "$focus_id_binding_type": "none",
@@ -84,7 +86,9 @@
   "recipe_grid_material@anvil_dx.recipe_grid": {
     "controls": [
       {
-        "material_item_slot@anvil.anvil_item_slot": {
+        "material_item_slot@container_item_dx.container_item": {
+          "anchor_to": "center",
+          "anchor_from": "center",
           "grid_position": [ 0, 0 ],
           "$item_collection_name": "anvil_material_items",
           "$focus_id_binding_type": "none",
@@ -113,7 +117,9 @@
   "recipe_grid_result@anvil_dx.recipe_grid": {
     "controls": [
       {
-        "result_item_slot@anvil.anvil_item_slot": {
+        "result_item_slot@container_item_dx.container_item": {
+          "anchor_to": "center",
+          "anchor_from": "center",
           "grid_position": [ 0, 0 ],
           "$item_collection_name": "anvil_result_items",
           "$button_ref": "anvil.anvil_output_slot_button",
@@ -203,7 +209,7 @@
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
     "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
-      { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
+      { "inventory_selected_icon_button@selected_icon_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
       { "anvil_panel@anvil_dx.anvil_panel": { } }
     ]

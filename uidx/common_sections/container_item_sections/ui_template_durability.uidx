@@ -3,6 +3,100 @@
 {
   "namespace": "common_durability_dx",
 
+  ////*/ Main Durability Bar /*////
+
+  "durability_bar_common": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "durability_bar_hold": {
+          "type": "panel",
+          "size": [ 16, 16 ],
+          "ignored": "$custom_durability_bar",
+          "controls": [
+            { 
+              "durability_bar@common.durability_bar": {
+                "layer": 0,
+                "size": [ 13, 1 ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [ 2, -2 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "custom_durability_bar_hold": {
+          "type": "panel",
+          "size": [ 16, 16 ],
+          "ignored": "(not $custom_durability_bar)",
+          "controls": [
+            { "durability_bar@common_durability_dx.durability_bar": { } }
+          ]
+        }
+      }
+    ]
+  },
+
+  ////*/ Durability Bar For Selected Icon /*////
+
+  "durability_bar_selected_icon": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "durability_bar_hold": {
+          "type": "panel",
+          "size": [ 16, 16 ],
+          "ignored": "$custom_durability_bar",
+          "controls": [
+            { 
+              "durability_bar_grabbed@common.durability_bar_grabbed": {
+                "size": [ 13, 1 ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [ 2, -2 ],
+                "layer": 61
+              }
+            }
+          ]
+        }
+      },
+      {
+        "custom_durability_bar_hold": {
+          "type": "panel",
+          "size": [ 16, 16 ],
+          "ignored": "(not $custom_durability_bar)",
+          "controls": [
+            { 
+              "durability_bar_grabbed@common_durability_dx.durability_bar": {
+                "layer": 61,
+                "$item_renderer_size": [ 16, 16 ],
+                "$is_grabbed": true,
+                "$total_amount": "#selected_item_durability_total_amount",
+                "$current_amount": "#selected_item_durability_current_amount",
+                "bindings": [
+                  {
+                    "binding_name": "$total_amount"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ($total_amount = 0))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  ////*/ Resources /*////
+
   /* Durability textures */
 
   "durability_bindings": {

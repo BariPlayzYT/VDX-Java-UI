@@ -19,7 +19,7 @@
         }
       },
       {
-        "input_item_slot@grindstone.grindstone_item_slot": {
+        "input_item_slot@container_item_dx.container_item": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [ 48, 18 ],
@@ -33,7 +33,7 @@
         }
       },
       {
-        "additional_item_slot@grindstone.grindstone_item_slot": {
+        "additional_item_slot@container_item_dx.container_item": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [ 48, 39 ],
@@ -61,7 +61,7 @@
         }
       },
       {
-        "result_item_slot@grindstone.grindstone_item_slot": {
+        "result_item_slot@container_item_dx.container_item": {
           "offset": [ -30, 33 ],
           "anchor_from": "top_right",
           "anchor_to": "top_right",
@@ -98,7 +98,7 @@
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
     "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
-      { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
+      { "inventory_selected_icon_button@selected_icon_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
       { "grindstone_panel@grindstone_dx.grindstone_panel": { } }
     ]

@@ -10,7 +10,7 @@
     "size": [ 16, 16 ],
     "controls": [
       {
-        "stack_count_label@common_dx.global_label": {
+        "stack_count_label@common_dx.global_label_numbers": {
           "layer": 2,
           "shadow": true,
           "color": "$item_stack_count_color",
@@ -99,53 +99,33 @@
     ]
   },
 
-  "single_item_grid@trade2.single_item_grid": {
+  "single_item_grid": {
+    "type": "grid",
+    "size": [ 18, 18 ],
+    "grid_dimensions": [ 1, 1 ],
     "collection_name": "$trade_item_collection_name",
     "controls": [
       {
         "item_with_count": {
           "type": "panel",
-          "size": [ "100%cm", "100%cm" ],
+          "size": [ 16, 16 ],
           "$stack_count_required": true,
           "controls": [
+            { "item_renderer_for_trade2@item_renderer_dx.item_renderer_for_trade2": { } },
             {
-              "item_renderer@common.item_renderer": {
-                "size": "$item_renderer_size",
-                "$item_renderer_size|default": [ 16, 16 ],
-                "layer": 1,
-                "bindings": [
-                  {
-                    "binding_type": "collection_details"
-                  },
-                  {
-                    "binding_name": "#item_id_aux"
-                  },
-                  {
-                    "binding_name": "#item_custom_color"
-                  },
-                  {
-                    "binding_name": "#item_pickup_time"
-                  },
-                  {
-                    "binding_name": "#banner_patterns"
-                  },
-                  {
-                    "binding_name": "#banner_colors"
-                  },
-                  {
-                    "binding_name": "#banner_type"
-                  }
-                ],
+              "renderer_panel": {
+                "type": "panel",
+                "size": [ 16, 16 ],
                 "controls": [
                   {
-                    "stack_count_label@common_dx.global_label": {
+                    "stack_count_label@common_dx.global_label_numbers": {
                       "layer": 2,
                       "shadow": true,
                       "color": "$item_stack_count_color",
                       "text": "#trade_item_count",
-                      "anchor_from": "bottom_right",
                       "anchor_to": "bottom_right",
-                      "offset": [ 1, 1 ],
+                      "anchor_from": "bottom_right",
+                      "offset": [ 1, 2 ],
                       "bindings": [
                         {
                           "binding_type": "collection_details"
@@ -488,8 +468,8 @@
     "anchor_to": "top_left",
     "anchor_from": "top_left",
     "offset": [ 5, 18 ],
-    "size": [ 95, 140 ],
-    "$scroll_size": [ 6, 140 ],
+    "size": [ 95.5, 140 ],
+    "$scroll_size": [ 7, 140 ],
     "$scroll_view_port_size": [ 89, 140 ],
     "$scrolling_pane_size": [ "100%", "100%" ],
     "$scroll_box_image_control": "villager2_java_dx.scroll_box",
@@ -768,13 +748,18 @@
     ]
   },
 
-  "item_slot@trade2.item_slot": {
+  "item_slot@container_item_dx.container_item": {
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "size": [ 18, 18 ],
     "$cell_image_size": [ 18, 18 ],
     "$item_renderer_panel_size": [ 18, 18 ],
-    "$item_renderer_size": [ 16, 16 ]
+    "$item_renderer_size": [ 16, 16 ],
+    "$background_images": "trade2.container_cell_image",
+
+    "$item_renderer_binding_condition": "always_when_visible",
+    "$stack_count_binding_condition": "always_when_visible",
+    "$cell_image_binding_condition": "always"
   },
 
   "ingredient_1_item_slot@trade2_dx.item_slot": {
@@ -834,7 +819,7 @@
         "result_item_slot@trade2_dx.result_item_slot": {
           "$highlight_slot_image": "java_gui_common.highlight_slot_output",
           "size": [ 26, 26 ],
-          "offset": [ 115, 32 ]
+          "offset": [ 115, 33 ]
         }
       },
       { "arrow_panel@trade2_dx.arrow_panel": { } }
@@ -868,7 +853,7 @@
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
     "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
-      { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
+      { "inventory_selected_icon_button@selected_icon_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
       { "trade2_panel@trade2_dx.trade2_panel": { } }
     ]

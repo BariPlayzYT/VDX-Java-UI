@@ -5,7 +5,7 @@
 
   /*//// Grid ////*/
   
-  "furnace_ingredient_item@common.container_item": {
+  "furnace_ingredient_item@container_item_dx.container_item": {
     "$background_images": "java_gui_common.cell_image",
     "size": [ 18, 18 ],
     "anchor_from": "top_left",
@@ -19,7 +19,7 @@
     "$focus_override_up_binding_type": "none"
   },
 
-  "furnace_fuel_item@common.container_item": {
+  "furnace_fuel_item@container_item_dx.container_item": {
     "$background_images": "java_gui_common.cell_image",
     "size": [ 18, 18 ],
     "anchor_from": "top_left",
@@ -33,7 +33,7 @@
     "$focus_override_left_binding_type": "none"
   },
   
-  "furnace_output_item@common.container_item": {
+  "furnace_output_item@container_item_dx.container_item": {
     "$background_images": "java_gui_common.cell_image_output",
     "$highlight_slot_image": "java_gui_common.highlight_slot_output",
     "size": [ 26, 26 ],
@@ -123,7 +123,7 @@
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
     "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
-      { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
+      { "inventory_selected_icon_button@selected_icon_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
       { "furnace_panel@furnace_dx.furnace_panel": { } }
     ]

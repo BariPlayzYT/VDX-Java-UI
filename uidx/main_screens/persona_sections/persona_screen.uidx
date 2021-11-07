@@ -414,7 +414,7 @@
                 "size": [ "100%", 0.5 ]
               }
             },
-            { "main_panel@common_screens_dx.horizontal_right_safezone_screen": { "$panel_content": "persona_dx.header_content" } }
+            { "main_panel@common_screens_dx.horizontal_safezone_screen": { "$panel_content": "persona_dx.header_content" } }
           ]
         }
       },
@@ -443,7 +443,7 @@
                 "size": [ "100%", 0.5 ]
               }
             },
-            { "main_panel@common_screens_dx.horizontal_right_safezone_screen": { "$panel_content": "persona_dx.botton_buttons" } }
+            { "main_panel@common_screens_dx.horizontal_safezone_screen": { "$panel_content": "persona_dx.botton_buttons" } }
           ]
         }
       }
@@ -606,13 +606,14 @@
     "$font_scale_factor": 0.8,
     "$controller_left_bumper_mapping": "",
     "$controller_right_bumper_mapping": "",
-    "controls": [
+    "controls": [/* 
       { 
         "persona_screen_main_panel@common_screens_dx.horizontal_left_safezone_screen": {
           "$left_safezone_panel_content": "sidebar_navigation_dx.sidebar_bg_safezone_fix",
           "$panel_content": "persona_dx.persona_screen_main_panel"
         }
-      },
+      }, */
+      { "main_persona_content@persona_dx.main_persona_content": { } },
       {
         "popup_dialog_factory_0": {
           "type": "factory",

@@ -391,7 +391,7 @@
           "size": [ 18, 18 ],
           "controls": [
             {
-              "head_grid_item@common.container_item": {
+              "head_grid_item@container_item_dx.container_item": {
                 "grid_position": [ 0, 0 ],
                 "$cell_overlay_ref": "crafting.armor_overlay_helmet"
               }
@@ -405,7 +405,7 @@
           "offset": [ 0, 9 ],
           "controls": [
             {
-              "chest_grid_item@common.container_item": {
+              "chest_grid_item@container_item_dx.container_item": {
                 "grid_position": [ 0, 1 ],
                 "$cell_overlay_ref": "crafting.armor_overlay_chest"
               }
@@ -419,7 +419,7 @@
           "offset": [ 54, -36 ],
           "controls": [
             {
-              "legs_grid_item@common.container_item": {
+              "legs_grid_item@container_item_dx.container_item": {
                 "grid_position": [ 0, 2 ],
                 "$cell_overlay_ref": "crafting.armor_overlay_legs"
               }
@@ -433,7 +433,7 @@
           "offset": [ 54, -27 ],
           "controls": [
             {
-              "feet_grid_item@common.container_item": {
+              "feet_grid_item@container_item_dx.container_item": {
                 "grid_position": [ 0, 3 ],
                 "$cell_overlay_ref": "crafting.armor_image_feet"
               }
@@ -643,14 +643,19 @@
       { "normal_tab_content@creative_dx.normal_tab_content": { } },
       { "search_tab_content@creative_dx.search_tab_content": { } },
       {
-        "creative_hotbar_panel@common.hotbar_grid_template": {
+        "creative_hotbar_panel": {
+          "type": "grid",
+          "size": [ 162, 18 ],
+          "grid_dimensions": [ 9, 1 ],
+          "collection_name": "hotbar_items",
+          "grid_item_template": "common_dx.grid_item_for_hotbar",
           "$background_images": "java_gui_common.cell_image",
           "$highlight_control": "common_dx.highlight_slot_panel",
           "$button_ref": "crafting.creative_hotbar_container_slot_button",
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "offset": [ 8, -7 ],
-          "layer": 20
+          "layer": 2
         }
       },
       {
@@ -777,7 +782,7 @@
     ]
   },
 
-  "grid_item_for_creative@crafting.grid_item_for_recipe_book": {
+  "grid_item_for_creative@recipe_book_dx.grid_item": {
     "$highlight_control": "common_dx.highlight_slot_panel",
     "$background_images": "java_gui_common.cell_image"
   },

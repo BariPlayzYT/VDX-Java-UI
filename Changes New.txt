@@ -1,3 +1,15 @@
+v1.1.2  [06/11/2021]
+[Additions]
+[+] Toast Screen for Java UI
+[+] Achievement Button for start_screen.
+[+] Full comaptibility for AgentMindStorm's Java Aspects v5.0.0 Beta!
+[Changes]
+[*] The previous design for dressing room and person has been returned, but they are still improved.
+[*] Added the ability to edit worlds/servers and entering the Realms Feed screen when using the controller.
+        Press the "X" Button if you are using Xbox One/Series, Nintendo Switch Pro Controller/Joycons, or generic Controller.
+        Press the "▢" Button if you are using PlayStation Dualshock 4 or Dualsense Controller.
+[*] Visual bug fixes for scroll box.
+
 v1.1.0  [31/10/2021]
 [Additions]
 [+] Realms Setting for Java UI

@@ -12,7 +12,7 @@
     "size": [ "100%", "100%" ],
     "controls": [
       /*//// Tabs ////*/
-      //{ "mode_panel@persona_panel_content.mode_panel": { } },
+      { "mode_panel@persona_panel_content.mode_panel": { } },
       /*//// Top Content ////*/
       { "top_panel_content@persona_create_dx.create_top_panel_content": { } },
       { "skins_top_panel_content@persona_skins_dx.skins_top_panel_content": { } },

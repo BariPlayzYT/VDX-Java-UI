@@ -202,7 +202,7 @@
         }
       },
       {
-        "input_item_slot@cartography.cartography_item_slot": {
+        "input_item_slot@container_item_dx.container_item": {
           "$background_images": "java_gui_common.cell_image",
           "$highlight_control": "common_dx.highlight_slot_panel",
           "anchor_from": "top_left",
@@ -218,7 +218,7 @@
         }
       },
       {
-        "additional_item_slot@cartography.cartography_item_slot": {
+        "additional_item_slot@container_item_dx.container_item": {
           "$background_images": "java_gui_common.cell_image",
           "$highlight_control": "common_dx.highlight_slot_panel",
           "anchor_from": "top_left",
@@ -235,7 +235,7 @@
       },
       { "map_image_panel@cartography_dx.map_image_panel": {} },
       {
-        "result_item_slot@cartography.cartography_item_slot": {
+        "result_item_slot@container_item_dx.container_item": {
           "$background_images": "java_gui_common.cell_image_output",
           "$highlight_control": "common_dx.highlight_slot_panel",
           "$highlight_slot_image": "java_gui_common.highlight_slot_output",
@@ -276,7 +276,7 @@
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
     "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
-      { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
+      { "inventory_selected_icon_button@selected_icon_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
       { "cartography_panel@cartography_dx.cartography_panel": { } }
     ]

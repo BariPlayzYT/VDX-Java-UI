@@ -123,7 +123,7 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "offset": [ 0, 6 ],
-    "size": [ 12, "100%-11px" ],
+    "size": [ 14, "100%-11px" ],
     "clips_children": true,
     "controls": [
       { "00@stonecutter_java_dx.scroll_middle": { } },

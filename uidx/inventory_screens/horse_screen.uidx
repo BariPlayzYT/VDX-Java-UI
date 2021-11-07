@@ -50,7 +50,12 @@
     "anchor_from": "top_left",
     "offset": [ 7, 17 ],
     "controls": [
-      { "equip_grid@horse.equip_grid": { "layer": 4 } },
+      { 
+        "equip_grid@horse.equip_grid": {
+          "grid_item_template": "@container_item_dx.container_item",
+          "layer": 4
+        }
+      },
       {
         "armor_cell@horse_java_dx.armor_cell_image": {
           "anchor_from": "top_left",
@@ -127,7 +132,11 @@
           ]
         }
       },
-      { "inv_grid@horse.inv_grid": {} }
+      { 
+        "inv_grid@horse.inv_grid": {
+          "grid_item_template": "@container_item_dx.container_item"
+        }
+      }
     ]
   },
 
@@ -174,7 +183,7 @@
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
     "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
-      { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
+      { "inventory_selected_icon_button@selected_icon_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
       { "horse_panel@horse_dx.horse_panel": { } }
     ]

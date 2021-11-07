@@ -33,7 +33,7 @@
                       "size": [ 304, "default" ],
                       "anchor_to": "top_middle",
                       "anchor_from": "top_middle",
-                      "grid_item_template": "play_multiplayer_dx.network_world_item"
+                      "grid_item_template": "play_multiplayer_dx.third_party_network_world_item"
                     }
                   }
                 ]
@@ -779,9 +779,46 @@
 
   /*////// GRID CONTENT //////*/
 
+  "third_party_network_world_item@play_multiplayer_dx.network_world_item": {
+    "$network_button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_network_world_item",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_network_world_item",
+        "mapping_type": "focused"
+      }
+    ]
+  },
+
   "network_world_item": {
     "type": "panel",
     "size": [ "100%", 36 ],
+    "$network_button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_network_world_item",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_network_world_item",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.menu_network_server_world_edit",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.menu_network_server_world_edit",
+        "mapping_type": "pressed"
+      }
+    ],
     "controls": [
       {
         "play_button@common.button": {
@@ -790,13 +827,13 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "layer": 8,
-          "$pressed_button_name": "button.menu_network_world_item",
           "bindings": [
             {
               "binding_type": "collection_details",
               "binding_collection_name": "$collection_name"
             }
           ],
+          "button_mappings": "$network_button_mappings",
           "controls": [
             { 
               "hover@world_selection_java_dx.select_world_button_hover": {
@@ -1331,6 +1368,21 @@
         "more_multiplayer_buttons_panel": {
           "type": "input_panel",
           "controls": [
+            {
+              "gamepad_helper_x@common_tooltip_dx.gamepad_helper_x": {
+                "$hide_description": true,
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [ 2, -2 ],
+                "layer": 10,
+                "bindings": [
+                  {
+                    "binding_name": "#is_using_gamepad",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
             { "more_server_items_bottom@cris_play_grid_items.more_servers_items_bottom": { } },
             {
               "featured_servers_button@common_toggles_dx.main_button_toggle": {
@@ -1384,6 +1436,21 @@
           "$button_text": "options.edit",
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left"
+        }
+      },
+      {
+        "gamepad_helper_a@common_tooltip_dx.gamepad_helper_a": {
+          "$hide_description": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 2, 2 ],
+          "layer": 10,
+          "bindings": [
+            {
+              "binding_name": "#is_using_gamepad",
+              "binding_name_override": "#visible"
+            }
+          ]
         }
       },
       {

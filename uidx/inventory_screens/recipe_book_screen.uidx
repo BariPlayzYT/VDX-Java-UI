@@ -304,8 +304,24 @@
   },
 
   /*//// Tabs Content Pages ////*/
+
+  "grid_item@container_item_dx.inventory_container_item": {
+    "$stack_count_required": true,
+    "$durability_bar_required": false,
+    "$item_renderer_binding_condition": "visible",
+    "$button_ref": "crafting.creative_no_coalesce_container_slot_button",
+    "$background_images": "crafting.recipe_container_cell_images",
+
+    "$slot_selected_binding_name": "#is_creative_selected_slot",
+
+    "$stack_count_binding_name": "#recipe_craftable_count",
+    "$item_collection_name": "recipe_book",
+    "$scrolling_grid_item_size|default": [ 18, 18 ],
+    "$hover_text_binding_name": "#recipe_hover_text",
+    "size": "$scrolling_grid_item_size"
+  },
   
-  "grid_item_for_recipe_book@crafting.grid_item_for_recipe_book": {
+  "grid_item_for_recipe_book@recipe_book_dx.grid_item": {
     "$highlight_control": "common_dx.highlight_slot_panel",
     "$background_images": "recipe_book_dx.recipe_container_cell_images",
     "$highlight_slot_image": "common.empty_panel",
@@ -338,7 +354,7 @@
       {
         "search_tab_pages@crisxolt_pages_panels.recipe_book_tab_pages": {
           "$tab_page": "search",
-          "$number_right": "33",
+          "$number_right": "37",
           "bindings": [
             {
               "binding_name": "#is_left_tab_search",
@@ -350,7 +366,7 @@
       {
         "construct_tab_pages@crisxolt_pages_panels.recipe_book_tab_pages": {
           "$tab_page": "construct",
-          "$number_right": "14",
+          "$number_right": "17",
           "$is_construct_pages": true,
           "bindings": [
             {
@@ -389,7 +405,7 @@
       {
         "nature_tab_pages@crisxolt_pages_panels.recipe_book_tab_pages": {
           "$tab_page": "nature",
-          "$number_right": "3",
+          "$number_right": "4",
           "$is_nature_pages": true,
           "bindings": [
             {
@@ -441,17 +457,7 @@
   },
 
   "construction_icon@recipe_book_dx.item_renderer": {
-    "$object_item_id": 45, //  Block of Brick - ID: 45
-    "controls": [
-      {
-        "overlay": {
-          "type": "image",
-          "layer": 17,
-          "size": [ 16, 16 ],
-          "texture": "textures/ui/block_overlay"
-        }
-      }
-    ]
+    "$object_item_id": 45 //  Block of Brick - ID: 45
   },
 
   "equipment_icon@recipe_book_dx.item_renderer": {
@@ -494,27 +500,21 @@
       }
     ]
   },
-
-  "survival_inv_icon": {
-    "type": "panel",
-    "size": [ 16, 16 ],
+  
+  "survival_inv_icon@recipe_book_dx.item_renderer": {
     "offset": [ 9, 5 ],
+    "layer": 16,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$object_item_id": 54, //  Chest - ID: 54
     "controls": [
+      /*  Added compatibility for AgentMindStorm's Java Aspects  */
       {
         "overlay": {
+          "ignored": "(not $is_java_aspects)",
           "type": "image",
-          "layer": 17,
           "size": [ 16, 16 ],
-          "texture": "textures/ui/chest_icon"
-        }
-      },
-      {
-        "survival_inv_icon@recipe_book_dx.item_renderer": {
-          "offset": [ 0, 0 ],
-          "layer": 16,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "$object_item_id": 54 //  Chest - ID: 54
+          "texture": "textures/icon/chest"
         }
       }
     ]

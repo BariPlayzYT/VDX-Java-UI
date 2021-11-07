@@ -59,7 +59,6 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "layer": 8,
-          "$pressed_button_name": "button.menu_start_local_world",
           "bindings": [
             {
               "binding_type": "collection_details",
@@ -70,6 +69,28 @@
               "binding_name": "#world_button_focus_identifier",
               "binding_name_override": "#focus_identifier",
               "binding_collection_name": "local_worlds"
+            }
+          ],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_start_local_world",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_start_local_world",
+              "mapping_type": "focused"
+            },
+            {
+              "from_button_id": "button.menu_secondary_select",
+              "to_button_id": "button.menu_local_world_item_edit",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.controller_select",
+              "to_button_id": "button.menu_local_world_item_edit",
+              "mapping_type": "pressed"
             }
           ],
           "controls": [
@@ -364,6 +385,36 @@
           "$button_text": "options.edit",
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left"
+        }
+      },
+      {
+        "gamepad_helper_a@common_tooltip_dx.gamepad_helper_a": {
+          "$hide_description": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 2, 2 ],
+          "layer": 10,
+          "bindings": [
+            {
+              "binding_name": "#is_using_gamepad",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "gamepad_helper_x@common_tooltip_dx.gamepad_helper_x": {
+          "$hide_description": true,
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 2, -2 ],
+          "layer": 10,
+          "bindings": [
+            {
+              "binding_name": "#is_using_gamepad",
+              "binding_name_override": "#visible"
+            }
+          ]
         }
       },
       { "local_world_items_bottom@cris_play_grid_items.local_world_items_bottom": { } },

@@ -475,7 +475,7 @@
           "type": "panel",
           "size": [ "fill", "100%" ]
         }
-      }, */
+      },
       {
         "skin_1": {
           "type": "panel",
@@ -488,7 +488,7 @@
             }
           ]
         }
-      },/* 
+      },
       {
         "padding_0": {
           "type": "panel",
@@ -633,13 +633,13 @@
             } 
           ]
         }
-      },/* 
+      }/*, 
       {
         "padding_5": {
           "type": "panel",
           "size": [ "fill", "100%" ]
         }
-      }, */
+      },
       {
         "skin_5": {
           "type": "panel",
@@ -652,7 +652,7 @@
             }
           ]
         }
-      }/* ,
+      },
       {
         "right_padding": {
           "type": "panel",
@@ -1035,7 +1035,7 @@
             {
               "left_button_panel": {
                 "type": "panel",
-                "size": [ 40, "100%" ],
+                "size": [ 28, "100%" ],
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
                 "controls": [
@@ -1063,7 +1063,7 @@
             {
               "right_button_panel": {
                 "type": "panel",
-                "size": [ 40, "100%" ],
+                "size": [ 28, "100%" ],
                 "anchor_from": "right_middle",
                 "anchor_to": "right_middle",
                 "controls": [
@@ -1130,7 +1130,7 @@
             {
               "left_button_panel": {
                 "type": "panel",
-                "size": [ 40, "100%" ],
+                "size": [ 28, "100%" ],
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
                 "controls": [
@@ -1158,7 +1158,7 @@
             {
               "right_button_panel": {
                 "type": "panel",
-                "size": [ 40, "100%" ],
+                "size": [ 28, "100%" ],
                 "anchor_from": "right_middle",
                 "anchor_to": "right_middle",
                 "controls": [
@@ -1334,81 +1334,7 @@
     "type": "stack_panel",
     "orientation": "vertical",
     "size": [ "100%", "100%" ],
-    "controls": [/* 
-      {
-        "left_panel": {
-          "type": "panel",
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [ 0, 0 ],
-          "size": [ 90, "100%" ],
-          "controls": [
-            {
-              "bg@main_profile_dx.bg_image_base": {
-                "anchor_from": "right_middle",
-                "anchor_to": "right_middle",
-                "size": [ "300%", "100%" ],
-                "color": [ 0.11764, 0.11764, 0.11764 ],
-                "layer": 1
-              }
-            },
-            {
-              "buttons_stack_panel": {
-                "type": "stack_panel",
-                "anchor_from": "right_middle",
-                "anchor_to": "right_middle",
-                "size": [ "100%", "100%" ],
-                "controls": [
-                  {
-                    "top_panel": {
-                      "type": "panel",
-                      "size": [ "100%", 3 ]
-                    }
-                  },
-                  {
-                    "name_panel": {
-                      "type": "panel",
-                      "size": [ "100%", 27 ],
-                      "controls": [
-                        { "toggle_content@main_profile_dx.toggle_content": { } },
-                        { "main_toggle_control@main_profile_dx.main_toggle_control": { } },
-                        { "main_toggle_dropbox_content@main_profile_dx.main_toggle_dropbox_content": { } }
-                      ]
-                    }
-                  },
-                  {
-                    "panel_0": {
-                      "type": "panel",
-                      "size": [ "100%", "fill" ]
-                    }
-                  },
-                  {
-                    "achievements_button@main_profile_dx.left_base_button": {
-                      "$base_text": "gui.achievements",
-                      "$pressed_button_name": "button.achievements",
-                      "$left_icon_texture": "textures/uidx/profile_screen/achievements_icon"
-                    }
-                  },
-                  {
-                    "options_button@main_profile_dx.left_base_button": {
-                      "$base_text": "menu.options",
-                      "$pressed_button_name": "button.settings",
-                      "$left_icon_texture": "textures/uidx/profile_screen/options_icon"
-                    }
-                  },
-                  {
-                    "back_button@main_profile_dx.left_base_button": {
-                      "$base_text": "gui.back",
-                      "$pressed_button_name": "button.try_exiting",
-                      "$left_icon_texture": "textures/uidx/profile_screen/back_icon"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      }, */
+    "controls": [
       {
         "header_panel": {
           "type": "panel",
@@ -1513,15 +1439,104 @@
     "type": "panel",
     "layer": -1,
     "controls": [
-      { "main_panel@main_profile_dx.main_panel": { } },
+      {
+        "left_panel": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ 90, "100%" ],
+          "controls": [
+            {
+              "bg@main_profile_dx.bg_image_base": {
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "size": [ "300%", "100%" ],
+                "color": [ 0.11764, 0.11764, 0.11764 ],
+                "layer": 1
+              }
+            },
+            {
+              "buttons_stack_panel": {
+                "type": "stack_panel",
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "size": [ "100%", "100%" ],
+                "controls": [
+                  {
+                    "top_panel": {
+                      "type": "panel",
+                      "size": [ "100%", 3 ]
+                    }
+                  },
+                  {
+                    "name_panel": {
+                      "type": "panel",
+                      "size": [ "100%", 27 ],
+                      "controls": [
+                        { "toggle_content@main_profile_dx.toggle_content": { } },
+                        { "main_toggle_control@main_profile_dx.main_toggle_control": { } },
+                        { "main_toggle_dropbox_content@main_profile_dx.main_toggle_dropbox_content": { } }
+                      ]
+                    }
+                  },
+                  {
+                    "panel_0": {
+                      "type": "panel",
+                      "size": [ "100%", "fill" ]
+                    }
+                  },/* 
+                  {
+                    "achievements_button@main_profile_dx.left_base_button": {
+                      "$base_text": "gui.achievements",
+                      "$pressed_button_name": "button.achievements",
+                      "$left_icon_texture": "textures/uidx/profile_screen/achievements_icon"
+                    }
+                  }, */
+                  {
+                    "options_button@main_profile_dx.left_base_button": {
+                      "$base_text": "menu.options",
+                      "$pressed_button_name": "button.settings",
+                      "$left_icon_texture": "textures/uidx/profile_screen/options_icon"
+                    }
+                  },
+                  {
+                    "back_button@main_profile_dx.left_base_button": {
+                      "$base_text": "gui.back",
+                      "$pressed_button_name": "button.try_exiting",
+                      "$left_icon_texture": "textures/uidx/profile_screen/back_icon"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { 
+        "main_panel@main_profile_dx.main_panel": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "size": [ "100%-90px", "100%" ]
+        }
+      },
       {
         "bg@main_profile_dx.bg_image_base": {
           "color": [ 0.18823, 0.18823, 0.18823 ],
           "layer": 1,
-          "size": [ "100%", "100%" ]
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "size": [ "100%-90px", "100%" ]
         }
       }
     ]
+  },
+  
+  "left_bg_fix@main_profile_dx.bg_image_base": {
+    "color": [ 0.11764, 0.11764, 0.11764 ],
+    "layer": 1,
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "size": [ "100%-90px", "100%" ]
   },
   
   "profile_screen_main_panel@sidebar_navigation_dx.sidebar_view": {
@@ -1531,11 +1546,17 @@
 
   "profile_screen_content": {
     "type": "panel",
-    "controls": [
+    "controls": [/* 
       { 
         "profile_screen_main_panel@common_screens_dx.horizontal_left_safezone_screen": {
           "$left_safezone_panel_content": "sidebar_navigation_dx.sidebar_bg_safezone_fix",
           "$panel_content": "main_profile_dx.profile_screen_main_panel"
+        }
+      }, */
+      { 
+        "profile_screen_main_panel@common_screens_dx.horizontal_left_safezone_screen": {
+          "$left_safezone_panel_content": "main_profile_dx.left_bg_fix",
+          "$panel_content": "main_profile_dx.main_profile_content"
         }
       },
       {

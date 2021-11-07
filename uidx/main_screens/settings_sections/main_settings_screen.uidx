@@ -479,7 +479,7 @@
     "anchor_to": "bottom_middle",
     "size": [ "100%-4px", 10 ],
     "controls": [
-      { "pack_label@start_dx.minecraft_text": { "color": [ 0.5, 0.5, 0.5 ], "text": "Vanilla DX: Java UI v1.1.0" } },
+      { "pack_label@start_dx.minecraft_text": { "color": [ 0.5, 0.5, 0.5 ], "text": "Vanilla DX: Java UI v1.1.2" } },
       { "fill_panel": { "type": "panel", "size": [ "fill", 10 ] } },
       { "author_label@start_dx.minecraft_text": { "color": [ 0.5, 0.5, 0.5 ], "text": "\u0042y @\u0043ris\u0058olt" } }
     ]

@@ -178,6 +178,107 @@
     ]
   },
 
+  /*//// Resource Packs and Behavior Packs ////*/
+
+  "resource_pack_bottom_content": {
+    "type": "panel",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -28 ],
+    "size": [ 308, 20 ],
+    "controls": [
+      {
+        "force_user_agreement_level_info": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ 150, 20 ],
+          "controls": [
+            {
+              "info_label@settings_dx.base_label": {
+                "text_alignment": "center",
+                "text": "resourcePack.header.level",
+                "color": [ 0.6, 0.6, 0.6 ],
+                "offset": [ 0, 21 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "force_user_agreement_level_toggle@settings_common_dx.option_toggle_150": {
+          "size": [ 150, 20 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "$option_label": "controllerLayoutScreen.save",
+          "$option_binding_name": "",
+          "$option_enabled_binding_name": "#force_user_agreement_level_enabled",
+          "$toggle_name": "force_user_agreement_level"
+        }
+      },
+      {
+        "main_done_button@world_slot_edit_dx.main_done_button": {
+          "$unchecked_control": "common_buttons_dx.150_default",
+          "$unchecked_hover_control": "common_buttons_dx.150_hover",
+          "size": [ 150, 20 ],
+          "$button_text": "gui.back",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right"
+        }
+      }
+    ]
+  },
+
+  "behavior_pack_bottom_content": {
+    "type": "panel",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -28 ],
+    "size": [ 308, 20 ],
+    "controls": [
+      {
+        "force_user_agreement_level_info": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ 150, 20 ],
+          "controls": [
+            {
+              "info_label@settings_dx.base_label": {
+                "text_alignment": "center",
+                "text": "resourcePack.header.behavior",
+                "color": [ 0.6, 0.6, 0.6 ],
+                "offset": [ 0, 21 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "force_user_agreement_level_toggle@settings_common_dx.toggle_unchecked": {
+          "size": [ 150, 20 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "$button_content": "settings_common_dx.button_label_with_value",
+          "$option_label": "controllerLayoutScreen.save",
+
+          "$toggle_value_text": "options.on",
+          "$toggle_texture": "common_buttons_dx.150_locked"
+        }
+      },
+      {
+        "main_done_button@world_slot_edit_dx.main_done_button": {
+          "$unchecked_control": "common_buttons_dx.150_default",
+          "$unchecked_hover_control": "common_buttons_dx.150_hover",
+          "size": [ 150, 20 ],
+          "$button_text": "gui.back",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right"
+        }
+      }
+    ]
+  },
+
   /*//// Button Tab ////*/
 
   "button_tab@common_toggles_dx.main_button_toggle": {
@@ -374,13 +475,13 @@
             },
             {
               "binding_type": "view",
-              "source_control_name": "resource_packs_button_toggle",
+              "source_control_name": "realms_resource_packs_button_toggle",
               "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
             },
             {
               "binding_type": "view",
-              "source_control_name": "behavior_packs_button_toggle",
+              "source_control_name": "realms_behavior_packs_button_toggle",
               "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
             }
@@ -413,7 +514,7 @@
       },
       {
         "world_resource_packs@world_resource_packs_dx.world_resource_pack_screen_panel": {
-          "$tab_view_binding_name": "main_button_toggle",
+          "$bottom_content": "world_slot_edit_dx.resource_pack_bottom_content",
           "bindings": [
             {
               "binding_type": "view",
@@ -426,7 +527,7 @@
       },
       {
         "world_behavior_packs@world_behavior_packs_dx.world_behavior_pack_screen_panel": {
-          "$tab_view_binding_name": "main_button_toggle",
+          "$bottom_content": "world_slot_edit_dx.behavior_pack_bottom_content",
           "bindings": [
             {
               "binding_type": "view",

@@ -365,7 +365,6 @@
                 "offset": [ -16, 21 ],
                 "$button_text": "realmsSettingsScreen.downloadWorldButton",
                 "$pressed_button_name": "menu_download_world",
-                "ignored": "(not $is_pregame)",
                 "layer": 37
               }
             },

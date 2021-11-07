@@ -19,6 +19,7 @@
       },
       { 
         "redstone_input_grid@redstone.redstone_input_grid": {
+          "grid_item_template": "container_item_dx.container_item",
           "$grid_dimensions": [ 3, 3 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
@@ -44,6 +45,7 @@
       },
       { 
         "redstone_input_grid@redstone.redstone_input_grid": {
+          "grid_item_template": "container_item_dx.container_item",
           "$grid_dimensions": [ 5, 1 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
@@ -79,7 +81,7 @@
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
     "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
-      { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
+      { "inventory_selected_icon_button@selected_icon_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
       { "redstone_panel@redstone_dx.redstone_panel": { } }
     ]

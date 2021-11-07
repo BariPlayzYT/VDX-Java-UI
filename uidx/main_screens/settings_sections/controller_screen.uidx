@@ -317,6 +317,24 @@
             }
           ]
         }
+      },
+      {
+        "panel_5": {
+          "type": "panel",
+          "size": [ 310, 25 ],
+          "controls": [
+            {
+              "option_toggle_11@settings_common_dx.option_toggle_150": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "options.clearhotbar",
+                "$option_binding_name": "#controller_clear_hotbar",
+                "$option_enabled_binding_name": "#controller_clear_hotbar_enabled",
+                "$toggle_name": "controller_clear_hotbar"
+              }
+            }
+          ]
+        }
       }
     ]
   },

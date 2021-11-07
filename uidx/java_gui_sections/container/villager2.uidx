@@ -420,7 +420,7 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "offset": [ 0, 6 ],
-    "size": [ 6, "100%-11px" ],
+    "size": [ 8, "100%-11px" ],
     "clips_children": true,
     "controls": [
       { "00@villager2_java_dx.scroll_middle": { } },

@@ -134,10 +134,18 @@
           "type": "panel",
           "size": [ 18, 18 ],
           "controls": [
-            { "item_icon@hud.hotbar_hud_item_icon": { "layer": 9, "size": [ 16, 16 ] } },
+            { "item_icon@item_renderer_dx.hotbar_hud_item_icon": { "layer": 9, "size": [ 16, 16 ] } },
             {
-              "item_count@common_dx.stack_count_label": {
+              "item_count@common_dx.global_label_numbers": {
+                "color": "$item_stack_count_color",
+                "offset": [ 0, 1 ],
+                "anchor_to": "bottom_right",
+                "anchor_from": "bottom_right",
                 "layer": 11,
+                "shadow": true,
+                "$stack_count_binding_name|default": "#inventory_stack_count",
+                "$stack_count_binding_condition|default": "none",
+                "text": "$stack_count_binding_name",
                 "$item_collection_name": "$hotbar_collection_name",
                 "$stack_count_collection_name": "$hotbar_collection_name",
                 "bindings": [
@@ -150,7 +158,7 @@
               }
             },
             {
-              "item_dura@common_dx.durability_bar_common": {
+              "item_dura@common_durability_dx.durability_bar_common": {
                 "layer": 10,
                 "$durability_bar_required|default": true,
                 "$item_renderer_size": [ 16, 16 ],

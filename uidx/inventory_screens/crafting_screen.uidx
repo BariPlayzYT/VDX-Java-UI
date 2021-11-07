@@ -77,7 +77,7 @@
           "$highlight_slot_image": "inventory_dx.highlight_slot_image",
           "controls": [
             {
-              "crafting_input_item_top_left@crafting.crafting_input_grid_item": {
+              "crafting_input_item_top_left@inventory_dx.crafting_input_grid_item": {
                 "$background_images": "inventory_dx.crafting_cell_images",
                 "$highlight_control": "common_dx.highlight_slot_panel",
                 "grid_position": [ 0, 0 ],
@@ -90,21 +90,21 @@
               }
             },
             {
-              "crafting_input_item_top_mid@crafting.crafting_input_grid_item": {
+              "crafting_input_item_top_mid@inventory_dx.crafting_input_grid_item": {
                 "$background_images": "inventory_dx.crafting_cell_images",
                 "$highlight_control": "common_dx.highlight_slot_panel",
                 "grid_position": [ 1, 0 ]
               }
             },
             {
-              "crafting_input_item_top_right@crafting.crafting_input_grid_item": {
+              "crafting_input_item_top_right@inventory_dx.crafting_input_grid_item": {
                 "$background_images": "inventory_dx.crafting_cell_images",
                 "$highlight_control": "common_dx.highlight_slot_panel",
                 "grid_position": [ 2, 0 ]
               }
             },
             {
-              "crafting_input_item_mid_left@crafting.crafting_input_grid_item": {
+              "crafting_input_item_mid_left@inventory_dx.crafting_input_grid_item": {
                 "$background_images": "inventory_dx.crafting_cell_images",
                 "$highlight_control": "common_dx.highlight_slot_panel",
                 "grid_position": [ 0, 1 ],
@@ -117,35 +117,35 @@
               }
             },
             {
-              "crafting_input_item_middle@crafting.crafting_input_grid_item": {
+              "crafting_input_item_middle@inventory_dx.crafting_input_grid_item": {
                 "$background_images": "inventory_dx.crafting_cell_images",
                 "$highlight_control": "common_dx.highlight_slot_panel",
                 "grid_position": [ 1, 1 ]
               }
             },
             {
-              "crafting_input_item_mid_right@crafting.crafting_input_grid_item": {
+              "crafting_input_item_mid_right@inventory_dx.crafting_input_grid_item": {
                 "$background_images": "inventory_dx.crafting_cell_images",
                 "$highlight_control": "common_dx.highlight_slot_panel",
                 "grid_position": [ 2, 1 ]
               }
             },
             {
-              "crafting_input_item_bot_left@crafting.crafting_input_grid_item": {
+              "crafting_input_item_bot_left@inventory_dx.crafting_input_grid_item": {
                 "$background_images": "inventory_dx.crafting_cell_images",
                 "$highlight_control": "common_dx.highlight_slot_panel",
                 "grid_position": [ 0, 2 ]
               }
             },
             {
-              "crafting_input_item_bot_mid@crafting.crafting_input_grid_item": {
+              "crafting_input_item_bot_mid@inventory_dx.crafting_input_grid_item": {
                 "$background_images": "inventory_dx.crafting_cell_images",
                 "$highlight_control": "common_dx.highlight_slot_panel",
                 "grid_position": [ 1, 2 ]
               }
             },
             {
-              "crafting_input_item_bot_right@crafting.crafting_input_grid_item": {
+              "crafting_input_item_bot_right@inventory_dx.crafting_input_grid_item": {
                 "$background_images": "inventory_dx.crafting_cell_images",
                 "$highlight_control": "common_dx.highlight_slot_panel",
                 "grid_position": [ 2, 2 ],
@@ -172,7 +172,7 @@
           "offset": [ 0, 25 ],
           "controls": [
             {
-              "work_bench_output@crafting.inventory_container_item": {
+              "work_bench_output@container_item_dx.inventory_container_item": {
                 "$background_images": "crafting_dx.crafting_cell_images_output",
                 "$highlight_control": "common_dx.highlight_slot_panel",
                 "$highlight_slot_image": "crafting_dx.highlight_slot_output_image",
@@ -297,7 +297,7 @@
     "controls": [
       { "crafting_panel@crafting_dx.crafting_panel": { } },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
-      { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} }
+      { "inventory_selected_icon_button@selected_icon_dx.inventory_selected_icon_button": {} }
     ]
   },
 

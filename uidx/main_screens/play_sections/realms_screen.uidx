@@ -466,7 +466,28 @@
           "controls": [
             {
               "on_icon@play_realms_dx.on_icon": {
-                "$pressed_button_name": "button.menu_start_realms_world",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.menu_start_realms_world",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.menu_start_realms_world",
+                    "mapping_type": "focused"
+                  },
+                  {
+                    "from_button_id": "button.menu_secondary_select",
+                    "to_button_id": "button.menu_realms_feed",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.controller_select",
+                    "to_button_id": "button.menu_realms_feed",
+                    "mapping_type": "pressed"
+                  }
+                ],
                 "bindings": [
                   {
                     "binding_type": "collection_details",
@@ -982,6 +1003,36 @@
           "offset": [ 97, 0 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left"
+        }
+      },
+      {
+        "gamepad_helper_a@common_tooltip_dx.gamepad_helper_a": {
+          "$hide_description": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 99, 2 ],
+          "layer": 10,
+          "bindings": [
+            {
+              "binding_name": "#is_using_gamepad",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "gamepad_helper_x@common_tooltip_dx.gamepad_helper_x": {
+          "$hide_description": true,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 2, 2 ],
+          "layer": 10,
+          "bindings": [
+            {
+              "binding_name": "#is_using_gamepad",
+              "binding_name_override": "#visible"
+            }
+          ]
         }
       },
       {

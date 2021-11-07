@@ -40,7 +40,14 @@
                 "layer": 2
               }
             },
-            { "main_bg_panel@settings_dx.bg_panel": { } }
+            { 
+              "options_background@java_gui_common.options_background": {
+                "size": [ "100%+128px", "100%+64px" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ -64, -32 ]
+              }
+            }
           ]
         }
       }

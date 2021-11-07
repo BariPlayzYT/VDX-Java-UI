@@ -3,6 +3,16 @@
 
   /* (c) CrisXolt. Don't use any code without authorization! */
 
+  ////*/ Other Resource Packs Compatibility /*////
+  /* By @agentms_*/
+  "$is_java_aspects": false,
+  
+  /* By @ZouChenyunfei*/
+  "$is_multipixel": false,
+  "$is_multipixel_java": false,
+  "$is_multipixel_bedrock": false,
+  "$is_multipixel_mixed": false,
+
   ////*/ Main menu button /*////
   "$main_menu_button_default_color": [ 0.87, 0.87, 0.87 ],
   "$main_menu_button_hover_color": [ 1.0, 1.0, 1.0 ], /* Before [ 1.0, 1.0, 0.62 ] */
@@ -125,6 +135,8 @@
   "$stonecutter_resolution": "256x",
   /* title_minecraft */
   "$title_minecraft_resolution": "256x",
+  /* toasts */
+  "$toasts_resolution": "256x",
   /* villager */
   "$villager_resolution": "256x",
   /* villager2 */
@@ -135,6 +147,10 @@
   "$uidx_buttons_resolution": "256x",
   /* world_selection */
   "$world_selection_resolution": "256x",
+  
+  //For accessibility button.
+  //Valid values is: 1x, 2x, 4x, 8x, 16x and 32x.
+  "$accessibility_resolution": "1x",
 
   //For realms textures.
   //Valid values is: 1x, 2x, 4x, 8x, 16x and 32x.

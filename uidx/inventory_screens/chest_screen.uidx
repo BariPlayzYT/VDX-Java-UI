@@ -2,6 +2,10 @@
 //(c) Don't use any code design without permission!*/
 {
   "namespace": "chest_dx",
+
+  "chest_grid_item@container_item_dx.container_item": {
+    "$item_collection_name": "container_items"
+  },
   
   "small_chest_panel_top_half": {
     "type": "panel",
@@ -20,6 +24,7 @@
       },
       {
         "small_chest_grid@chest.small_chest_grid": {
+          "grid_item_template": "chest_dx.chest_grid_item",
           "offset": [ 7, 17 ]
         }
       }
@@ -43,6 +48,7 @@
       },
       {
         "large_chest_grid@chest.large_chest_grid": {
+          "grid_item_template": "chest_dx.chest_grid_item",
           "offset": [ 7, 17 ]
         }
       }
@@ -75,7 +81,7 @@
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
     "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
-      { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
+      { "inventory_selected_icon_button@selected_icon_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
       { "chest_panel@chest_dx.chest_panel": { } }
     ]

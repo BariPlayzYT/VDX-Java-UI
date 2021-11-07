@@ -106,6 +106,23 @@
         }
       },
       {
+        "switch_accounts@start_dx.stacked_row": {
+          "ignored": "$ignore_profile_switch_account_button",
+          "controls": [
+            {
+              "switch_accounts@common_buttons_dx.main_button_310": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "enabled": "$is_pregame",
+                "$button_size_override": [ "100%", "100% - 4px" ],
+                "$button_content": "general_section.switch_accounts_button_content",
+                "$pressed_button_name": "button.switch_accounts"
+              }
+            }
+          ]
+        }
+      },
+      {
         "panel_0@start_dx.stacked_row": {
           "bindings": [
             {
@@ -411,6 +428,26 @@
         }
       },
       {
+        "panel_terms_and_conditions@start_dx.stacked_row": {
+          "ignored": "($is_holographic or $fire_tv or not $thirdpartyconsole)",
+          "controls": [
+            {
+              "terms_and_conditions_link_button@common_buttons_dx.main_button_310": {
+                "$button_text": "options.termsAndConditions",
+                "$pressed_button_name": "button.menu_open_uri",
+                "bindings": [
+                  {
+                    "binding_name": "#terms_and_conditions_hyperlink",
+                    "binding_name_override": "#hyperlink",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
         "panel_11@start_dx.stacked_row": {
           "controls": [
             {
@@ -574,6 +611,12 @@
       {
         "panel_18@start_dx.stacked_row": {
           "size": [ "100%", 32 ],
+          "bindings": [
+            {
+              "binding_name": "#content_log_file_enabled",
+              "binding_name_override": "#visible"
+            }
+          ],
           "controls": [
             {
               "label@settings_dx.base_label": {
@@ -588,6 +631,90 @@
                     "binding_name_override": "#text"
                   }
                 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "categorie_licenses": {
+          "type": "panel",
+          "size": [ "100%", 25 ],
+          "ignored": "(not $display_copyright_info)",
+          "controls": [
+            {
+              "object_name": {
+                "type": "image",
+                "texture": "textures/uidx/global/white",
+                "layer": 5,
+                "size": [ "100%-20px", 1 ],
+                "anchor_from": "center",
+                "anchor_to": "center"
+              }
+            }
+          ]
+        }
+      },/* 
+      {
+        "panel_licensed_content@start_dx.stacked_row": {
+          "ignored": "(not $is_holographic and not $fire_tv)",
+          "controls": [
+            {
+              "licensed_content_popup_button@common_buttons_dx.main_button_310": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$pressed_button_name": "button.licensed_content_popup",
+                "$button_text": "options.licensed_content"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_font_licensed_content@start_dx.stacked_row": {
+          "controls": [
+            {
+              "font_license_popup_button@common_buttons_dx.main_button_310": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$pressed_button_name": "button.font_license_popup",
+                "$button_text": "options.font_license"
+              }
+            }
+          ]
+        }
+      }, */
+      {
+        "third_party_copyright_info_label_panel": {
+          "ignored": "(not $display_copyright_info)",
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "spacer_0": {
+                "type": "panel",
+                "size": [ "100%", 4 ]
+              }
+            },
+            {
+              "copyright_label": {
+                "type": "label",
+                "color": "$body_text_color",
+                "text": "thirdPartyConsole.copyright"
+              }
+            },
+            {
+              "spacer_1": {
+                "type": "panel",
+                "size": [ "100%", 4 ]
+              }
+            },
+            {
+              "copyright_icon": {
+                "type": "image",
+                "size": [ 117, 41 ],
+                "texture": "textures/ui/third_party_copyright"
               }
             }
           ]

@@ -189,7 +189,35 @@
             }
           ],
           "controls": [
-            { "selected_item_icon@common.inventory_selected_icon": { "layer": 0, "offset": [ 0.5, 0.5 ], "min_size": [ 16, 16 ] } }
+            { "selected_item_icon@common.inventory_selected_icon": { "$use_item_icons|default": true, "layer": 0, "offset": [ 0.5, 0.5 ], "min_size": [ 16, 16 ] } }
+          ]
+        }
+      }
+    ]
+  },
+
+  ////*/ Item Renderer For Auto Complete in Chat Screen /*////
+
+  "auto_complete_item_renderer": {
+    "type": "panel",
+    "size": [ 8, 8 ],
+    "controls": [
+      {
+        "auto_complete_item_renderer": {
+          "type": "custom",
+          "renderer": "inventory_item_renderer",
+          "size": [ 8, 8 ],
+          "offset": [ 2, 0 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#auto_complete_item",
+              "binding_type": "collection",
+              "binding_name_override": "#item_id_aux",
+              "binding_collection_name": "auto_complete"
+            }
           ]
         }
       }
@@ -491,7 +519,7 @@
           ],
           "controls": [
             { "specific_trade_icon_renderer@trade2.specific_trade_icon_renderer": { "layer": 0 } },
-            { "regular_glass_pane_icon@trade2.regular_glass_pane_icon": { "layer": 0 } }
+            { "glass_pane_icon@trade2.glass_pane_icon": { "layer": 0 } }
           ]
         }
       }

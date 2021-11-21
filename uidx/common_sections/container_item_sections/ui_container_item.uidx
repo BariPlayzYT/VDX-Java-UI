@@ -102,13 +102,6 @@
         }
       },
       {
-        "item_selected_image@common.slot_selected": {
-          "texture": "$slot_selected_texture",
-          "$slot_selected_texture|default": "textures/ui/pocket_ui_highlight_selected_slot",
-          "layer": 4
-        }
-      },
-      {
         "item_button_ref@$button_ref": {
           "consume_hover_events": false,
           "tts_ignore_count": true,
@@ -215,13 +208,6 @@
       {
         "item_cell_overlay_ref@$cell_overlay_ref": {
           "layer": 3
-        }
-      },
-      {
-        "item_selected_image@common.slot_selected": {
-          "texture": "$slot_selected_texture",
-          "$slot_selected_texture|default": "textures/ui/pocket_ui_highlight_selected_slot",
-          "layer": 4
         }
       },
       {

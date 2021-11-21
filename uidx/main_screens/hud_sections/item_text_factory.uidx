@@ -67,6 +67,29 @@
     "to": 0
   },
 
+  "anim_item_name_text_alpha_in": {
+    "anim_type": "alpha",
+    "duration": 0,
+    "from": 0.0,
+    "to": 1.0,
+    "next": "@hud_item_text_dx.anim_item_name_text_alpha_stay"
+  },
+
+  "anim_item_name_text_alpha_stay": {
+    "anim_type": "wait",
+    "duration": "$wait_duration",
+    "next": "@hud_item_text_dx.anim_item_name_text_alpha_out"
+  },
+
+  "anim_item_name_text_alpha_out": {
+    "anim_type": "alpha",
+    "easing": "in_expo",
+    "destroy_at_end": "$destroy_id",
+    "duration": 2,
+    "from": 1.0,
+    "to": 0
+  },
+
   "item_name_text": {
     "type": "panel",
     //"type": "image",
@@ -91,7 +114,7 @@
           "color": "$tool_tip_text",
           "text": "#text",
           "shadow": "$shadow",
-          "alpha": "@hud.anim_item_name_text_alpha_in",
+          "alpha": "@hud_item_text_dx.anim_item_name_text_alpha_in",
           "bindings": [
             {
               "binding_name": "#item_text",
@@ -254,7 +277,7 @@
           "color": "$tool_tip_text",
           "text": "#text",
           "shadow": false,
-          "alpha": "@hud.anim_item_name_text_alpha_in",
+          "alpha": "@hud_item_text_dx.anim_item_name_text_alpha_in",
           "bindings": [
             {
               "binding_name": "#tip_text",

@@ -163,10 +163,14 @@ options.difficulty=Сложность
 
 ##  Raid Texts Input
 raid.name=Raid	#
-raid.progress=Mobs remaining:	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
 
 ##  Raid Texts Output
-bar.event.raid.name=Налет	#
-bar.event.raid.remaining.2=Налет - Осталось мобов: 2	#
-bar.event.raid.remaining.1=Налет - Осталось мобов: 1	#
-bar.event.raid.remaining.0=Налет - Осталось мобов: 0	#
+bar.event.raid.name=Рейд	#
+bar.event.raid.remaining.2=Рейд - Осталось нападающих: 2	#
+bar.event.raid.remaining.1=Рейд - Осталось нападающих: 1	#
+bar.event.raid.remaining.0=Рейд - Осталось нападающих: 0	#
+bar.event.raid.victory=Рейд - Победа	#
+bar.event.raid.defeat=Рейд - Поражение	#

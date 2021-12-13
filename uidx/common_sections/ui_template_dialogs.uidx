@@ -54,13 +54,63 @@
     ]
   },
 
-  "modal_dialog_with_buttons": {
+  "modal_label_text": {
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "offset": [ 2, 0 ],
+    "controls": [
+      {
+        "text": {
+          "type": "image",
+          "texture": "textures/uidx/global/white",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "layer": 2,
+          "size": [ "100%", "100%c" ],
+          "alpha": 0.0,
+          "controls": [
+            {
+              "text@common_dx.global_label": {
+                "size": [ "100%-8px", "default" ],
+                "anchor_to": "top_middle",
+                "anchor_from": "top_middle",
+                "line_padding": 10.0,
+                "layer": 3,
+                "text": "#text",
+                "text_tts": "#tts_text",
+                "color": "$body_text_color",
+                //"text_alignment": "center",
+                "shadow": true,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$visibility_source_control_name",
+                    "source_property_name": "#modal_label_text",
+                    "target_property_name": "#text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "$visibility_source_control_name",
+                    "source_property_name": "#modal_label_tts",
+                    "target_property_name": "#tts_text"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "modal_dialog_with_buttons": {
+    "type": "stack_panel",
+    "size": [ 310, "100%c" ],
     "offset": [ 0, 5 ],
     "anchor_from": "center",
     "anchor_to": "center",
-    "controls": [/* 
+    "controls": [
       {
         "title_panel": {
           "type": "panel",
@@ -84,15 +134,38 @@
           "type": "panel",
           "size": [ "100%", 8 ]
         }
-      }, */
+      },
+      {
+        "modal_label_panel@common.scrolling_panel": {
+          "size": [ "100%", 80 ],
+          "$scrolling_pane_size": [ "100%", "100%" ],
+          "$scrolling_pane_offset": [ 0, 0 ],
+          "$scrolling_content": "common_dialogs_dx.modal_label_text",
+          "$show_background": false,
+          "layer": 1,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "$always_handle_scrolling": true,
+
+          "$scroll_track_image_control": "common_menus_dx.java_scroll_track",
+          "$scroll_box_mouse_image_control": "common_menus_dx.java_scroll_box",
+          "$scroll_size": [ 6, "100%" ]
+        }
+      },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [ "100%", 8 ]
+        }
+      },/* 
       {
         "text_panel": {
           "type": "panel",
           "size": [ "100%", "100%c+32px" ],
+          //"max_size": [ "100%", "75%" ],
           "controls": [
             {
-              "text": {
-                "type": "label",
+              "text@common_dx.global_label": {
                 "layer": 2,
                 "size": [ 310, "default" ],
                 "anchor_from": "top_middle",
@@ -122,7 +195,7 @@
             }
           ]
         }
-      },
+      }, */
       {
         "button_panel": {
           "type": "panel",

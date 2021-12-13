@@ -1,9 +1,13 @@
 ﻿##  Raid Texts Input
 raid.name=Raid	#
-raid.progress=Mobs remaining:	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
 
 ##  Raid Texts Output
-bar.event.raid.name=Ataque	#
-bar.event.raid.remaining.2=Ataque - Criaturas restantes: 2	#
-bar.event.raid.remaining.1=Ataque - Criaturas restantes: 1	#
-bar.event.raid.remaining.0=Ataque - Criaturas restantes: 0	#
+bar.event.raid.name=Invasão	#
+bar.event.raid.remaining.2=Invasão - Invasores restantes: 2	#
+bar.event.raid.remaining.1=Invasão - Invasores restantes: 1	#
+bar.event.raid.remaining.0=Invasão - Invasores restantes: 0	#
+bar.event.raid.victory=Invasão - Vitória	#
+bar.event.raid.defeat=Invasão - Derrota	#

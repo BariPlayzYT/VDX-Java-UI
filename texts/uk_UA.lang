@@ -1,9 +1,13 @@
 ﻿##  Raid Texts Input
 raid.name=Raid	#
-raid.progress=Mobs remaining:	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
 
 ##  Raid Texts Output
-bar.event.raid.name=Наскок	#
-bar.event.raid.remaining.2=Наскок - Залишилося мобів: 2	#
-bar.event.raid.remaining.1=Наскок - Залишилося мобів: 1	#
-bar.event.raid.remaining.0=Наскок - Залишилося мобів: 0	#
+bar.event.raid.name=Рейд	#
+bar.event.raid.remaining.2=Рейд - Залишилося нападників: 2	#
+bar.event.raid.remaining.1=Рейд - Залишилося нападників: 1	#
+bar.event.raid.remaining.0=Рейд - Залишилося нападників: 0	#
+bar.event.raid.victory=Рейд - Перемога	#
+bar.event.raid.defeat=Рейд - Поразка	#

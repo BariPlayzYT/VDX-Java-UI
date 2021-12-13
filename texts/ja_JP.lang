@@ -1,9 +1,13 @@
 ﻿##  Raid Texts Input
 raid.name=Raid	#
-raid.progress=Mobs remaining:	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
 
 ##  Raid Texts Output
 bar.event.raid.name=襲撃	#
-bar.event.raid.remaining.2=襲撃 - 残りモブ数: 2	#
-bar.event.raid.remaining.1=襲撃 - 残りモブ数: 1	#
-bar.event.raid.remaining.0=襲撃 - 残りモブ数: 0	#
+bar.event.raid.remaining.2=襲撃 - 残り 襲撃者 数: 2	#
+bar.event.raid.remaining.1=襲撃 - 残り 襲撃者 数: 1	#
+bar.event.raid.remaining.0=襲撃 - 残り 襲撃者 数: 0	#
+bar.event.raid.victory=襲撃 - 勝利	#
+bar.event.raid.defeat=襲撃 - 敗北	#

@@ -117,6 +117,22 @@
           ]
         }
       },
+      { 
+        "raid_defeat_bar@CrisXolt_bars_bindings_dx.raid_defeat_bindings": {
+          "controls": [
+            { "bar_name@CrisXolt_bars_dx.bar_name": { "text": "bar.event.raid.defeat" } },
+            { "raid_panel@$raid_bar_panel_control": { } }
+          ]
+        }
+      },
+      { 
+        "raid_victory_bar@CrisXolt_bars_bindings_dx.raid_victory_bindings": {
+          "controls": [
+            { "bar_name@CrisXolt_bars_dx.bar_name": { "text": "bar.event.raid.victory" } },
+            { "raid_panel@$raid_bar_panel_control": { } }
+          ]
+        }
+      },
       { "default_bar_control@CrisXolt_default_bar_dx.001": { } }
     ],
     "bindings": [

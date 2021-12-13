@@ -180,7 +180,6 @@
           "size": [ 16, 16 ],
           "$icon_size": [ 16, 16 ],
           "$selected_size": [ 16, 16 ],
-          "$use_item_icons|default": true,
           "ignored": "(not $is_java_aspects)",
           "variables": [
             {

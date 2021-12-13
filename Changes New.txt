@@ -1,3 +1,14 @@
+v1.1.3  [08/12/2021]
+[Removes]
+[-] Old World Generation Type due 1.18 update.
+[Changes]
+[*] Updated for v1.18.0 and for the latest Beta version.
+[*] Fixed UV values for GUI textures greater than 512x for creative bottom tabs.
+[*] Fixed black texts and added scroll panel for dialog template
+    but cost is left-aligning text.
+[*] Changed the text for boss bar to match Java Edition aspect.
+    > Also to make fully compatible for AgentMindStorm's Java Aspects v5.0.0!
+
 v1.1.2  [06/11/2021]
 [Additions]
 [+] Toast Screen for Java UI

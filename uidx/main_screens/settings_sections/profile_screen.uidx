@@ -640,7 +640,6 @@
         "categorie_licenses": {
           "type": "panel",
           "size": [ "100%", 25 ],
-          "ignored": "(not $display_copyright_info)",
           "controls": [
             {
               "object_name": {
@@ -654,9 +653,37 @@
             }
           ]
         }
-      },/* 
+      },
       {
         "panel_licensed_content@start_dx.stacked_row": {
+          "ignored": "($is_holographic or $fire_tv or $education_edition)",
+          "variables": [
+            {
+              "requires": "(not $nx_os)",
+              "$licensed_content_button_url": "https://www.minecraft.net/licensed-content/?hideChrome"
+            },
+            {
+              "requires": "($nx_os)",
+              "$licensed_content_button_url": "https://aka.ms/switchcontent"
+            }
+          ],
+          "controls": [
+            {
+              "licensed_content_popup_button@common_buttons_dx.main_button_310": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$pressed_button_name": "button.menu_open_uri",
+                "$button_text": "options.licensed_content",
+                "property_bag": {
+                  "#hyperlink": "$licensed_content_button_url"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_licensed_content_alt@start_dx.stacked_row": {
           "ignored": "(not $is_holographic and not $fire_tv)",
           "controls": [
             {
@@ -683,7 +710,7 @@
             }
           ]
         }
-      }, */
+      },
       {
         "third_party_copyright_info_label_panel": {
           "ignored": "(not $display_copyright_info)",

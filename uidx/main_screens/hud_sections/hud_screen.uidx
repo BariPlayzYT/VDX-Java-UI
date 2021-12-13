@@ -642,7 +642,7 @@
         "stack_panel": {
           "type": "stack_panel",
           "size": [ "100%cm", "100%c" ],
-          "min_size": [ 75, "100%c" ],
+          "min_size": [ 26, "100%c" ],
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
 
@@ -728,7 +728,7 @@
       { "right_helpers@hud_dx.right_helpers": {} },
       //{ "bottom_helpers@hud_dx.bottom_helpers": {} },
       { "gui_elements@hud_dx.gui_elements": { } },
-      { "vignette_rend@hud.vignette_renderer": {} },
+      { "vignette_rend@hud.vignette_renderer": { "layer": -10 } },
       { "cursor_rend@hud.cursor_renderer": {} },
       { "mob_effects_renderer@hud.mob_effects_renderer": { "size": [ "100%", "75%" ], "offset": [ 0, 24 ], "anchor_from": "center", "anchor_to": "center" } },
       { "sidebar@scoreboard.scoreboard_sidebar": {} },

@@ -49,19 +49,19 @@
     "$button.sort_up": "button.sort_up_global",
     "$button.sort_down": "button.sort_down_global",
     "$button.pack_settings": "button.pack_settings_global",
-    "collection_name": "$pack_items_type",
+    "collection_name": "$pack_items_type",/* 
     "$available_grid_visible_binding_name|default": "",
-    "$available_grid_visible_binding_type|default": "none",
+    "$available_grid_visible_binding_type|default": "none", */
     "bindings": [
       {
         "binding_name": "#available_grid_dimensions_global",
         "binding_name_override": "#collection_length"
-      },
+      }/* ,
       {
         "binding_name": "$available_grid_visible_binding_name",
         "binding_name_override": "#visible",
         "binding_type": "$available_grid_visible_binding_type"
-      }
+      } */
     ]
   },
 
@@ -510,184 +510,192 @@
     "$button_collection_name": "$pack_items_type",
     "controls": [
       {
-        "button@resource_packs.common_pack_button": {
-          "layer": 3,
-          "size": [ "100%", 36 ],
-          "$pressed_button_name": "$pressed_button_name_type",
-          "bindings": [
-            {
-              "binding_collection_name": "$pack_items_type",
-              "binding_type": "collection_details"
-            }
-          ],
+        "buttons_panel_hold": {
+          "type": "panel",
+          "ignored": "(not $is_pregame)",
           "controls": [
             {
-              "hover@common.empty_panel": {
+              "button@resource_packs.common_pack_button": {
+                "layer": 3,
+                "size": [ "100%", 36 ],
+                "$pressed_button_name": "$pressed_button_name_type",
+                "bindings": [
+                  {
+                    "binding_collection_name": "$pack_items_type",
+                    "binding_type": "collection_details"
+                  }
+                ],
                 "controls": [
                   {
-                    "java_menu_select_grid@java_gui_common.java_menu_select_grid": {
-                      "layer": 7,
-                      "size": [ 32, 32 ],
-                      "offset": [ 2, 2 ],
-                      "anchor_from": "top_left",
-                      "anchor_to": "top_left"
+                    "hover@common.empty_panel": {
+                      "controls": [
+                        {
+                          "java_menu_select_grid@java_gui_common.java_menu_select_grid": {
+                            "layer": 7,
+                            "size": [ 32, 32 ],
+                            "offset": [ 2, 2 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
               }
-            }
-          ]
-        }
-      },
-      {
-        "selected_pack_direction_buttons@resource_packs.input_button_panel": {
-          "size": [ 194, 36 ],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "controls": [
-            { "text_input_java@java_gui_common.text_input_java": { "layer": 3 } },
-            {
-              "button_panel": {
-                "type": "panel",
-                "size": [ 32, 32 ],
-                "offset": [ 2, 2 ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "layer": 10,
-                "controls": [
-                  { "selected_pack_left_button@resource_packs_dx.selected_pack_minus_button": { } },
-                  { "selected_pack_right_button@resource_packs_dx.selected_pack_plus_button": { } },
-                  { "selected_pack_up_button@resource_packs_dx.selected_pack_up_button": { } },
-                  { "selected_pack_down_button@resource_packs_dx.selected_pack_down_button": { } }
-                ]
-              }
             },
             {
-              "selected_pack_options_buttons": {
-                "type": "stack_panel",
-                "ignored": "(not $is_selected)",
-                "size": [ 16, 32 ],
-                "offset": [ -2, 2 ],
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "layer": 4,
+              "selected_pack_direction_buttons@resource_packs.input_button_panel": {
+                "size": [ 194, 36 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
                 "controls": [
+                  { "text_input_java@java_gui_common.text_input_java": { "layer": 3 } },
                   {
-                    "info_button@common.button": {
-                      "size": [ 16, 16 ],
-                      "$pressed_button_name": "$button.report_errors",
+                    "button_panel": {
+                      "type": "panel",
+                      "size": [ 32, 32 ],
+                      "offset": [ 2, 2 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "layer": 10,
                       "controls": [
-                        { 
-                          "default@java_gui_common.resource_info_default": {
-                            "size": [ 16, 16 ],
-                            "layer": 8
-                          }
-                        },
-                        { 
-                          "hover@java_gui_common.resource_info_hover": {
-                            "size": [ 16, 16 ],
-                            "layer": 8,
-                            "controls": [
-                              {
-                                "java_menu_select_grid@java_gui_common.java_menu_select_grid": {
-                                  "layer": -1,
-                                  "size": [ 32, 32 ],
-                                  "offset": [ -158, 0 ],
-                                  "anchor_from": "top_right",
-                                  "anchor_to": "top_right"
-                                }
-                              }
-                            ]
-                          }
-                        },
-                        { 
-                          "pressed@java_gui_common.resource_info_hover": {
-                            "size": [ 16, 16 ],
-                            "layer": 8,
-                            "controls": [
-                              {
-                                "java_menu_select_grid@java_gui_common.java_menu_select_grid": {
-                                  "layer": -1,
-                                  "size": [ 32, 32 ],
-                                  "offset": [ -158, 0 ],
-                                  "anchor_from": "top_right",
-                                  "anchor_to": "top_right"
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "bindings": [
-                        {
-                          "binding_collection_name": "$button_collection_name",
-                          "binding_type": "collection_details"
-                        },
-                        {
-                          "binding_collection_name": "$button_collection_name",
-                          "binding_name": "#report_button_visible",
-                          "binding_name_override": "#visible",
-                          "binding_type": "collection"
-                        }
+                        { "selected_pack_left_button@resource_packs_dx.selected_pack_minus_button": { } },
+                        { "selected_pack_right_button@resource_packs_dx.selected_pack_plus_button": { } },
+                        { "selected_pack_up_button@resource_packs_dx.selected_pack_up_button": { } },
+                        { "selected_pack_down_button@resource_packs_dx.selected_pack_down_button": { } }
                       ]
                     }
                   },
                   {
-                    "config_button@common.button": {
-                      "size": [ 16, 16 ],
-                      "$pressed_button_name": "$button.pack_settings",
+                    "selected_pack_options_buttons": {
+                      "type": "stack_panel",
+                      "ignored": "(not $is_selected)",
+                      "size": [ 16, 32 ],
+                      "offset": [ -2, 2 ],
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "layer": 4,
                       "controls": [
-                        { 
-                          "default@java_gui_common.resource_config_default": {
+                        {
+                          "info_button@common.button": {
                             "size": [ 16, 16 ],
-                            "layer": 8
-                          }
-                        },
-                        { 
-                          "hover@java_gui_common.resource_config_hover": {
-                            "size": [ 16, 16 ],
-                            "layer": 8,
+                            "$pressed_button_name": "$button.report_errors",
                             "controls": [
-                              {
-                                "java_menu_select_grid@java_gui_common.java_menu_select_grid": {
-                                  "layer": -1,
-                                  "size": [ 32, 32 ],
-                                  "offset": [ -158, 0 ],
-                                  "anchor_from": "bottom_right",
-                                  "anchor_to": "bottom_right"
+                              { 
+                                "default@java_gui_common.resource_info_default": {
+                                  "size": [ 16, 16 ],
+                                  "layer": 8
                                 }
+                              },
+                              { 
+                                "hover@java_gui_common.resource_info_hover": {
+                                  "size": [ 16, 16 ],
+                                  "layer": 8,
+                                  "controls": [
+                                    {
+                                      "java_menu_select_grid@java_gui_common.java_menu_select_grid": {
+                                        "layer": -1,
+                                        "size": [ 32, 32 ],
+                                        "offset": [ -158, 0 ],
+                                        "anchor_from": "top_right",
+                                        "anchor_to": "top_right"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              { 
+                                "pressed@java_gui_common.resource_info_hover": {
+                                  "size": [ 16, 16 ],
+                                  "layer": 8,
+                                  "controls": [
+                                    {
+                                      "java_menu_select_grid@java_gui_common.java_menu_select_grid": {
+                                        "layer": -1,
+                                        "size": [ 32, 32 ],
+                                        "offset": [ -158, 0 ],
+                                        "anchor_from": "top_right",
+                                        "anchor_to": "top_right"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ],
+                            "bindings": [
+                              {
+                                "binding_collection_name": "$button_collection_name",
+                                "binding_type": "collection_details"
+                              },
+                              {
+                                "binding_collection_name": "$button_collection_name",
+                                "binding_name": "#report_button_visible",
+                                "binding_name_override": "#visible",
+                                "binding_type": "collection"
                               }
                             ]
                           }
                         },
-                        { 
-                          "pressed@java_gui_common.resource_config_hover": {
+                        {
+                          "config_button@common.button": {
                             "size": [ 16, 16 ],
-                            "layer": 8,
+                            "$pressed_button_name": "$button.pack_settings",
                             "controls": [
-                              {
-                                "java_menu_select_grid@java_gui_common.java_menu_select_grid": {
-                                  "layer": -1,
-                                  "size": [ 32, 32 ],
-                                  "offset": [ -158, 0 ],
-                                  "anchor_from": "bottom_right",
-                                  "anchor_to": "bottom_right"
+                              { 
+                                "default@java_gui_common.resource_config_default": {
+                                  "size": [ 16, 16 ],
+                                  "layer": 8
                                 }
+                              },
+                              { 
+                                "hover@java_gui_common.resource_config_hover": {
+                                  "size": [ 16, 16 ],
+                                  "layer": 8,
+                                  "controls": [
+                                    {
+                                      "java_menu_select_grid@java_gui_common.java_menu_select_grid": {
+                                        "layer": -1,
+                                        "size": [ 32, 32 ],
+                                        "offset": [ -158, 0 ],
+                                        "anchor_from": "bottom_right",
+                                        "anchor_to": "bottom_right"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              { 
+                                "pressed@java_gui_common.resource_config_hover": {
+                                  "size": [ 16, 16 ],
+                                  "layer": 8,
+                                  "controls": [
+                                    {
+                                      "java_menu_select_grid@java_gui_common.java_menu_select_grid": {
+                                        "layer": -1,
+                                        "size": [ 32, 32 ],
+                                        "offset": [ -158, 0 ],
+                                        "anchor_from": "bottom_right",
+                                        "anchor_to": "bottom_right"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ],
+                            "bindings": [
+                              {
+                                "binding_type": "collection",
+                                "binding_collection_name": "$button_collection_name",
+                                "binding_name": "#has_pack_settings",
+                                "binding_name_override": "#visible"
+                              },
+                              {
+                                "binding_type": "collection_details",
+                                "binding_collection_name": "$button_collection_name"
                               }
                             ]
                           }
-                        }
-                      ],
-                      "bindings": [
-                        {
-                          "binding_type": "collection",
-                          "binding_collection_name": "$button_collection_name",
-                          "binding_name": "#has_pack_settings",
-                          "binding_name_override": "#visible"
-                        },
-                        {
-                          "binding_type": "collection_details",
-                          "binding_collection_name": "$button_collection_name"
                         }
                       ]
                     }

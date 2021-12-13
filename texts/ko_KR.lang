@@ -1,9 +1,13 @@
 ﻿##  Raid Texts Input
 raid.name=Raid	#
-raid.progress=Mobs remaining:	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
 
 ##  Raid Texts Output
-bar.event.raid.name=레이드	#
-bar.event.raid.remaining.2=레이드 - 남은 몹: 2	#
-bar.event.raid.remaining.1=레이드 - 남은 몹: 1	#
-bar.event.raid.remaining.0=레이드 - 남은 몹: 0	#
+bar.event.raid.name=습격	#
+bar.event.raid.remaining.2=습격 - 남은 습격자 수: 2	#
+bar.event.raid.remaining.1=습격 - 남은 습격자 수: 1	#
+bar.event.raid.remaining.0=습격 - 남은 습격자 수: 0	#
+bar.event.raid.victory=습격 - 승리	#
+bar.event.raid.defeat=습격 - 패배	#

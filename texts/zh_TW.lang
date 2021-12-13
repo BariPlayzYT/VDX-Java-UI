@@ -110,13 +110,17 @@ gamerule.category.misc=§l雜項
 
 ##  Raid Texts Input (Don't change unless you know what you are doing)
 raid.name=Raid	#
-raid.progress=Mobs remaining:	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
 
 ##  Raid Texts Output
-bar.event.raid.name=突襲
-bar.event.raid.remaining.2=突襲 - 剩餘敵人: 2
-bar.event.raid.remaining.1=突襲 - 剩餘敵人: 1
-bar.event.raid.remaining.0=突襲 - 剩餘敵人: 0
+bar.event.raid.name=突襲	#
+bar.event.raid.remaining.2=突襲 - 剩餘敵人: 2	#
+bar.event.raid.remaining.1=突襲 - 剩餘敵人: 1	#
+bar.event.raid.remaining.0=突襲 - 剩餘敵人: 0	#
+bar.event.raid.victory=突襲 - 勝利	#
+bar.event.raid.defeat=突襲 - 失敗	#
 
 ##  Audio Settings
 

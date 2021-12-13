@@ -140,13 +140,17 @@ gamerule.category.misc=§lMiscellaneous
 
 ##  Raid Texts Input
 raid.name=Raid	#
-raid.progress=Mobs remaining:	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
 
 ##  Raid Texts Output
 bar.event.raid.name=Raid	#
-bar.event.raid.remaining.2=Raid - Mobs remaining: 2	#
-bar.event.raid.remaining.1=Raid - Mobs remaining: 1	#
-bar.event.raid.remaining.0=Raid - Mobs remaining: 0	#
+bar.event.raid.remaining.2=Raid - Raiders Remaining: 2	#
+bar.event.raid.remaining.1=Raid - Raiders Remaining: 1	#
+bar.event.raid.remaining.0=Raid - Raiders Remaining: 0	#
+bar.event.raid.victory=Raid - Victory	#
+bar.event.raid.defeat=Raid - Defeat	#
 
 ##  Audio Settings
 soundCategory.ambient=Ambient/Environment

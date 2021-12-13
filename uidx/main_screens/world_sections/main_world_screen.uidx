@@ -12,7 +12,7 @@
       "anchor_to": "top_left",
       "$option_label": "createWorldScreen.worldType",
       "$option_enabled_binding_name": "#world_type_dropdown_enabled",
-      "controls": [
+      "controls": [/*
         {
           "flat_world_type_toggle@settings_common_dx.dropdown_radio_150": {
             "$toggle_state_binding_name": "#world_type_radio_flat",
@@ -47,6 +47,32 @@
             "bindings": [
               {
                 "binding_name": "#world_type_radio_infinite",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        } */
+        {
+          "flat_world_type_toggle@settings_common_dx.dropdown_radio_150": {
+            "$toggle_state_binding_name": "#world_type_radio_flat",
+            "$radio_label_text": "generator.infinite",
+            "$toggle_value_text": "$radio_label_text",
+            "bindings": [
+              {
+                "binding_name": "#world_type_radio_infinite",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "infinite_world_type_toggle@settings_common_dx.dropdown_radio_150": {
+            "$toggle_state_binding_name": "#world_type_radio_infinite",
+            "$radio_label_text": "generator.flat",
+            "$toggle_value_text": "$radio_label_text",
+            "bindings": [
+              {
+                "binding_name": "#world_type_radio_flat",
                 "binding_name_override": "#visible"
               }
             ]

@@ -118,10 +118,14 @@ options.showautosaveicon=Icono de autoguardado	#
 
 ##  Raid Texts Input
 raid.name=Raid	#
-raid.progress=Mobs remaining:	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
 
 ##  Raid Texts Output
-bar.event.raid.name=Asalto	#
-bar.event.raid.remaining.2=Asalto - Criaturas restantes: 2	#
-bar.event.raid.remaining.1=Asalto - Criaturas restantes: 1	#
-bar.event.raid.remaining.0=Asalto - Criaturas restantes: 0	#
+bar.event.raid.name=Invasión	#
+bar.event.raid.remaining.2=Invasión - Invasores restantes: 2	#
+bar.event.raid.remaining.1=Invasión - Invasores restantes: 1	#
+bar.event.raid.remaining.0=Invasión - Invasores restantes: 0	#
+bar.event.raid.victory=Invasión - Victoria	#
+bar.event.raid.defeat=Invasión - Derrota	#

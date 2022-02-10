@@ -692,7 +692,7 @@
               }
             },
             {
-              "image_outline@achievement.focus_border_button": {
+              "image_outline@common_buttons.focus_border": {
                 "size": [ "100% - 2px", "100% - 2px" ],
                 "layer": 4,
                 "bindings": [

@@ -59,9 +59,12 @@
   },
 
   "feedback_button@start_dx.main_button_98": {
-    "$pressed_button_name": "button.menu_feedback",
-    "$button_text": "feedbackScreen.button",
-    "size": [ 98, 20 ]
+    "$pressed_button_name": "button.menu_open_uri",
+    "$button_text": "options.group.feedback",
+    "size": [ 98, 20 ],
+    "property_bag": {
+      "#hyperlink": "https://aka.ms/minecraftfb"
+    }
   },
 
   "invite_players_button@start_dx.main_button_98": {

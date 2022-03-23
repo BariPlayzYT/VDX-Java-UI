@@ -321,7 +321,7 @@
   
   "trade_panel@common_dx.root_panel": {
     "controls": [
-      { "close_button_panel@inventory_dx.close_button_panel": { } },
+      { "main_buttons_panel@common_dx.main_inventory_buttons_panel": { } },
       { "dialog_bg_trade@villager_java_dx.dialog_bg_trade": { "layer": 1 } },
       { "trade_panel_top_half@trade_dx.trade_panel_top_half": { } },
       {
@@ -352,6 +352,7 @@
   "center_screen": {
     "type": "panel",
     "controls": [
+      { "main_screen_content@trade_dx.main_screen_content": { } },
       { "container_gamepad_helpers@common_tooltip_dx.container_gamepad_helpers": { } },
       { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "(not $is_holographic)" } }
     ]
@@ -360,7 +361,6 @@
   "full_screen": {
     "type": "panel",
     "controls": [
-      { "main_screen_content@trade_dx.main_screen_content": { } },
       { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "$is_holographic" } }
     ]
   }

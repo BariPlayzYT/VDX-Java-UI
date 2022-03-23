@@ -348,7 +348,8 @@
           }
         },
         {
-          "seed_info@common_buttons_dx.button_label": {
+          "seed_info@common_dx.global_label": {
+            "shadow": true,
             "color": [ 0.6, 0.6, 0.6 ],
             "anchor_from": "top_left",
             "anchor_to": "top_left",
@@ -451,7 +452,8 @@
             "offset": [ 0, 38 ],
             "controls": [
               { 
-                "saved_label@common_buttons_dx.button_label": {
+                "saved_label@common_dx.global_label": {
+                  "shadow": true,
                   "size": [ "default", 12 ],
                   "color": [ 0.6, 0.6, 0.6 ],
                   "text": "selectWorld.resultFolder"
@@ -464,7 +466,8 @@
                 }
               },
               { 
-                "default_label@common_buttons_dx.button_label": {
+                "default_label@common_dx.global_label": {
+                  "shadow": true,
                   "size": [ "default", 12 ],
                   "color": [ 0.6, 0.6, 0.6 ],
                   "text": "createWorldScreen.defaultName",
@@ -477,7 +480,8 @@
                 }
               },
               { 
-                "world_label@common_buttons_dx.button_label": {
+                "world_label@common_dx.global_label": {
+                  "shadow": true,
                   "size": [ "default", 12 ],
                   "color": [ 0.6, 0.6, 0.6 ],
                   "text": "#world_name",
@@ -513,7 +517,8 @@
                   "offset": [ 5, 21 ],
                   "controls": [
                     {
-                      "survival_label_line1@common_buttons_dx.button_label": {
+                      "survival_label_line1@common_dx.global_label": {
+                        "shadow": true,
                         "color": [ 0.6, 0.6, 0.6 ],
                         "anchor_from": "top_left",
                         "anchor_to": "top_left",
@@ -527,7 +532,8 @@
                       }
                     },
                     {
-                      "survival_label_line2@common_buttons_dx.button_label": {
+                      "survival_label_line2@common_dx.global_label": {
+                        "shadow": true,
                         "color": [ 0.6, 0.6, 0.6 ],
                         "anchor_from": "top_left",
                         "anchor_to": "top_left",
@@ -542,7 +548,8 @@
                       }
                     },
                     {
-                      "creative_label_line1@common_buttons_dx.button_label": {
+                      "creative_label_line1@common_dx.global_label": {
+                        "shadow": true,
                         "color": [ 0.6, 0.6, 0.6 ],
                         "anchor_from": "top_left",
                         "anchor_to": "top_left",
@@ -556,7 +563,8 @@
                       }
                     },
                     {
-                      "creative_label_line2@common_buttons_dx.button_label": {
+                      "creative_label_line2@common_dx.global_label": {
+                        "shadow": true,
                         "color": [ 0.6, 0.6, 0.6 ],
                         "anchor_from": "top_left",
                         "anchor_to": "top_left",
@@ -571,7 +579,8 @@
                       }
                     },
                     {
-                      "adventure_label_line1@common_buttons_dx.button_label": {
+                      "adventure_label_line1@common_dx.global_label": {
+                        "shadow": true,
                         "color": [ 0.6, 0.6, 0.6 ],
                         "anchor_from": "top_left",
                         "anchor_to": "top_left",
@@ -585,7 +594,8 @@
                       }
                     },
                     {
-                      "adventure_label_line2@common_buttons_dx.button_label": {
+                      "adventure_label_line2@common_dx.global_label": {
+                        "shadow": true,
                         "color": [ 0.6, 0.6, 0.6 ],
                         "anchor_from": "top_left",
                         "anchor_to": "top_left",
@@ -633,7 +643,8 @@
                 }
               },
               {
-                "allow_cheats_info@common_buttons_dx.button_label": {
+                "allow_cheats_info@common_dx.global_label": {
+                  "shadow": true,
                   "color": [ 0.6, 0.6, 0.6 ],
                   "anchor_from": "top_left",
                   "anchor_to": "top_left",
@@ -711,28 +722,18 @@
       "offset": [ 0, -8 ],
       "controls": [
         {
-          "play_on_realms_button@common.button": {
-            "controls": [
-              { "default@java_gui_common.realms_default": { } },
-              { "hover@java_gui_common.realms_hover": { } },
-              { "pressed@java_gui_common.realms_hover": { } }
-            ],
+          "play_on_realms_button@common_buttons_dx.black_button": {
             "anchor_from": "bottom_left",
             "anchor_to": "bottom_left",
             "size": [ 20, 20 ],
             "offset": [ -20, 0 ],
             "$pressed_button_name": "play_world_on_realm_button",
+            "$button_content": "java_gui_common.realms_icon",
             "variables": [
               {
                 "requires": "(not $is_world_edit)",
                 "$button_text": "createWorldScreen.createOnRealms",
                 "$pressed_button_name": "create_world_on_realm_button"
-              },
-              {
-                "requires": "$realms_plus_on",
-                "$default_button_texture": "textures/ui/realmsContent",
-                "$hover_button_texture": "textures/ui/realmsContentHover",
-                "$pressed_button_texture": "textures/ui/realmsContentPressed"
               }
             ],          
             "bindings": [

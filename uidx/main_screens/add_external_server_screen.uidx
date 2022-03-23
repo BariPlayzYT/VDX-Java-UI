@@ -21,6 +21,7 @@
         "panel_0": {
           "type": "panel",
           "size": [ 202, 41 ],
+          "$max_text_edit_length": 16,
           "controls": [
             {
               "option_text_edit_0@settings_common_dx.option_text_edit": {
@@ -47,6 +48,7 @@
         "panel_1": {
           "type": "panel",
           "size": [ 202, 39 ],
+          "$max_text_edit_length": 256,
           "controls": [
             {
               "option_text_edit_1@settings_common_dx.option_text_edit": {
@@ -73,6 +75,7 @@
         "panel_2": {
           "type": "panel",
           "size": [ 202, 41 ],
+          "$max_text_edit_length": 6,
           "controls": [
             {
               "option_text_edit_2@settings_common_dx.option_text_edit": {

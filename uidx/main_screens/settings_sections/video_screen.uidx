@@ -30,13 +30,17 @@
 
   /*//// Hover Text Panels ////*/
 
-  "graphics_fancy_hover_text@common_dx.hover_text_label": {
-    "line_padding": 1.0,
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "offset": [ 4, 2 ],
-    "size": [ 165, "default" ],
-    "text": "options.graphics.fancy.tooltip"
+  "graphics_hover_text_panel@common_dx.hover_text_panel": {
+    "variables": [
+      {
+        "requires": "$toggle_unchecked_state",
+        "$hover_text_label_control": "video_dx.graphics_fast_hover_text"
+      },
+      {
+        "requires": "$toggle_checked_state",
+        "$hover_text_label_control": "video_dx.graphics_fancy_hover_text"
+      }
+    ]
   },
 
   "graphics_fast_hover_text@common_dx.hover_text_label": {
@@ -46,6 +50,15 @@
     "offset": [ 4, 2 ],
     "size": [ 197, "default" ],
     "text": "options.graphics.fast.tooltip"
+  },
+  
+  "graphics_fancy_hover_text@common_dx.hover_text_label": {
+    "line_padding": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 4, 2 ],
+    "size": [ 165, "default" ],
+    "text": "options.graphics.fancy.tooltip"
   },
 
   /*//// Button tab ////*/
@@ -289,10 +302,7 @@
           "controls": [
             {
               "graphics_toggle@settings_common_dx.option_toggle_150": {
-                "$hover_text_checked_label_control":"video_dx.graphics_fancy_hover_text",
-                "$hover_text_label_control": "video_dx.graphics_fast_hover_text",
-                "$has_checked_hover_text": true,
-                "$ignore_hover_text": false,
+                "$hover_content": "video_dx.graphics_hover_text_panel",
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "$option_label": "options.renderingProfile",

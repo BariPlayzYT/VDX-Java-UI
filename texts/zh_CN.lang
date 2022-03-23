@@ -35,13 +35,13 @@ pack.available.title=§l可用
 pack.selected.title=§l已选择
 
 resourcePack.title=选择资源包
-dataPack.title=选择数据包
+behaviorPack.title=选择数据包
 
 selectWorld.resourcePack=资源包
-selectWorld.dataPack=数据包
+selectWorld.behaviorPack=数据包
 
 pack.resources.dropInfo=请将资源包置于"resource_packs"文件夹 来载入此资源包
-pack.data.dropInfo=请将数据包置于"behavior_packs"文件夹 来载入此数据包
+pack.behavior.dropInfo=请将数据包置于"behavior_packs"文件夹 来载入此数据包
 
 ## Recipe Book
 gui.recipebook.search_hint=§o搜寻...

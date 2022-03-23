@@ -2,6 +2,9 @@
 //(c) Don't use any code design without permission!*/
 {
   "ugc_viewer_screen": {
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
     "$screen_content": "common.empty_panel",
     "$screen_bg_content": "ugc_viewer_dx.screen_content",
     "$header_safezone_control": "common.empty_panel",

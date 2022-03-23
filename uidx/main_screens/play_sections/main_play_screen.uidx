@@ -6,35 +6,29 @@
   /*////// TAB BUTTONS //////*/
 
   "button_tab@common_toggles_dx.main_button_toggle": {
-    "layer": 100,
-
+    "$unchecked_control": "common_buttons_dx.black_button_default",
+    "$unchecked_hover_control": "common_buttons_dx.black_button_hover",
+    "$checked_control": "common_buttons_dx.black_button_hover",
+    "$checked_hover_control": "common_buttons_dx.black_button_hover",
+    "layer": 50,
     "size": [ 20, 20 ],
     "$toggle_name": "navigation_tab"
   },
 
   "worlds_navigation_tab@play_dx.button_tab": {
-    "$unchecked_control": "java_gui_common.world_default",
-    "$unchecked_hover_control": "java_gui_common.world_hover",
-    "$checked_control": "java_gui_common.world_hover",
-    "$checked_hover_control": "java_gui_common.world_hover",
+    "$button_content": "java_gui_common.worlds_icon",
     "$tab_view_binding_name": "world_navigation_tab_toggle",
     "$toggle_group_forced_index": 0
   },
 
   "friends_navigation_tab@play_dx.button_tab": {
-    "$unchecked_control": "java_gui_common.realms_default",
-    "$unchecked_hover_control": "java_gui_common.realms_hover",
-    "$checked_control": "java_gui_common.realms_hover",
-    "$checked_hover_control": "java_gui_common.realms_hover",
+    "$button_content": "java_gui_common.realms_icon",
     "$tab_view_binding_name": "friends_navigation_tab_toggle",
     "$toggle_group_forced_index": 1
   },
 
   "server_navigation_tab@play_dx.button_tab": {
-    "$unchecked_control": "java_gui_common.server_default",
-    "$unchecked_hover_control": "java_gui_common.server_hover",
-    "$checked_control": "java_gui_common.server_hover",
-    "$checked_hover_control": "java_gui_common.server_hover",
+    "$button_content": "java_gui_common.multiplayer_icon",
     "$tab_view_binding_name": "server_navigation_tab_toggle",
     "$toggle_group_forced_index": 2
   },
@@ -166,7 +160,7 @@
         "popup_dialog_factory": {
           "type": "factory",
           "control_ids": {
-            "join_by_code": "@play.popup_dialog_join_by_code",
+            "join_by_code": "@play_realms_dx.popup_dialog_join_by_code",
             "high_ping_warning": "@play.popup_dialog_high_ping"
           }
         }

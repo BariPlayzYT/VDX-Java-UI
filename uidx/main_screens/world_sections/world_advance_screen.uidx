@@ -196,11 +196,34 @@
       {
         "panel_3@start_dx.stacked_row": {
           "ignored": "$education_edition",
-          "controls": [
+          "controls": [/* 
             {
               "permission_option@world_advanced_dx.permission_option": {
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle"
+              }
+            } */
+            {
+              "option_dropdown_permissions@settings_common_dx.option_dropdown_220": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$tts_section_header": "createWorldScreen.worldPreferences",
+                "$option_label": "permissions.title",
+                "$dropdown_content": "permissions.permission_level_dropdown_content",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "player_permissions_dropdown",
+                "$button_type_panel": "permissions.permission_level_dropdown_state_content",
+                "$options_dropdown_toggle_label_binding": "#player_permissions_dropdown_toggle_label",
+                "$option_enabled_binding_name": "#player_permissions_dropdown_enabled",
+                "$dropdown_scroll_content_size": [ "100%", "385%" ],
+                "$is_world_settings": true,
+                "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                "variables": [
+                  {
+                    "requires": "$education_edition",
+                    "$option_label": "permissions.title.settings.edu"
+                  }
+                ]
               }
             }
           ],
@@ -226,6 +249,35 @@
                 "$option_enabled_binding_name": "#server_sim_distance_enabled",
                 "$slider_steps_binding_name": "#server_sim_distance_steps",
                 "$label_bindings": [ { "binding_name": "#server_sim_distance_slider_label" } ]
+              }
+            }
+          ]
+        }
+      },
+      { 
+        "education_categorie_label@controls_dx.categories_text_panel": {
+          "ignored": "$education_edition",
+          "$categorie_text": "howtoplay.category.education",
+          "$categorie_color|default": [ 1.0, 1.0, 0.33 ],
+          "$categorie_text_offset": [ 0, 8 ],
+          "size": [ "100%", 28 ]
+        }
+      },
+      {
+        "education_panel@start_dx.stacked_row": {
+          "ignored": "$education_edition",
+          "controls": [
+            {
+              "education_toggle@settings_common_dx.option_toggle_alt": {
+                "size": [ 220, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$tts_section_header": "createWorldScreen.cheatSettings",
+                "$option_label": "createWorldScreen.educationtoggle",
+                "$option_binding_name": "#education_toggle",
+                "$option_enabled_binding_name": "#education_toggle_enabled",
+                "$toggle_name": "education_toggle",
+                "$focus_override_right": "FOCUS_OVERRIDE_STOP"
               }
             }
           ]

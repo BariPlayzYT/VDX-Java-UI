@@ -213,7 +213,7 @@
     "size": [ 310, 20 ],
     "controls": [
       {
-        "left@common_buttons_dx.main_button_100": {
+        "left@common_buttons_dx.main_button_150": {
           "$button_content": "common_dialogs_dx.button_label_dialog",
           "anchor_to": "top_left",
           "anchor_from": "top_left",
@@ -222,21 +222,22 @@
         }
       },
       {
-        "middle@common_buttons_dx.main_button_100": {
+        "middle@common_buttons_dx.main_button_150": {
           "$button_content": "common_dialogs_dx.button_label_dialog",
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
-          "$pressed_button_name": "$popup_dialog_middle_button_name",
-          "$button_text": "#modal_middle_button_text"
+          "offset": [ 0, 24 ],
+          "$pressed_button_name": "$popup_dialog_rightcancel_button_name",
+          "$button_text": "#modal_rightcancel_button_text"
         }
       },
       {
-        "right@common_buttons_dx.main_button_100": {
+        "right@common_buttons_dx.main_button_150": {
           "$button_content": "common_dialogs_dx.button_label_dialog",
           "anchor_to": "top_right",
           "anchor_from": "top_right",
-          "$pressed_button_name": "$popup_dialog_rightcancel_button_name",
-          "$button_text": "#modal_rightcancel_button_text"
+          "$pressed_button_name": "$popup_dialog_middle_button_name",
+          "$button_text": "#modal_middle_button_text"
         }
       }
     ]
@@ -247,7 +248,7 @@
     "size": [ 310, 20 ],
     "controls": [
       {
-        "left@common_buttons_dx.main_button_100": {
+        "left@common_buttons_dx.main_button_150": {
           "$button_content": "common_dialogs_dx.button_label_dialog",
           "anchor_to": "top_left",
           "anchor_from": "top_left",
@@ -256,21 +257,22 @@
         }
       },
       {
-        "middle@common_buttons_dx.main_button_100": {
+        "middle@common_buttons_dx.main_button_150": {
           "$button_content": "common_dialogs_dx.button_label_dialog",
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
-          "$pressed_button_name": "$popup_dialog_middle_button_name",
-          "$button_text": "#modal_middle_button_text"
+          "offset": [ 0, 24 ],
+          "$pressed_button_name": "$popup_dialog_rightcancel_button_name",
+          "$button_text": "#modal_rightcancel_button_text"
         }
       },
       {
-        "right@common_buttons_dx.main_button_100": {
+        "right@common_buttons_dx.main_button_150": {
           "$button_content": "common_dialogs_dx.button_label_dialog",
           "anchor_to": "top_right",
           "anchor_from": "top_right",
-          "$pressed_button_name": "$popup_dialog_rightcancel_button_name",
-          "$button_text": "#modal_rightcancel_button_text"
+          "$pressed_button_name": "$popup_dialog_middle_button_name",
+          "$button_text": "#modal_middle_button_text"
         }
       }
     ]

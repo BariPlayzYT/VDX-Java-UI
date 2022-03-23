@@ -248,17 +248,38 @@
     "size": [ 182, 5 ],
     "layer": 10,
     "controls": [
-      { "blue_bar_empty@bars_java_dx.blue_bar_empty": { "layer": 1, "size": [ 182, 5 ] } },
       { 
-        "blue_bar_full@bars_java_dx.blue_bar_full": {
+        "white_bar_empty@bars_java_dx.white_bar_empty": {
+          "layer": 1,
+          "size": [ 182, 5 ],
+          "color": "#color",
+          "bindings": [
+            {
+              "binding_name": "#bar_color",
+              "binding_name_override": "#color",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      },
+      { 
+        "white_bar_full@bars_java_dx.white_bar_full": {
           "layer": 3,
           "size": [ 182, 5 ],
           "clip_direction": "left",
           "clip_pixelperfect": true,
+          "color": "#color",
           "bindings": [
             {
               "binding_name": "#progress_percentage",
               "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            },
+            {
+              "binding_name": "#bar_color",
+              "binding_name_override": "#color",
               "binding_type": "collection",
               "binding_collection_name": "$progress_bar_collection"
             }

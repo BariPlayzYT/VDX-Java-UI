@@ -1,23 +1,29 @@
 /*File modified by @CrisXolt.
 //(c) Don't use any code design without permission!*/
 {
+  "progress_screen": {
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ]
+  },
+  
   "world_loading_progress_screen": {
     "$screen_bg_content": "java_gui_common.options_background",
     "$screen_content": "progress_dx.world_loading_progress_screen_content"
   },
 
   "overworld_loading_progress_screen": {
-    "$screen_bg_content": "progress_dx.overworld_loading_background",
+    "$screen_bg_content": "progress_dx.world_dimension_progress_screen_background",
     "$screen_content": "progress_dx.world_dimension_progress_screen_content"
   },
 
   "nether_loading_progress_screen": {
-    "$screen_bg_content": "progress_dx.nether_loading_background",
+    "$screen_bg_content": "progress_dx.world_dimension_progress_screen_background",
     "$screen_content": "progress_dx.world_dimension_progress_screen_content"
   },
 
   "theend_loading_progress_screen": {
-    "$screen_bg_content": "progress_dx.theend_loading_background",
+    "$screen_bg_content": "progress_dx.world_dimension_progress_screen_background",
     "$screen_content": "progress_dx.world_dimension_progress_screen_content"
   },
 
@@ -33,6 +39,6 @@
 
   "realms_loading_progress_screen": {
     "$screen_bg_content": "java_gui_common.options_background",
-    "$screen_content": "progress_dx.world_dimension_progress_screen_content"
+    "$screen_content": "progress_dx.realms_progress_screen_content"
   }
 }

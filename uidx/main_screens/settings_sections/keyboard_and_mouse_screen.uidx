@@ -5,14 +5,24 @@
   
   /*//// Button tab ////*/
   
-  "more_options_button@settings_dx.button_tab": {
+  "mouse_settings_button@settings_dx.button_tab": {
     "size": [ 150, 20 ],
-    "$button_text": "options.keyboardAndMouseSettings",
+    "$button_text": "options.mouse_settings",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "$toggle_name": "keyboard_and_mouse_options",
-    "$tab_view_binding_name": "keyboard_and_mouse_more_toggle",
+    "$tab_view_binding_name": "mouse_settings_toggle",
     "$toggle_group_forced_index": 1
+  },
+  
+  "key_binds_button@settings_dx.button_tab": {
+    "size": [ 150, 20 ],
+    "$button_text": "controls.keybinds",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "$toggle_name": "keyboard_and_mouse_options",
+    "$tab_view_binding_name": "key_binds_toggle",
+    "$toggle_group_forced_index": 2
   },
 
   "main_options_button@settings_dx.button_tab": {
@@ -146,7 +156,7 @@
     "$collection_name": "$keymapping_collection"
   },
 
-  "keyboard_and_mouse_stack_panel": {
+  "key_binds_stack_panel": {
     "type": "stack_panel",
     "orientation": "vertical",
     "anchor_from": "top_midddle",
@@ -280,7 +290,7 @@
     ]
   },
 
-  "more_stack_panel": {
+  "mouse_settings_stack_panel": {
     "type": "stack_panel",
     "orientation": "vertical",
     "anchor_from": "top_middle",
@@ -376,24 +386,6 @@
             }
           ]
         }
-      },
-      {
-        "panel_2": {
-          "type": "panel",
-          "size": [ 310, 25 ],
-          "controls": [
-            {
-              "option_toggle_full_keyboard_gameplay@settings_common_dx.option_toggle_310": {
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "$option_label": "options.fullKeyboardGameplay",
-                "$option_binding_name": "#keyboard_show_full_keyboard_options",
-                "$option_enabled_binding_name": "#keyboard_show_full_keyboard_options_enabled",
-                "$toggle_name": "keyboard_show_full_keyboard_options"
-              }
-            }
-          ]
-        }
       }
     ]
   },
@@ -404,15 +396,71 @@
     "type": "panel",
     "controls": [
       {
-        "main@common_menus_dx.java_edition_menu_panel_template": {
-          "$top_content": "controls_dx.keyboard_and_mouse_top_content",
-          "$top_content_size": [ "100%", 43 ],
-          "$scrolling_content": "controls_dx.keyboard_and_mouse_stack_panel",
-          "$bottom_content": "controls_dx.keyboard_and_mouse_bottom_content",
+        "main": {
+          "type": "panel",
+          "controls": [
+            { "main_bg_panel@settings_dx.bg_panel": { } },
+            {
+              "keyboard_and_mouse_label@settings_dx.base_label": {
+                "text": "options.keyboardAndMouse",
+                "offset": [ 0, 14 ]
+              }
+            },
+            {
+              "panel": {
+                "type": "panel",
+                "size": [ 310, 92 ],
+                "offset": [ 0, 28 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "controls": [
+                  { "mouse_settings_button@controls_dx.mouse_settings_button": { } },
+                  { "key_binds_button@controls_dx.key_binds_button": { } },
+                  {
+                    "option_toggle_1@settings_common_dx.option_toggle_150": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 0, 24 ],
+                      "$option_label": "options.autojump",
+                      "$option_binding_name": "#keyboard_mouse_autojump",
+                      "$option_enabled_binding_name": "#keyboard_mouse_autojump_enabled",
+                      "$toggle_name": "keyboard_mouse_autojump"
+                    }
+                  },
+                  {
+                    "option_toggle_full_keyboard_gameplay@settings_common_dx.option_toggle_150": {
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "offset": [ 0, 24 ],
+                      "$option_label": "options.fullKeyboardGameplay",
+                      "$option_binding_name": "#keyboard_show_full_keyboard_options",
+                      "$option_enabled_binding_name": "#keyboard_show_full_keyboard_options_enabled",
+                      "$toggle_name": "keyboard_show_full_keyboard_options"
+                    }
+                  },
+                  {
+                    "null_navigation_tab@settings_dx.null_navigation_tab": {
+                      "$unchecked_control": "common_buttons_dx.200_default",
+                      "$unchecked_hover_control": "common_buttons_dx.200_hover",
+                      "size": [ 200, 20 ],
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
           "bindings": [
             {
               "binding_type": "view",
-              "source_control_name": "keyboard_and_mouse_more_toggle",
+              "source_control_name": "mouse_settings_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "key_binds_toggle",
               "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
             }
@@ -420,15 +468,31 @@
         }
       },
       {
-        "more@common_menus_dx.java_edition_menu_panel_template": {
-          "$top_content": "controls_dx.more_label",
+        "key_binds@common_menus_dx.java_edition_menu_panel_template": {
+          "$top_content": "controls_dx.key_binds_label",
+          "$top_content_size": [ "100%", 20 ],
+          "$scrolling_content": "controls_dx.key_binds_stack_panel",
+          "$bottom_content": "controls_dx.key_binds_bottom_content",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "key_binds_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "mouse_settings@common_menus_dx.java_edition_menu_panel_template": {
+          "$top_content": "controls_dx.mouse_settings_label",
           "$top_content_size": [ "100%", 32 ],
-          "$scrolling_content": "controls_dx.more_stack_panel",
+          "$scrolling_content": "controls_dx.mouse_settings_stack_panel",
           "$bottom_content": "controls_dx.main_options_button",
           "bindings": [
             {
               "binding_type": "view",
-              "source_control_name": "keyboard_and_mouse_more_toggle",
+              "source_control_name": "mouse_settings_toggle",
               "source_property_name": "#toggle_state",
               "target_property_name": "#visible"
             }
@@ -437,45 +501,18 @@
       }
     ]
   },
-
-  "keyboard_and_mouse_top_content": {
-    "type": "panel",
-    "anchor_from": "top_middle",
-    "anchor_to": "top_middle",
-    "size": [ 310, 62 ],
-    "controls": [
-      {
-        "keyboard_and_mouse_label@settings_dx.base_label": {
-          "text": "options.keyboardAndMouse",
-          "offset": [ 0, 7 ]
-        }
-      },
-      {
-        "panel": {
-          "type": "panel",
-          "size": [ 310, 20 ],
-          "offset": [ 0, 18 ],
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "controls": [
-            { "more_options_button@controls_dx.more_options_button": { } },
-            {
-              "option_toggle_1@settings_common_dx.option_toggle_150": {
-                "anchor_from": "bottom_right",
-                "anchor_to": "bottom_right",
-                "$option_label": "options.autojump",
-                "$option_binding_name": "#keyboard_mouse_autojump",
-                "$option_enabled_binding_name": "#keyboard_mouse_autojump_enabled",
-                "$toggle_name": "keyboard_mouse_autojump"
-              }
-            }
-          ]
-        }
-      }
-    ]
+  
+  "mouse_settings_label@settings_dx.base_label": {
+    "text": "options.mouse_settings.title",
+    "offset": [ 0, 4 ]
+  },
+  
+  "key_binds_label@settings_dx.base_label": {
+    "text": "controls.keybinds.title",
+    "offset": [ 0, 7 ]
   },
 
-  "keyboard_and_mouse_bottom_content": {
+  "key_binds_bottom_content": {
     "type": "panel",
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
@@ -491,17 +528,15 @@
         }
       },
       {
-        "null_navigation_tab@settings_dx.null_navigation_tab": {
+        "null_navigation_tab@controls_dx.main_options_button": {
+          "offset": [ 0, 0 ],
+          "$unchecked_control": "common_buttons_dx.150_default",
+          "$unchecked_hover_control": "common_buttons_dx.150_hover",
           "size": [ 150, 20 ],
           "anchor_from": "top_right",
           "anchor_to": "top_right"
         }
       }
     ]
-  },
-
-  "more_label@settings_dx.base_label": {
-    "text": "options.keyboardAndMouseSettings",
-    "offset": [ 0, 4 ]
   }
 }

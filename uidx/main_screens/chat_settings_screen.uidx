@@ -18,6 +18,7 @@
     "controls": [
       {
         "button_label@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
           "ignored": "$only_value",
           "text": "$option_label",
           "color": "$option_label_text_color"
@@ -25,18 +26,21 @@
       },
       {
         "colon@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
           "ignored": "($only_value or (not $colon_needed))",
           "text": ": "
         }
       },
       {
         "separator@common_buttons_dx.button_label": {
-          "ignored": "$colon_needed",
+          "size": [ "default", 10 ],
+          "ignored": "($only_value or $colon_needed)",
           "text": " "
         }
       },
       {
         "value_label@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
           "$radio_label_font_type|default": "default",
           "font_type": "smooth",
           "text": "$toggle_value_text",
@@ -195,6 +199,7 @@
     "controls": [
       {
         "button_label@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
           "ignored": "$only_value",
           "text": "$option_label",
           "color": "$option_label_text_color"
@@ -202,12 +207,14 @@
       },
       {
         "separator@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
           "ignored": "$only_value",
           "text": ": "
         }
       },
       {
         "value_label@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
           "color": "$value_color",
           "text": "$toggle_value_text",
           "bindings": [

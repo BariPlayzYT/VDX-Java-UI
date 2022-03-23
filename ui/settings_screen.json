@@ -2,6 +2,9 @@
 //(c) Don't use any code design without permission!*/
 {
   "screen_world_create": {
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
     "$title_text": "createWorldScreen.header.local",
     "$screen_content": "create_world_dx.center_screen",
     "$screen_bg_content": "create_world_dx.full_screen",
@@ -11,6 +14,9 @@
   },
 
   "screen_template_create": {
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
     "$title_text": "createWorldScreen.header.local",
     "$screen_content": "create_world_dx.center_screen",
     "$screen_bg_content": "create_world_dx.full_screen",
@@ -20,6 +26,9 @@
   },
 
   "screen_world_edit": {
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
     "$title_text": "createWorldScreen.header.editLocal",
     "$screen_content": "create_world_dx.center_screen",
     "$screen_bg_content": "create_world_dx.full_screen",
@@ -30,6 +39,9 @@
   },
 
   "screen_controls_and_settings": {
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
     "$screen_content": "settings_dx.center_screen",
     "$screen_bg_content": "settings_dx.full_screen",
     "$header_safezone_control": "common.empty_panel",
@@ -38,6 +50,9 @@
   },
 
   "screen_world_controls_and_settings": {
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
     "$screen_content": "settings_dx.center_screen",
     "$screen_bg_content": "settings_dx.full_screen",
     "$header_safezone_control": "common.empty_panel",
@@ -46,6 +61,9 @@
   },
 
   "screen_realm_controls_and_settings": {
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
     "$include_realm_section": true,
     "$is_realms": true,
     "$include_controls_and_settings_sections": true,
@@ -57,6 +75,9 @@
   },
 
   "screen_world_slot_edit": {
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
     "$include_realm_section": true,
     "$is_realm_slot": true,
     "$_include_world_section": false,
@@ -75,6 +96,9 @@
   },
 
   "screen_realm_manage": {
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
     "$include_realm_section": true,
     "$realm_no_world_edit": true,
     "$_include_world_section": false,

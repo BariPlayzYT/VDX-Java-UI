@@ -7,6 +7,8 @@
     "anchor_to": "bottom_left",
     "orientation": "horizontal",
     "size": [ "100%c", 16 ],
+    "layer": "$gamepad_helper_layer",
+    "$gamepad_helper_layer|default": 100,
     "$icon_texture": "",
     "$desc_panel_content|default": "common.empty_panel",
     "$hide_description|default": false,

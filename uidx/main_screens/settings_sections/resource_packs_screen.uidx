@@ -512,7 +512,6 @@
       {
         "buttons_panel_hold": {
           "type": "panel",
-          "ignored": "(not $is_pregame)",
           "controls": [
             {
               "button@resource_packs.common_pack_button": {
@@ -559,6 +558,7 @@
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "layer": 10,
+                      "ignored": "(not $is_pregame)",
                       "controls": [
                         { "selected_pack_left_button@resource_packs_dx.selected_pack_minus_button": { } },
                         { "selected_pack_right_button@resource_packs_dx.selected_pack_plus_button": { } },
@@ -578,51 +578,10 @@
                       "layer": 4,
                       "controls": [
                         {
-                          "info_button@common.button": {
+                          "info_button@common_buttons_dx.black_button": {
                             "size": [ 16, 16 ],
                             "$pressed_button_name": "$button.report_errors",
-                            "controls": [
-                              { 
-                                "default@java_gui_common.resource_info_default": {
-                                  "size": [ 16, 16 ],
-                                  "layer": 8
-                                }
-                              },
-                              { 
-                                "hover@java_gui_common.resource_info_hover": {
-                                  "size": [ 16, 16 ],
-                                  "layer": 8,
-                                  "controls": [
-                                    {
-                                      "java_menu_select_grid@java_gui_common.java_menu_select_grid": {
-                                        "layer": -1,
-                                        "size": [ 32, 32 ],
-                                        "offset": [ -158, 0 ],
-                                        "anchor_from": "top_right",
-                                        "anchor_to": "top_right"
-                                      }
-                                    }
-                                  ]
-                                }
-                              },
-                              { 
-                                "pressed@java_gui_common.resource_info_hover": {
-                                  "size": [ 16, 16 ],
-                                  "layer": 8,
-                                  "controls": [
-                                    {
-                                      "java_menu_select_grid@java_gui_common.java_menu_select_grid": {
-                                        "layer": -1,
-                                        "size": [ 32, 32 ],
-                                        "offset": [ -158, 0 ],
-                                        "anchor_from": "top_right",
-                                        "anchor_to": "top_right"
-                                      }
-                                    }
-                                  ]
-                                }
-                              }
-                            ],
+                            "$button_content": "java_gui_common.pack_info_icon",
                             "bindings": [
                               {
                                 "binding_collection_name": "$button_collection_name",
@@ -638,51 +597,11 @@
                           }
                         },
                         {
-                          "config_button@common.button": {
+                          "config_button@common_buttons_dx.black_button": {
+                            "ignored": "(not $is_pregame)",
                             "size": [ 16, 16 ],
                             "$pressed_button_name": "$button.pack_settings",
-                            "controls": [
-                              { 
-                                "default@java_gui_common.resource_config_default": {
-                                  "size": [ 16, 16 ],
-                                  "layer": 8
-                                }
-                              },
-                              { 
-                                "hover@java_gui_common.resource_config_hover": {
-                                  "size": [ 16, 16 ],
-                                  "layer": 8,
-                                  "controls": [
-                                    {
-                                      "java_menu_select_grid@java_gui_common.java_menu_select_grid": {
-                                        "layer": -1,
-                                        "size": [ 32, 32 ],
-                                        "offset": [ -158, 0 ],
-                                        "anchor_from": "bottom_right",
-                                        "anchor_to": "bottom_right"
-                                      }
-                                    }
-                                  ]
-                                }
-                              },
-                              { 
-                                "pressed@java_gui_common.resource_config_hover": {
-                                  "size": [ 16, 16 ],
-                                  "layer": 8,
-                                  "controls": [
-                                    {
-                                      "java_menu_select_grid@java_gui_common.java_menu_select_grid": {
-                                        "layer": -1,
-                                        "size": [ 32, 32 ],
-                                        "offset": [ -158, 0 ],
-                                        "anchor_from": "bottom_right",
-                                        "anchor_to": "bottom_right"
-                                      }
-                                    }
-                                  ]
-                                }
-                              }
-                            ],
+                            "$button_content": "java_gui_common.pack_settings_icon",
                             "bindings": [
                               {
                                 "binding_type": "collection",

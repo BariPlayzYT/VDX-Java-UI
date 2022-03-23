@@ -10,6 +10,15 @@ options.enableAutoPlatformTextToSpeech=TTS with Device
 options.enableUITextToSpeech=UI Screen Reader
 options.enableOpenChatMessage=Open Chat Message
 
+##  Controls Settings
+options.mouse_settings=Mouse Settings...
+options.mouse_settings.title=Mouse Settings
+controls.keybinds=Key Binds...
+controls.keybinds.title=Key Binds
+
+options.joystick_settings=Joystick Settings...
+options.joystick_settings.title=Joystick Settings
+
 ##  Video Settings
 options.graphics.fancy.tooltip=Fancy graphics balances performance and quality for the majority of machines. Weather, clouds and particles may not appear behind translucent blocks or water.
 options.graphics.fast.tooltip=Fast graphics reduces the amount of visible rain and snow. Transparency effects are disabled for various blocks such as tree-leaves.

@@ -209,19 +209,19 @@
     ]
   },
 
-  /*//// World Dimension Loading Screen /////*/
+  /*//// Realms Loading Screen /////*/
   
-  "world_dimension_progress_screen_content": {
+  "realms_progress_screen_content": {
     "type": "panel",
     "layer": 4,
     "controls": [
-      { "title_dimension_panel@progress_dx.title_dimension_panel": {} },
+      { "title_realms_panel@progress_dx.title_realms_panel": {} },
       { "popup_dialog_factory@progress.popup_dialog_factory": {} },
       { "gamepad_helpers@progress_dx.gamepad_helpers": {} }
     ]
   },
   
-  "title_dimension_panel": {
+  "title_realms_panel": {
     "type": "panel",
     "size": [ "100%", "100%" ],
     "anchor_from": "top_middle",
@@ -250,6 +250,87 @@
       { "classic_progress_loading_bars@progress_dx.classic_progress_loading_bars": {} },
       { "cancel_button@progress_dx.cancel_button": { "offset": [ 0, -56 ] } }
     ]
+  },
+
+  /*//// World Dimension Loading Screen /////*/
+  
+  "world_dimension_progress_screen_content": {
+    "type": "panel",
+    "layer": 4,
+    "controls": [
+      { "title_dimension_panel@progress_dx.title_dimension_panel": {} },
+      { "popup_dialog_factory@progress.popup_dialog_factory": {} },
+      { "gamepad_helpers@progress_dx.gamepad_helpers": {} }
+    ]
+  },
+  
+  "title_dimension_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "progress_title_text@progress_dx.progress_title_text": {} }/* ,
+      {
+        "progress_bar_text@common_dx.global_label": {
+          "color": "$loading_text_color",
+          "shadow": true,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 93 ],
+          "text": "#progress_text",
+          "bindings": [
+            {
+              "binding_name": "#progress_text"
+            },
+            {
+              "binding_name": "#loading_bar_visible",
+              "binding_name_override": "#progress_bar_visible"
+            }
+          ]
+        }
+      },
+      { "classic_progress_loading_bars@progress_dx.classic_progress_loading_bars": {} },
+      { "cancel_button@progress_dx.cancel_button": { "offset": [ 0, -56 ] } } */
+    ]
+  },
+
+  "world_dimension_progress_screen_background": {
+    "type": "panel",
+    "controls": [
+      { 
+        "pre_bg@java_gui_common.screen_background": {
+          "layer": -10
+        }
+      },
+      { 
+        "main_bg@java_gui_common.options_background": {
+          "alpha": "@progress_dx.main_bg_animation_in",
+          "layer": -5
+        }
+      }
+    ]
+  },
+
+  "main_bg_animation_in": {
+    "anim_type": "alpha",
+    "duration": 0,
+    "from": 0.0,
+    "to": 0.0,
+    "next": "@progress_dx.main_bg_animation_wait"
+  },
+  
+  "main_bg_animation_wait": {
+    "anim_type": "wait",
+    "duration": 1.75,
+    "next": "@progress_dx.main_bg_animation_out"
+  },
+
+  "main_bg_animation_out": {
+    "anim_type": "alpha",
+    "duration": 1,
+    "from": 1.0,
+    "to": 1.0
   },
 
   /*//// World Saving Screen /////*/

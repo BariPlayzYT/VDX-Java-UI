@@ -105,15 +105,19 @@
     "$option_text_edit_control_size": [ "100%", 22 ],
     "$option_place_holder_text|default": "",
     "$max_text_edit_length|default": 30,
+    "$label_bindings": [],
     "controls": [
       {
         "button_label@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
           "offset": "$label_offset",
           "color": "$label_color",
           "layer": 5,
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "text": "$option_label"
+          "text_alignment": "left",
+          "text": "$option_label",
+          "bindings": "$label_bindings"
         }
       },
       {
@@ -237,6 +241,7 @@
     "controls": [
       {
         "button_label@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
           "ignored": "$only_value",
           "text": "$option_label",
           "color": "$option_label_text_color"
@@ -244,18 +249,21 @@
       },
       {
         "colon@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
           "ignored": "($only_value or (not $colon_needed))",
           "text": ": "
         }
       },
       {
         "separator@common_buttons_dx.button_label": {
-          "ignored": "$colon_needed",
+          "size": [ "default", 10 ],
+          "ignored": "($only_value or $colon_needed)",
           "text": " "
         }
       },
       {
         "value_label@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
           "text": "$toggle_value_text",
           "bindings": [
             {
@@ -266,45 +274,48 @@
       }
     ]
   },
-  
-  "toggle_unchecked": {
+
+  "main_toggle_base": {
     "type": "panel",
-    "$toggle_value_text": "$toggle_off_text",
-    "$toggle_texture": "$toggle_texture_default",
+    "$toggle_unchecked_state": false,
+    "$toggle_checked_state": false,
     "controls": [
       { "texture@$toggle_texture": { } }
     ]
   },
   
-  "toggle_unchecked_hover@settings_common_dx.toggle_unchecked": {
+  "toggle_unchecked@settings_common_dx.main_toggle_base": {
+    "$toggle_unchecked_state": true,
+    "$toggle_value_text": "$toggle_off_text",
+    "$toggle_texture": "$toggle_texture_default"
+  },
+  
+  "toggle_unchecked_hover@settings_common_dx.main_toggle_base": {
+    "$toggle_unchecked_state": true,
     "$toggle_value_text": "$toggle_off_text",
     "$toggle_texture": "$toggle_texture_hover"
   },
   
-  "toggle_unchecked_locked@settings_common_dx.toggle_unchecked": {
+  "toggle_unchecked_locked@settings_common_dx.main_toggle_base": {
+    "$toggle_unchecked_state": true,
     "$toggle_value_text": "$toggle_off_text",
     "$toggle_texture": "$toggle_texture_locked"
   },
   
-  "toggle_checked@settings_common_dx.toggle_unchecked": {
+  "toggle_checked@settings_common_dx.main_toggle_base": {
+    "$toggle_checked_state": true,
     "$toggle_value_text": "$toggle_on_text",
     "$toggle_texture": "$toggle_texture_default"
   },
   
-  "toggle_checked_hover@settings_common_dx.toggle_unchecked": {
-    "$has_checked_hover_text|default": false,
+  "toggle_checked_hover@settings_common_dx.main_toggle_base": {
+    "$toggle_checked_state": true,
     "$toggle_value_text": "$toggle_on_text",
-    "$toggle_texture": "$toggle_texture_hover",
-    "variables": [
-      {
-        "requires": "$has_checked_hover_text",
-        "$hover_text_checked_label_control|default": "common.empty_panel",
-        "$hover_text_label_control": "$hover_text_checked_label_control"
-      }
-    ]
+    "$toggle_texture": "$toggle_texture_hover"
   },
   
-  "toggle_checked_locked@settings_common_dx.toggle_unchecked": {
+  "toggle_checked_locked@settings_common_dx.main_toggle_base": {
+    "$toggle_checked_state": true,
     "$toggle_value_text": "$toggle_on_text",
     "$toggle_texture": "$toggle_texture_locked"
   },
@@ -321,6 +332,7 @@
           "color": [ 1.0, 1.0, 1.0 ],
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
+          "text_alignment": "left",
           "size": [ "100%-46px", "default" ],
           "layer": 10,
           "shadow": false,
@@ -426,5 +438,179 @@
     "$toggle_texture_default": "common_buttons_dx.44_default",
     "$toggle_texture_hover": "common_buttons_dx.44_hover",
     "$toggle_texture_locked": "common_buttons_dx.44_locked"
+  },
+
+  /*//// True Option Dropdown ////*/
+  
+  "dropdown_label": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ "100%c", 10 ],
+    "$only_bindings|default": false,
+    "layer": 2,
+    "controls": [
+      {
+        "button_label@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
+          "text": "$option_label",
+          "ignored": "$only_bindings",
+          "bindings": "$label_bindings"
+        }
+      },
+      {
+        "separator@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
+          "ignored": "$only_bindings",
+          "text": ": "
+        }
+      },
+      { 
+        "button_label_content_name@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
+          "$option_label_text_color|default": "$text_color",
+          "color": "$option_label_text_color",
+          "text": "$options_dropdown_toggle_label_binding",
+          "bindings": [
+            {
+              "binding_name": "$options_dropdown_toggle_label_binding",
+              "binding_condition": "none",
+              "binding_type": "$options_dropdown_toggle_label_binding_type",
+              "binding_collection_name": "$options_dropdown_toggle_label_binding_collection_name"
+            },
+            {
+              "binding_name": "$options_dropdown_label_color_binding",
+              "binding_type": "$options_dropdown_label_color_binding_type",
+              "binding_name_override": "#color"
+            },
+            {
+              "binding_type": "global",
+              "binding_name": "$options_dropdown_toggle_label_font_type",
+              "binding_name_override": "#font_type"
+            }
+          ]
+        }
+      },
+      {
+        "button_panel": {
+          "type": "panel",
+          "size": [ 12, 10 ],
+          "ignored": "$only_bindings",
+          "controls": [
+            { 
+              "arrow_down_icon": {
+                "type": "image",
+                "layer": 2,
+                "size": [ 12, 12 ],
+                "offset": [ 0, 1 ],
+                "color": "$text_color",
+                "texture": "textures/uidx/icons/arrow_down"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "options_dropdown_toggle_control@common_toggles.light_template_toggle": {
+    "$button_content": "settings_common_dx.dropdown_label",
+
+    "$unchecked_control": "$dropdown_texture_default",
+    "$checked_control": "$dropdown_texture_pressed",
+    "$unchecked_hover_control": "$dropdown_texture_hover",
+    "$checked_hover_control": "$dropdown_texture_pressed",
+
+    "$unchecked_locked_control": "$dropdown_texture_locked",
+    "$unchecked_locked_hover_control": "$dropdown_texture_locked",
+    "$checked_locked_control": "$dropdown_texture_locked",
+    "$checked_locked_hover_control": "$dropdown_texture_locked",
+
+    "size": [ "100%", "100%" ],
+    "$button_type_panel|default": "settings_common.default_options_dropdown_toggle_button_state_content",
+
+    "enabled": "$enabled",
+    "$toggle_enabled_binding_name|default": "$option_enabled_binding_name",
+    "$toggle_enabled_binding_type|default": "global",
+    "$toggle_binding_type|default": "global",
+    "variables": [
+      {
+        "requires": "(not $option_enabled_binding_name or not $enabled)",
+        "$toggle_enabled_binding_name": "#not_data_bound",
+        "$toggle_enabled_binding_type": "none"
+      }
+    ]
+  },
+
+  "option_dropdown_base@settings_common.option_generic": {
+    "$label_bindings": [],
+    "$option_dropdown_type": "common.dropdown",
+    "$options_dropdown_toggle_label_binding_collection_name": "",
+    "$options_dropdown_toggle_label_binding_type": "global",
+    "$options_dropdown_label_color_binding": "",
+    "$options_dropdown_label_color_binding_type": "none",
+    "$options_dropdown_toggle_label_font_type": "default",
+    "controls": [
+      {
+        "button_panel": {
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "$dropdown_background_control": "java_gui_common.text_input_java",
+          "$scroll_track_image_control": "common_menus_dx.java_scroll_track",
+          "$scroll_box_mouse_image_control": "common_menus_dx.java_scroll_box",
+          "controls": [
+            {
+              "dropdown@$option_dropdown_type": {
+                "size": [ "100%", 20 ],
+                "$dropdown_toggle": "settings_common_dx.options_dropdown_toggle_control",
+                "$dropdown_background": "$dropdown_background_control",
+                "$dropdown_content|default": "unset_dropdown_content",
+                "$dropdown_name|default": "unset $dropdown_name",
+                "$options_dropdown_toggle_label_binding|default": "unset $options_dropdown_toggle_label_text",
+                "$locked_alpha": 0.5,
+                "$toggle_tts_header": "$option_label"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "option_dropdown_no_scroll@settings_common_dx.option_dropdown_base": {
+    "$option_dropdown_type": "common.dropdown_no_scrollpanel"
+  },
+
+  "option_dropdown_130@settings_common_dx.option_dropdown_base": {
+    "size": [ 130, 20 ],
+    "$dropdown_texture_default": "common_buttons_dx.130_default",
+    "$dropdown_texture_hover": "common_buttons_dx.130_hover",
+    "$dropdown_texture_pressed": "common_buttons_dx.130_pressed",
+    "$dropdown_texture_locked": "common_buttons_dx.130_locked"
+  },
+
+  "option_dropdown_200@settings_common_dx.option_dropdown_base": {
+    "size": [ 200, 20 ],
+    "$dropdown_texture_default": "common_buttons_dx.200_default",
+    "$dropdown_texture_hover": "common_buttons_dx.200_hover",
+    "$dropdown_texture_pressed": "common_buttons_dx.200_pressed",
+    "$dropdown_texture_locked": "common_buttons_dx.200_locked"
+  },
+
+  "option_dropdown_220@settings_common_dx.option_dropdown_base": {
+    "size": [ 220, 20 ],
+    "$dropdown_texture_default": "common_buttons_dx.220_default",
+    "$dropdown_texture_hover": "common_buttons_dx.220_hover",
+    "$dropdown_texture_pressed": "common_buttons_dx.220_pressed",
+    "$dropdown_texture_locked": "common_buttons_dx.220_locked"
+  },
+
+  "option_dropdown_310@settings_common_dx.option_dropdown_base": {
+    "size": [ 310, 20 ],
+    "$dropdown_texture_default": "common_buttons_dx.310_default",
+    "$dropdown_texture_hover": "common_buttons_dx.310_hover",
+    "$dropdown_texture_pressed": "common_buttons_dx.310_pressed",
+    "$dropdown_texture_locked": "common_buttons_dx.310_locked"
   }
 }

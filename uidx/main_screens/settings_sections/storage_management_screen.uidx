@@ -147,10 +147,21 @@
     "$is_checked|default": false,
     "layer": 2,
     "controls": [
-      { "button_label@common_buttons_dx.button_label": { "text": "$option_label" } },
-      { "separator@common_buttons_dx.button_label": { "text": ": " } },
+      { 
+        "button_label@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
+          "text": "$option_label"
+        }
+      },
+      { 
+        "separator@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
+          "text": ": "
+        }
+      },
       { 
         "button_label_content_name@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
           "text": "$size_text",
           "bindings":[
             {

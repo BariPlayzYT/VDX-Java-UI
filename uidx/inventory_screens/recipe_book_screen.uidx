@@ -310,6 +310,7 @@
     "$durability_bar_required": false,
     "$item_renderer_binding_condition": "visible",
     "$button_ref": "crafting.creative_no_coalesce_container_slot_button",
+    "$auto_place_mode_button_name": "button.recipe_tertiary",
     "$background_images": "crafting.recipe_container_cell_images",
 
     "$slot_selected_binding_name": "#is_creative_selected_slot",
@@ -511,7 +512,7 @@
       /*  Added compatibility for AgentMindStorm's Java Aspects  */
       {
         "overlay": {
-          "ignored": "(not $is_java_aspects)",
+          "ignored": "(not $is_java_aspects_fidelity)",
           "type": "image",
           "size": [ 16, 16 ],
           "texture": "textures/icon/chest"
@@ -735,15 +736,23 @@
   "recipe_book@common.root_panel": {
     "size": [ 147, 166 ],
     "controls": [
-      { "filter_panel@recipe_book_dx.filter_panel": { } },
-      { "locked_filter_panel@recipe_book_dx.locked_filter_panel": { } },
-      { "header_text_panel@recipe_book_dx.header_text_panel": { } },
-      { "dialog_bg_recipe_book@recipe_book_java_dx.dialog_bg_recipe_book": { "layer": 1 } },
-      { "tab_front_navigation_panel@recipe_book_dx.tab_front_navigation_panel": { "layer": 1 } },
+      {
+        "panel_content": {
+          "type": "panel",
+          "layer": 11,
+          "controls": [
+            { "filter_panel@recipe_book_dx.filter_panel": { } },
+            { "locked_filter_panel@recipe_book_dx.locked_filter_panel": { } },
+            { "header_text_panel@recipe_book_dx.header_text_panel": { } },
+            { "tab_front_navigation_panel@recipe_book_dx.tab_front_navigation_panel": { "layer": 1 } },
+            { "tab_icon_navigation_panel@recipe_book_dx.tab_icon_navigation_panel": { "layer": 2 } },
+            { "tab_gamepad_helper_panel@recipe_book_dx.tab_gamepad_helper_panel": { } },
+            { "recipe_item_pages@recipe_book_dx.recipe_item_pages": { "layer": 4 } }
+          ]
+        }
+      },
       { "tab_back_navigation_panel@recipe_book_dx.tab_back_navigation_panel": { "layer": -2 } },
-      { "tab_icon_navigation_panel@recipe_book_dx.tab_icon_navigation_panel": { "layer": 2 } },
-      { "tab_gamepad_helper_panel@recipe_book_dx.tab_gamepad_helper_panel": { } },
-      { "recipe_item_pages@recipe_book_dx.recipe_item_pages": { "layer": 4 } }
+      { "dialog_bg_recipe_book@recipe_book_java_dx.dialog_bg_recipe_book": { "layer": 1 } }
     ]
   }
 }

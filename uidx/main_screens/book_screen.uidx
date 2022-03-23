@@ -3,6 +3,155 @@
 {
   "namespace": "book_dx",
 
+  /*//// Icons ////*/
+
+  "book_edit_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "textures/uidx/book/book_edit_icon"
+  },
+
+  "book_addtextpage_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "textures/uidx/book/book_addtextpage_icon"
+  },
+
+  "book_shiftleft_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "textures/uidx/book/book_shiftleft_icon"
+  },
+
+  "book_shiftright_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "textures/uidx/book/book_shiftright_icon"
+  },
+
+  "book_delete_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "textures/uidx/book/book_delete_icon"
+  },
+
+  /*//// More Options ////*/
+  
+  "padded_button": {
+    "type": "panel",
+    "size": [ 20, 24 ],
+    "$button_bind_type": "global",
+    "controls": [
+      {
+        "button@book.base_button": {
+          "size": [ 20, 20 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "controls": [
+            { "default@book_dx.edit_button_default": { } },
+            { "hover@book_dx.edit_button_hover": { } },
+            { "pressed@book_dx.edit_button_hover": { } }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "$button_active",
+        "binding_name_override": "#visible",
+        "binding_type": "$button_bind_type",
+        "binding_collection_name": "book_pages"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "book_pages"
+      }
+    ]
+  },
+
+  "page_buttons_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ 20, "100%c" ],
+    "bindings": [
+      {
+        "binding_name": "#edit_controls_active",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "book_pages"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "book_pages"
+      }
+    ],
+    "controls": [
+      {
+        "delete_page@book_dx.padded_button": {
+          "$mode_texture": "book_dx.book_delete_icon",
+          "$pressed_button_name": "button.delete_page",
+          "$button_active": "#edit_controls_active"
+        }
+      },
+      {
+        "insert_text_page@book_dx.padded_button": {
+          "$mode_texture": "book_dx.book_addtextpage_icon",
+          "$pressed_button_name": "button.insert_text_page",
+          "$button_active": "#insert_page_active",
+          "$button_bind_type": "collection"
+        }
+      },
+      {
+        "swap_page_left@book_dx.padded_button": {
+          "$mode_texture": "book_dx.book_shiftleft_icon",
+          "$pressed_button_name": "button.swap_page_left",
+          "$button_active": "#swap_left_active",
+          "$button_bind_type": "collection"
+        }
+      },
+      {
+        "swap_page_right@book_dx.padded_button": {
+          "$mode_texture": "book_dx.book_shiftright_icon",
+          "$pressed_button_name": "button.swap_page_right",
+          "$button_active": "#swap_right_active",
+          "$button_bind_type": "collection"
+        }
+      }
+    ]
+  },
+
+  "edit_button_default": {
+    "type": "panel",
+    "size": [ 20, 20 ],
+    "$ignore_border": true,
+    "controls": [
+      { "texture@$mode_texture": { "layer": 3 } },
+      {
+        "bg_image": {
+          "type": "image",
+          "layer": 1,
+          "texture": "textures/uidx/global/white",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "alpha": 0.5,
+          "size": [ 20, 20 ]
+        }
+      },
+      {
+        "hover_image": {
+          "type": "image",
+          "layer": 2,
+          "ignored": "$ignore_border",
+          "texture": "textures/ui/square_image_border_white",
+          "size": [ 20, 20 ]
+        }
+      }
+    ]
+  },
+
+  "edit_button_hover@book_dx.edit_button_default": {
+    "$ignore_border": false
+  },
+
   /*//// Button Panels ////*/
 
   "signing_book_panel": {
@@ -95,22 +244,57 @@
 
   "left_book_panel": {
     "type": "panel",
-    "size": [ 146, 180 ],
+    "size": [ 148, 180 ],
     "controls": [
-      { "left_book_panel@book_java_dx.left_book_panel": { "layer": 1 } },
+      { 
+        "left_book_panel@book_java_dx.left_book_panel": {
+          "size": [ 146, 180 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 1
+        }
+      },
       {
         "left_panel": {
           "type": "panel",
+          "size": [ 146, 180 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
           "layer": 2,
           "controls": [
             {
               "page_number_label@book.page_number_label": {
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "offset": [ 19, 14 ]
+                "color": [ 0.0, 0.0, 0.0 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": [ -19, 14 ]
               }
             },
-            { "page_text@book_dx.page_text": { } }
+            { "page_text@book_dx.page_text": { } },
+            { 
+              "page_buttons_panel@book_dx.page_buttons_panel": {
+                "offset": [ -32, 0 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle"
+              }
+            },
+            {
+              "edit_page@book.base_button": {
+                "size": [ 20, 20 ],
+                "offset": [ -32, 0 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "$mode_texture": "book_dx.book_edit_icon",
+                "$pressed_button_name": "button.edit_page",
+                "$button_active": "#edit_button_active",
+                "$button_bind_type": "collection",
+                "controls": [
+                  { "default@book_dx.edit_button_default": { } },
+                  { "hover@book_dx.edit_button_hover": { } },
+                  { "pressed@book_dx.edit_button_hover": { } }
+                ]
+              }
+            }
           ],
           "bindings": [
             {
@@ -127,22 +311,57 @@
 
   "right_book_panel": {
     "type": "panel",
-    "size": [ 146, 180 ],
+    "size": [ 148, 180 ],
     "controls": [
-      { "right_book_panel@book_java_dx.right_book_panel": { "layer": 1 } },
+      { 
+        "right_book_panel@book_java_dx.right_book_panel": {
+          "size": [ 146, 180 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "layer": 1
+        }
+      },
       {
         "right_panel": {
           "type": "panel",
+          "size": [ 146, 180 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
           "layer": 2,
           "controls": [
             {
               "page_number_label@book.page_number_label": {
+                "color": [ 0.0, 0.0, 0.0 ],
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "offset": [ -19, 14 ]
               }
             },
-            { "page_text@book_dx.page_text": { } }
+            { "page_text@book_dx.page_text": { } },
+            { 
+              "page_buttons_panel@book_dx.page_buttons_panel": {
+                "offset": [ 32, 0 ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle"
+              }
+            },
+            {
+              "edit_page@book.base_button": {
+                "size": [ 20, 20 ],
+                "offset": [ 32, 0 ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "$mode_texture": "book_dx.book_edit_icon",
+                "$pressed_button_name": "button.edit_page",
+                "$button_active": "#edit_button_active",
+                "$button_bind_type": "collection",
+                "controls": [
+                  { "default@book_dx.edit_button_default": { } },
+                  { "hover@book_dx.edit_button_hover": { } },
+                  { "pressed@book_dx.edit_button_hover": { } }
+                ]
+              }
+            }
           ],
           "bindings": [
             {
@@ -284,7 +503,7 @@
   "book_grid": {
     "type": "grid",
     "grid_dimensions": [ 2, 1 ],
-    "size": [ 292, 180 ],
+    "size": [ 296, 180 ],
     "collection_name": "book_pages",
     "controls": [
       { "left_book_panel@book_dx.left_book_panel": { "grid_position": [ 0, 0 ] } },
@@ -298,7 +517,7 @@
       {
         "book_viewing_panel": {
           "type": "panel",
-          "size": [ 292, 180 ],
+          "size": [ 296, 180 ],
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "offset": [ 0, 3 ],
@@ -306,7 +525,7 @@
             {
               "left_book_grid": {
                 "type": "panel",
-                "size": [ 292, 180 ],
+                "size": [ 296, 180 ],
                 "controls": [
                   { "prev_button@book_dx.prev_button": {} },
                   { "next_button@book_dx.next_button": {} },
@@ -402,6 +621,7 @@
   "center_screen": {
     "type": "panel",
     "controls": [
+      { "book_screen_content@book_dx.book_screen_content": { } },
       { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "(not $is_holographic)" } }
     ]
   },
@@ -409,7 +629,6 @@
   "full_screen": {
     "type": "panel",
     "controls": [
-      { "book_screen_content@book_dx.book_screen_content": { } },
       { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "$is_holographic" } }
     ]
   }

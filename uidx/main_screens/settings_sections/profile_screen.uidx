@@ -326,7 +326,19 @@
         "panel_6@start_dx.stacked_row": {
           "ignored": "($is_console or $is_settopbox or $win10_edition or $osx_edition or $education_edition)",
           "controls": [
-            { "auto_update_mode_dropdown@profile_dx.auto_update_mode_option": { } }
+            //{ "auto_update_mode_dropdown@profile_dx.auto_update_mode_option": { } }
+            {
+              "auto_update_mode_dropdown@settings_common_dx.option_dropdown_310": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$option_label": "options.autoUpdateMode",
+                "$dropdown_content": "general_section.auto_update_mode_dropdown_content",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "auto_update_mode_dropdown",
+                "$options_dropdown_toggle_label_binding": "#auto_update_mode_dropdown_toggle_label",
+                "$dropdown_scroll_content_size": [ "100%", "200%" ]
+              }
+            }
           ]
         }
       },
@@ -403,9 +415,23 @@
       },
       {
         "panel_10@start_dx.stacked_row": {
-          "visible": "($storage_location_switch_enabled and not $gear_vr)",
+          "ignored": "($is_holographic and $is_reality_mode)",
           "controls": [
-            { "file_storage_option@profile_dx.file_storage_option": { } }
+            //{ "file_storage_option@profile_dx.file_storage_option": { } }
+            {
+              "file_storage_dropdown@settings_common_dx.option_dropdown_310": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$option_label": "options.filelocation.title",
+                "visible": "($storage_location_switch_enabled and not $gear_vr)",
+                "$dropdown_content": "general_section.file_storage_location_content",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "file_storage_location",
+                "$option_enabled_binding_name": "#file_storage_location_enabled",
+                "$options_dropdown_toggle_label_binding": "#file_storage_location_toggle_label",
+                "$dropdown_scroll_content_size": [ "100%", "200%" ]
+              }
+            }
           ]
         }
       },

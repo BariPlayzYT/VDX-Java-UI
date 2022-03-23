@@ -492,7 +492,6 @@
       { "armor_grid@creative_dx.armor_grid": { } },
       { "player_renderer@creative_dx.player_renderer": { } },
       { "offhand_grid@inventory_dx.offhand_grid": { "offset": [ 34, 19 ] } },
-      { "dialog_bg_tab_inventory@creative_inv_java_dx.dialog_bg_tab_inventory": { "layer": 1 } },
       {
         "inventory_panel_bottom_half@common_dx.inventory_panel_bottom_half": {
           "offset": [ 8, -7 ],
@@ -560,7 +559,6 @@
   "normal_tab_content": {
     "type": "panel",
     "controls": [
-      { "dialog_bg_tab_items@creative_inv_java_dx.dialog_bg_tab_items": { "layer": 1 } },
       {
         "creative_label@common_dx.global_label": {
           "color": "$vdx_container_title_text_color",
@@ -591,7 +589,6 @@
   "search_tab_content": {
     "type": "panel",
     "controls": [
-      { "dialog_bg_tab_item_search@creative_inv_java_dx.dialog_bg_tab_item_search": { "layer": 1 } },
       {
         "creative_label@common_dx.global_label": {
           "color": "$vdx_container_title_text_color",
@@ -652,6 +649,7 @@
           "$background_images": "java_gui_common.cell_image",
           "$highlight_control": "common_dx.highlight_slot_panel",
           "$button_ref": "crafting.creative_hotbar_container_slot_button",
+          "$auto_place_mode_button_name": "button.container_auto_destroy",
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "offset": [ 8, -7 ],
@@ -821,13 +819,74 @@
   "creative_panel@common_dx.root_panel": {
     "size": [ 195, 136 ],
     "controls": [
-      { "close_button_panel@inventory_dx.close_button_panel": { } },
-      { "tab_items_content@creative_dx.tab_items_content": { } },
-      { "tab_inventory@creative_dx.tab_inventory": { } },
-      { "tab_front_navigation_panel@creative_dx.tab_front_navigation_panel": { } },
-      { "tab_back_navigation_panel@creative_dx.tab_back_navigation_panel": { } },
-      { "tab_icons_navigation_panel@creative_dx.tab_icons_navigation_panel": { } },
-      { "tab_gamepad_helper_panel@creative_dx.tab_gamepad_helper_panel": { } }
+      {
+        "dialog_bg": {
+          "type": "panel",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "survival_tab_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            { 
+              "dialog_bg_tab_items@creative_inv_java_dx.dialog_bg_tab_items": {
+                "bindings": [
+                  {
+                    "binding_name": "(not #is_left_tab_search)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+                
+              }
+            },
+            { 
+              "dialog_bg_tab_item_search@creative_inv_java_dx.dialog_bg_tab_item_search": {
+                "bindings": [
+                  {
+                    "binding_name": "(#is_left_tab_search)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "dialog_bg_inventory": {
+          "type": "panel",
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "survival_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            { "dialog_bg_tab_inventory@creative_inv_java_dx.dialog_bg_tab_inventory": { } }
+          ]
+        }
+      },
+      {
+        "panel_content": {
+          "type": "panel",
+          "layer": 11,
+          "controls": [
+            { "tab_items_content@creative_dx.tab_items_content": { } },
+            { "tab_inventory@creative_dx.tab_inventory": { } },
+            { "tab_front_navigation_panel@creative_dx.tab_front_navigation_panel": { } },
+            { "tab_icons_navigation_panel@creative_dx.tab_icons_navigation_panel": { } }
+          ]
+        }
+      },
+      { "tab_gamepad_helper_panel@creative_dx.tab_gamepad_helper_panel": { } },
+      { "tab_back_navigation_panel@creative_dx.tab_back_navigation_panel": { } }
     ],
     "bindings": [
       {

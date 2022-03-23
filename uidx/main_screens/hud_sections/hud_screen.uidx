@@ -254,76 +254,101 @@
     "anchor_to": "bottom_middle",
     "controls": [
       {
-        "heart_rend@hud.heart_renderer": {
-          "layer": 1,
-          "offset": [ 0, -38 ],
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left"
-        }
-      },
-      {
-        "hunger_rend@hud.hunger_renderer": {
-          "offset": [ 0, -38 ],
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right"
-        }
-      },
-      {
-        "armor_rend@hud.armor_renderer": {
-          "layer": 1,
-          "offset": [ 0, -38 ],
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left"
-        }
-      },
-      {
-        "horse_heart_rend_0@hud.horse_heart_renderer": {
-          "offset": [ 0, -55 ],
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
+        "creative_mode": {
+          "type": "panel",
           "bindings": [
             {
               "binding_name": "#is_creative_mode",
               "binding_name_override": "#visible"
             }
+          ],
+          "controls": [
+            {
+              "horse_heart_rend@hud.horse_heart_renderer": {
+                "offset": [ 0, -46 ],
+                "size": [ 1, 9 ],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "bindings": [
+                  {
+                    "binding_name": "#is_creative_mode",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
           ]
         }
       },
       {
-        "horse_heart_rend_1@hud.horse_heart_renderer": {
-          "offset": [ 0, -48 ],
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
+        "survival_mode": {
+          "type": "panel",
           "bindings": [
             {
               "binding_name": "#is_not_creative_mode",
               "binding_name_override": "#visible"
             }
-          ]
-        }
-      },
-      {
-        "bubbles_rend_0@hud.bubbles_renderer": {
-          "offset": [ 0, -48 ],
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
-          "bindings": [
+          ],
+          "controls": [
             {
-              "binding_name": "#is_not_riding",
-              "binding_name_override": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "bubbles_rend_1@hud.bubbles_renderer": {
-          "offset": [ 0, -58 ],
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
-          "bindings": [
+              "heart_rend@hud.heart_renderer": {
+                "offset": [ 0, -30 ],
+                "size": [ 1, 9 ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left"
+              }
+            },
             {
-              "binding_name": "#is_riding",
-              "binding_name_override": "#visible"
+              "armor_rend@hud.armor_renderer": {
+                "offset": [ 0, -30 ],
+                "size": [ 1, 9 ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left"
+              }
+            },
+            {
+              "hunger_rend@hud.hunger_renderer": {
+                "offset": [ 0, -30 ],
+                "size": [ 1, 9 ],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right"
+              }
+            },
+            {
+              "horse_heart_rend@hud.horse_heart_renderer": {
+                "offset": [ 0, -40 ],
+                "size": [ 1, 9 ],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right"
+              }
+            },
+            {
+              "bubbles_rend_0@hud.bubbles_renderer": {
+                "offset": [ 0, -40 ],
+                "size": [ 1, 9 ],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "bindings": [
+                  {
+                    "binding_name": "#is_not_riding",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "bubbles_rend_1@hud.bubbles_renderer": {
+                "offset": [ 0, -60 ],
+                "size": [ 1, 9 ],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "bindings": [
+                  {
+                    "binding_name": "#is_riding",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
             }
           ]
         }

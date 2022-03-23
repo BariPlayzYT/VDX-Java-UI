@@ -61,6 +61,7 @@
   "center_screen": {
     "type": "panel",
     "controls": [
+      { "sign_screen_content@sign_dx.sign_screen_content": { } },
       {
         "invisible_exit_background": {
           "type": "input_panel",
@@ -91,7 +92,6 @@
   "full_screen": {
     "type": "panel",
     "controls": [
-      { "sign_screen_content@sign_dx.sign_screen_content": { } },
       { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "$is_holographic" } }
     ]
   }

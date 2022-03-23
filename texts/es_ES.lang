@@ -10,6 +10,15 @@ options.enableAutoPlatformTextToSpeech=Narrar con dispositivo	#
 options.enableUITextToSpeech=Narrar UI	#
 options.enableOpenChatMessage=Activar Chat	#
 
+##  Controls Settings
+options.mouse_settings=Opciones de ratón...
+options.mouse_settings.title=Opciones de ratón
+controls.keybinds=Teclas...
+controls.keybinds.title=Teclas
+
+options.joystick_settings=Opciones de Joystick...
+options.joystick_settings.title=Opciones de Joystick
+
 ##  Video Settings
 options.graphics.fancy.tooltip=Los gráficos detallados equilibran el rendimiento y la calidad en la mayoría de dispositivos.Las precipitaciones, las nubes y las partículas puede que no se muestren al mirarlas a través de bloques translúcidos o de agua.	#
 options.graphics.fast.tooltip=Los gráficos rápidos reducen la cantidad de lluvia y nieve visible. Los efectos de transparencia se desactivan para bloques como las hojas de árboles.	#
@@ -35,13 +44,37 @@ pack.available.title=§lDisponibles	#
 pack.selected.title=§lSeleccionados	#
 
 resourcePack.title=Seleccionar packs de recursos	#
-dataPack.title=Seleccionar packs de datos	#
+behaviorPack.title=Seleccionar packs de comportamientos	#
 
 selectWorld.resourcePack=Recursos	#
-selectWorld.dataPack=Datos	#
+selectWorld.behaviorPack=Comportamientos	#
 
-pack.resources.dropInfo=Arrastra archivos en la carpets "resource_packs" para agregar packs	#
-pack.data.dropInfo=Arrastra archivos en la carpets "behavior_packs" para agregar packs	#
+pack.resources.dropInfo=Arrastra archivos en la carpeta "resource_packs" para agregar packs	#
+pack.behavior.dropInfo=Arrastra archivos en la carpeta "behavior_packs" para agregar packs	#
+
+## Structure Editor
+
+structure_block.position=Posición relativa
+structure_block.size=Tamaño de la estructura
+structure_block.integrity_and_seed=Integridad y semilla de la estructura
+structure_block.detect_size=Detectar tamaño y posición:
+
+structure_block.mode_info.save=Modo Guardar: guarda en un archivo
+structure_block.mode_info.load=Modo cargar: Carga de un archivo
+structure_block.mode_info.corner=Modo esquina: indica posición límite y medida
+structure_block.exportTo=Exporta en un archivo:
+
+structure_block.mode.export=Export
+
+structure_block.button.detect_size=DETECTAR
+structure_block.button.save=GUARDAR
+structure_block.button.load=CARGAR
+structure_block.button.structureExport=MCS
+structure_block.button.3dExport=3D OBJ
+
+structure_block.redstone_save_mode=Guardado Redstone
+structure_block.save_to_disk=En disco
+structure_block.save_to_memory=En memoria
 
 ##  Recipe Book
 gui.recipebook.search_hint=§oBuscar...	#
@@ -85,17 +118,18 @@ editGamerule.title=Editar las reglas del juego	#
 editGamerule.default=Por defecto: 	#
 
 gamerule.doImmediateRespawn=Reaparición instantánea	#
-gamerule.keepInventory=Mantener inventario al morirh	#
+gamerule.keepInventory=Mantener inventario tras morir	#
+gamerule.mobGriefing=Permitir que las criaturas destruyan	#
 gamerule.naturalRegeneration=Regenerar salud	#
 gamerule.spawnRadius=Radio del punto de reaparición	#
 gamerule.doMobSpawning=Generar criaturas	#
 gamerule.doMobSpawning.description=Permite que se generen criaturas en el mundo. Algunas entidades pueden tener sus propias reglas.	#
 gamerule.doEntityDrops=Soltar ítems al romper entidades	#
-gamerule.doEntityDrops.description=Permite que las entidades suelten ítems al romperlas. Afecta a vagones (incluyendo sus inventarios), marcos, botes, etc.	#
+gamerule.doEntityDrops.description=Permite que se recupere una entidad al romperla. Afecta a vagonetas (incluyendo sus inventarios), marcos, barcas, etc.	#
 gamerule.doMobLoot=Soltar ítems al matar criaturas	#
-gamerule.doMobLoot.description=Permite que las criaturas suelten ítems y orbes de experiencia al morir.	#
+gamerule.doMobLoot.description=Controla que las criaturas puedan soltar recursos, incluyendo orbes de experiencia.	#
 gamerule.doTileDrops=Soltar ítems al romper bloques	#
-gamerule.doTileDrops.description=Permite que los bloques suelten ítems y orbes de experiencia al romperlos.	#
+gamerule.doTileDrops.description=Controla que los bloques puedan soltar recursos, incluyendo orbes de experiencia.	#
 gamerule.doDaylightCycle=Ciclo de día y noche	#
 gamerule.doFireTick=Propagación del fuego	#
 gamerule.doWeatherCycle=Ciclo meteorológico	#

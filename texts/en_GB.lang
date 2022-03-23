@@ -35,13 +35,13 @@ pack.available.title=§lAvailable
 pack.selected.title=§lSelected
 
 resourcePack.title=Select Resource Packs
-dataPack.title=Select Data Packs
+behaviorPack.title=Select Data Packs
 
 selectWorld.resourcePack=Resource
-selectWorld.dataPack=Data
+selectWorld.behaviorPack=Data
 
 pack.resources.dropInfo=Drag and drop files into "resource_packs" folder directory to add Packs
-pack.data.dropInfo=Drag and drop files into "behavior_packs" folder directory to add Packs
+pack.behavior.dropInfo=Drag and drop files into "behavior_packs" folder directory to add Packs
 
 ##  Recipe Book
 gui.recipebook.search_hint=§oSearch...

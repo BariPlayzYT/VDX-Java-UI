@@ -1,7 +1,39 @@
+v1.2.0 [22/03/2022]
+[Additions]
+[+] Join Realm by Code Screen for Java UI
+[+] File Upload/Download progress Screen for Java UI
+[+] Quick trade button, just press the arrow to grab all at once.
+[+] Quick craft button for Stonecutter, just press the arrow to craft all at once.
+[+] Re-added the ability of the HUD be visible if opens inventory and other screens.
+    The cost of course is the opaque chat messages BG in chat_screen (no in HUD) while "screen animations" is in OFF.
+[+] Auto place mode toggle, only for touch device.
+[Changes]
+[*] Updated for v1.18.12.
+[*] Some related screen menus now have animations disabled even if "screen animation" is ON.
+[*] Fixed bug where chat messages in chat_screen were duplicated.
+[*] Changed default boss bar color from blue to white with custom color,
+    only affects Java UI and Mixed UI.
+[*] Fixed bug where "hud_tip_text" was visible forever.
+[*] Fixed bug where scroll box was not visible in permissions screen (in the right options panel).
+[*] The Y position of "hud_item_text" is now different when you are in survival mode or
+    in creative mode.
+[*] Fixed compatibility issue for Java Aspects Performance version.
+[*] Changed the layout for 3 buttons dialog UI template.
+[*] Changed layer of inventory UI panels to layer 10 while the dialog BG remains to layer 1.
+[*] The crafting recipe book panel no longer appears when you are in creative mode.
+[*] Updated and added new touch options for newest beta/preview version.
+[*] Fixed highlight slot image red for loom and trade v2.
+[*] Added book page options! (Finally)
+[*] screen_background texture has made changes from static to gradient.
+[*] Progress Screen BG for loading dimensions now will be as default, only affects Java UI.
+    (no more BG with netherrack/end stone or dirt with gradient).
+    Also, I have added the pre-background using "screen_background".
+[*] Difficulty option in game now is the option as dropdown, only in settings screen.
+
 v1.1.4  [10/02/2022]
 [Removes]
 [-] Removed dressing room and persona screen, due new UI update.
-    Until I make sure everything has the UI updated (from MC BEdrock original), then I'll work on the fixed UI.
+    Until I make sure everything has the UI updated (from MC Bedrock original), then I'll work on the fixed UI.
 [Changes]
 [*] Updated for v1.18.10.
 [*] Some bug fixes related to content log errors.

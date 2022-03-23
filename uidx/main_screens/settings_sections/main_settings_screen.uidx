@@ -83,26 +83,29 @@
 
   "subscription_navigation_tab@settings_dx.button_tab": {
     "size": [ 20, 20 ],
-    "$unchecked_control": "java_gui_common.subscription_default",
-    "$unchecked_hover_control": "java_gui_common.subscription_hover",
+    "$unchecked_control": "common_buttons_dx.black_button_default",
+    "$unchecked_hover_control": "common_buttons_dx.black_button_hover",
+    "$button_content": "java_gui_common.realm_subscriptions",
     "$tab_view_binding_name": "view_subscriptions_button_toggle",
     "$toggle_group_forced_index": "$view_subscriptions_forced_index"
   },
 
   "more_options_navigation_tab@settings_dx.button_tab": {
     "size": [ 20, 20 ],
-    "$unchecked_control": "java_gui_common.more_options_default",
-    "$unchecked_hover_control": "java_gui_common.more_options_hover",
+    "$unchecked_control": "common_buttons_dx.black_button_default",
+    "$unchecked_hover_control": "common_buttons_dx.black_button_hover",
+    "$button_content": "java_gui_common.more_options",
     "$tab_view_binding_name": "more_options_button_toggle",
     "$toggle_group_forced_index": 120
   },
 
   "how_to_play_navigation_tab@settings_dx.button_tab": {
     "size": [ 20, 20 ],
-    "$unchecked_control": "java_gui_common.help_default",
-    "$unchecked_hover_control": "java_gui_common.help_hover",
-    "$checked_control": "java_gui_common.help_default",
-    "$checked_hover_control": "java_gui_common.help_hover",
+    "$unchecked_control": "common_buttons_dx.black_button_default",
+    "$unchecked_hover_control": "common_buttons_dx.black_button_hover",
+    "$checked_control": "common_buttons_dx.black_button_default",
+    "$checked_hover_control": "common_buttons_dx.black_button_hover",
+    "$button_content": "java_gui_common.how_to_play",
     "$tab_view_binding_name": "how_to_play_button_toggle",
     "$toggle_group_forced_index": "$how_to_play_index",
     "$toggle_property_bag": {
@@ -117,6 +120,15 @@
     "$button_content": "java_gui_common.arrow_right_icon",
     "$button_text": "createWorldScreen.game.settings",
     "$tab_view_binding_name": "game_tab_toggle",
+    "$toggle_group_forced_index": 111
+  },
+
+  "server_navigation_tab@settings_dx.button_tab": {
+    "size": [ 20, 20 ],
+    "$unchecked_control": "common_buttons_dx.black_button_default",
+    "$unchecked_hover_control": "common_buttons_dx.black_button_hover",
+    "$button_content": "java_gui_common.multiplayer_icon",
+    "$tab_view_binding_name": "server_tab_toggle",
     "$toggle_group_forced_index": 111
   },
 
@@ -254,12 +266,27 @@
           "anchor_from": "top_right",
           "anchor_to": "top_right",
           "size": [ 150, 20 ],
-          "controls": [
+          "controls": [/* 
             { 
               "difficulty_option@settings_dx.difficulty_option": {
                 "ignored": "$is_pregame",
                 "anchor_from": "top_left",
                 "anchor_to": "top_left"
+              }
+            }, */
+            {
+              "option_dropdown_2@settings_common_dx.option_dropdown_130": {
+                "ignored": "$is_pregame",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "options.difficulty",
+                "$dropdown_content": "world_section.world_difficulty_dropdown_content",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "world_difficulty_dropdown",
+                "$options_dropdown_toggle_label_binding": "#world_difficulty_dropdown_toggle_label",
+                "$option_enabled_binding_name": "#world_difficulty_dropdown_enabled",
+                "$dropdown_scroll_content_size": [ "100%", "260%" ],
+                "$focus_override_right": "FOCUS_OVERRIDE_STOP"
               }
             },
             {
@@ -286,13 +313,13 @@
                 "anchor_to": "top_right"
               }
             }
-          ],
+          ]/* ,
           "bindings": [
             {
               "binding_name": "(not #server_settings_visible)",
               "binding_name_override": "#visible"
             }
-          ]
+          ] */
         }
       },
       /* Middle Buttons */
@@ -319,17 +346,6 @@
       },
       {
         "resource_pack_navigation_tab@settings_dx.resource_pack_navigation_tab": {
-          "ignored": "($nx_os)",
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left"
-        }
-      },
-      {
-        "locked_game_navigation_tab@common_buttons_dx.150_locked": {
-          "ignored": "(not $nx_os)",
-          "size": [ 150, 20 ],
-          "$text_color": "$main_menu_button_locked_color",
-          "$button_text": "gui.resourcepacks",
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left"
         }
@@ -461,7 +477,13 @@
         "source_control_name": "view_subscriptions_button_toggle",
         "source_property_name": "(not #toggle_state)",
         "target_property_name": "#visible"
-      },
+      },/* 
+      {
+        "binding_type": "view",
+        "source_control_name": "server_tab_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }, */
       {
         "binding_type": "view",
         "source_control_name": "more_options_button_toggle",
@@ -490,7 +512,7 @@
     "anchor_to": "bottom_middle",
     "size": [ "100%-4px", 10 ],
     "controls": [
-      { "pack_label@start_dx.minecraft_text": { "color": [ 0.5, 0.5, 0.5 ], "text": "Vanilla DX: Java UI v1.1.4" } },
+      { "pack_label@start_dx.minecraft_text": { "color": [ 0.5, 0.5, 0.5 ], "text": "Vanilla DX: Java UI v1.2.0" } },
       { "fill_panel": { "type": "panel", "size": [ "fill", 10 ] } },
       { "author_label@start_dx.minecraft_text": { "color": [ 0.5, 0.5, 0.5 ], "text": "\u0042y @\u0043ris\u0058olt" } }
     ]
@@ -524,7 +546,30 @@
           "type": "panel",
           "size": [ 0, 4 ]
         }
-      },
+      },/* 
+      {
+        "server_hold": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "ignored": "($is_pregame)",
+          "size": [ 20, "100%c" ],
+          "bindings": [
+            {
+              "binding_name": "#server_settings_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            { "server_navigation_tab@settings_dx.server_navigation_tab": { } },
+            {
+              "padding_2": {
+                "type": "panel",
+                "size": [ 0, 4 ]
+              }
+            }
+          ]
+        }
+      }, */
       {
         "subscription_navigation_tab@settings_dx.subscription_navigation_tab": {
           "bindings": [
@@ -562,10 +607,11 @@
           "$radio_toggle_group": false,
           "$toggle_name": "#thirdperson_radio_first",
 
-          "$unchecked_control": "java_gui_common.3rd_person_front_default",
-          "$checked_control": "java_gui_common.3rd_person_front_default",
-          "$unchecked_hover_control": "java_gui_common.3rd_person_front_hover",
-          "$checked_hover_control": "java_gui_common.3rd_person_front_hover",
+          "$unchecked_control": "common_buttons_dx.black_button_default",
+          "$unchecked_hover_control": "common_buttons_dx.black_button_hover",
+          "$checked_control": "common_buttons_dx.black_button_default",
+          "$checked_hover_control": "common_buttons_dx.black_button_hover",
+          "$button_content": "java_gui_common.third_person_front",
           "bindings": [
             {
               "binding_name": "#thirdperson_radio_third_front",
@@ -580,10 +626,11 @@
           "$radio_toggle_group": false,
           "$toggle_name": "#thirdperson_radio_third_back",
 
-          "$unchecked_control": "java_gui_common.1st_person_default",
-          "$checked_control": "java_gui_common.1st_person_default",
-          "$unchecked_hover_control": "java_gui_common.1st_person_hover",
-          "$checked_hover_control": "java_gui_common.1st_person_hover",
+          "$unchecked_control": "common_buttons_dx.black_button_default",
+          "$unchecked_hover_control": "common_buttons_dx.black_button_hover",
+          "$checked_control": "common_buttons_dx.black_button_default",
+          "$checked_hover_control": "common_buttons_dx.black_button_hover",
+          "$button_content": "java_gui_common.first_person",
           "bindings": [
             {
               "binding_name": "#thirdperson_radio_first",
@@ -598,10 +645,11 @@
           "$radio_toggle_group": false,
           "$toggle_name": "#thirdperson_radio_third_front",
 
-          "$unchecked_control": "java_gui_common.3rd_person_back_default",
-          "$checked_control": "java_gui_common.3rd_person_back_default",
-          "$unchecked_hover_control": "java_gui_common.3rd_person_back_hover",
-          "$checked_hover_control": "java_gui_common.3rd_person_back_hover",
+          "$unchecked_control": "common_buttons_dx.black_button_default",
+          "$unchecked_hover_control": "common_buttons_dx.black_button_hover",
+          "$checked_control": "common_buttons_dx.black_button_default",
+          "$checked_hover_control": "common_buttons_dx.black_button_hover",
+          "$button_content": "java_gui_common.third_person_back",
           "bindings": [
             {
               "binding_name": "#thirdperson_radio_third_back",
@@ -720,7 +768,6 @@
       },
       {
         "resource_pack_screen@resource_packs_dx.resource_pack_screen_panel": {
-          "ignored": "($nx_os)",
           "bindings": [
             {
               "binding_type": "view",
@@ -802,7 +849,33 @@
             }
           ]
         }
-      },
+      },/* 
+      {
+        "server_hold": {
+          "type": "panel",
+          "ignored": "($is_pregame)",
+          "bindings": [
+            {
+              "binding_name": "#server_settings_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "server_options_screen@server_options_dx.server_options_screen_panel": {
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "server_tab_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }, */
       { 
         "subscription_screen@subscription_dx.subscription_screen_panel": {
           "bindings": [

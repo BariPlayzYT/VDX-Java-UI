@@ -121,8 +121,9 @@
     "offset": [ -2, 2 ],
     "controls": [
       {
-        "store_button@common.button": {
+        "store_button@common_buttons_dx.black_button": {
           "$pressed_button_name": "button.menu_store",
+          "$button_content": "java_gui_common.minecraft_store_icon",
           "size": [ 20, 20 ],
           "bindings": [
             {
@@ -130,11 +131,6 @@
               "binding_name_override": "#visible",
               "binding_type": "global"
             }
-          ],
-          "controls": [
-            { "default@java_gui_common.store_default": { } },
-            { "hover@java_gui_common.store_hover": { } },
-            { "pressed@java_gui_common.store_hover": { } }
           ]
         }
       },
@@ -157,14 +153,10 @@
           "size": [ "100%", "100%c" ],
           "controls": [
             {
-              "feed_button@common.button": {
+              "feed_button@common_buttons_dx.black_button": {
                 "$pressed_button_name": "button.menu_feed",
-                "size": [ 20, 20 ],
-                "controls": [
-                  { "default@java_gui_common.feed_default": { } },
-                  { "hover@java_gui_common.feed_hover": { } },
-                  { "pressed@java_gui_common.feed_hover": { } }
-                ]
+                "$button_content": "java_gui_common.realm_feed",
+                "size": [ 20, 20 ]
               }
             },
             {
@@ -174,14 +166,10 @@
               }
             },
             {
-              "take_screenshot_button@common.button": {
+              "take_screenshot_button@common_buttons_dx.black_button": {
                 "$pressed_button_name": "button.screenshot",
-                "size": [ 20, 20 ],
-                "controls": [
-                  { "default@java_gui_common.take_screenshot_default": { } },
-                  { "hover@java_gui_common.take_screenshot_hover": { } },
-                  { "pressed@java_gui_common.take_screenshot_hover": { } }
-                ]
+                "$button_content": "java_gui_common.realm_take_screenshot",
+                "size": [ 20, 20 ]
               }
             }
           ],

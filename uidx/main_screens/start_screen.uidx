@@ -114,12 +114,18 @@
     "anchor_to": "top_right"
   },
 
-  "notification_icon@realms_java_dx.invitation_default": {
+  "notification_icon@start_dx.main_button": {
     "size": [ 15, 25 ],
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "offset": [ -4, -4 ],
     "layer": 10,
+    "$pressed_button_name": "button.menu_invite_notification",
+    "controls": [
+      { "default@realms_java_dx.invitation_default": { } },
+      { "hover@realms_java_dx.invitation_hover": { } },
+      { "pressed@realms_java_dx.invitation_hover": { } }
+    ],
     "bindings": [
       {
         "binding_name": "#realms_notification_visible",

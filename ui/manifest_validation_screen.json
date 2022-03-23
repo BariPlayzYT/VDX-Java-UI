@@ -1,6 +1,9 @@
 {
   "manifest_validation_screen": {
     "force_render_below": false,
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ],
     "$screen_content": "manifest_validation_dx.manifest_validation_screen_content",
     "$screen_bg_content": "common.empty_panel"
   },

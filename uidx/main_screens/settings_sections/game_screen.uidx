@@ -217,12 +217,35 @@
         "permission_panel": {
           "type": "panel",
           "size": [ 310, 25 ],
-          "controls": [
+          "controls": [/* 
             { 
               "permission_option@game_world_dx.permission_option": {
                 "size": [ 200, 20 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle"
+              }
+            } */
+            {
+              "option_dropdown_permissions@settings_common_dx.option_dropdown_200": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$tts_section_header": "createWorldScreen.worldPreferences",
+                "$option_label": "permissions.title",
+                "$dropdown_content": "permissions.permission_level_dropdown_content",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "player_permissions_dropdown",
+                "$button_type_panel": "permissions.permission_level_dropdown_state_content",
+                "$options_dropdown_toggle_label_binding": "#player_permissions_dropdown_toggle_label",
+                "$option_enabled_binding_name": "#player_permissions_dropdown_enabled",
+                "$dropdown_scroll_content_size": [ "100%", "385%" ],
+                "$is_world_settings": true,
+                "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                "variables": [
+                  {
+                    "requires": "$education_edition",
+                    "$option_label": "permissions.title.settings.edu"
+                  }
+                ]
               }
             }
           ],

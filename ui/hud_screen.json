@@ -1,6 +1,13 @@
 /*File modified by @CrisXolt.
 //(c) Don't use any code design without permission!*/
 {
+  "hud_screen": {
+    "render_only_when_topmost": "(not $show_hud_while_inventory)",
+    "$use_loading_bars": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ]
+  },
+  
   "hud_content": {
     "controls": [
       { "root_panel@hud_dx.root_panel": {} },

@@ -3,6 +3,61 @@
 {
   "namespace": "play_realms_dx",
 
+  /*////// JOIN CODE //////*/
+
+  "popup_dialog_join_by_code@popup_dialog.modal_input_panel": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "options_background@java_gui_common.options_background": { "layer": -1 } },
+      {
+        "main_panel": {
+          "type": "panel",
+          "size": [ 202, 212 ],
+          "layer": 4,
+          "controls": [
+            {
+              "title_label@settings_dx.base_label": {
+                "text": "networkWorld.joinByCode",
+                "offset": [ 0, "19px" ]
+              }
+            },
+            {
+              "option_text_edit_1@settings_common_dx.option_text_edit": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, "99px" ],
+                "$option_label": "networkWorld.realmsHashPlaceholder",
+                "$option_place_holder_text": "",
+                "$max_text_edit_length": 11,
+                "$option_binding_name": "#text_box_item_name",
+                "$text_box_name": "#join_by_code_text_edit"
+              }
+            },
+            {
+              "join_button@common_buttons_dx.main_button_200": {
+                "size": [ 200, 20 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [ 0, "-24px" ],
+                "$pressed_button_name": "button.menu_network_join_by_code_popup_join",
+                "$button_text": "networkWorld.join"
+              }
+            },
+            {
+              "cancel_button@common_buttons_dx.main_button_200": {
+                "size": [ 200, 20 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "$pressed_button_name": "button.menu_network_join_by_code_close",
+                "$button_text": "gui.cancel"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   /*////// STACK PANEL CONTENT //////*/
   
   "realms_stack_panel@play_dx.scroll_stack_panel_base": {

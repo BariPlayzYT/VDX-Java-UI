@@ -93,32 +93,5 @@
   "inventory_screen": {
     "$screen_content": "inventory_dx.center_screen",
     "$screen_bg_content": "inventory_dx.full_screen"
-  },
-  
-  "no_coalesce_container_slot_button": {
-    "$is_output|default": false,
-    "modifications": [
-      {
-        "array_name": "button_mappings",
-        "operation": "insert_front",
-        "value": [
-          {
-            "ignored": "($is_output or not $touch)",
-            "from_button_id": "button.menu_select",
-            "to_button_id": "$button_auto_place",
-            "mapping_type": "double_pressed"
-          },
-          {
-            "ignored": "($is_output or not $touch)",
-            "from_button_id": "button.menu_ok",
-            "to_button_id": "$button_auto_place",
-            "mapping_type": "double_pressed"
-          }
-        ]
-      }
-    ]
-  },
-  "output_no_coalesce_container_slot_button": {
-    "$is_output": true
   }
 }

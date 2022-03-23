@@ -5,7 +5,8 @@
 
   ////*/ Other Resource Packs Compatibility /*////
   /* By @agentms_*/
-  "$is_java_aspects": false,
+  "$is_java_aspects_fidelity": false,
+  "$is_java_aspects_performance": false,
   
   /* By @ZouChenyunfei*/
   "$is_multipixel": false,
@@ -25,6 +26,12 @@
   "$ignore_scoreboard_scores": false,
   "$scoreboard_text_shadow": false,
   "$player_score_color": [ 1.0, 0.333, 0.333, 1.0 ],
+  /*
+  Recommended if you use "Screen Animations" enabled in settings.
+  But it is not recommended when the texture of the chat message
+  you are going to use is transparent.
+  */
+  "$show_hud_while_inventory": true,
 
   //////// Anvil ////////
   //For java text colors.

@@ -574,8 +574,7 @@
       },
       /* Warning Panel */
       {
-        "warning_text": {
-          "type": "label",
+        "warning_text@common_dx.global_label": {
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "offset": [ 0, 234 ],

@@ -136,6 +136,18 @@
     /* Recipe Book */
     "uidx/inventory_screens/recipe_book/pages_panel.uidx",
     "uidx/inventory_screens/recipe_book/tab_pages.uidx",
+    /* Furnace Recipe Book */
+    "uidx/inventory_screens/furnace_recipe_book/furnace_recipe_book_screen.uidx",
+    "uidx/inventory_screens/furnace_recipe_book/furnace_fuel.uidx",
+    "uidx/inventory_screens/furnace_recipe_book/furnace_input.uidx",
+    "uidx/inventory_screens/furnace_recipe_book/furnace_output.uidx",
+    "uidx/inventory_screens/furnace_recipe_book/pages_panel.uidx",
+    "uidx/inventory_screens/furnace_recipe_book/tab_pages.uidx",
+    "uidx/inventory_screens/furnace_recipe_book/furnace_content_pages.uidx",
+    "uidx/inventory_screens/furnace_recipe_book/blast_furnace_content_pages.uidx",
+    "uidx/inventory_screens/furnace_recipe_book/smoker_content_pages.uidx",
+    "uidx/inventory_screens/furnace_recipe_book/smelt_rendered_items.uidx",
+    "uidx/inventory_screens/furnace_recipe_book/smelt_toggle_items.uidx",
     ////////*/ Java GUI Textures /*////////
     "uidx/java_gui_sections/accessibility.uidx",
     "uidx/java_gui_sections/bars.uidx",
@@ -189,6 +201,7 @@
     "uidx/java_gui_sections/widgets/main_button_90.uidx",
     "uidx/java_gui_sections/widgets/main_button_98.uidx",
     "uidx/java_gui_sections/widgets/main_button_100.uidx",
+    "uidx/java_gui_sections/widgets/main_button_108.uidx",
     "uidx/java_gui_sections/widgets/main_button_120.uidx",
     "uidx/java_gui_sections/widgets/main_button_130.uidx",
     "uidx/java_gui_sections/widgets/main_button_150.uidx",

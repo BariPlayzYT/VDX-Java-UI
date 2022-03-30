@@ -39,6 +39,7 @@
       {
         "label@common_dx.global_label": {
           "offset": [ 1, 5 ],
+          "size": [ "100%", "default" ],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "text": "#custom_text",

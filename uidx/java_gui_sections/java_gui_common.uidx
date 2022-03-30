@@ -39,8 +39,7 @@
 
   "panorama_overlay_image": {
     "type": "image",
-    "size": [ "100%", "100%" ],
-    "alpha": 0.0,
+    "fill": true,
     "texture": "assets/minecraft/textures/gui/title/background/panorama_overlay"
   },
 

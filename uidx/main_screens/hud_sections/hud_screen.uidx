@@ -554,7 +554,20 @@
                 "anchor_from": "bottom_middle",
                 "anchor_to": "bottom_middle",
                 "offset": [ 0, -3 ],
-                "shadow": true
+                "shadow": true,
+                "controls": [
+                  {
+                    "text_bg": {
+                      "type": "image",
+                      "size": [ "100% + 5px", 12 ],
+                      "offset": [ -0.5, 0 ],
+                      "texture": "textures/uidx/global/white",
+                      "layer": -1,
+                      "color": [ 0, 0, 0 ],
+                      "alpha": 0.5
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -765,8 +778,7 @@
         }
       },
       {
-        "gamertag_label_for_splitscreen": {
-          "type": "label",
+        "gamertag_label_for_splitscreen@common_dx.global_label": {
           "size": [ "default", "default" ],
           "anchor_from": "top_right",
           "anchor_to": "top_right",

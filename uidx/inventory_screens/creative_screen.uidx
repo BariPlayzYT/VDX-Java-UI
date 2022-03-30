@@ -258,6 +258,8 @@
   "creative_tab@common_toggles_dx.toggle_panel": {
     "size": [ 28, 28 ],
     "layer": 10,
+    "$sound_volume|default": 0.0,
+    "$sound_pitch|default": 0.0,
     "$unchecked_control": "common.empty_panel",
     "$unchecked_hover_control": "creative_dx.null_tab_front",
     "$toggle_name": "navigation_tab",
@@ -781,6 +783,8 @@
   },
 
   "grid_item_for_creative@recipe_book_dx.grid_item": {
+    "$button_ref_sound_volume|default": 0.0,
+    "$button_ref_sound_pitch|default": 0.0,
     "$highlight_control": "common_dx.highlight_slot_panel",
     "$background_images": "java_gui_common.cell_image"
   },

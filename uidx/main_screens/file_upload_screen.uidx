@@ -87,7 +87,6 @@
   /*//// Main Panel /////*/
 
   "common_label@common_dx.global_label": {
-    "type": "label",
     "color": [ 1.0, 1.0, 1.0 ],
     "size": [ "default", "100%" ],
     "text": "#label_text",
@@ -174,7 +173,6 @@
           "controls": [
             {
               "message_text@common_dx.global_label": {
-                "type": "label",
                 "color": [ 1.0, 1.0, 1.0 ],
                 "size": [ "100%", "default" ],
                 "shadow": true,

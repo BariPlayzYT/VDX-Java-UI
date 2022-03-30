@@ -68,8 +68,7 @@
     "size": [ 336, 20 ],
     "controls": [
       {
-        "keymapping_label_control": {
-          "type": "label",
+        "keymapping_label_control@common_dx.global_label": {
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "offset": [ 5, -2 ],

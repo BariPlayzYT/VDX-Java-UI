@@ -95,9 +95,51 @@
           ]
         }
       },
-      { "ingredient@furnace_dx.furnace_ingredient_item": {} },
-      { "fuel@furnace_dx.furnace_fuel_item": {} },
-      { "output@furnace_dx.furnace_output_item": {} }
+      {
+        "recipe_hold": {
+          "type": "panel",
+          "ignored": "(not $enable_furnace_recipe_book_concept)",
+          "controls": [
+            { 
+              "overlay_1@furnace_input_dx.input_overlay_panel": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 55, 16 ],
+                "layer": -5
+              }
+            },
+            { 
+              "overlay_2@furnace_fuel_dx.cell_image_fuel_overlay": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 55, 52 ],
+                "layer": -5
+              }
+            },
+            { 
+              "overlay_3@furnace_output_dx.output_overlay_panel": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": [ -39, 30 ],
+                "layer": -5
+              }
+            },
+            { 
+              "gamepad_helper_select@common_tooltip_dx.gamepad_helper_select": {
+                "offset": [ 22, 17 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$hide_description": true
+              }
+            },
+            { "show_recipe_book_toggle@furnace_recipe_book_dx.show_recipe_book_toggle": { } },
+            { "hide_recipe_book_toggle@furnace_recipe_book_dx.hide_recipe_book_toggle": { } }
+          ]
+        }
+      },
+      { "ingredient@furnace_dx.furnace_ingredient_item": { } },
+      { "fuel@furnace_dx.furnace_fuel_item": { } },
+      { "output@furnace_dx.furnace_output_item": { } }
     ]
   },
 
@@ -111,6 +153,48 @@
           "layer": 11,
           "$with_label": true
         }
+      }
+    ]
+  },
+
+  "furnace_and_recipe_book_panel": {
+    "type": "stack_panel",
+    "size": [ "100%c", 166 ],
+    "orientation": "horizontal",
+    "controls": [
+      { 
+        "recipe_book@furnace_recipe_book_dx.recipe_book_panel": {
+          "bindings": [
+            { 
+              "binding_type": "view",
+              "source_control_name": "show_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "center_fold": {
+          "type": "panel",
+          "size": [ 1, "100%" ],
+          "bindings": [
+            { 
+              "binding_type": "view",
+              "source_control_name": "show_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      { "furnace_panel@furnace_dx.furnace_panel": { } }
+    ],
+    "bindings": [
+      {
+        "binding_type": "global",
+        "binding_name": "(not #is_creative_mode)",
+        "binding_name_override": "#visible"
       }
     ]
   },
@@ -133,7 +217,8 @@
           ]
         }
       },
-      { "furnace_panel@furnace_dx.furnace_panel": { } }
+      { "furnace_panel@furnace_dx.furnace_panel": { "ignored": "$enable_furnace_recipe_book_concept" } },
+      { "furnace_and_recipe_book_panel@furnace_dx.furnace_and_recipe_book_panel": { "ignored": "(not $enable_furnace_recipe_book_concept)" } }
     ]
   },
   

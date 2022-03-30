@@ -7,7 +7,28 @@
 
   "recipe_book_tab_pages": {
     "type": "panel",
+    "$number_right|default": "-",
+    "$ignore_number_label|default": false,
     "controls": [
+      {
+        "number_separator@recipe_book_dx.page_label": {
+          "ignored": "$ignore_number_label",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "text": "/",
+          "offset": [ -0.5, 140 ]
+        }
+      },
+      {
+        "number_right@recipe_book_dx.page_label": {
+          "ignored": "$ignore_number_label",
+          "text": "$number_right",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "text_alignment": "left",
+          "offset": [ 76, 140 ]
+        }
+      },
       { "page_1@crisxolt_tab_pages.page_1": { } },
       { "page_2@crisxolt_pages_panels.page_2": { } }
     ]

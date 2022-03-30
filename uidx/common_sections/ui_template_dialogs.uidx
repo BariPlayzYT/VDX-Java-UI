@@ -32,6 +32,7 @@
     "controls": [
       {
         "modal_input@popup_dialog.modal_input_panel": {
+          "layer": 500,
           "size": [ "100%", "100%" ],
           "controls": [
             {
@@ -42,10 +43,22 @@
             },
             { 
               "options_background@java_gui_common.options_background": {
+                "layer": -10,
                 "size": [ "100%+128px", "100%+64px" ],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
-                "offset": [ -64, -32 ]
+                "offset": [ -64, -32 ],
+                "ignored": "(not $is_pregame)"
+              }
+            },
+            { 
+              "bg_world@java_gui_common.screen_background": {
+                "layer": -12,
+                "size": [ "100%+128px", "100%+64px" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ -64, -32 ],
+                "ignored": "$is_pregame"
               }
             }
           ]

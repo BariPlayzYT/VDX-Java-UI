@@ -5,8 +5,7 @@
 
   /*//// Base ////*/
 
-  "base_label": {
-    "type": "label",
+  "base_label@common_dx.global_label": {
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "color": "$main_menu_button_locked_color",
@@ -91,8 +90,7 @@
     ]
   },
 
-  "block_type_value": {
-    "type": "label",
+  "block_type_value@common_dx.global_label": {
     "text": "$block_type_text",
     "color": "$text_color",
     "shadow": true
@@ -247,8 +245,7 @@
             { "hover@java_gui_common.text_input_java_hover": { "layer": 1 } },
             { "pressed@java_gui_common.text_input_java_hover": { "layer": 1 } },
             { 
-              "output_text": {
-                "type": "label",
+              "output_text@common_dx.global_label": {
                 "text": "#command_output_text",
                 "color": [ 0.43, 0.43, 0.43 ],
                 "size": [ "100%-10px", 10 ],

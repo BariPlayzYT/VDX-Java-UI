@@ -197,6 +197,7 @@
   "full_screen": {
     "type": "panel",
     "controls": [
+      { "panorama_overlay_image@java_gui_common.panorama_overlay_image": { "layer": -10 } }
     ]
   }
 }

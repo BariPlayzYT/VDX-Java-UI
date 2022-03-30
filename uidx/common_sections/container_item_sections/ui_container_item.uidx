@@ -14,6 +14,9 @@
     "$cell_image_size|default": [ 18, 18 ],
     "$cell_overlay_ref|default": "common.cell_overlay",
     "$button_ref|default": "common.container_slot_button_prototype",
+    "$button_ref_sound_name|default": "random.click",
+    "$button_ref_sound_volume|default": 0.0,
+    "$button_ref_sound_pitch|default": 0.0,
     "$auto_place_mode_button_name|default": "button.container_auto_place",
     "$stack_count_required|default": true,
     "$durability_bar_required|default": true,
@@ -109,6 +112,12 @@
           "controls": [
             {
               "main@$button_ref": { 
+                "sound_name": "$button_ref_sound_name",
+                "sound_volume": "$button_ref_sound_volume",
+                "sound_pitch": "$button_ref_sound_pitch",
+                "default_control": "default",
+                "hover_control": "hover",
+                "pressed_control": "pressed",
                 "ignored": "($touch)",
                 "consume_hover_events": false,
                 "tts_ignore_count": true,
@@ -131,6 +140,9 @@
                 "controls": [
                   { 
                     "button@$button_ref": {
+                      "sound_name": "$button_ref_sound_name",
+                      "sound_volume": "$button_ref_sound_volume",
+                      "sound_pitch": "$button_ref_sound_pitch",
                       "consume_hover_events": false,
                       "tts_ignore_count": true,
                       "tts_skip_message": true,
@@ -155,6 +167,9 @@
                 "controls": [
                   { 
                     "button@$button_ref": {
+                      "sound_name": "$button_ref_sound_name",
+                      "sound_volume": "$button_ref_sound_volume",
+                      "sound_pitch": "$button_ref_sound_pitch",
                       "consume_hover_events": false,
                       "tts_ignore_count": true,
                       "tts_skip_message": true,
@@ -204,6 +219,9 @@
 
   "inventory_container_item@container_item_dx.container_item": {
     "$button_ref|default": "crafting.inventory_container_slot_button",
+    "$button_ref_sound_name|default": "random.click",
+    "$button_ref_sound_volume|default": 0.0,
+    "$button_ref_sound_pitch|default": 0.0,
     "$auto_place_mode_button_name|default": "button.container_auto_place",
     "$background_images|default": "crafting.container_cell_images",
 
@@ -287,6 +305,9 @@
           "controls": [
             {
               "main@$button_ref": {
+                "sound_name": "$button_ref_sound_name",
+                "sound_volume": "$button_ref_sound_volume",
+                "sound_pitch": "$button_ref_sound_pitch",
                 "ignored": "($touch)",
                 "tts_ignore_count": true,
                 "tts_skip_message": true,
@@ -308,6 +329,9 @@
                 "controls": [
                   { 
                     "button@$button_ref": {
+                      "sound_name": "$button_ref_sound_name",
+                      "sound_volume": "$button_ref_sound_volume",
+                      "sound_pitch": "$button_ref_sound_pitch",
                       "tts_ignore_count": true,
                       "tts_skip_message": true,
                       "tts_inherit_siblings": true
@@ -331,6 +355,9 @@
                 "controls": [
                   { 
                     "button@$button_ref": {
+                      "sound_name": "$button_ref_sound_name",
+                      "sound_volume": "$button_ref_sound_volume",
+                      "sound_pitch": "$button_ref_sound_pitch",
                       "tts_ignore_count": true,
                       "tts_skip_message": true,
                       "tts_inherit_siblings": true,

@@ -200,8 +200,7 @@
                           }
                         },
                         {
-                          "label_0": {
-                            "type": "label",
+                          "label_0@common_dx.global_label": {
                             "color": [ 0.75, 0.75, 0.75 ],
                             "layer": 5,
                             "text": " (",
@@ -216,8 +215,7 @@
                           }
                         },
                         {
-                          "label_0": {
-                            "type": "label",
+                          "label_0@common_dx.global_label": {
                             "color": [ 0.75, 0.75, 0.75 ],
                             "layer": 5,
                             "text": ")",
@@ -237,8 +235,7 @@
                       "offset": [ 0, 20 ],
                       "controls": [
                         {
-                          "label_0": {
-                            "type": "label",
+                          "label_0@common_dx.global_label": {
                             "color": [ 0.75, 0.75, 0.75 ],
                             "layer": 5,
                             "text": "selectWorld.gameMode",
@@ -246,8 +243,7 @@
                           }
                         },
                         {
-                          "label_1": {
-                            "type": "label",
+                          "label_1@common_dx.global_label": {
                             "color": [ 0.75, 0.75, 0.75 ],
                             "layer": 5,
                             "text": ": ",
@@ -262,8 +258,7 @@
                           }
                         },
                         {
-                          "label_1": {
-                            "type": "label",
+                          "label_1@common_dx.global_label": {
                             "color": [ 0.75, 0.75, 0.75 ],
                             "layer": 5,
                             "text": ", ",
@@ -271,8 +266,7 @@
                           }
                         },
                         {
-                          "label_1": {
-                            "type": "label",
+                          "label_1@common_dx.global_label": {
                             "color": [ 0.75, 0.75, 0.75 ],
                             "layer": 5,
                             "text": "dr.categories.size",
@@ -280,8 +274,7 @@
                           }
                         },
                         {
-                          "label_1": {
-                            "type": "label",
+                          "label_1@common_dx.global_label": {
                             "color": [ 0.75, 0.75, 0.75 ],
                             "layer": 5,
                             "text": " ",

@@ -438,8 +438,7 @@
                 "size": [ "fill", "100%" ],
                 "controls": [
                   {
-                    "top_text": {
-                      "type": "label",
+                    "top_text@common_dx.global_label": {
                       "size": [ "100%", 10 ],
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
@@ -977,8 +976,7 @@
                 "size": [ "100%c", "100%" ],
                 "controls": [
                   {
-                    "player_count": {
-                      "type": "label",
+                    "player_count@common_dx.global_label": {
                       "layer": 5,
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",

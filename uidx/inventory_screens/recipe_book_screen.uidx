@@ -31,9 +31,8 @@
 
   /*//// Panels ////*/
   
-  "page_label": {
+  "page_label@common_dx.global_label": {
     "size": [ "default", 10 ],
-    "type": "label",
     "layer": 4,
     "shadow": false,
     "color": "$main_menu_button_default_color"
@@ -49,10 +48,8 @@
     "$panel_content|default": "",
     "$panel_content_offset|default": [ 0, 0 ],
     "$number_left|default": "-",
-    "$number_right|default": "-",
     "$ignore_prev_button|default": false,
     "$ignore_next_button|default": false,
-    "$ignore_number_label|default": false,
     "controls": [
       {
         "content": {
@@ -76,6 +73,7 @@
         "buttons": {
           "type": "panel",
           "size": [ 68, 18 ],
+          "offset": [ -1, 0 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "controls": [
@@ -103,40 +101,13 @@
         }
       },
       {
-        "number": {
-          "type": "panel",
-          "size": [ 68, 18 ],
-          "anchor_from": "bottom_middle",
-          "anchor_to": "bottom_middle",
+        "number_left@recipe_book_dx.page_label": {
           "ignored": "$ignore_number_label",
-          "controls": [
-            {
-              "number_left@recipe_book_dx.page_label": {
-                "text": "$number_left",
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "text_alignment": "right",
-                "offset": [ -37, 4 ]
-              }
-            },
-            {
-              "number@recipe_book_dx.page_label": {
-                "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
-                "text": "/",
-                "offset": [ 0, 4 ]
-              }
-            },
-            {
-              "number_right@recipe_book_dx.page_label": {
-                "text": "$number_right",
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "text_alignment": "left",
-                "offset": [ 37, 4 ]
-              }
-            }
-          ]
+          "text": "$number_left",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "text_alignment": "right",
+          "offset": [ -66, 109 ]
         }
       },
       {
@@ -306,6 +277,8 @@
   /*//// Tabs Content Pages ////*/
 
   "grid_item@container_item_dx.inventory_container_item": {
+    "$button_ref_sound_volume|default": 1.0,
+    "$button_ref_sound_pitch|default": 1.0,
     "$stack_count_required": true,
     "$durability_bar_required": false,
     "$item_renderer_binding_condition": "visible",
@@ -486,7 +459,7 @@
       {
         "equipment_alt_icon@recipe_book_dx.equipment_alt_icon": {
           "offset": [ 0, 0 ],
-          "layer": 15,
+          "layer": 2,
           "anchor_from": "top_left",
           "anchor_to": "top_left"
         }
@@ -494,7 +467,7 @@
       {
         "equipment_icon@recipe_book_dx.equipment_icon": {
           "offset": [ 0, 0 ],
-          "layer": 14,
+          "layer": 1,
           "anchor_from": "top_right",
           "anchor_to": "top_right"
         }
@@ -515,6 +488,7 @@
           "ignored": "(not $is_java_aspects_fidelity)",
           "type": "image",
           "size": [ 16, 16 ],
+          "layer": 1,
           "texture": "textures/icon/chest"
         }
       }

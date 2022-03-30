@@ -731,6 +731,30 @@
     "text": "$button_text"
   },
 
+  /*//// Black BG ////*/
+
+  "black_bg": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/uidx/buttons/black_button_bg"
+  },
+
+  "black_bg_hover": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/uidx/buttons/black_button_bg",
+    "controls": [
+      {
+        "border": {
+          "type": "image",
+          "layer": 2,
+          "size": [ "100%", "100%" ],
+          "texture": "textures/uidx/buttons/button_border_white"
+        }
+      }
+    ]
+  },
+
   /*//// Black Button ////*/
 
   "black_button_label@common_dx.global_label": {

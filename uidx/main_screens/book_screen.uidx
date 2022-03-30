@@ -196,8 +196,7 @@
                 "size": [ "100%c", "100%c" ],
                 "controls": [
                   {
-                    "author_label": {
-                      "type": "label",
+                    "author_label@common_dx.global_label": {
                       "size": [ "default", 14 ],
                       "offset": [ 0, "4px" ],
                       "text": "book.byAuthor",
@@ -377,6 +376,7 @@
   },
 
   "page_text@book.page_text": {
+    "constrain_to_rect": false,
     "$enable_shadow": false,
     "$text_background_locked": "$text_background_default",
     "controls": [
@@ -387,7 +387,7 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "$text_background_hover": "book.blank",
-    "max_length": 266
+    "max_length": 270
   },
 
   "text_edit_hover_image@book.text_edit_hover_image": {

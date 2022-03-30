@@ -178,7 +178,7 @@
             { "loading_percentage_image@progress_anim_dx.loading_percentage_image": { } }
           ]
         }
-      },
+      }/* ,
       { "padding_2": { "type": "panel", "size": [ 1, 4 ] } },
       { 
         "padding_3@progress_dx.text_panel": {
@@ -205,7 +205,7 @@
             }
           ]
         }
-      }
+      } */
     ]
   },
 

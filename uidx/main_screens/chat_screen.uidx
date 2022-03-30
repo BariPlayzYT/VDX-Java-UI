@@ -50,12 +50,9 @@
 
   /*//// BG Base ////*/
 
-  "chat_bg": {
+  "chat_button_bg": {
     "type": "image",
-    "texture": "textures/uidx/global/white",
-    "color": [ 0.0, 0.0, 0.0 ],
-    "$bg_alpha|default": 0.5,
-    "alpha": "$bg_alpha",
+    "texture": "textures/uidx/chat/chat_button_bg",
     "size": [ "100%", "100%" ]
   },
 
@@ -116,8 +113,9 @@
           ],
           "controls": [
             {
-              "background@chat_dx.chat_bg": {
-                "$bg_alpha": 1,
+              "background": {
+                "type": "image",
+                "texture": "textures/uidx/chat/autocomplete_bg",
                 "layer": -1,
                 "offset": [ 0, 0 ],
                 "size": [ "100%", "100%" ]
@@ -295,7 +293,7 @@
     ]
   },
   
-  "black_button_default@chat_dx.chat_bg": {
+  "black_button_default@chat_dx.chat_button_bg": {
     "$text_color": "$main_menu_button_default_color",
     "$hover_visible": false,
     "$text_offset|default": [ 0, 0 ],
@@ -314,7 +312,7 @@
           "type": "image",
           "visible": "$hover_visible",
           "size": [ "100% +2px", "100% +2px" ],
-          "texture": "textures/ui/focus_border_white"
+          "texture": "textures/uidx/chat/chat_button_border_white"
         }
       }
     ]
@@ -524,13 +522,13 @@
     "texture": "textures/uidx/chat/chat_settings_icon"
   },
 
-  "text_edit_hover@chat_dx.chat_bg": {
+  "text_edit_hover@chat_dx.chat_button_bg": {
     "controls": [
       {
         "border": {
           "type": "image",
           "size": [ "100% +2px", "100% +2px" ],
-          "texture": "textures/ui/focus_border_white"
+          "texture": "textures/uidx/chat/chat_button_border_white"
         }
       }
     ]
@@ -596,7 +594,7 @@
         "text_box@chat.text_edit_box": {
           "$text_edit_box_label_offset": [ 2, 0 ],
           "size": [ "fill", 12 ],
-          "$text_background_default": "chat_dx.chat_bg",
+          "$text_background_default": "chat_dx.chat_button_bg",
           "$text_background_hover": "chat_dx.text_edit_hover",
           "controls": [
             { "custom_panel@common_dx.custom_text_edit_panel": { } }

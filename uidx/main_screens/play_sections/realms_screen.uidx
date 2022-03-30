@@ -900,8 +900,7 @@
               }
             },
             {
-              "realms_desc_label": {
-                "type": "label",
+              "realms_desc_label@common_dx.global_label": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "font_type": "normal",

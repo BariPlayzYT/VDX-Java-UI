@@ -299,8 +299,7 @@
                 "size": [ "fill", 75 ],
                 "controls": [
                   {
-                    "top_text": {
-                      "type": "label",
+                    "top_text@common_dx.global_label": {
                       "$name|default": "#realm_name",
                       "text": "$name",
                       "size": [ "100%", 10 ],
@@ -320,8 +319,7 @@
                     }
                   },
                   {
-                    "middle_text": {
-                      "type": "label",
+                    "middle_text@common_dx.global_label": {
                       "$description|default": "#description_text",
                       "text": "$description",
                       "text_alignment": "left",
@@ -343,8 +341,7 @@
                     }
                   },
                   {
-                    "expired_text": {
-                      "type": "label",
+                    "expired_text@common_dx.global_label": {
                       "text": "#realms_subscription_text",
                       "text_alignment": "left",
                       "size": [ "100%", "default" ],

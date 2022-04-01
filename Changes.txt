@@ -5,8 +5,8 @@ v1.2.0 [03/04/2022]
 [+] Quick trade button, just press the arrow to grab all at once.
 [+] Quick craft button for Stonecutter, just press the arrow to craft all at once.
 [+] Re-added the ability of the HUD be visible if opens inventory and other screens.
-    The cost of course is the opaque chat messages BG in chat_screen (no in HUD) while "screen animations" is in OFF.
-[+] Added text BG for tooltip controler in HUD.
+    The cost of course is the opaque chat messages BG in chat_screen (no in HUD).
+[+] Added text BG for tooltip controller in HUD.
 [+] Auto place mode toggle, only for touch device.
 [+] Re-added the furnace recipe book concept, only for Java UI.
     Now with new items for the latest version of Caves & Cliffs.
@@ -34,6 +34,7 @@ v1.2.0 [03/04/2022]
     (no more BG with netherrack/end stone or dirt with gradient).
     Also, I have added the pre-background using "screen_background".
 [*] Difficulty option in game now is the option as dropdown, only in settings screen.
+[*] Re-added line spacing option for Chat, while keeping Java Edition's desired default spacing.
 
 v1.1.4  [10/02/2022]
 [Removes]

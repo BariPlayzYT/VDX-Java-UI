@@ -286,13 +286,11 @@
         }
       },
       {
-        "chat_tts_toggle@settings_common_dx.option_toggle_150": {
+        "chat_color_option@chat_settings_dx.color_option_base": {
+          "$option_label": "chat.settings.chatColor",
+          "$color_prefix": "chat",
           "anchor_from": "top_right",
-          "anchor_to": "top_right",
-          "size": [ 150, 20 ],
-          "$option_label": "chat.settings.tts",
-          "$option_binding_name": "#toggle_tts",
-          "$toggle_name": "toggle_tts"
+          "anchor_to": "top_right"
         }
       },
       {
@@ -303,10 +301,19 @@
         }
       },
       {
-        "font_size_slider@settings_common_dx.option_slider_150": {
+        "mentions_color_option@chat_settings_dx.color_option_base": {
+          "$option_label": "chat.settings.mentionsColor",
+          "$color_prefix": "mentions",
           "anchor_from": "top_right",
           "anchor_to": "top_right",
-          "offset": [ 0, 24 ],
+          "offset": [ 0, 24 ]
+        }
+      },
+      {
+        "font_size_slider@settings_common_dx.option_slider_150": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 48 ],
           "size": [ 150, 20 ],
           "$option_label": "#chat_font_size_custom_label",
           "$slider_name": "chat_font_size",
@@ -334,21 +341,43 @@
         }
       },
       {
-        "chat_color_option@chat_settings_dx.color_option_base": {
-          "$option_label": "chat.settings.chatColor",
-          "$color_prefix": "chat",
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [ 0, 48 ]
+        "line_spacing_slider@settings_common_dx.option_slider_150": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ 0, 48 ],
+          "size": [ 150, 20 ],
+          "$option_label": "#chat_line_spacing_slider_label",
+          "$slider_name": "chat_line_spacing",
+          "$slider_value_binding_name": "#chat_line_spacing",
+          "$option_enabled_binding_name": "#chat_line_spacing_enabled",
+          "$slider_tts_text_value": "#chat_line_spacing_text_value",
+      
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label",
+              "binding_condition": "visible"
+            },
+            {
+              "binding_name": "$slider_tts_text_value"
+            }
+          ]
         }
       },
       {
-        "mentions_color_option@chat_settings_dx.color_option_base": {
-          "$option_label": "chat.settings.mentionsColor",
-          "$color_prefix": "mentions",
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
-          "offset": [ 0, 48 ]
+        "chat_tts_toggle@settings_common_dx.option_toggle_310": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 72 ],
+          "size": [ 310, 20 ],
+          "$option_label": "chat.settings.tts",
+          "$option_binding_name": "#toggle_tts",
+          "$toggle_name": "toggle_tts",
+          "bindings": [
+            {
+              "binding_name": "(not #hide_chat)",
+              "binding_name_override": "#enabled"
+            }
+          ]
         }
       }
     ]

@@ -192,7 +192,7 @@
           "type": "image",
           "texture": "textures/uidx/chat/chat_messages_bg_opaque",
           "size": [ "100%", "100%" ],
-          "layer": 2,
+          "layer": 2/* ,
           "alpha": 1.0,
           "animation_reset_name": "screen_animation_reset",
           "anims": [
@@ -200,7 +200,7 @@
             "@chat_dx.screen_exit_animation_pop_alpha_invert",
             "@chat_dx.screen_entrance_animation_push_alpha_invert",
             "@chat_dx.screen_entrance_animation_pop_alpha_invert"
-          ]
+          ] */
         }
       },
       {
@@ -251,17 +251,18 @@
   "messages_text": {
     "type": "label",
     "shadow": true,
-    "color": "$chat_text_color",
     "localize": false,
     "size": [ "100%", "default" ],
     "text": "#text",
     "text_tts": "#text_tts",
+    "color": "$chat_text_color",
     "font_type": "$chat_font_type",
     "font_scale_factor": "$chat_font_scale_factor",
-    "line_padding": -1,
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "offset": [ 2, 0.5 ],
+    "$chat_fixed_line_padding": 2.025,
+    "line_padding": "($chat_line_spacing - $chat_fixed_line_padding)",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [ 2, 0.669 ],
     "bindings": [
       {
         "binding_name": "#chat_visible",

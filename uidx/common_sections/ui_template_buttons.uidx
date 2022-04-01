@@ -758,6 +758,9 @@
   /*//// Black Button ////*/
 
   "black_button_label@common_dx.global_label": {
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "text_alignment": "center",
     "text": "$button_text",
     "offset": "$text_offset",
     "shadow": true,

@@ -227,12 +227,33 @@
           ],
           "controls": [
             {
-              "chat_text@hud.chat_label": {
+              "chat_text": {
+                "type": "label",
                 "layer": 3,
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "line_padding": -1,
-                "offset": [ 2, 0.5 ]
+                "text": "#text",
+                "size": [ "100%", "default" ],
+                "shadow": true,
+                "localize": false,
+                "color": "$chat_text_color",
+                "font_type": "$chat_font_type",
+                "font_scale_factor": "$chat_font_scale_factor",
+                "$chat_fixed_line_padding": 2.025,
+                "line_padding": "($chat_line_spacing - $chat_fixed_line_padding)",
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [ 2, 0.669 ],
+                "anims": [
+                  "@hud.anim_chat_txt_wait"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#chat_text",
+                    "binding_name_override": "#text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "chat_text_grid",
+                    "binding_condition": "once"
+                  }
+                ]
               }
             }
           ]
@@ -262,14 +283,14 @@
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
     "size": "$chat_size",
-    "propagate_alpha": true,
+    "propagate_alpha": true,/* 
     "animation_reset_name": "screen_animation_reset",
     "anims": [
       "@common.screen_exit_animation_push_fade",
       "@common.screen_exit_animation_pop_fade",
       "@common.screen_entrance_animation_push_fade",
       "@common.screen_entrance_animation_pop_fade"
-    ],
+    ], */
     "controls": [
       {
         "stack_panel": {

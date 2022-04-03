@@ -32,7 +32,8 @@
                 ],
                 "controls": [
                   {
-                    "hud_player": {
+                    "hud_player_alt": {
+                      "ignored": "$show_hud_while_inventory",
                       "type": "custom",
                       "renderer": "hud_player_renderer",
                       "layer": 1,
@@ -43,6 +44,20 @@
                         "@common.screen_entrance_size_animation_push",
                         "@common.screen_entrance_size_animation_pop"
                       ],
+                      "bindings": [
+                        {
+                          "binding_name": "#paper_doll_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "hud_player": {
+                      "ignored": "(not $show_hud_while_inventory)",
+                      "type": "custom",
+                      "renderer": "hud_player_renderer",
+                      "layer": 1,
                       "bindings": [
                         {
                           "binding_name": "#paper_doll_visible",
@@ -81,7 +96,8 @@
                 ],
                 "controls": [
                   {
-                    "hud_player": {
+                    "hud_player_alt": {
+                      "ignored": "$show_hud_while_inventory",
                       "type": "custom",
                       "renderer": "hud_player_renderer",
                       "layer": 1,
@@ -92,6 +108,20 @@
                         "@common.screen_entrance_size_animation_push",
                         "@common.screen_entrance_size_animation_pop"
                       ],
+                      "bindings": [
+                        {
+                          "binding_name": "#paper_doll_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "hud_player": {
+                      "ignored": "(not $show_hud_while_inventory)",
+                      "type": "custom",
+                      "renderer": "hud_player_renderer",
+                      "layer": 1,
                       "bindings": [
                         {
                           "binding_name": "#paper_doll_visible",

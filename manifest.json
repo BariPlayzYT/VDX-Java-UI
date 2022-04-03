@@ -3,14 +3,14 @@
   "header": {
     "name": "VDX: Java UI v1.2.0",
     "description": "Project by @CrisXolt.\nA UI pack made since Q4 of 2016.",
-    "uuid": "e0bb270b-5406-43e5-84e0-1e0c3f7e060b",
+    "uuid": "4fe284cb-82c1-46e2-b90f-9b3f55007579",
     "version": [1, 2, 0],
     "min_engine_version": [ 1, 18, 10 ]
   },
   "modules": [
     {
       "type": "resources",
-      "uuid": "d4c42572-c3ff-43c2-95a1-c1716fe19ebe",
+      "uuid": "a5483656-e38e-4e69-bb36-051f7ae6e411",
       "version": [1, 2, 0]
     }
   ]

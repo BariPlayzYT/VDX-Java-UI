@@ -96,5 +96,41 @@
     "fps": 10,
     "reversible": true,
     "easing": "linear"
+  },
+  
+  /*//// Auto Save Text ////*/
+
+  "auto_save_label@common_dx.global_label": {
+    "shadow": true,
+    "text": "progressScreen.saving",
+    "color": [ 1.0, 1.0, 1.0],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "alpha": "@hud_resources_dx.auto_save_label_animation_1",
+    "offset": [ -10, -6 ],
+    "layer": 160,
+    "bindings": [
+      {
+        "binding_name": "#auto_save_animation_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "auto_save_label_animation_1": {
+    "anim_type": "alpha",
+    "duration": 0.5,
+    "from": 1.0,
+    "to": 0.5,
+    "next": "@hud_resources_dx.auto_save_label_animation_2"
+  },
+
+  "auto_save_label_animation_2": {
+    "anim_type": "alpha",
+    "easing": "in_expo",
+    "duration": 0.5,
+    "from": 0.5,
+    "to": 1.0,
+    "next": "@hud_resources_dx.auto_save_label_animation_1"
   }
 }

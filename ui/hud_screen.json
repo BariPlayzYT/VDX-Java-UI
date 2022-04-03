@@ -4,8 +4,22 @@
   "hud_screen": {
     "render_only_when_topmost": "(not $show_hud_while_inventory)",
     "$use_loading_bars": false,
-    "$screen_animations": [ ],
-    "$background_animations": [ ]
+    "variables": [
+      {
+        "requires": "(not $show_hud_while_inventory)",
+        "$screen_animations": [
+          "@common.screen_exit_animation_push_fade",
+          "@common.screen_exit_animation_pop_fade",
+          "@common.screen_entrance_animation_push_fade",
+          "@common.screen_entrance_animation_pop_fade"
+        ]
+      },
+      {
+        "requires": "($show_hud_while_inventory)",
+        "$screen_animations": [ ],
+        "$background_animations": [ ]
+      }
+    ]
   },
   
   "hud_content": {

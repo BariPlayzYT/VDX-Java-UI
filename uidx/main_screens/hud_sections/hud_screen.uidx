@@ -805,7 +805,7 @@
           }
         }
       },
-      { "auto_save@hud_resources_dx.auto_save": {} }
+      { "auto_save@hud_resources_dx.auto_save_label": {} }
     ],
     "bindings": [
       {

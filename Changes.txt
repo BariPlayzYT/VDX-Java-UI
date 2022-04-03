@@ -1,4 +1,4 @@
-v1.2.0 [03/04/2022]
+v1.2.0 [02/04/2022]
 [Additions]
 [+] Join Realm by Code Screen for Java UI
 [+] File Upload/Download progress Screen for Java UI
@@ -8,6 +8,7 @@ v1.2.0 [03/04/2022]
     The cost of course is the opaque chat messages BG in chat_screen (no in HUD).
 [+] Added text BG for tooltip controller in HUD.
 [+] Auto place mode toggle, only for touch device.
+[+] Added Auto Save Text in HUD, only for Java UI.
 [+] Re-added the furnace recipe book concept, only for Java UI.
     Now with new items for the latest version of Caves & Cliffs.
 [Changes]

@@ -156,7 +156,6 @@
           "$options_dropdown_toggle_label_binding": "#dropdown_option_text",
           "$options_dropdown_toggle_label_binding_type": "collection",
           "$options_dropdown_toggle_label_binding_collection_name": "custom_form",
-          "$dropdown_scroll_content_size": [ "100%", "200%" ],
           "$label_bindings": [
             {
               "binding_name": "#custom_text",

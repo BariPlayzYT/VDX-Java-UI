@@ -44,24 +44,34 @@
             { 
               "options_background@java_gui_common.options_background": {
                 "layer": -10,
-                "size": [ "100%+128px", "100%+64px" ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "offset": [ -64, -32 ],
                 "ignored": "(not $is_pregame)"
-              }
-            },
-            { 
-              "bg_world@java_gui_common.screen_background": {
-                "layer": -12,
-                "size": [ "100%+128px", "100%+64px" ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "offset": [ -64, -32 ],
-                "ignored": "$is_pregame"
               }
             }
           ]
+        }
+      }
+    ]
+  },
+
+  "modal_dialog_popup_bg": {
+    "type": "panel",
+    "layer": 495,
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "main_bg_panel": {
+          "ignored": "(not $is_pregame)",
+          "type": "image",
+          "layer": -12,
+          "texture": "textures/uidx/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "fill": true
+        }
+      },
+      { 
+        "bg_world@java_gui_common.screen_background": {
+          "layer": -12,
+          "ignored": "$is_pregame"
         }
       }
     ]
@@ -77,7 +87,7 @@
       {
         "text": {
           "type": "image",
-          "texture": "textures/uidx/global/white",
+          "texture": "textures/uidx/global/color_base",
           "color": [ 0.0, 0.0, 0.0 ],
           "layer": 2,
           "size": [ "100%", "100%c" ],

@@ -14,7 +14,9 @@
     "uidx/common_sections/ui_template_tooltip.uidx",
     "uidx/common_sections/ui_template_touch.uidx",
     /* Container Item Sections */
+    "uidx/common_sections/container_item_sections/inventory_buttons.uidx",
     "uidx/common_sections/container_item_sections/ui_container_item.uidx",
+    "uidx/common_sections/container_item_sections/ui_item_highlight.uidx",
     "uidx/common_sections/container_item_sections/ui_item_renderer.uidx",
     "uidx/common_sections/container_item_sections/ui_selected_icon.uidx",
     "uidx/common_sections/container_item_sections/ui_template_durability.uidx",
@@ -85,10 +87,12 @@
     "uidx/main_screens/realms_sections/manage_realm_screen.uidx",
     "uidx/main_screens/realms_sections/realms_players.uidx",
     "uidx/main_screens/realms_sections/realms_players_content.uidx",
+    "uidx/main_screens/realms_sections/realms_players_permissions.uidx",
     "uidx/main_screens/realms_sections/world_slot_edit_screen.uidx",
     /* Settings Sections */
     "uidx/main_screens/settings_sections/accessibility_screen.uidx",
     "uidx/main_screens/settings_sections/controller_screen.uidx",
+    "uidx/main_screens/settings_sections/creator_screen.uidx",
     "uidx/main_screens/settings_sections/game_screen.uidx",
     "uidx/main_screens/settings_sections/keyboard_and_mouse_screen.uidx",
     "uidx/main_screens/settings_sections/language_screen.uidx",

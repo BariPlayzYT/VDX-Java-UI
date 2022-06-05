@@ -5,7 +5,7 @@
 
   /*//// Buttons Assets ////*/
 
-  "return_from_sub_command_button@chat_dx.black_button": {
+  "return_from_sub_command_button@common_buttons_dx.black_button": {
     "size": [ "100%", 20 ],
     "$button_label_offset": [ 30, 0 ],
     "$button_content": "host_options_dx.button_content",
@@ -78,7 +78,7 @@
     "size": [ "100%", 22 ],
     "controls": [
       {
-        "host_option_banner@chat_dx.black_button": {
+        "host_option_banner@common_buttons_dx.black_button": {
           "anchor_from": "center",
           "anchor_to": "center",
           "size": [ "100%-2px", 20 ],
@@ -168,7 +168,7 @@
     "size": [ "100%", 22 ],
     "controls": [
       {
-        "player_banner@chat_dx.black_button": {
+        "player_banner@common_buttons_dx.black_button": {
           "anchor_from": "center",
           "anchor_to": "center",
           "size": [ "100%-2px", 20 ],
@@ -239,7 +239,7 @@
         }
       },
       {
-        "host_option_button@chat_dx.black_button": {
+        "host_option_button@common_buttons_dx.black_button": {
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "size": [ "100%", 20 ],
@@ -285,7 +285,7 @@
     "size": [ "100%", 22 ],
     "controls": [
       {
-        "host_option_banner@chat_dx.black_button": {
+        "host_option_banner@common_buttons_dx.black_button": {
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "size": [ "100%", 20 ],

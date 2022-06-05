@@ -1,4 +1,6 @@
-﻿##  Start
+﻿map.position=Block: %s %s %s
+
+##  Start
 menu.play=Play Game
 menu.options=Options...
 menu.quit=Quit Game
@@ -9,6 +11,7 @@ options.enableChatTextToSpeech=TTS For Chat
 options.enableAutoPlatformTextToSpeech=TTS with Device
 options.enableUITextToSpeech=UI Screen Reader
 options.enableOpenChatMessage=Open Chat Message
+options.darknessEffectModifier=Darkness Pulsing
 
 ##  Video Settings
 options.graphics.fancy.tooltip=Fancy graphics balances performance and quality for the majority of machines. Weather, clouds and particles may not appear behind translucent blocks or water.

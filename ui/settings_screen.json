@@ -2,6 +2,7 @@
 //(c) Don't use any code design without permission!*/
 {
   "screen_world_create": {
+    "load_screen_immediately": true,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
     "$background_animations": [ ],
@@ -14,6 +15,7 @@
   },
 
   "screen_template_create": {
+    "load_screen_immediately": true,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
     "$background_animations": [ ],
@@ -26,6 +28,7 @@
   },
 
   "screen_world_edit": {
+    "load_screen_immediately": true,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
     "$background_animations": [ ],
@@ -39,6 +42,7 @@
   },
 
   "screen_controls_and_settings": {
+    "load_screen_immediately": true,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
     "$background_animations": [ ],
@@ -50,6 +54,7 @@
   },
 
   "screen_world_controls_and_settings": {
+    "load_screen_immediately": true,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
     "$background_animations": [ ],
@@ -61,6 +66,7 @@
   },
 
   "screen_realm_controls_and_settings": {
+    "load_screen_immediately": true,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
     "$background_animations": [ ],
@@ -75,6 +81,7 @@
   },
 
   "screen_world_slot_edit": {
+    "load_screen_immediately": true,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
     "$background_animations": [ ],
@@ -96,6 +103,7 @@
   },
 
   "screen_realm_manage": {
+    "load_screen_immediately": true,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
     "$background_animations": [ ],

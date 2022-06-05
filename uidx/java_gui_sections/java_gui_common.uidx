@@ -31,7 +31,7 @@
 
   "screen_background": {
     "type": "image",
-    "size": [ "100%", "100%" ],
+    "fill": true,
     "texture": "textures/uidx/screen_background"
   },
 
@@ -67,13 +67,11 @@
 
   "highlight_slot": {
     "type": "image",
-    "layer": 6,
     "texture": "textures/uidx/highlight/highlight_slot",
     "size": [ 16, 16 ]
   },
 
   "highlight_slot_red@java_gui_common.highlight_slot": {
-    "layer": 0,
     "texture": "textures/uidx/highlight/highlight_slot_red"
   },
 
@@ -83,7 +81,6 @@
   },
 
   "highlight_slot_output_red@java_gui_common.highlight_slot": {
-    "layer": 0,
     "texture": "textures/uidx/highlight/highlight_slot_output_red",
     "size": [ 24, 24 ]
   },
@@ -141,35 +138,29 @@
     "type": "image",
     "color": "$text_color",
     "texture": "textures/uidx/feedback_icon",
-    "size": [
-      20,
-      20
-    ]
+    "size": [ 20, 20 ]
   },
   
   "skin_icon": {
     "type": "image",
     "color": "$text_color",
     "texture": "textures/uidx/skin_icon",
-    "size": [
-      20,
-      20
-    ]
+    "size": [ 20, 20 ]
   },
 
   "camera_icon": {
     "type": "image",
     "color": "$text_color",
     "texture": "textures/uidx/camera_icon",
-    "size": [
-      20,
-      20
-    ]
+    "size": [ 20, 20 ]
   },
 
   /*//// Options Background ////*/
   
-  "options_background@common.dirt_background": {
+  "options_background": {
+    "type": "image",
+    "fill": true,
+    "tiled": true,
     "texture": "assets/minecraft/textures/gui/options_background",
     "color": [ 0.25, 0.25, 0.25, 1.0 ],
     "$bg_tiled_scale|default": [ 0, 0 ],
@@ -402,6 +393,14 @@
     "size": [ 16, 16 ],
     "color": "$text_color",
     "texture": "textures/uidx/icons/multiplayer"
+  },
+
+  "creator_icon": {
+    "type": "image",
+    "layer": 4,
+    "size": [ 16, 16 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/creator"
   },
 
   /*//// Resource Packs Settings ////*/

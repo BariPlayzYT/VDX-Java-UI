@@ -271,10 +271,26 @@
     ]
   },
 
+  "file_upload_content_bg": {
+    "type": "panel",
+    "controls": [
+      {
+        "main_bg_panel": {
+          "type": "image",
+          "layer": -12,
+          "texture": "textures/uidx/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "fill": true
+        }
+      }
+    ]
+  },
+
   "file_upload_content": {
     "type": "panel",
     "layer": 4,
     "controls": [
+      { "main_bg@java_gui_common.options_background": { "layer": -5 } },
       { "title_panel@file_upload_dx.title_panel": {} },
       { "content_panel@file_upload_dx.content_panel": {} },
       { "button_panel@file_upload_dx.button_panel": { } },

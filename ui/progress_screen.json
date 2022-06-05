@@ -8,7 +8,7 @@
   },
   
   "world_loading_progress_screen": {
-    "$screen_bg_content": "java_gui_common.options_background",
+    "$screen_bg_content": "progress_dx.main_progress_screen_background",
     "$screen_content": "progress_dx.world_loading_progress_screen_content"
   },
 
@@ -28,17 +28,17 @@
   },
 
   "world_saving_progress_screen": {
-    "$screen_bg_content": "java_gui_common.options_background",
+    "$screen_bg_content": "progress_dx.main_progress_screen_background",
     "$screen_content": "progress_dx.world_saving_progress_screen_content"
   },
 
   "world_convert_modal_progress_screen": {
-    "$screen_bg_content": "java_gui_common.options_background",
+    "$screen_bg_content": "progress_dx.main_progress_screen_background",
     "$screen_content": "progress_dx.world_loading_progress_screen_content"
   },
 
   "realms_loading_progress_screen": {
-    "$screen_bg_content": "java_gui_common.options_background",
+    "$screen_bg_content": "progress_dx.main_progress_screen_background",
     "$screen_content": "progress_dx.realms_progress_screen_content"
   }
 }

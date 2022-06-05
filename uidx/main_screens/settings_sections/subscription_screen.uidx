@@ -389,7 +389,7 @@
   
   "subscription_label@settings_dx.base_label": {
     "text": "realmsSettingsScreen.subscriptionSectionTitle",
-    "offset": [ 0, 4 ]
+    "offset": [ 0, 14 ]
   },
 
   "subscription_screen_panel@common_menus_dx.java_edition_menu_panel_template": {

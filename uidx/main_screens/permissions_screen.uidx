@@ -205,7 +205,7 @@
     "anchor_to": "top_middle",
     "size": [ "100%", "100%" ],
     "alpha": 0.25,
-    "texture": "textures/uidx/global/white"
+    "texture": "textures/uidx/global/color_base"
   },
 
   /*////// Content List Stack Panel  //////*/
@@ -282,8 +282,6 @@
                 "$button_type_panel": "permissions.permission_level_dropdown_state_content",
                 "$option_enabled_binding_name": "#can_edit_permissions",
                 "$options_dropdown_toggle_label_binding": "#permission_level_dropdown_label",
-                "$dropdown_scroll_content_size": [ "100%", "245%" ],
-            
                 "$default_focus_precedence": 2,
                 "$focus_override_up": "back_button"
               }
@@ -475,12 +473,6 @@
     "size": [ "100%", "100%-64px" ],
     "controls": [
       {
-        "left_safezone": {
-          "type": "panel",
-          "size": "$left_horizontal_safezone_size"
-        }
-      },
-      {
         "left_separator": {
           "type": "panel",
           "size": [ 10, "100%" ]
@@ -550,17 +542,27 @@
           "type": "panel",
           "size": [ 10, "100%" ]
         }
-      },
-      {
-        "right_safezone": {
-          "type": "panel",
-          "size": "$right_horizontal_safezone_size"
-        }
       }
     ]
   },
 
   /*////// Screen  //////*/
+
+  "permissions_screen_bg": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "main_bg_panel": {
+          "type": "image",
+          "layer": -12,
+          "texture": "textures/uidx/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "fill": true
+        }
+      }
+    ]
+  },
 
   "permissions_screen_content": {
     "type": "panel",

@@ -458,9 +458,10 @@
                       "offset": [ 0, 11 ],
                       "controls": [
                         {
-                          "network_world_details@play.network_world_details": {
-                            "$secondary_text_color": [ 0.75, 0.75, 0.75 ],
+                          "network_world_details@common_dx.global_label": {
+                            "color": [ 0.75, 0.75, 0.75 ],
                             "layer": 5,
+                            "text": "#network_world_details",
                             "bindings": [
                               {
                                 "binding_name": "#network_world_details",
@@ -483,9 +484,9 @@
                       "offset": [ 0, 20 ],
                       "controls": [
                         {
-                          "world_list_text@play.world_list_text": {
+                          "world_list_text@common_dx.global_label": {
                             "size": [ "default", 10 ],
-                            "$text_color": [ 0.75, 0.75, 0.75 ],
+                            "color": [ 0.75, 0.75, 0.75 ],
                             "shadow": false,
                             "layer": 5,
                             "text": "#network_world_header",
@@ -499,8 +500,7 @@
                           }
                         },
                         {
-                          "separator": {
-                            "type": "label",
+                          "separator@common_dx.global_label": {
                             "size": [ "default", 10 ],
                             "color": [ 0.75, 0.75, 0.75 ],
                             "shadow": false,
@@ -509,7 +509,7 @@
                           }
                         },
                         {
-                          "world_player_count@play.world_list_text": {
+                          "world_player_count@common_dx.global_label": {
                             "layer": 5,
                             "text": "#network_world_player_count",
                             "color": [ 0.667, 0.667, 0.667 ],
@@ -643,11 +643,11 @@
                 "size": [ "fill", "100%" ],
                 "controls": [
                   {
-                    "top_text@play.world_list_text": {
+                    "top_text@common_dx.global_label": {
                       "size": [ "100%", 10 ],
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
-                      "$text_color": [ 1.0, 1.0, 1.0 ],
+                      "color": [ 1.0, 1.0, 1.0 ],
                       "shadow": false,
                       "layer": 5,
                       "text": "#network_world_header",
@@ -670,9 +670,10 @@
                       "offset": [ 0, 11 ],
                       "controls": [
                         {
-                          "network_world_details@play.network_world_details": {
-                            "$secondary_text_color": [ 0.75, 0.75, 0.75 ],
+                          "network_world_details@common_dx.global_label": {
+                            "color": [ 0.75, 0.75, 0.75 ],
                             "layer": 5,
+                            "text": "#network_world_details",
                             "bindings": [
                               {
                                 "binding_name": "#network_world_details",
@@ -694,7 +695,7 @@
                 "size": [ "100%c", "100%" ],
                 "controls": [
                   {
-                    "world_player_count@play.world_list_text": {
+                    "world_player_count@common_dx.global_label": {
                       "layer": 5,
                       "text": "#network_world_player_count",
                       "color": [ 0.667, 0.667, 0.667 ],
@@ -932,11 +933,11 @@
                 "size": [ "fill", "100%" ],
                 "controls": [
                   {
-                    "top_text@play.world_list_text": {
+                    "top_text@common_dx.global_label": {
                       "size": [ "100%", 10 ],
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
-                      "$text_color": [ 1.0, 1.0, 1.0 ],
+                      "color": [ 1.0, 1.0, 1.0 ],
                       "shadow": false,
                       "layer": 5,
                       "text": "#network_world_header",
@@ -959,9 +960,17 @@
                       "offset": [ 0, 11 ],
                       "controls": [
                         { 
-                          "network_world_details@play.network_world_details": {
-                            "$secondary_text_color": [ 0.75, 0.75, 0.75 ],
-                            "layer": 5
+                          "network_world_details@common_dx.global_label": {
+                            "color": [ 0.75, 0.75, 0.75 ],
+                            "layer": 5,
+                            "text": "#network_world_details",
+                            "bindings": [
+                              {
+                                "binding_name": "#network_world_details",
+                                "binding_type": "collection",
+                                "binding_collection_name": "$collection_name"
+                              }
+                            ]
                           }
                         }
                       ]

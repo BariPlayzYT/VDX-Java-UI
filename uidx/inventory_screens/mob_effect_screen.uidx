@@ -389,7 +389,7 @@
   "scroll_box": {
     "type": "image",
     "size": [ "100%", "100%" ],
-    "texture": "textures/uidx/global/white",
+    "texture": "textures/uidx/global/color_base",
     "color": [ 0.8, 0.8, 1 ],
     "alpha": 0.5
   },

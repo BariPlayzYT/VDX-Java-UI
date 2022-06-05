@@ -275,7 +275,6 @@
         "main": {
           "type": "panel",
           "controls": [
-            { "main_bg_panel@settings_dx.bg_panel": { } },
             {
               "keyboard_and_mouse_label@settings_dx.base_label": {
                 "text": "options.controller",

@@ -1,4 +1,6 @@
-﻿##  Start
+﻿map.position=Block: %s %s %s
+
+##  Start
 menu.play=Jugar al juego	#
 menu.options=Opciones...	#
 menu.quit=Cerrar Minecraft	#
@@ -9,19 +11,25 @@ options.enableChatTextToSpeech=Narrar chat	#
 options.enableAutoPlatformTextToSpeech=Narrar con dispositivo	#
 options.enableUITextToSpeech=Narrar UI	#
 options.enableOpenChatMessage=Activar Chat	#
+options.darknessEffectModifier=Pulso de oscuridad
 
 ##  Controls Settings
 options.mouse_settings=Opciones de mouse...
 options.mouse_settings.title=Opciones de mouse
 controls.keybinds=Teclas...
 controls.keybinds.title=Teclas
+options.fullKeyboardGameplay=Disposición de teclas
 
 options.joystick_settings=Opciones de Joystick...
 options.joystick_settings.title=Opciones de Joystick
+options.hidegamepadcursor=Ocultar el cursor
+options.hidetooltips=Ocultar descripciones
 
 ##  Video Settings
 options.graphics.fancy.tooltip=Los gráficos detallados equilibran el rendimiento y la calidad en la mayoría de dispositivos.Las precipitaciones, las nubes y las partículas puede que no se muestren al mirarlas a través de bloques translúcidos o de agua.	#
 options.graphics.fast.tooltip=Los gráficos rápidos reducen la cantidad de lluvia y nieve visible. Los efectos de transparencia se desactivan para bloques como las hojas de árboles.	#
+
+options.raytracing.renderDistance=Visibilidad del trazado de rayos
 
 options.vsync=VSync	#
 options.vsync.off=NO	#

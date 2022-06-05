@@ -130,7 +130,7 @@
         "bg_image": {
           "type": "image",
           "layer": 1,
-          "texture": "textures/uidx/global/white",
+          "texture": "textures/uidx/global/color_base",
           "color": [ 0.0, 0.0, 0.0 ],
           "alpha": 0.5,
           "size": [ 20, 20 ]
@@ -160,18 +160,23 @@
     "controls": [
       { "signing_book_panel@book_java_dx.signing_book_panel": { "layer": 1 } },
       {
-        "title_label@book.title_label": {
+        "title_label@common_dx.global_label": {
           "layer": 3,
           "text_alignment": "center",
           "size": [ 100, 14 ],
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "offset": [ 0, 30 ],
-          "color": [ 0, 0, 0 ]
+          "color": [ 0, 0, 0 ],
+          "text": "book.editTitle"
         }
       },
       {
         "title_text_box@book.title_text_box": {
+          "$place_holder_control": "common_dx.text_edit_box_place_holder_label",
+          "controls": [
+            { "custom_panel@common_dx.custom_text_edit_panel": { } }
+          ],
           "layer": 3,
           "size": [ 100, 14 ],
           "offset": [ 0, 44 ],
@@ -213,6 +218,10 @@
                 "controls": [
                   {
                     "author_text_box@book.author_text_box": {
+                      "$place_holder_control": "common_dx.text_edit_box_place_holder_label",
+                      "controls": [
+                        { "custom_panel@common_dx.custom_text_edit_panel": { } }
+                      ],
                       "$text_alignment": "center",
                       "offset": [ "1px", 2 ],
                       "$text_box_text_color": [ 0.33, 0.33, 0.33 ],
@@ -227,15 +236,16 @@
         }
       },
       {
-        "warning_label@book.warning_label": {
-          "font_type": "normal",
+        "warning_label@common_dx.global_label": {
           "font_scale_factor": 1.0,
           "line_padding": -1.0,
           "layer": 3,
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [ 16, 78 ],
-          "color": [ 0, 0, 0 ]
+          "color": [ 0, 0, 0 ],
+          "size": [ "100%-30px", "100%" ],
+          "text": "book.finalizeWarning"
         }
       }
     ]
@@ -262,7 +272,7 @@
           "layer": 2,
           "controls": [
             {
-              "page_number_label@book.page_number_label": {
+              "page_number_label@book_dx.page_number_label": {
                 "color": [ 0.0, 0.0, 0.0 ],
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
@@ -329,7 +339,7 @@
           "layer": 2,
           "controls": [
             {
-              "page_number_label@book.page_number_label": {
+              "page_number_label@book_dx.page_number_label": {
                 "color": [ 0.0, 0.0, 0.0 ],
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
@@ -375,13 +385,37 @@
     ]
   },
 
+  "page_number_label@common_dx.global_label": {
+    "offset": [ 0, 13 ],
+    "layer": 5,
+    "color": "$book_page_number_color",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+
+    "localize": false,
+    "text": "#page_number",
+
+    "bindings": [
+      {
+        "binding_name": "#page_number",
+        "binding_type": "collection",
+        "binding_collection_name": "book_pages"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "book_pages"
+      }
+    ]
+  },
+
   "page_text@book.page_text": {
-    "constrain_to_rect": false,
-    "$enable_shadow": false,
-    "$text_background_locked": "$text_background_default",
+    "$place_holder_control": "common_dx.text_edit_box_place_holder_label",
     "controls": [
       { "custom_panel@common_dx.custom_text_edit_panel": { } }
     ],
+    "constrain_to_rect": false,
+    "$enable_shadow": false,
+    "$text_background_locked": "$text_background_default",
     "size": [ 120, 128 ],
     "offset": [ 16, 29 ],
     "anchor_from": "top_left",

@@ -20,15 +20,32 @@
 
   /*//// Option Dropdown Radio ////*/
 
+  "radio_with_label_core@common_toggles_dx.toggle_panel": {
+    "$radio_toggle_group": true,
+    "$toggle_name|default": "$toggle_state_binding_name",
+    "$toggle_enabled_binding_name": "$option_enabled_binding_name",
+
+    "enabled": "$enabled",
+    "$toggle_enabled_binding_type": "global",
+    "variables": [
+      {
+        "requires": "(not $option_enabled_binding_name or not $enabled)",
+        "$toggle_enabled_binding_name": "#not_data_bound",
+        "$toggle_enabled_binding_type": "none"
+      }
+    ]
+  },
+
   "dropdown_radio_base@settings_common.option_generic": {
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "$custom_button_content|default": "settings_common_dx.button_label_with_value",
+    "$dropdown_radio_base_size": [ "100%", "100%" ],
     "controls": [
       { 
-        "radio_with_label_core@settings_common.radio_with_label_core": {
-          "$radio_label_text": "unset $radio_label_text",
-          "size": [ "100%", "100%" ],
+        "radio_with_label_core@settings_common_dx.radio_with_label_core": {
+          "$radio_label_text|default": "unset $radio_label_text",
+          "size": "$dropdown_radio_base_size",
 
           "$unchecked_control": "$radio_texture_default",
           "$checked_control": "$radio_texture_default",
@@ -233,7 +250,7 @@
     "orientation": "horizontal",
     "anchor_from": "center",
     "anchor_to": "center",
-    "size": [ "100%c", "100% - 9px" ],
+    "size": [ "100%c", 10 ],
     "$option_label_text_color|default": "$text_color",
     "$colon_needed|default": true,
     "$only_value|default": false,
@@ -242,6 +259,7 @@
       {
         "button_label@common_buttons_dx.button_label": {
           "size": [ "default", 10 ],
+          "max_size": [ "fill", 10 ],
           "ignored": "$only_value",
           "text": "$option_label",
           "color": "$option_label_text_color"
@@ -250,6 +268,7 @@
       {
         "colon@common_buttons_dx.button_label": {
           "size": [ "default", 10 ],
+          "max_size": [ "default", 10 ],
           "ignored": "($only_value or (not $colon_needed))",
           "text": ": "
         }
@@ -257,6 +276,7 @@
       {
         "separator@common_buttons_dx.button_label": {
           "size": [ "default", 10 ],
+          "max_size": [ "default", 10 ],
           "ignored": "($only_value or $colon_needed)",
           "text": " "
         }
@@ -264,6 +284,7 @@
       {
         "value_label@common_buttons_dx.button_label": {
           "size": [ "default", 10 ],
+          "max_size": [ "fill", 10 ],
           "text": "$toggle_value_text",
           "bindings": [
             {
@@ -454,6 +475,7 @@
       {
         "button_label@common_buttons_dx.button_label": {
           "size": [ "default", 10 ],
+          "max_size": [ "fill", 10 ],
           "text": "$option_label",
           "ignored": "$only_bindings",
           "bindings": "$label_bindings"
@@ -462,6 +484,7 @@
       {
         "separator@common_buttons_dx.button_label": {
           "size": [ "default", 10 ],
+          "max_size": [ "default", 10 ],
           "ignored": "$only_bindings",
           "text": ": "
         }
@@ -469,6 +492,7 @@
       { 
         "button_label_content_name@common_buttons_dx.button_label": {
           "size": [ "default", 10 ],
+          "max_size": [ "fill", 10 ],
           "$option_label_text_color|default": "$text_color",
           "color": "$option_label_text_color",
           "text": "$options_dropdown_toggle_label_binding",
@@ -545,7 +569,8 @@
 
   "option_dropdown_base@settings_common.option_generic": {
     "$label_bindings": [],
-    "$option_dropdown_type": "common.dropdown",
+    "$dropdown_scroll_content_size": [ "100%", "200%" ],
+    "$option_dropdown_type": "settings_common_dx.main_dropdown", //Use "settings_common_dx.dropdown_no_scrollpanel" if you want to use contained version.
     "$options_dropdown_toggle_label_binding_collection_name": "",
     "$options_dropdown_toggle_label_binding_type": "global",
     "$options_dropdown_label_color_binding": "",
@@ -556,15 +581,11 @@
         "button_panel": {
           "type": "panel",
           "size": [ "100%", 20 ],
-          "$dropdown_background_control": "java_gui_common.text_input_java",
-          "$scroll_track_image_control": "common_menus_dx.java_scroll_track",
-          "$scroll_box_mouse_image_control": "common_menus_dx.java_scroll_box",
           "controls": [
             {
               "dropdown@$option_dropdown_type": {
                 "size": [ "100%", 20 ],
                 "$dropdown_toggle": "settings_common_dx.options_dropdown_toggle_control",
-                "$dropdown_background": "$dropdown_background_control",
                 "$dropdown_content|default": "unset_dropdown_content",
                 "$dropdown_name|default": "unset $dropdown_name",
                 "$options_dropdown_toggle_label_binding|default": "unset $options_dropdown_toggle_label_text",
@@ -578,8 +599,59 @@
     ]
   },
 
-  "option_dropdown_no_scroll@settings_common_dx.option_dropdown_base": {
-    "$option_dropdown_type": "common.dropdown_no_scrollpanel"
+  "main_dropdown@common.dropdown": {
+    "$dropdown_content_controls": [
+      {
+        "background@java_gui_common.text_input_java": {
+          "layer": 1,
+          "size": "$dropdown_scroll_content_size",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 0 ],
+          "controls": [
+            {
+              "scrolling_panel@common_scroll_dx.scrolling_panel": {
+                "size": [ "100%-4px", "100%-4px" ],
+                "$scrolling_pane_size": [ "100%", "100%" ],
+                "$scroll_view_port_size": [ "100%-6px", "100%" ],
+                "$scroll_box_image_control": "common_menus_dx.java_scroll_box",
+                "$scroll_track_image_control": "common_menus_dx.java_scroll_track",
+                "$scroll_size": [ 6, "100%" ],
+                "$show_background": false,
+                "layer": 4,
+      
+                "$scrolling_content": "$dropdown_content"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "dropdown_no_scrollpanel@common.dropdown_no_scrollpanel": {
+    "$dropdown_content_controls": [
+      {
+        "background@java_gui_common.text_input_java": {
+          "layer": 1,
+          "size": [ "100%", "100%c+3.5px" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 0 ],
+          "controls": [
+            {
+              "content@$dropdown_content": {
+                "size": [ "100%-6px", "100%c" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 3, 1.5 ],
+                "layer": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
   },
 
   "option_dropdown_130@settings_common_dx.option_dropdown_base": {
@@ -588,6 +660,14 @@
     "$dropdown_texture_hover": "common_buttons_dx.130_hover",
     "$dropdown_texture_pressed": "common_buttons_dx.130_pressed",
     "$dropdown_texture_locked": "common_buttons_dx.130_locked"
+  },
+
+  "option_dropdown_158@settings_common_dx.option_dropdown_base": {
+    "size": [ 158, 20 ],
+    "$dropdown_texture_default": "common_buttons_dx.158_default",
+    "$dropdown_texture_hover": "common_buttons_dx.158_hover",
+    "$dropdown_texture_pressed": "common_buttons_dx.158_pressed",
+    "$dropdown_texture_locked": "common_buttons_dx.158_locked"
   },
 
   "option_dropdown_200@settings_common_dx.option_dropdown_base": {

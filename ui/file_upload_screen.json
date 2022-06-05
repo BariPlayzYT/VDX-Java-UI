@@ -3,7 +3,7 @@
     "$use_loading_bars": false,
     "$screen_animations": [ ],
     "$background_animations": [ ],
-    "$screen_bg_content": "java_gui_common.options_background",
+    "$screen_bg_content": "file_upload_dx.file_upload_content_bg",
     "$screen_content": "file_upload_dx.file_upload_content"
   }
 }

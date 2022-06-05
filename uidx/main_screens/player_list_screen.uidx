@@ -47,7 +47,7 @@
                 "anchor_to": "top_middle",
                 "size": [ 111, 8 ],
                 "alpha": 0.25,
-                "texture": "textures/uidx/global/white"
+                "texture": "textures/uidx/global/color_base"
               }
             }
           ] */

@@ -281,7 +281,7 @@
             {
               "object_name": {
                 "type": "image",
-                "texture": "textures/uidx/global/white",
+                "texture": "textures/uidx/global/color_base",
                 "layer": 5,
                 "size": [ "100%-20px", 1 ],
                 "anchor_from": "center",
@@ -296,18 +296,11 @@
           "type": "stack_panel",
           "orientation": "vertical",
           "size": [ 310, "100%c" ],
-          "ignored": "(not $pre_release)",
           "controls": [
             {
               "panel_0": {
                 "type": "panel",
                 "size": [ 310, 25 ],
-                "bindings": [
-                  {
-                    "binding_name": "#new_touch_control_schemes_preview_enabled",
-                    "binding_name_override": "#visible"
-                  }
-                ],
                 "controls": [
                   {
                     "option_enable_new_touch_control_schemes_button@settings_common_dx.option_toggle_310": {

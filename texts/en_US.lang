@@ -1,3 +1,5 @@
+map.position=Block: %s %s %s
+
 ##  Start
 menu.play=Play Game
 menu.options=Options...
@@ -9,6 +11,7 @@ options.enableChatTextToSpeech=TTS For Chat
 options.enableAutoPlatformTextToSpeech=TTS with Device
 options.enableUITextToSpeech=UI Screen Reader
 options.enableOpenChatMessage=Open Chat Message
+options.darknessEffectModifier=Darkness Pulsing
 
 ##  Controls Settings
 options.mouse_settings=Mouse Settings...
@@ -97,7 +100,7 @@ inventory.binSlot=Destroy Item
 merchant.deprecated=Villagers restock up to two times per day
 
 ##  Worlds
-selectWorld.tooltip.beta=Don't forget to backup this world before you load it in this beta.
+selectWorld.tooltip.beta=Don't forget to backup this world before you load it in this Beta/Preview.
 
 ##  Realms
 mco.selectServer.popup=Realms is a safe, simple way to enjoy an online Minecraft world with up to ten friends at a time.   It supports loads of minigames and plenty of custom worlds! Only the owner of the realm needs to pay.

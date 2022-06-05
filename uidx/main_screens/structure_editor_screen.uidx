@@ -35,6 +35,7 @@
   /*//// Base ////*/
 
   "text_edit_box_base@structure_editor.text_edit_control": {
+    "$place_holder_control": "common_dx.text_edit_box_place_holder_label",
     "$text_edit_clipping_panel_size": [ "100%-8px", 10 ],
     "$text_background_default": "java_gui_common.text_input_java",
     "$text_background_hover": "java_gui_common.text_input_java_hover",

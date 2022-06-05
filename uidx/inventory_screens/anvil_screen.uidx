@@ -21,6 +21,7 @@
       },
       {
         "text_edit_control@anvil.text_edit_control": {
+          "$place_holder_control": "common_dx.text_edit_box_place_holder_label",
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "size": [ 110, 16 ],
@@ -49,7 +50,7 @@
           "type": "image",
           "size": [ "100% + 5px", 12 ],
           "offset": [ -0.5, 0 ],
-          "texture": "textures/uidx/global/white",
+          "texture": "textures/uidx/global/color_base",
           "layer": -1,
           "color": [ 0, 0, 0 ],
           "alpha": 0.31
@@ -139,7 +140,7 @@
     "size": [ 142, 34 ],
     "offset": [ 26, 45 ],
     "$background_images": "java_gui_common.cell_image",
-    "$highlight_control": "common_dx.highlight_slot_panel",
+    "$highlight_control": "item_highlight_dx.highlight_slot_panel",
     "controls": [
       { "recipe_grid_input@anvil_dx.recipe_grid_input": { "offset": [ 0, 1 ] } },
       { "recipe_grid_material@anvil_dx.recipe_grid_material": { "offset": [ 49, 1 ] } },
@@ -189,7 +190,7 @@
 
   "anvil_panel@common_dx.root_panel": {
     "controls": [
-      { "main_buttons_panel@common_dx.main_inventory_buttons_panel": { "layer": 11 } },
+      { "main_buttons_panel@inventory_buttons_dx.main_inventory_buttons_panel": { "layer": 11 } },
       { "dialog_bg_anvil@anvil_java_dx.dialog_bg_anvil": { "layer": 1 } },
       { "anvil_panel_top_half@anvil_dx.anvil_panel_top_half": { "layer": 11 } }, 
       {
@@ -209,6 +210,7 @@
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
     "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 18, "ignored": "$ignore_flying_item" } },
       { "inventory_selected_icon_button@selected_icon_dx.inventory_selected_icon_button": {} },
       { 
         "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {

@@ -328,12 +328,6 @@
     "size": [ "100%", "100%-47px" ],
     "controls": [
       {
-        "left_safezone": {
-          "type": "panel",
-          "size": "$left_horizontal_safezone_size"
-        }
-      },
-      {
         "left_scroll_panel": {
           "type": "panel",
           "size": [ "fill", "100%" ],
@@ -394,12 +388,6 @@
             { "panel@common_menus_dx.panel_toggle": { "size": [ "100%", "100%" ] } }
           ]
         }
-      },
-      {
-        "right_safezone": {
-          "type": "panel",
-          "size": "$right_horizontal_safezone_size"
-        }
       }
     ]
   },
@@ -448,7 +436,26 @@
           "layer": 40,
           "controls": [
             { "horizontal_stack_panel@common_screens_dx.horizontal_safezone_screen": { "$panel_content": "realms_backups_dx.header_panel", "layer": 45 } },
-            { "panel_toggle@common_menus_dx.panel_toggle": {} }
+            { 
+              "panel_toggle@common_menus_dx.panel_toggle": {
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "size": [ "100%", "100%+32px" ]
+              }
+            },
+            {
+              "black_panel": {
+                "ignored": "($middle_clips_children)",
+                "layer": -1,
+                "type": "image",
+                "texture": "textures/uidx/global/color_base",
+                "color": [ 0.0, 0.0, 0.0 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "size": [ "100%", 32 ],
+                "offset": [ 0, -32 ]
+              }
+            }
           ]
         }
       },
@@ -460,19 +467,30 @@
           "layer": 40,
           "controls": [
             { "horizontal_stack_panel@common_screens_dx.horizontal_safezone_screen": { "$panel_content": "common.empty_panel", "layer": 45 } },
-            { "panel_toggle@common_menus_dx.panel_toggle": {} }
+            { 
+              "panel_toggle@common_menus_dx.panel_toggle": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "size": [ "100%", "100%+32px" ]
+              }
+            },
+            {
+              "black_panel": {
+                "ignored": "($middle_clips_children)",
+                "layer": -1,
+                "type": "image",
+                "texture": "textures/uidx/global/color_base",
+                "color": [ 0.0, 0.0, 0.0 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "size": [ "100%", 32 ],
+                "offset": [ 0, 32 ]
+              }
+            }
           ]
         }
       },
-      { "main_control@realms_backups_dx.backup_middle_content": {} },
-      {
-        "game_main_bg_panel@java_gui_common.options_background": {
-          "size": [ "100%+128px", "100%+64px" ],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [ -64, -32 ]
-        }
-      }
+      { "main_control@realms_backups_dx.backup_middle_content": {} }
     ]
   }
 }

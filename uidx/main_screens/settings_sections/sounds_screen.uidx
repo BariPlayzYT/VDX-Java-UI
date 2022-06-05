@@ -239,7 +239,6 @@
   "sounds_screen_panel": {
     "type": "panel",
     "controls": [
-      { "main_bg_panel@settings_dx.bg_panel": { } },
       { "panel_content@sounds_dx.panel_content": { } }
     ]
   }

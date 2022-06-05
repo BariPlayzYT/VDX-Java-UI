@@ -192,13 +192,15 @@
                 "size": [ "fill", "100%" ],
                 "controls": [
                   {
-                    "top_text@play.realms_world_header": {
+                    "top_text@play_realms_dx.realms_list_text": {
                       "size": [ "100%", 10 ],
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "$text_color": [ 1.0, 1.0, 1.0 ],
                       "shadow": false,
-                      "layer": 5
+                      "layer": 5,
+                      "$text": "#realms_world_header",
+                      "$text_binding_type": "collection"
                     }
                   },
                   {
@@ -211,7 +213,7 @@
                       "offset": [ 0, 11 ],
                       "controls": [
                         {
-                          "realms_world_player_count@play.world_list_text": {
+                          "realms_world_player_count@common_dx.global_label": {
                             "text": "#realms_world_player_count",
                             "color": [ 0.42, 0.42, 0.42 ],
                             "size": [ "default", "default" ],
@@ -238,9 +240,11 @@
                       "offset": [ 0, 20 ],
                       "controls": [
                         {
-                          "realms_world_details@play.realms_world_details": {
+                          "realms_world_details@play_realms_dx.realms_list_text": {
                             "layer": 5,
-                            "color": [ 0.29, 0.29, 0.29 ]
+                            "color": [ 0.29, 0.29, 0.29 ],
+                            "$text": "#realms_world_details",
+                            "$text_binding_type": "collection"
                           }
                         }
                       ]
@@ -287,6 +291,7 @@
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "layer": 9,
+                      "sound_volume": 0.0,
                       "controls": [
                         {
                           "default@common.empty_panel": {
@@ -350,6 +355,7 @@
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "layer": 9,
+                      "sound_volume": 0.0,
                       "controls": [
                         {
                           "default@common.empty_panel": {
@@ -394,6 +400,25 @@
             }
           ]
         }
+      }
+    ]
+  },
+
+  "realms_list_text@common_dx.global_label": {
+    "color": "$text_color",
+    "shadow": false,
+    "text": "$text",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$text_binding_type|default": "none",
+    "$realms_worlds_collection_name|default": "",
+    "$text_binding_condition|default": "none",
+    "bindings": [
+      {
+        "binding_condition": "$text_binding_condition",
+        "binding_name": "$text",
+        "binding_type": "$text_binding_type",
+        "binding_collection_name": "$realms_worlds_collection_name"
       }
     ]
   },
@@ -764,7 +789,7 @@
       {
         "bg": {
           "type": "image",
-          "texture": "textures/uidx/global/white",
+          "texture": "textures/uidx/global/color_base",
           "color": "@play_realms_dx.bg_color",
           "size": [ "100% - 2px", "100% - 2px" ],
           "layer": 1
@@ -903,7 +928,6 @@
               "realms_desc_label@common_dx.global_label": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
-                "font_type": "normal",
                 "font_scale_factor": 1.0,
                 "line_padding": 0.0,
                 "layer": 152,

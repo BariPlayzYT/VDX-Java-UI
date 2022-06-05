@@ -113,7 +113,7 @@
 
   /*//// Stack panels ////*/
   
-  "panel_cotent": {
+  "panel_content": {
     "type": "stack_panel",
     "orientation": "vertical",
     "anchor_from": "top_midddle",
@@ -215,7 +215,6 @@
                 "$button_type_panel": "permissions.permission_level_dropdown_state_content",
                 "$options_dropdown_toggle_label_binding": "#player_permissions_dropdown_toggle_label",
                 "$option_enabled_binding_name": "#player_permissions_dropdown_enabled",
-                "$dropdown_scroll_content_size": [ "100%", "385%" ],
                 "$is_world_settings": true,
                 "$focus_override_right": "FOCUS_OVERRIDE_STOP",
                 "variables": [
@@ -376,10 +375,20 @@
     "offset": [ 0, -7 ]
   },
 
+  "edit_world_advanced_done_button@create_world_dx.more_world_options_done_button": {
+    "$unchecked_control": "common_buttons_dx.200_default",
+    "$unchecked_hover_control": "common_buttons_dx.200_hover",
+
+    "size": [ 200, 20 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -7 ]
+  },
+
   "world_advanced_screen_panel@common_menus_dx.java_edition_menu_panel_template": {
     "$scroll_view_port_size": [ 256, "100%" ],
     "$top_content": "world_advanced_dx.world_advanced_label",
-    "$scrolling_content": "world_advanced_dx.panel_cotent",
+    "$scrolling_content": "world_advanced_dx.panel_content",
     "$bottom_content": "world_advanced_dx.world_advanced_done_button"
   }
 }

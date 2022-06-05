@@ -92,7 +92,7 @@
             {
               "object_name": {
                 "type": "image",
-                "texture": "textures/uidx/global/white",
+                "texture": "textures/uidx/global/color_base",
                 "layer": 5,
                 "size": [ "100%-20px", 1 ],
                 "anchor_from": "center",

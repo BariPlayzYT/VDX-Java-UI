@@ -5,7 +5,7 @@
 
   /*//// Stack panels ////*/
   
-  "panel_cotent": {
+  "panel_content": {
     "type": "stack_panel",
     "size": [ 310, "100%c" ],
     "controls": [
@@ -48,7 +48,7 @@
 
   "server_options_screen_panel@common_menus_dx.java_edition_menu_panel_template": {
     "$top_content": "server_options_dx.server_options_label",
-    "$scrolling_content": "server_options_dx.panel_cotent",
+    "$scrolling_content": "server_options_dx.panel_content",
     "$bottom_content": "server_options_dx.done_panel"
   },
 

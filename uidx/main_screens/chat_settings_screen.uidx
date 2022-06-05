@@ -19,6 +19,7 @@
       {
         "button_label@common_buttons_dx.button_label": {
           "size": [ "default", 10 ],
+          "max_size": [ "fill", 10 ],
           "ignored": "$only_value",
           "text": "$option_label",
           "color": "$option_label_text_color"
@@ -27,6 +28,7 @@
       {
         "colon@common_buttons_dx.button_label": {
           "size": [ "default", 10 ],
+          "max_size": [ "default", 10 ],
           "ignored": "($only_value or (not $colon_needed))",
           "text": ": "
         }
@@ -34,6 +36,7 @@
       {
         "separator@common_buttons_dx.button_label": {
           "size": [ "default", 10 ],
+          "max_size": [ "default", 10 ],
           "ignored": "($only_value or $colon_needed)",
           "text": " "
         }
@@ -41,6 +44,7 @@
       {
         "value_label@common_buttons_dx.button_label": {
           "size": [ "default", 10 ],
+          "max_size": [ "fill", 10 ],
           "$radio_label_font_type|default": "default",
           "font_type": "smooth",
           "text": "$toggle_value_text",
@@ -80,7 +84,7 @@
       {
         "noto_sans@settings_common_dx.dropdown_radio_150": {
           "$toggle_state_binding_name": "#typeface_radio_notoSans",
-          "$radio_label_text": "typeface.mojangles",
+          "$radio_label_text": "createWorldScreen.gameMode.serverDefault",
           "$toggle_value_text": "$radio_label_text",
           "bindings": [
             {
@@ -200,6 +204,7 @@
       {
         "button_label@common_buttons_dx.button_label": {
           "size": [ "default", 10 ],
+          "max_size": [ "fill", 10 ],
           "ignored": "$only_value",
           "text": "$option_label",
           "color": "$option_label_text_color"
@@ -208,6 +213,7 @@
       {
         "separator@common_buttons_dx.button_label": {
           "size": [ "default", 10 ],
+          "max_size": [ "default", 10 ],
           "ignored": "$only_value",
           "text": ": "
         }
@@ -215,6 +221,7 @@
       {
         "value_label@common_buttons_dx.button_label": {
           "size": [ "default", 10 ],
+          "max_size": [ "fill", 10 ],
           "color": "$value_color",
           "text": "$toggle_value_text",
           "bindings": [
@@ -223,45 +230,6 @@
             }
           ]
         }
-      }
-    ]
-  },
-
-  /*////// CHAT COLOR SECTIONS //////*/
-  
-  "colors_dropdown_base@settings_common_dx.option_dropdown_no_scroll": {
-    "$dropdown_area": "chat_settings_content_area",
-    "$dropdown_name": "($color_prefix + '_color_dropdown')",
-    "$option_enabled_binding_name": "('#' + $color_prefix + '_color_dropdown_enabled')",
-    "$options_dropdown_toggle_label_binding": "('#' + $color_prefix + '_color_dropdown_label')",
-    "$option_dropdown_size": [ "100%", 22 ],
-    "$options_dropdown_toggle_button_state_content": [ "100%", "100%" ],
-    "$options_dropdown_toggle_left_padding": [ 3, "100%" ],
-    "$options_dropdown_toggle_prelabel_content": "chat_settings.paintbrush",
-    "$options_dropdown_toggle_prelabel_content_size": [ "100%y", "100%" ],
-    "$options_dropdown_toggle_prelabel_content_padding": [ 3, "100%" ],
-    "$dropdown_content": "chat_settings.chat_color_dropdown_content",
-    "$no_radio_content": false,
-    "$radio_content_control": "chat_settings.colored_icon_panel",
-    "$icon_texture": "textures/ui/text_color_paintbrush",
-    "$icon_overlay_texture": "textures/ui/text_color_paintbrush_overlay",
-    "$icon_color_binding": "#font_color",
-    "$icon_color_binding_type": "collection",
-    "$icon_color_collection_name": "font_colors",
-    "$radio_label_text": "#font_color_label",
-    "$radio_label_color": "#font_color",
-    "$options_dropdown_toggle_label_shadow": true,
-    "$radio_label_bindings": [
-      {
-        "binding_name": "$radio_label_text",
-        "binding_collection_name": "$icon_color_collection_name",
-        "binding_type": "collection"
-      },
-      {
-        "binding_name": "$radio_label_color",
-        "binding_collection_name": "$icon_color_collection_name",
-        "binding_name_override": "#color",
-        "binding_type": "collection"
       }
     ]
   },

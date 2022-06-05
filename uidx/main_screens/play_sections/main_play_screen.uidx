@@ -8,8 +8,8 @@
   "button_tab@common_toggles_dx.main_button_toggle": {
     "$unchecked_control": "common_buttons_dx.black_button_default",
     "$unchecked_hover_control": "common_buttons_dx.black_button_hover",
-    "$checked_control": "common_buttons_dx.black_button_hover",
-    "$checked_hover_control": "common_buttons_dx.black_button_hover",
+    "$checked_control": "common_buttons_dx.black_button_checked",
+    "$checked_hover_control": "common_buttons_dx.black_button_checked_hover",
     "layer": 50,
     "size": [ 20, 20 ],
     "$toggle_name": "navigation_tab"
@@ -60,6 +60,9 @@
   "button_tabs": {
     "type": "stack_panel",
     "orientation": "horizontal",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, 6 ],
     "size": [ "100%", 20 ],
     "controls": [
       {
@@ -93,19 +96,26 @@
     ]
   },
   
+  "play_screen_bg": {
+    "type": "panel",
+    "controls": [
+      {
+        "main_bg_panel": {
+          "type": "image",
+          "layer": -12,
+          "texture": "textures/uidx/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "fill": true
+        }
+      }
+    ]
+  },
+  
   "play_screen_content": {
     "type": "panel",
     "$middle_clips_children": false,
     "controls": [
-      {
-        "button_tabs@common_screens_dx.horizontal_safezone_screen": {
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [ 0, 6 ],
-          "size": [ "100%", 20 ],
-          "$panel_content": "play_dx.button_tabs"
-        }
-      },
+      { "button_tabs@play_dx.button_tabs": { } },
       {
         "select_world_screen_panel@select_wolrd_dx.select_world_screen_panel": {
           "bindings": [

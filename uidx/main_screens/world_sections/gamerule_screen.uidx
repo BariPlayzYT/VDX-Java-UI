@@ -102,7 +102,7 @@
 
   /*//// Stack panels ////*/
   
-  "panel_cotent": {
+  "panel_content": {
     "type": "stack_panel",
     "size": [ 220, "100%c" ],
     "$categorie_shadow": true,
@@ -619,7 +619,7 @@
     "$scroll_view_port_size": [ 256, "100%" ],
     "$top_content_size": [ "100%", 43 ],
     "$top_content": "gamerule_dx.gamerule_label",
-    "$scrolling_content": "gamerule_dx.panel_cotent",
+    "$scrolling_content": "gamerule_dx.panel_content",
     "$bottom_content": "gamerule_dx.done_panel"
   },
 

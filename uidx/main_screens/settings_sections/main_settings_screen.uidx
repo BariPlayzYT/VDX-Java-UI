@@ -132,6 +132,18 @@
     "$toggle_group_forced_index": 111
   },
 
+  "creator_navigation_tab@settings_dx.button_tab": {
+    "size": [ 20, 20 ],
+    "$unchecked_control": "common_buttons_dx.black_button_default",
+    "$unchecked_hover_control": "common_buttons_dx.black_button_hover",
+    "$button_content": "java_gui_common.creator_icon",
+    "$tab_view_binding_name": "creator_button_toggle",
+    "$toggle_group_forced_index": "$creator_forced_index",
+    "$toggle_property_bag": {
+      "#panel_title": "options.creatorTitle"
+    }
+  },
+
   "realms_navigation_tab@settings_dx.game_navigation_tab": {
     "$button_text": "",
     "$tab_view_binding_name": "realms_tab_toggle",
@@ -228,7 +240,7 @@
   
   /*//// Panels ////*/
 
-  "panel_cotent": {
+  "panel_content": {
     "type": "panel",
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
@@ -276,6 +288,7 @@
             }, */
             {
               "option_dropdown_2@settings_common_dx.option_dropdown_130": {
+                "$option_dropdown_type": "settings_common_dx.dropdown_no_scrollpanel",
                 "ignored": "$is_pregame",
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
@@ -285,7 +298,6 @@
                 "$dropdown_name": "world_difficulty_dropdown",
                 "$options_dropdown_toggle_label_binding": "#world_difficulty_dropdown_toggle_label",
                 "$option_enabled_binding_name": "#world_difficulty_dropdown_enabled",
-                "$dropdown_scroll_content_size": [ "100%", "260%" ],
                 "$focus_override_right": "FOCUS_OVERRIDE_STOP"
               }
             },
@@ -397,8 +409,7 @@
     ]
   },
 
-  "main_screen_panel@common_screens_dx.horizontal_safezone_screen": {
-    "$panel_content": "settings_dx.middle_main_panel",
+  "main_panel_bindings": {
     "bindings": [
       {
         "binding_type": "view",
@@ -489,19 +500,24 @@
         "source_control_name": "more_options_button_toggle",
         "source_property_name": "(not #toggle_state)",
         "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "creator_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
       }
     ]
   },
 
-  "middle_main_panel": {
+  "main_screen_panel@settings_dx.main_panel_bindings": {
     "type": "panel",
     "size": [ "100%", "100%" ],
     "controls":[
       { "extra_buttons_panel@settings_dx.extra_buttons": {} },
       { "text_panel@settings_dx.text_panel": { } },
-      { "main_bg_panel@settings_dx.bg_panel": { } },
       { "options_label@settings_dx.options_label": { } },
-      { "panel_cotent@settings_dx.panel_cotent": { } }
+      { "panel_content@settings_dx.panel_content": { } }
     ]
   },
 
@@ -512,7 +528,7 @@
     "anchor_to": "bottom_middle",
     "size": [ "100%-4px", 10 ],
     "controls": [
-      { "pack_label@start_dx.minecraft_text": { "color": [ 0.5, 0.5, 0.5 ], "text": "Vanilla DX: Java UI v1.2.0" } },
+      { "pack_label@start_dx.minecraft_text": { "color": [ 0.5, 0.5, 0.5 ], "text": "Vanilla DX: Java UI v1.2.1" } },
       { "fill_panel": { "type": "panel", "size": [ "fill", 10 ] } },
       { "author_label@start_dx.minecraft_text": { "color": [ 0.5, 0.5, 0.5 ], "text": "\u0042y @\u0043ris\u0058olt" } }
     ]
@@ -526,6 +542,13 @@
     "layer": 5,
     "offset": [ -2, 2 ],
     "controls": [
+      { "creator_navigation_tab@settings_dx.creator_navigation_tab": { } },
+      {
+        "padding_creator": {
+          "type": "panel",
+          "size": [ 0, 4 ]
+        }
+      },
       { "more_options_navigation_tab@settings_dx.more_options_navigation_tab": { } },
       {
         "padding_0": {
@@ -661,25 +684,23 @@
     ]
   },
 
-  "bg_panel": {
+  "main_bg_panel": {
     "type": "panel",
+    "size": [ "100%", "100%" ],
     "layer": -10,
-    "controls": [
-      { 
-        "options_background@java_gui_common.options_background": {
-          "size": [ "100%+128px", "100%+64px" ],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [ -64, -32 ],
-          "ignored": "(not $is_pregame)"
+    "controls":[
+      {
+        "main_bg_panel": {
+          "ignored": "(not $is_pregame)",
+          "type": "image",
+          "layer": -12,
+          "texture": "textures/uidx/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "fill": true
         }
       },
       { 
         "bg_world@java_gui_common.screen_background": {
-          "size": [ "100%+128px", "100%+64px" ],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [ -64, -32 ],
           "ignored": "$is_pregame"
         }
       }
@@ -690,6 +711,12 @@
     "type": "panel",
     "layer": 5,
     "controls": [
+      { 
+        "bg@java_gui_common.options_background": {
+          "layer": -9,
+          "ignored": "(not $is_pregame)"
+        }
+      },
       { "main_screen_panel@settings_dx.main_screen_panel": { } },
       {
         "game_screen@game_world_dx.game_world_screen_content": {
@@ -887,6 +914,18 @@
             }
           ]
         }
+      },
+      { 
+        "creator_screen@creator_dx.creator_screen_panel": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "creator_button_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
       }
     ]
   },
@@ -894,14 +933,14 @@
   "center_screen": {
     "type": "panel",
     "controls": [
-
+      { "main_panel@settings_dx.main_panel": { } }
     ]
   },
 
   "full_screen": {
     "type": "panel",
     "controls": [
-      { "main_panel@settings_dx.main_panel": { } }
+      { "main_bg_panel@settings_dx.main_bg_panel": { } }
     ]
   }
 }

@@ -117,7 +117,7 @@
       {
         "crafting_label@common_dx.global_label": {
           "text": "container.crafting",
-          "color": "$vdx_container_title_text_color",
+          "color": "$vdx_2x2_crafting_title_text_color",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [ 0, 0 ],
@@ -134,7 +134,7 @@
             {
               "crafting_input_item_top_left@inventory_dx.crafting_input_grid_item": {
                 "$background_images": "inventory_dx.crafting_cell_images",
-                "$highlight_control": "common_dx.highlight_slot_panel",
+                "$highlight_control": "item_highlight_dx.highlight_slot_panel",
                 "grid_position": [ 0, 0 ],
       
                 "$focus_id_binding_type": "none",
@@ -147,7 +147,7 @@
             {
               "crafting_input_item_top_right@inventory_dx.crafting_input_grid_item": {
                 "$background_images": "inventory_dx.crafting_cell_images",
-                "$highlight_control": "common_dx.highlight_slot_panel",
+                "$highlight_control": "item_highlight_dx.highlight_slot_panel",
                 "grid_position": [ 1, 0 ],
       
                 "$focus_id_binding_type": "none",
@@ -160,7 +160,7 @@
             {
               "crafting_input_item_bot_left@inventory_dx.crafting_input_grid_item": {
                 "$background_images": "inventory_dx.crafting_cell_images",
-                "$highlight_control": "common_dx.highlight_slot_panel",
+                "$highlight_control": "item_highlight_dx.highlight_slot_panel",
                 "grid_position": [ 0, 1 ],
       
                 "$focus_id_binding_type": "none",
@@ -173,7 +173,7 @@
             {
               "crafting_input_item_bot_right@inventory_dx.crafting_input_grid_item": {
                 "$background_images": "inventory_dx.crafting_cell_images",
-                "$highlight_control": "common_dx.highlight_slot_panel",
+                "$highlight_control": "item_highlight_dx.highlight_slot_panel",
                 "grid_position": [ 1, 1 ],
       
                 "$focus_override_right_binding_type": "none",
@@ -212,7 +212,7 @@
             {
               "work_bench_output@container_item_dx.inventory_container_item": {
                 "$background_images": "inventory_dx.crafting_cell_images",
-                "$highlight_control": "common_dx.highlight_slot_panel",
+                "$highlight_control": "item_highlight_dx.highlight_slot_panel",
                 "$item_collection_name": "crafting_output_items",
                 "$button_ref": "crafting.output_no_coalesce_container_slot_button",
                 "$auto_place_mode_button_name": "button.crafting_output_tertiary",
@@ -246,7 +246,7 @@
     "$item_collection_name": "armor_items",
     "collection_name": "$item_collection_name",
     "$background_images": "java_gui_common.cell_image",
-    "$highlight_control": "common_dx.highlight_slot_panel",
+    "$highlight_control": "item_highlight_dx.highlight_slot_panel",
     "controls": [
       {
         "head_grid_item@container_item_dx.container_item": {
@@ -314,7 +314,7 @@
     "$item_collection_name": "offhand_items",
     "collection_name": "$item_collection_name",
     "$background_images": "java_gui_common.cell_image",
-    "$highlight_control": "common_dx.highlight_slot_panel",
+    "$highlight_control": "item_highlight_dx.highlight_slot_panel",
     "controls": [
       {
         "offhand_grid_item@container_item_dx.container_item": {
@@ -444,6 +444,7 @@
     "controls": [
       {
         "recipe_book@recipe_book_dx.recipe_book": {
+          "$recipe_book_pages_type": "recipe_book_dx.2x2_recipe_item_pages",
           "bindings": [
             {
               "binding_type": "global",
@@ -490,7 +491,7 @@
           "type": "panel",
           "size": [ "100%cm", "100%cm" ],
           "controls": [
-            { "main_buttons_panel@common_dx.main_inventory_buttons_panel": { "size": [ "100%sm", "100%sm" ], "layer": 11 } },
+            { "main_buttons_panel@inventory_buttons_dx.main_inventory_buttons_panel": { "size": [ "100%sm", "100%sm" ], "layer": 11 } },
             { "inventory_panel@inventory_dx.inventory_panel": { } },
             { "creative_panel@creative_dx.creative_panel": { } }
           ]
@@ -505,6 +506,7 @@
           ]
         }
       },
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 18, "ignored": "$ignore_flying_item" } },
       { "inventory_selected_icon_button@selected_icon_dx.inventory_selected_icon_button": {} }
     ]
   },

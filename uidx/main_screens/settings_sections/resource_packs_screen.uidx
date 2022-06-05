@@ -99,7 +99,7 @@
                       "type": "image",
                       "size": [ "100% + 2px", 1 ],
                       "offset": [ 0, 3 ],
-                      "texture": "textures/uidx/global/white"
+                      "texture": "textures/uidx/global/color_base"
                     }
                   }
                 ]
@@ -146,7 +146,7 @@
                       "type": "image",
                       "size": [ "100% + 2px", 1 ],
                       "offset": [ 0, 3 ],
-                      "texture": "textures/uidx/global/white"
+                      "texture": "textures/uidx/global/color_base"
                     }
                   }
                 ]
@@ -218,7 +218,7 @@
                     }
                   },
                   {
-                    "pack_name_label@resource_packs.white_label": {
+                    "pack_name_label@common_dx.global_label": {
                       "layer": 3,
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
@@ -229,7 +229,7 @@
                     }
                   },
                   {
-                    "pack_description_label@resource_packs.gray_label": {
+                    "pack_description_label@common_dx.global_label": {
                       "layer": 3,
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
@@ -655,13 +655,14 @@
                 "size": [ "fill", "100%" ],
                 "controls": [
                   {
-                    "pack_name_label@resource_packs.name_label": {
+                    "pack_name_label@common_dx.global_label": {
                       "size": [ "100%", 10 ],
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "shadow": true,
                       "layer": 5,
                       "$name_collection_name": "$pack_items_type",
+                      "text": "#name",
                       "bindings": [
                         {
                           "binding_collection_name": "$name_collection_name",
@@ -672,16 +673,16 @@
                     }
                   },
                   {
-                    "pack_description_label@resource_packs.pack_label": {
+                    "pack_description_label@common_dx.global_label": {
                       "size": [ "100%", 20 ],
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "offset": [ 0, 11 ],
                       "shadow": true,
                       "layer": 5,
-                      "font_type": "normal",
                       "color": [ 0.5, 0.5, 0.5 ],
                       "$desc_collection_name": "$pack_items_type",
+                      "text": "#description",
                       "bindings": [
                         {
                           "binding_collection_name": "$desc_collection_name",

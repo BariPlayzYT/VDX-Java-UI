@@ -237,7 +237,6 @@
                 "$button_type_panel": "permissions.permission_level_dropdown_state_content",
                 "$options_dropdown_toggle_label_binding": "#player_permissions_dropdown_toggle_label",
                 "$option_enabled_binding_name": "#player_permissions_dropdown_enabled",
-                "$dropdown_scroll_content_size": [ "100%", "385%" ],
                 "$is_world_settings": true,
                 "$focus_override_right": "FOCUS_OVERRIDE_STOP",
                 "variables": [
@@ -327,22 +326,6 @@
   "game_world_screen_content": {
     "type": "panel",
     "controls": [
-      {
-        "game_main_bg_panel@java_gui_common.screen_background": {
-          "size": [ "100%+128px", "100%+64px" ],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [ -64, -32 ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "gamerule_button_toggle",
-              "source_property_name": "(not #toggle_state)",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
       {
         "game_main_panel@game_world_dx.game_main_panel": {
           "bindings": [

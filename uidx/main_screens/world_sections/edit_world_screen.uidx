@@ -15,12 +15,12 @@
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "offset": [ 0, 46 ],
-    "size": [ 202, 190 ],
+    "size": [ 200, 190 ],
     "controls": [
       {
         "panel_0": {
           "type": "panel",
-          "size": [ 202, 50 ],
+          "size": [ "100%", 50 ],
           "controls": [
             {
               "option_text_edit_0@settings_common_dx.option_text_edit": {
@@ -38,16 +38,19 @@
       {
         "gamerules_button_panel": {
           "type": "panel",
-          "size": [ 202, 24 ],
+          "size": [ "100%", 24 ],
           "controls": [
             {
-              "gamerules_button@create_world_dx.gamerules_button": {
-                "$unchecked_control": "common_buttons_dx.200_default",
-                "$unchecked_hover_control": "common_buttons_dx.200_hover",
-
+              "allow_cheats_toggle@settings_common_dx.option_toggle_200": {
                 "size": [ 200, 20 ],
-                "anchor_from": "top_middle",
-                "anchor_to": "top_middle"
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "$colon_needed": false,
+                "$option_label": "selectWorld.allowCommands",
+                "$option_binding_name": "#allow_cheats",
+                "$option_enabled_binding_name": "#allow_cheats_enabled",
+                "$toggle_name": "allow_cheats",
+                "$toggle_binding_condition": "always_when_visible"
               }
             }
           ]
@@ -56,16 +59,27 @@
       {
         "panel_1": {
           "type": "panel",
-          "size": [ 202, 24 ],
+          "size": [ "100%", 24 ],
           "controls": [
             {
-              "more_world_options_button@create_world_dx.more_world_options_button": {
-                "$unchecked_control": "common_buttons_dx.200_default",
-                "$unchecked_hover_control": "common_buttons_dx.200_hover",
+              "gamerules_button@create_world_dx.gamerules_button": {
+                "$unchecked_control": "common_buttons_dx.98_default",
+                "$unchecked_hover_control": "common_buttons_dx.98_hover",
 
-                "size": [ 200, 20 ],
-                "anchor_from": "top_middle",
-                "anchor_to": "top_middle"
+                "size": [ 98, 20 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            },
+            {
+              "more_world_options_button@create_world_dx.more_world_options_button": {
+                "$button_text": "createWorldScreen.advanced",
+                "$unchecked_control": "common_buttons_dx.98_default",
+                "$unchecked_hover_control": "common_buttons_dx.98_hover",
+
+                "size": [ 98, 20 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right"
               }
             }
           ]
@@ -74,7 +88,7 @@
       {
         "panel_2": {
           "type": "panel",
-          "size": [ 202, 24 ],
+          "size": [ "100%", 24 ],
           "bindings": [
             {
               "binding_name": "#show_convert_to_infinite_button",
@@ -97,7 +111,7 @@
       {
         "panel_3": {
           "type": "panel",
-          "size": [ 202, 24 ],
+          "size": [ "100%", 24 ],
           "ignored": "(($pocket_edition or $export_disabled or not $file_picking_supported) and not $education_edition",
           "controls": [
             {
@@ -115,7 +129,7 @@
       {
         "resources_panel": {
           "type": "panel",
-          "size": [ 202, 24 ],
+          "size": [ "100%", 24 ],
           "controls": [
             {
               "resource_packs_button@create_world_dx.resource_packs_button": {
@@ -143,7 +157,7 @@
       {
         "panel_4": {
           "type": "panel",
-          "size": [ 202, 24 ],
+          "size": [ "100%", 24 ],
           "ignored": "(not $is_world_edit or $is_mp_client or $trial or not $is_pregame or $export_disabled)",
           "controls": [
             {
@@ -161,7 +175,7 @@
       {
         "panel_5": {
           "type": "panel",
-          "size": [ 202, 24 ],
+          "size": [ "100%", 24 ],
           "ignored": "(not $is_world_edit or $is_mp_client or $trial or not $is_pregame or $export_template_disabled or not $win10_edition)",
           "controls": [
             {
@@ -179,14 +193,36 @@
       {
         "panel_6": {
           "type": "panel",
-          "size": [ 202, 20 ],
+          "size": [ "100%", 20 ],
           "controls": [
+            {
+              "play_on_realms_button@common_buttons_dx.black_button": {
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "size": [ 20, 20 ],
+                "offset": [ -20, 0 ],
+                "$pressed_button_name": "play_world_on_realm_button",
+                "$button_content": "java_gui_common.realms_icon",
+                "variables": [
+                  {
+                    "requires": "(not $is_world_edit)",
+                    "$button_text": "createWorldScreen.createOnRealms",
+                    "$pressed_button_name": "create_world_on_realm_button"
+                  }
+                ],          
+                "bindings": [
+                  {
+                    "binding_name": "#create_on_realm_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
             {
               "save_button@common_buttons_dx.main_button_98": {
                 "anchor_from": "bottom_left",
                 "anchor_to": "bottom_left",
                 "size": [ 98, 20 ],
-                "offset": [ 1, 0 ],
                 "$pressed_button_name": "button.menu_exit",
                 "$button_text": "addExternalServerScreen.saveButtonLabel"
               }
@@ -196,7 +232,6 @@
                 "size": [ 98, 20 ],
                 "anchor_from": "bottom_right",
                 "anchor_to": "bottom_right",
-                "offset": [ -1, 0 ],
                 "$button_text": "gui.deleteWorldLong",
                 "$pressed_button_name": "delete_world_button"
               }
@@ -211,8 +246,7 @@
     "type": "panel",
     "controls": [
       { "options_label@edit_world_dx.title_label": { "layer": 2 } },
-      { "panel_content@edit_world_dx.panel_content": { "layer": 2 } },
-      { "main_bg_panel@settings_dx.bg_panel": { } }
+      { "panel_content@edit_world_dx.panel_content": { "layer": 2 } }
     ]
   }
 }

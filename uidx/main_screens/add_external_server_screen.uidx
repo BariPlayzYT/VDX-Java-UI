@@ -194,6 +194,22 @@
   "full_screen": {
     "type": "panel",
     "controls": [
+      {
+        "main_bg_panel": {
+          "type": "image",
+          "layer": -12,
+          "texture": "textures/uidx/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "fill": true
+        }
+      }
+    ]
+  },
+
+  "center_screen": {
+    "type": "panel",
+    "controls": [
+      { "options_background@java_gui_common.options_background": { "layer": -10, "ignored": "(not $is_holographic)" } },
       { "options_label@add_external_server_dx.title_label": { "layer": 2 } },
       {
         "page_navigation_panel": {
@@ -240,13 +256,6 @@
       },
       { "panel_content@add_external_server_dx.panel_content": { "layer": 2 } },
       { "options_background@java_gui_common.options_background": { "layer": -10, "ignored": "$is_holographic"  } }
-    ]
-  },
-
-  "center_screen": {
-    "type": "panel",
-    "controls": [
-      { "options_background@java_gui_common.options_background": { "layer": -10, "ignored": "(not $is_holographic)"   } }
     ]
   }
 }

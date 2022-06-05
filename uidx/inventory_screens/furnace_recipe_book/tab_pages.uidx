@@ -5,7 +5,7 @@
 
   /*//// Pages ////*/
 
-  "page_1@recipe_book_dx.recipe_book_panel_cotent": {
+  "page_1@recipe_book_dx.recipe_book_panel_content": {
     "$ignore_prev_button": true,
     "$number_left": "1",
     "$panel_content": "$panel_content_1",
@@ -21,7 +21,7 @@
     ]
   },
 
-  "page_2@recipe_book_dx.recipe_book_panel_cotent": {
+  "page_2@recipe_book_dx.recipe_book_panel_content": {
     "$number_left": "2",
     "$panel_content": "$panel_content_2",
     "$prev_button_view_binding_name": "($tab_page + '_page_1_button_toggle')",
@@ -38,7 +38,7 @@
     ]
   },
 
-  "page_3@recipe_book_dx.recipe_book_panel_cotent": {
+  "page_3@recipe_book_dx.recipe_book_panel_content": {
     "$number_left": "3",
     "$panel_content": "$panel_content_3",
     "$prev_button_view_binding_name": "($tab_page + '_page_2_button_toggle')",

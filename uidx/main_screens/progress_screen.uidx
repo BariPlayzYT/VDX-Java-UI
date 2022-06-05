@@ -134,6 +134,7 @@
     "type": "panel",
     "layer": 4,
     "controls": [
+      { "main_bg@java_gui_common.options_background": { "layer": -5 } },
       { "title_panel@progress_dx.title_stack_panel": {} },
       { "cancel_button@progress_dx.cancel_button": { "offset": [ 0, -56 ] } },
       { "popup_dialog_factory@progress.popup_dialog_factory": {} },
@@ -215,6 +216,7 @@
     "type": "panel",
     "layer": 4,
     "controls": [
+      { "main_bg@java_gui_common.options_background": { "layer": -5 } },
       { "title_realms_panel@progress_dx.title_realms_panel": {} },
       { "popup_dialog_factory@progress.popup_dialog_factory": {} },
       { "gamepad_helpers@progress_dx.gamepad_helpers": {} }
@@ -270,6 +272,12 @@
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "controls": [
+      { 
+        "main_bg@java_gui_common.options_background": {
+          "alpha": "@progress_dx.main_bg_animation_in",
+          "layer": -5
+        }
+      },
       { "progress_title_text@progress_dx.progress_title_text": {} }/* ,
       {
         "progress_bar_text@common_dx.global_label": {
@@ -298,15 +306,19 @@
   "world_dimension_progress_screen_background": {
     "type": "panel",
     "controls": [
-      { 
-        "pre_bg@java_gui_common.screen_background": {
-          "layer": -10
+      {
+        "main_bg_panel": {
+          "type": "image",
+          "layer": -12,
+          "texture": "textures/uidx/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "fill": true,
+          "alpha": "@progress_dx.main_bg_animation_in"
         }
       },
       { 
-        "main_bg@java_gui_common.options_background": {
-          "alpha": "@progress_dx.main_bg_animation_in",
-          "layer": -5
+        "pre_bg@java_gui_common.screen_background": {
+          "layer": -10
         }
       }
     ]
@@ -339,6 +351,7 @@
     "type": "panel",
     "layer": 4,
     "controls": [
+      { "main_bg@java_gui_common.options_background": { "layer": -5 } },
       { "title_panel@progress_dx.title_saving_panel": {} },
       { "popup_dialog_factory@progress.popup_dialog_factory": {} }
     ]
@@ -389,5 +402,22 @@
     "anchor_to": "top_middle",
     "offset": [ 0, 115 ],
     "uv": "@progress_dx.auto_save_animation"
+  },
+
+  /*//// Main BG /////*/
+
+  "main_progress_screen_background": {
+    "type": "panel",
+    "controls": [
+      {
+        "main_bg_panel": {
+          "type": "image",
+          "layer": -12,
+          "texture": "textures/uidx/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "fill": true
+        }
+      }
+    ]
   }
 }

@@ -250,7 +250,7 @@
       {
         "title@toast_screen_dx.toast_label": {
           "text": "#toast_title",
-          "size": [ "100%", 10 ],
+          "size": [ "100%", "default" ],
           "layer": 2,
           "anchor_from": "top_left",
           "anchor_to": "top_left",

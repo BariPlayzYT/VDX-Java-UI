@@ -6,6 +6,9 @@ menu.options=設定…
 menu.quit=終了
 menu.store=Minecraft ストア
 
+##  Accessibility Settings
+options.darknessEffectModifier=暗闇の脈動
+
 ##  Controls Settings
 options.mouse_settings=マウス設定…
 options.mouse_settings.title=マウス設定

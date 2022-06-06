@@ -549,7 +549,13 @@
     "size": [ "100%-12px", 18 ],
     "controls": [
       {
-        "chat": {
+        "button@common_buttons_dx.black_button_default": {
+          "$button_content": "java_gui_common.creator_icon",
+          "size": [ 20, 20 ]
+        }
+      },
+      {
+        "fill": {
           "type": "panel",
           "size": [ "fill", "100%" ]
         }

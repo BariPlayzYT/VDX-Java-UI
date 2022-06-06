@@ -1,7 +1,20 @@
-v1.2.1 [01/06/2022]
+v1.2.1 [07/06/2022]
+[Additions]
+[+] More language support: -ja_JP -ko_KR -pt_PT -pt_BR -uk_UA
+[+] Added Copy coordinates tools for chat screen, only enabled by creator settings.
+[+] Custom permission level dropdown control for realms player list.
+[+] Added reason message text for death screen.
+[+] Added creator settings screen, and some options from profile screen now have moved to desired screen.
 [Changes]
+[*] Updated for v1.19 Release.
+[*] Changed position text bg to match Java Edition Debug apperance.
+[*] Updated black button textures.
+[*] Added 1.19 new accesibility options.
 [*] The recipe book for 2x2 crafting now has a desired max page numbers.
-[*] 
+[*] Updated Chat Screen.
+[*] Updated safe zone menu screens, outside border now will be black background, while in game, will be screen background.
+[*] Replaced all UI label texts to desired global label control.
+[*] Made another revision for Sign Screen and Book Screen.
 
 v1.2.0 [02/04/2022]
 [Additions]

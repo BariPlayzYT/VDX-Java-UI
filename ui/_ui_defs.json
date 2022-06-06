@@ -27,6 +27,7 @@
     "uidx/main_screens/chat_screen.uidx",
     "uidx/main_screens/chat_settings_screen.uidx",
     "uidx/main_screens/command_block_screen.uidx",
+    "uidx/main_screens/custom_options_screen.uidx",
     "uidx/main_screens/death_screen.uidx",
     "uidx/main_screens/disconnect_screen.uidx",
     "uidx/main_screens/file_upload_screen.uidx",

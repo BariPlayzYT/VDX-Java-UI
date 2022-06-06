@@ -17,41 +17,74 @@
   "classic_done_button@common_buttons_dx.main_button_200": {
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
-    "layer": 4,
     "offset": [ 0, -48 ],
     "$button_text": "gui.done",
     "$pressed_button_name": "button.menu_exit"
   },
 
-  "sign_bg@sign.sign_background": {
-    "size": [ 94, 46 ],
-    "offset": [ 0, 0 ] /* 12 */
+  "sign_text_edit_hover": {
+    "type": "image",
+    "texture": "textures/uidx/global/main_border",
+    "size": [ "100%+2px", "100%+2px" ],
+    "anchor_from": "center",
+    "anchor_to": "center"
   },
 
-  "sign_text_multiline@sign.sign_text_multiline": {
-    "anchor_from": "top_middle",
-    "anchor_to": "top_middle",
-    "size": [ 93, 46 ],
-    "offset": [ 0, "25%" ],
-    "$font_size": "normal",
-    "$text_background_default": "sign_dx.sign_bg",
-    "$text_background_hover": "sign_dx.sign_bg",
-    "button_mappings": [
+  "sign_text_panel": {
+    "type": "panel",
+    "size": [ 94, 47 ],
+    "offset": [ 0, 0 ], /* 12 */
+    "controls": [
+      { "sign_bg@sign.sign_background": { "size": [ "100%", "100%" ], "layer": 1 } },
       {
-        "from_button_id": "button.menu_cancel",
-        "to_button_id": "button.menu_exit",
-        "handle_select": false,
-        "handle_deselect": true,
-        "mapping_type": "global"
+        "sign_text_multiline@common.multiline_text_edit_box": {
+          "layer": 4,
+          "size": [ 94, 47 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ -1, -5 ],
+          "$text_background_default": "common.empty_panel",
+          "$text_background_hover": "sign_dx.sign_text_edit_hover",
+
+          "$font_size": "normal",
+          "$text_edit_box_label_anchor_point": "top_middle",
+          "$text_alignment": "center",
+          "$text_edit_box_label_offset": [ 0, 4 ],
+          "$text_box_font_scale_factor": 1.0,
+          "$text_box_line_padding": 0.0,
+          "$text_edit_clipping_panel_size": [ "100%-4px", "100%" ],
+          "$text_offset": [ 2.5, 0 ],
+
+          "constrain_to_rect": false,
+          "selected": true,
+          "can_be_deselected": false,
+          "focus_enabled": true,
+          "$text_box_name": "#sign_text_multi",
+          "$text_color_binding_type": "global",
+          "max_length": 32500,
+          "controls": [
+            { "custom_panel@common_dx.custom_text_edit_panel": { } }
+          ],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_cancel",
+              "to_button_id": "button.menu_exit",
+              "handle_select": false,
+              "handle_deselect": true,
+              "mapping_type": "global"
+            }
+          ]
+        }
       }
     ]
   },
 
   "sign_screen_content": {
     "type": "panel",
+    "layer": 10,
     "controls": [
       { "sign_edit_label@sign_dx.sign_edit_label": {} },
-      { "text_edit@sign_dx.sign_text_multiline": {} },
+      { "sign_text_panel@sign_dx.sign_text_panel": {} },
       { "classic_done_button@sign_dx.classic_done_button": {} }
     ]
   },

@@ -129,8 +129,10 @@
   
   "text_edit_box_label@common_dx.global_label": {
     "layer": 4,
-    "font_scale_factor": 1.0,
-    "line_padding": -1.0,
+    "$text_box_font_scale_factor|default": 1.0,
+    "font_scale_factor": "$text_box_font_scale_factor",
+    "$text_box_line_padding|default": -1.0,
+    "line_padding": "$text_box_line_padding",
     "size": "$text_edit_box_label_size",
     "offset": "$text_edit_box_label_offset",
     "min_size": "$text_edit_box_label_min_size",
@@ -204,6 +206,11 @@
     "$locked_text_alpha|default": 0.5,
     "$font_size|default": "normal",
     "$text_alignment|default": "left",
+    
+    "$text_box_font_scale_factor|default": 1.0,
+    "font_scale_factor": "$text_box_font_scale_factor",
+    "$text_box_line_padding|default": -1.0,
+    "line_padding": "$text_box_line_padding",
 
     "$text_edit_box_placeholder_content_binding_type|default": "global",
     "$text_edit_box_placeholder_content_binding_name|default": "#text_box_item_name",

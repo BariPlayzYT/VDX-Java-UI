@@ -1,29 +1,152 @@
-## Main Screen
+map.position=Block: %s %s %s
 
-options.title=Настройки...
-gui.exit=Выйти из игры
-menu.store=Minecraft Store
-menu.play=Одиночная игра
-profileScreen.header=Внешний вид
+##  Start
+menu.play=Играть
+menu.options=Настройки...
+menu.quit=Выйти из игры
+menu.store=Магазин Minecraft
+
+##  Accessibility Settings
+options.enableChatTextToSpeech=Текст чата в речь 
+options.enableAutoPlatformTextToSpeech=Текст настроек в речь
+options.enableUITextToSpeech=Экранный диктор
+options.enableOpenChatMessage=Уведомление чата
+options.darknessEffectModifier=Пульсация тьмы
+
+##  Controls Settings
+options.mouse_settings=Настройки мыши…
+options.mouse_settings.title=Настройки мыши
+controls.keybinds=Назначение клавиш...
+controls.keybinds.title=Назначение клавиш
+
+options.joystick_settings=Настройки Joystick...
+options.joystick_settings.title=Настройки Joystick
+
+##  Video Settings
+options.graphics.fancy.tooltip=«Детальная» графика сочетает производительность и качество для большинства компьютеров. Дождь, снег, облака и частицы могут не отображаться, если перекрыты прозрачными блоками или водой.
+options.graphics.fast.tooltip=«Быстрая» графика уменьшает количество видимого дождя и снега. Эффекты прозрачности отключены для некоторых блоков, таких как листья деревьев.
+
+options.graphics.fancy=Детально
+options.graphics.fast=Быстро
+
+options.vsync=Использовать V-Sync
+options.vsync.off=Выкл
+options.vsync.on=Вкл
+options.vsync.adaptive=Адаптивный режим
+
+options.renderClouds=Облака
+
+options.maxFramerate=Частота кадров
+
+##  Packs
+pack.available.title=§lДоступные
+pack.selected.title=§lВыбранные
+
+resourcePack.title=Выбор наборов ресурсов
+behaviorPack.title=Выбор наборов параметров
+
+selectWorld.resourcePack=Ресурсы
+selectWorld.behaviorPack=Параметры
+
+pack.resources.dropInfo=Перетащите файлы в каталог папки «resource_packs», чтобы добавить пакеты.
+pack.behavior.dropInfo=Перетащите файлы в каталог папки «behavior_packs», чтобы добавить пакеты.
+
+## Structure Editor
+
+structure_block.position=Относительные координаты
+structure_block.size=Размеры конструкции
+structure_block.integrity_and_seed=Целостность конструкции и ключ случайного алгоритма
+structure_block.detect_size=Размер и расположение:
+
+structure_block.mode_info.save=Запись
+structure_block.mode_info.load=Чтение
+structure_block.mode_info.corner=Угол
+structure_block.exportTo=Экспорт в файл:
+
+structure_block.mode.export=Экспорт
+
+structure_block.button.detect_size=РАСЧЁТ
+structure_block.button.save=ЗАПИСЬ
+structure_block.button.load=ЧТЕНИЕ
+structure_block.button.structureExport=MCS
+structure_block.button.3dExport=3D OBJ
+
+##  Recipe Book
+gui.recipebook.search_hint=§oПоиск…
+gui.recipebook.toggleRecipes.all=Все рецепты
+gui.recipebook.toggleRecipes.blastable=Рецепты для плавильной печи
+gui.recipebook.toggleRecipes.craftable=Доступно к созданию
+gui.recipebook.toggleRecipes.smeltable=Рецепты для печи
+gui.recipebook.toggleRecipes.smokable=Рецепты для коптильни
+
+## Creative
+inventory.binSlot=Удалить предмет
+
+##  Trade v2
+merchant.deprecated=Крестьяне пополняют запасы дважды в день.
+
+##  Worlds
+selectWorld.tooltip.beta=Не забудьте сделать резервную копию мира прежде чем загрузить его в этой версии.
+
+##  Realms
+mco.selectServer.popup=Realms — это безопасный и простой способ игры в Minecraft с друзьями (одновременно до десяти человек), поддерживающий мини-игры и уникальные миры. Только владелец платит за реалм.
+
+##  Toggle OFF/ON
+options.off=Выкл
+options.on=Вкл
+
+##  Realms
+mco.configure.world.title=Настройка реалма:
+mco.configure.world.name.binding=%s
+
+mco.invites.title=Поступившие приглашения
+mco.invites.pending=Новые приглашения!
+mco.invites.nopending=Приглашений нет!
+mco.invites.button.accept=Принять
+mco.invites.button.reject=Отклонить
+
+## Gamerule
+selectWorld.gameRules=Игровые правила
+  
+editGamerule.title=Настройка игровых правил
+editGamerule.default=По умолчанию: 
+
+gamerule.doImmediateRespawn=Мгновенное возрождение
+gamerule.keepInventory=Сохранение инвентаря при смерти
+gamerule.mobGriefing=Разрушительные действия мобов
+gamerule.naturalRegeneration=Регенерация здоровья
+gamerule.spawnRadius=Радиус области возрождения
+gamerule.doMobSpawning=Появление мобов
+gamerule.doMobSpawning.description=У некоторых сущностей могут быть свои игровые правила
+gamerule.doEntityDrops=Выпадение экипировки сущностей
+gamerule.doEntityDrops.description=Влияет на выпадение предметов с вагонеток (включая инвентарь), рамок, лодок и т.д.
+gamerule.doMobLoot=Выпадение добычи с мобов
+gamerule.doMobLoot.description=Влияет на выпадение предметов и сфер опыта с мобов
+gamerule.doTileDrops=Выпадение блоков
+gamerule.doTileDrops.description=Влияет на выпадение предметов и сфер опыта с блоков
+gamerule.doDaylightCycle=Смена дня и ночи
+gamerule.doFireTick=Распространение огня
+gamerule.doWeatherCycle=Изменения погоды
+gamerule.randomTickSpeed=Частота случайных тактов
+
+gamerule.category.player=§lИгрок
+gamerule.category.mobs=§lМобы
+gamerule.category.spawning=§Появление
+gamerule.category.drops=§lВыпадение ресурсов
+gamerule.category.updates=§lОбновления мира
+gamerule.category.misc=§lРазное
 
 ## Options and other buttons
 options.video=Настройки графики...
 options.language=Язык...
 options.sounds=Музыка и звуки...
 options.accessibility=Специальные возможности...
-options.vsync=Использовать V-Sync
-options.vsync.off=Выкл
-options.vsync.on=Вкл
-options.vsync.adaptive=Адаптивный режим
 options.videoTitle=Настройки графики
 options.renderDistance=Прорисовка
 options.renderDistanceFormat=%s чанков
 options.framerateLimit=Частота кадров
-options.maxFramerate=Частота кадров
 options.framerateLimit.max=Максимум
 options.smooth_lighting=Мягкое освещение
-options.graphics.fancy=Максимум
-options.graphics.fast=Быстро
 options.guiScale.optionName=Интерфейс
 options.guiScale.auto=Авто
 options.fullscreen=Полноэкранный режим
@@ -31,9 +154,6 @@ options.gamma=Яркость
 options.gamma.max=Ярко
 options.gamma.min=Тускло
 options.particleRenderDistance=Рендер частиц
-options.off=Выкл
-options.on=Вкл
-options.renderclouds=Облака
 options.showautosaveicon=Знак автосохранения
 options.resetSettings=Сбросить настройки
 options.thirdperson=Вид
@@ -57,10 +177,6 @@ options.hotbarOnlyTouch=Сенсор для хотбара
 options.languageWarning=Переводы могут содержать ошибки
 options.swapJumpAndSneak=Сменить прыжок
 controls.resetAll=Сбросить настройки
-options.enableChatTextToSpeech=Текст чата в речь 
-options.enableAutoPlatformTextToSpeech=Текст настроек в речь
-options.enableUITextToSpeech=Экранный диктор
-options.enableOpenChatMessage=Уведомление чата
 options.edit=Настроить
 selectServer.select=Подключиться
 menu.returnToMenu=Отключиться
@@ -76,7 +192,6 @@ options.category.addons=Наборы данных
 offer.navigationTab.textures=Наборы ресурсов
 menu.behaviors=Выбор наборов данных
 store.search.filter.texturePacks=Наборы ресурсов
-resourcePack.title=Выбор наборов ресурсов
 resourcePack.vanilla.name=Default
 resourcePack.vanilla.description=The default look and feel of Minecraft (встроенный)
 profileScreen.manage_button_text=Редактировать
@@ -86,78 +201,6 @@ profileScreen.manage_button_create_text=Создать
 dr.zooming=Приблизить
 dr.header.classic_skins=Классические
 dr.header.customization=Конструктор
-
-##  Recipe Book
-gui.recipebook.search_hint=§oПоиск…
-gui.recipebook.toggleRecipes.all=Все рецепты
-gui.recipebook.toggleRecipes.blastable=Рецепты для плавильной печи
-gui.recipebook.toggleRecipes.craftable=Рецепты для верстака
-gui.recipebook.toggleRecipes.smeltable=Рецепты для печи
-gui.recipebook.toggleRecipes.smokable=Рецепты для коптильни
-
-## Creative
-inventory.binSlot=Удалить предмет
-
-##  Resource Packs
-resourcePack.available.title=§lДоступные
-resourcePack.available.title.behaviorPacks=§lДоступные
-resourcePack.selected.title=§lВыбранные
-resourcePack.selected.title.behaviorPacks=§lВыбранные
-
-## Gamerule
-selectWorld.gameRules=Игровые правила
-  
-editGamerule.title=Настройка игровых правил
-editGamerule.default=По умолчанию: 
-
-gamerule.announceAdvancements=Оповещения о достижениях
-gamerule.commandBlockOutput=Сообщения командных блоков
-gamerule.disableElytraMovementCheck=Отключение проверки на элитрах
-gamerule.disableRaids=Отключение рейдов
-gamerule.doDaylightCycle=Смена дня и ночи
-gamerule.doEntityDrops=Выпадение экипировки сущностей
-gamerule.doEntityDrops.description=Влияет на выпадение предметов с вагонеток (включая инвентарь), рамок, лодок и т.д.
-gamerule.doFireTick=Распространение огня
-gamerule.doImmediateRespawn=Мгновенное возрождение
-gamerule.doInsomnia=Появление фантомов
-gamerule.doLimitedCrafting=Создание только по рецепту
-gamerule.doLimitedCrafting.description=Если включено, то игроки могут создавать предметы только по разблокированным рецептам
-gamerule.doMobLoot=Выпадение добычи с мобов
-gamerule.doMobLoot.description=Влияет на выпадение предметов и сфер опыта с мобов
-gamerule.doMobSpawning=Появление мобов
-gamerule.doMobSpawning.description=У некоторых сущностей могут быть свои игровые правила
-gamerule.doPatrolSpawning=Патрули разбойников
-gamerule.doTileDrops=Выпадение блоков
-gamerule.doTileDrops.description=Влияет на выпадение предметов и сфер опыта с блоков
-gamerule.doTraderSpawning=Странствующие торговцы
-gamerule.doWeatherCycle=Изменения погоды
-gamerule.drowningDamage=Урон от утопления
-gamerule.fallDamage=Урон от падения
-gamerule.fireDamage=Урон от огня
-gamerule.forgiveDeadPlayers=Прощение умерших игроков
-gamerule.forgiveDeadPlayers.description=Разозлённые нейтральные существа перестают злиться, когда игрок, бывший их целью, умирает неподалёку.
-gamerule.keepInventory=Сохранение инвентаря при смерти
-gamerule.logAdminCommands=Запись команд администраторов
-gamerule.maxCommandChainLength=Ограничение длины цепи команд
-gamerule.maxCommandChainLength.description=Затрагивает цепи командных блоков и функции
-gamerule.maxEntityCramming=Предел сущностей в одном блоке
-gamerule.mobGriefing=Разрушительные действия мобов
-gamerule.naturalRegeneration=Регенерация здоровья
-gamerule.randomTickSpeed=Частота случайных тактов
-gamerule.reducedDebugInfo=Малый экран отладки
-gamerule.reducedDebugInfo.description=Ограничение содержания экрана отладки
-gamerule.sendCommandFeedback=Отображение сообщений команд
-gamerule.showDeathMessages=Сообщения о смерти
-gamerule.spawnRadius=Радиус области возрождения
-gamerule.spectatorsGenerateChunks=Генерация мира наблюдателями
-
-gamerule.category.chat=§lЧат
-gamerule.category.spawning=§lПоявление
-gamerule.category.updates=§lОбновления мира
-gamerule.category.drops=§lВыпадение ресурсов
-gamerule.category.mobs=§lМобы
-gamerule.category.player=§lИгрок
-gamerule.category.misc=§lРазное
 
 options.difficulty=Сложность
 
@@ -174,3 +217,22 @@ bar.event.raid.remaining.1=Рейд - Осталось нападающих: 1	#
 bar.event.raid.remaining.0=Рейд - Осталось нападающих: 0	#
 bar.event.raid.victory=Рейд - Победа	#
 bar.event.raid.defeat=Рейд - Поражение	#
+
+##  Audio Settings
+soundCategory.ambient=Окружение
+soundCategory.block=Блоки
+soundCategory.hostile=Враждебные существа
+soundCategory.master=Общая громкость
+soundCategory.music=Музыка
+soundCategory.neutral=Мирные существа
+soundCategory.player=Игроки
+soundCategory.record=Музыкальные блоки
+soundCategory.weather=Погода
+
+##  Online Safety
+multiplayerWarning.header=§lПредупреждение: игра на сторонних серверах
+multiplayerWarning.message=Предупреждение. Сетевая игра, предложенная сторонними серверами, не является собственностью, не управляется и не модерируется Mojang Studios. Во время сетевой игры, вы можете столкнуться с немодерируемыми сообщениями в чате или иными видами пользовательского контента, который может подходить не всем игрокам.
+multiplayerWarning.check=Больше не показывать
+
+##  Progress
+vdx.loading.percentage=%

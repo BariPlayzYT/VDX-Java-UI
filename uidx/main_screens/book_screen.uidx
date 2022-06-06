@@ -173,66 +173,45 @@
       },
       {
         "title_text_box@book.title_text_box": {
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
           "$place_holder_control": "common_dx.text_edit_box_place_holder_label",
           "controls": [
             { "custom_panel@common_dx.custom_text_edit_panel": { } }
           ],
           "layer": 3,
-          "size": [ 100, 14 ],
-          "offset": [ 0, 44 ],
+          "size": [ 120, 10 ],
+          "offset": [ 0, 46 ],
           "$text_box_text_color": [ 0, 0, 0 ],
           "$color": [ 0, 0, 0 ],
-          "$text_background_hover": "book.blank"
+          "$text_edit_box_label_anchor_point": "top_middle",
+          "$text_alignment": "center",
+          "$text_edit_box_label_offset": [ 0, 0.5 ],
+          "$text_background_default": "common.empty_panel",
+          "$text_background_hover": "book_dx.main_text_edit_hover"
         }
       },
       {
-        "author_stack_panel": {
-          "type": "stack_panel",
-          "size": [ 100, 14 ],
-          "offset": [ 0, 52 ],
+        "author_text_box@book.author_text_box": {
+          "size": [ 120, 10 ],
+          "offset": [ 0, 56 ],
           "layer": 3,
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
-          "orientation": "horizontal",
+          "$place_holder_control": "common_dx.text_edit_box_place_holder_label",
+          "constrain_to_rect": false,
+          "max_length": 500,
           "controls": [
-            {
-              "author_label_panel": {
-                "type": "panel",
-                "size": [ "100%c", "100%c" ],
-                "controls": [
-                  {
-                    "author_label@common_dx.global_label": {
-                      "size": [ "default", 14 ],
-                      "offset": [ 0, "4px" ],
-                      "text": "book.byAuthor",
-                      "color": [ 0.33, 0.33, 0.33 ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "author_text_panel": {
-                "type": "panel",
-                "size": [ "fill", 14 ],
-                "controls": [
-                  {
-                    "author_text_box@book.author_text_box": {
-                      "$place_holder_control": "common_dx.text_edit_box_place_holder_label",
-                      "controls": [
-                        { "custom_panel@common_dx.custom_text_edit_panel": { } }
-                      ],
-                      "$text_alignment": "center",
-                      "offset": [ "1px", 2 ],
-                      "$text_box_text_color": [ 0.33, 0.33, 0.33 ],
-                      "$color": [ 0.33, 0.33, 0.33 ],
-                      "$text_background_hover": "book.blank"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
+            { "custom_panel@common_dx.custom_text_edit_panel": { } }
+          ],
+          "$text_edit_box_label_size": [ "default", 10 ],
+          "$text_edit_box_label_anchor_point": "top_middle",
+          "$text_alignment": "center",
+          "$text_edit_box_label_offset": [ 0, 0.5 ],
+          "$text_box_text_color": [ 0.33, 0.33, 0.33 ],
+          "$color": [ 0.33, 0.33, 0.33 ],
+          "$text_background_default": "common.empty_panel",
+          "$text_background_hover": "book_dx.main_text_edit_hover"
         }
       },
       {
@@ -242,7 +221,7 @@
           "layer": 3,
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "offset": [ 16, 78 ],
+          "offset": [ 16, 78.5 ],
           "color": [ 0, 0, 0 ],
           "size": [ "100%-30px", "100%" ],
           "text": "book.finalizeWarning"
@@ -276,7 +255,7 @@
                 "color": [ 0.0, 0.0, 0.0 ],
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
-                "offset": [ -19, 14 ]
+                "offset": [ -18, 14 ]
               }
             },
             { "page_text@book_dx.page_text": { } },
@@ -343,7 +322,7 @@
                 "color": [ 0.0, 0.0, 0.0 ],
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
-                "offset": [ -19, 14 ]
+                "offset": [ -18, 14 ]
               }
             },
             { "page_text@book_dx.page_text": { } },
@@ -408,6 +387,15 @@
     ]
   },
 
+  "main_text_edit_hover": {
+    "type": "image",
+    "texture": "textures/uidx/global/main_border",
+    "size": [ "100%+2px", "100%+2px" ],
+    "color": [ 0.5, 0.5, 0.5 ],
+    "anchor_from": "center",
+    "anchor_to": "center"
+  },
+
   "page_text@book.page_text": {
     "$place_holder_control": "common_dx.text_edit_box_place_holder_label",
     "controls": [
@@ -420,8 +408,10 @@
     "offset": [ 16, 29 ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "$text_background_hover": "book.blank",
-    "max_length": 270
+    "$text_edit_box_label_offset": [ 0, 0.5 ],
+    "$text_background_default": "common.empty_panel",
+    "$text_background_hover": "book_dx.main_text_edit_hover",
+    "max_length": 500
   },
 
   "text_edit_hover_image@book.text_edit_hover_image": {

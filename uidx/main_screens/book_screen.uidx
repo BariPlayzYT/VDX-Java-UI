@@ -401,6 +401,12 @@
     "controls": [
       { "custom_panel@common_dx.custom_text_edit_panel": { } }
     ],
+    "$text_box_text_color": [ 0, 0, 0 ],
+    "$locked_color": [ 0, 0, 0 ],
+    "$color": [ 0, 0, 0 ],
+    "$text_box_locked_text_color": [ 0, 0, 0 ],
+    "$place_holder_text_color": [ 0, 0, 0 ],
+    "$locked_text_alpha": 1.0,
     "constrain_to_rect": false,
     "$enable_shadow": false,
     "$text_background_locked": "$text_background_default",
@@ -411,7 +417,13 @@
     "$text_edit_box_label_offset": [ 0, 0.5 ],
     "$text_background_default": "common.empty_panel",
     "$text_background_hover": "book_dx.main_text_edit_hover",
-    "max_length": 500
+    "max_length": 500,
+
+    "$text_edit_box_focusable_binding_name": "#editable",
+    "$text_edit_visible_binding_name": "#is_text_page",
+    "$text_edit_visible_binding_collection_name": "book_pages",
+    "$text_edit_visible_binding_type|default": "collection",
+    "$enable_profanity_filter": true
   },
 
   "text_edit_hover_image@book.text_edit_hover_image": {

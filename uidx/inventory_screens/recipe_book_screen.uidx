@@ -328,7 +328,8 @@
       {
         "search_tab_pages@crisxolt_pages_panels.recipe_book_tab_pages": {
           "$tab_page": "search",
-          "$number_right": "37",
+          "$number_right": "38",
+          "$has_only_38_pages": true,
           "bindings": [
             {
               "binding_name": "#is_left_tab_search",
@@ -366,8 +367,8 @@
       {
         "items_tab_pages@crisxolt_pages_panels.recipe_book_tab_pages": {
           "$tab_page": "items",
-          "$number_right": "12",
-          "$has_only_12_pages": true,
+          "$number_right": "13",
+          "$has_only_13_pages": true,
           "bindings": [
             {
               "binding_name": "#is_left_tab_items",
@@ -401,8 +402,8 @@
       {
         "search_tab_pages@crisxolt_pages_panels.recipe_book_tab_pages": {
           "$tab_page": "search",
-          "$number_right": "13",
-          "$has_only_13_pages": true,
+          "$number_right": "14",
+          "$has_only_14_pages": true,
           "bindings": [
             {
               "binding_name": "#is_left_tab_search",

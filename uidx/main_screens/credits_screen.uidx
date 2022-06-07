@@ -289,6 +289,14 @@
   "credits_screen_content": {
     "type": "panel",
     "controls": [
+      {
+        "bg": {
+          "type": "panel",
+          "controls": [
+
+          ]
+        }
+      },
       { "main_credits_panel@credits_dx.main_credits_panel": { } },
       {
         "vignette_renderer": {
@@ -339,15 +347,23 @@
   "center_screen": {
     "type": "panel",
     "controls": [
-      { "background@credits_dx.background": { "ignored": "(not $is_holographic)" } }
+      { "credits_screen_content@credits_dx.credits_screen_content": { } },
+      { "background@credits_dx.background": { } }
     ]
   },
 
   "full_screen": {
     "type": "panel",
     "controls": [
-      { "credits_screen_content@credits_dx.credits_screen_content": { } },
-      { "background@credits_dx.background": { "ignored": "$is_holographic" } }
+      {
+        "main_bg_panel": {
+          "type": "image",
+          "layer": -12,
+          "texture": "textures/uidx/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "fill": true
+        }
+      }
     ]
   }
 }

@@ -4,6 +4,7 @@
       {
         "requires": "$desktop_screen",
         "$screen_content": "anvil_dx.center_screen",
+        "$screen_center_content": "anvil_dx.no_safezone_center_screen",
         "$screen_bg_content": "anvil_dx.full_screen"
       },
       {

@@ -7,7 +7,7 @@
     "$background_animations": [ ],
     "$screen_content": "disconnect_dx.disconnect_screen_content",
     "$button_layout": "disconnect_dx.ok_button",
-    "$screen_bg_content": "java_gui_common.options_background"
+    "$screen_bg_content": "disconnect_dx.disconnect_screen_bg"
   },
 
   "realms_disconnect_screen": {
@@ -16,7 +16,7 @@
     "$background_animations": [ ],
     "$screen_content": "disconnect_dx.disconnect_screen_content",
     "$button_layout": "disconnect_dx.realms_disconnect_button_panel",
-    "$screen_bg_content": "java_gui_common.options_background"
+    "$screen_bg_content": "disconnect_dx.disconnect_screen_bg"
   },
 
   "realms_warning_screen": {
@@ -25,6 +25,6 @@
     "$background_animations": [ ],
     "$screen_content": "disconnect_dx.disconnect_screen_content",
     "$button_layout": "disconnect_dx.realms_warning_button_panel",
-    "$screen_bg_content": "java_gui_common.options_background"
+    "$screen_bg_content": "disconnect_dx.disconnect_screen_bg"
   }
 }

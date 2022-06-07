@@ -632,6 +632,7 @@
 
   "page_37": {
     "type": "panel",
+    "$has_only_37_pages|default": false,
     "bindings": [
       {
         "binding_type": "view",
@@ -641,13 +642,14 @@
       }
     ],
     "controls": [
-      { "page_37@crisxolt_tab_pages.page_37": { "$ignore_next_button": true } },
-      { "page_38@crisxolt_pages_panels.page_38": { "ignored": true } }
+      { "page_37@crisxolt_tab_pages.page_37": { "$ignore_next_button": "$has_only_37_pages" } },
+      { "page_38@crisxolt_pages_panels.page_38": { "ignored": "$has_only_37_pages" } }
     ]
   },
 
   "page_38": {
     "type": "panel",
+    "$has_only_38_pages|default": false,
     "bindings": [
       {
         "binding_type": "view",
@@ -657,13 +659,14 @@
       }
     ],
     "controls": [
-      { "page_38@crisxolt_tab_pages.page_38": { } },
-      { "page_39@crisxolt_pages_panels.page_39": { } }
+      { "page_38@crisxolt_tab_pages.page_38": { "$ignore_next_button": "$has_only_38_pages" } },
+      { "page_39@crisxolt_pages_panels.page_39": { "ignored": "$has_only_38_pages" } }
     ]
   },
 
   "page_39": {
     "type": "panel",
+    "$has_only_39_pages|default": false,
     "bindings": [
       {
         "binding_type": "view",
@@ -673,8 +676,8 @@
       }
     ],
     "controls": [
-      { "page_39@crisxolt_tab_pages.page_39": { } },
-      { "page_40@crisxolt_pages_panels.page_40": { } }
+      { "page_39@crisxolt_tab_pages.page_39": { "$ignore_next_button": "$has_only_39_pages" } },
+      { "page_40@crisxolt_pages_panels.page_40": { "ignored": "$has_only_39_pages" } }
     ]
   },
 

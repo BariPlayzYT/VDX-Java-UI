@@ -198,7 +198,9 @@
       {
         "03@creative_inv_java_dx.grid_stack_panel_10": {
           "controls": [
-            { "00@creative_inv_java_dx.tab_item_grid_texture": { } }
+            { "00@creative_inv_java_dx.tab_item_grid_texture": { } },
+            { "01@creative_inv_java_dx.tab_item_grid_texture": { } },
+            { "02@creative_inv_java_dx.tab_item_grid_texture": { } }
           ]
         }
       }
@@ -603,7 +605,8 @@
       { "37@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
       { "38@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
       { "39@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
-      { "40@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } }
+      { "40@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } },
+      { "41@creative_inv_java_dx.scroll_middle": { "bindings": "$scroll_middle_bindings" } }
     ]
   },
 

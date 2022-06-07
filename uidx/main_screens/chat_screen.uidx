@@ -443,6 +443,7 @@
           "type": "stack_panel",
           "orientation": "horizontal",
           "size": [ "100%c", "100%" ],
+          "ignored": "(not $pre_release)",
           "bindings": [
             {
               "binding_name": "#cheats_on",

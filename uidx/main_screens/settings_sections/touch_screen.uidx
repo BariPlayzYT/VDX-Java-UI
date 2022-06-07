@@ -276,7 +276,6 @@
         "new_touch_category_panel": {
           "type": "panel",
           "size": [ "100%", 25 ],
-          "ignored": "(not $pre_release)",
           "controls": [
             {
               "object_name": {

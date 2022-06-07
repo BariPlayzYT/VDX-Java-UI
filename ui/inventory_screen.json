@@ -87,11 +87,13 @@
 
   "crafting_screen": {
     "$screen_content": "crafting_dx.center_screen",
+    "$screen_center_content": "crafting_dx.no_safezone_center_screen",
     "$screen_bg_content": "crafting_dx.full_screen"
   },
 
   "inventory_screen": {
     "$screen_content": "inventory_dx.center_screen",
+    "$screen_center_content": "inventory_dx.no_safezone_center_screen",
     "$screen_bg_content": "inventory_dx.full_screen"
   }
 }

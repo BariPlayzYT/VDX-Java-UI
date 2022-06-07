@@ -2,15 +2,15 @@
   "format_version": 2,
   "header": {
     "name": "VDX: Java UI v1.2.1",
-    "description": "Project by @CrisXolt.\nA UI pack made since Q4 of 2016.",
-    "uuid": "b7f5e373-8990-4287-ac13-a1275c9d1e49",
+    "description": "Project by @CrisXolt.\nA porting UI pack for Bedrock Edition made since Q4 2016.",
+    "uuid": "fc9ae985-3738-4adc-848c-e20100712c96",
     "version": [1, 2, 1],
-    "min_engine_version": [ 1, 18, 10 ]
+    "min_engine_version": [ 1, 19, 0 ]
   },
   "modules": [
     {
       "type": "resources",
-      "uuid": "54fee382-da1c-4c4f-b82f-2874c6e6e20e",
+      "uuid": "51cee28f-8565-4b3b-ad58-bbf776c81ee3",
       "version": [1, 2, 1]
     }
   ]

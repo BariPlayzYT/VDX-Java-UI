@@ -225,10 +225,16 @@
   
   /*//// Screen ////*/
 
+  "no_safezone_center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@furnace_dx.main_screen_content": { } }
+    ]
+  },
+
   "center_screen": {
     "type": "panel",
     "controls": [
-      { "main_screen_content@furnace_dx.main_screen_content": { } },
       { "container_gamepad_helpers@common_tooltip_dx.container_gamepad_helpers": { } },
       { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "(not $is_holographic)" } }
     ]

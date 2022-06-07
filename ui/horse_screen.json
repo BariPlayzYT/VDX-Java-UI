@@ -6,6 +6,7 @@
       {
         "requires": "$desktop_screen",
         "$screen_content": "horse_dx.center_screen",
+        "$screen_center_content": "horse_dx.no_safezone_center_screen",
         "$screen_bg_content": "horse_dx.full_screen"
       },
       {

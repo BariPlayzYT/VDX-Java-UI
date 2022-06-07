@@ -6,6 +6,7 @@
       {
         "requires": "$desktop_screen",
         "$screen_content": "loom_dx.center_screen",
+        "$screen_center_content": "loom_dx.no_safezone_center_screen",
         "$screen_bg_content": "loom_dx.full_screen"
       },
       {

@@ -154,9 +154,25 @@
 
   /*///// Screen /////*/
 
+  "disconnect_screen_bg": {
+    "type": "panel",
+    "controls": [
+      {
+        "main_bg_panel": {
+          "type": "image",
+          "layer": -12,
+          "texture": "textures/uidx/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "fill": true
+        }
+      }
+    ]
+  },
+
   "disconnect_screen_content": {
     "type": "panel",
     "controls": [
+      { "main_bg@java_gui_common.options_background": { "layer": -8 } },
       { "main_panel@disconnect_dx.main_panel": {} },
       { "gamepad_helpers@progress_deluxe.gamepad_helpers": {} }
     ]

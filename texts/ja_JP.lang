@@ -8,6 +8,7 @@ menu.store=Minecraft ストア
 
 ##  Accessibility Settings
 options.darknessEffectModifier=暗闇の脈動
+options.darknessEffectModifier.message=ウォーデンまたはスカルクシュリーカーが暗闇の効果を与える時にどの程度脈動するかを設定できます。
 
 ##  Controls Settings
 options.mouse_settings=マウス設定…
@@ -22,12 +23,24 @@ options.joystick_settings.title=Joystick 設定
 options.graphics.fancy.tooltip=描画優先は多くの動作環境においてパフォーマンスと画質を両立させます。半透明なブロックや水の背後の天候表現、雲、パーティクルは表示されない場合があります。
 options.graphics.fast.tooltip=処理優先は表示される雨や雪の数を減らします。木の葉のような様々なブロックの透過効果は無効になります。
 
+options.vsync=垂直同期
+
+options.renderClouds=雲の表示
+
+options.maxFramerate=最大フレームレート
+
+options.renderDistance=描画距離
+options.renderDistanceFormat=%sチャンク
+options.renderDistanceRecommendedFormat=%sチャンク
+
+options.showautosaveicon=オートセーブの表示
+
 ##  Packs
 pack.available.title=§l利用可能
 pack.selected.title=§l選択中
 
 resourcePack.title=リソース パックの選択	#
-behaviorPack.title=ビヘイビアー パックの選択	#
+behaviorPack.title=ビヘイビア パックの選択	#
 
 selectWorld.resourcePack=リソース
 selectWorld.behaviorPack=ビヘイビア
@@ -51,7 +64,7 @@ structure_block.mode.export=エクスポート
 
 structure_block.button.detect_size=検出
 structure_block.button.save=保存
-structure_block.button.load="読み込み
+structure_block.button.load=読み込み
 structure_block.button.structureExport=MCS
 structure_block.button.3dExport=3D OBJ
 
@@ -149,3 +162,6 @@ soundCategory.weather=天候
 multiplayerWarning.header=§l警告：サードパーティ製のオンラインサーバー
 multiplayerWarning.message=警告：オンラインでのプレイはサードパーティ製のサーバーによって提供されており、Mojang StudiosやMicrosoftが所有、運営、監督するものではありません。オンラインでのプレイ中に、不適切なチャットメッセージ等の内容にさらされる可能性があります。
 multiplayerWarning.check=この画面を再度表示しない
+
+##  Progress
+vdx.loading.percentage=%

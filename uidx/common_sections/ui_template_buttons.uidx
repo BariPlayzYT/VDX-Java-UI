@@ -725,7 +725,7 @@
     "shadow": true,
     "size": [ "default", 10 ],
     "max_size": "$button_label_max_size",
-    "$button_label_max_size|default": [ "100%-8px", 10 ],
+    "$button_label_max_size|default": [ "100%+2px", 10 ],
     "color": "$text_color",
     "text": "$button_text"
   },
@@ -753,7 +753,7 @@
     "color": "$text_color",
     "size": [ "default", 10 ],
     "max_size": "$button_label_max_size",
-    "$button_label_max_size|default": [ "100%-8px", 10 ]
+    "$button_label_max_size|default": [ "100%+2px", 10 ]
   },
   
   "black_button_default": {

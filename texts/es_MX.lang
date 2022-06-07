@@ -12,6 +12,7 @@ options.enableAutoPlatformTextToSpeech=Narrar con dispositivo	#
 options.enableUITextToSpeech=Narrar UI	#
 options.enableOpenChatMessage=Activar Chat	#
 options.darknessEffectModifier=Pulso de oscuridad
+options.darknessEffectModifier.message=Controla el pulso del efecto de oscuridad cuando un warden o chillador de sculk te lo da.
 
 ##  Controls Settings
 options.mouse_settings=Opciones de mouse...
@@ -29,7 +30,10 @@ options.hidetooltips=Ocultar descripciones
 options.graphics.fancy.tooltip=Los gráficos detallados equilibran el rendimiento y la calidad en la mayoría de dispositivos.Las precipitaciones, las nubes y las partículas puede que no se muestren al mirarlas a través de bloques translúcidos o de agua.	#
 options.graphics.fast.tooltip=Los gráficos rápidos reducen la cantidad de lluvia y nieve visible. Los efectos de transparencia se desactivan para bloques como las hojas de árboles.	#
 
-options.raytracing.renderDistance=Visibilidad del trazado de rayos
+options.graphics.fancy=Detallados
+options.graphics.fast=Rápidos
+
+options.raytracing.renderDistance=Renderizado del trazado de rayos
 
 options.vsync=VSync	#
 options.vsync.off=NO	#
@@ -39,6 +43,12 @@ options.vsync.adaptive=Adaptado	#
 options.renderClouds=Nubes	#
 
 options.maxFramerate=FPS máximos	#
+
+options.renderDistance=Renderizado
+options.renderDistanceFormat=%s chunks
+options.renderDistanceRecommendedFormat=%s chunks
+
+options.showautosaveicon=Indicar autoguardado
 
 options.fov.toggle=Campo visual dinámico	#
 
@@ -72,7 +82,7 @@ structure_block.mode_info.load=Cargar: Cargar desde archivo
 structure_block.mode_info.corner=Esquina: colócalo en esquinas para marcarlas
 structure_block.exportTo=Exportar en archivo:
 
-structure_block.mode.export=Export
+structure_block.mode.export=Exportar
 
 structure_block.button.detect_size=DETECTAR
 structure_block.button.save=GUARDAR
@@ -156,7 +166,6 @@ options.guiScale.optionName=Tamaño de interfaz	#
 options.particleRenderDistance=Distancia del partículas	#
 options.safeZone.title=Área segura en pantalla	#
 options.ingamePlayerNames=Nombres de los jugadores	#
-options.showautosaveicon=Icono de autoguardado	#
 
 ##  Raid Texts Input
 raid.name=Raid	#
@@ -171,3 +180,22 @@ bar.event.raid.remaining.1=Invasión - Invasores restantes: 1	#
 bar.event.raid.remaining.0=Invasión - Invasores restantes: 0	#
 bar.event.raid.victory=Invasión - Victoria	#
 bar.event.raid.defeat=Invasión - Derrota	#
+
+##  Audio Settings
+soundCategory.ambient=Ambiente
+soundCategory.block=Bloques
+soundCategory.hostile=Criaturas hostiles
+soundCategory.master=Volumen general
+soundCategory.music=Música
+soundCategory.neutral=Criaturas pacíficas
+soundCategory.player=Jugadores
+soundCategory.record=Bloques musicales
+soundCategory.weather=Precipitaciones
+
+##  Online Safety
+multiplayerWarning.header=§lATENCIÓN: Juego en línea de terceros
+multiplayerWarning.message=PRECAUCIÓN: El modo multijugador está compuesto de servidores de terceros que no son propiedad, ni están administrados o supervisados por Mojang Studios o Microsoft. Mientras juegues en línea, puedes estar expuesto a mensajes de chat inapropiados u otro tipo de contenido creado por la comunidad, por lo que podría no ser adecuado para todos los usuarios.
+multiplayerWarning.check=No mostrar este mensaje de nuevo
+
+##  Progress
+vdx.loading.percentage=%

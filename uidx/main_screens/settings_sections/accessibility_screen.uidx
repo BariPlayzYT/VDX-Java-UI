@@ -3,6 +3,28 @@
 {
   "namespace": "accessibility_dx",
 
+  /*//// Hover Text Panels ////*/
+
+  "darkness_hover_text@common_dx.hover_text_label": {
+    "line_padding": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 4, 2 ],
+    "size": [ 200, "default" ],
+    "text": "options.darknessEffectModifier.message"
+  },
+
+  "notification_hover_text@common_dx.hover_text_label": {
+    "line_padding": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 4, 2 ],
+    "size": [ 200, "default" ],
+    "text": "options.notificationDuration.message"
+  },
+
+  /*//// Main ////*/
+
   "accessibility_stack_panel": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -123,6 +145,8 @@
           "controls": [
             {
               "darkness_slider@settings_common_dx.option_slider_150": {
+                "$hover_content": "common_dx.hover_text_panel",
+                "$hover_text_label_control": "accessibility_dx.darkness_hover_text",
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "$option_label": "#darkness_slider_label",
@@ -158,6 +182,8 @@
           "controls": [
             {
               "notification_duration_dropdown@settings_common_dx.option_dropdown_310": {
+                "$hover_content": "common_dx.hover_text_panel",
+                "$hover_text_label_control": "accessibility_dx.notification_hover_text",
                 "$option_dropdown_type": "settings_common_dx.dropdown_no_scrollpanel",
                 "ignored": "($is_holographic and $is_reality_mode)",
                 "$option_label": "options.notificationDuration",

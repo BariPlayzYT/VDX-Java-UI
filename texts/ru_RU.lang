@@ -12,6 +12,7 @@ options.enableAutoPlatformTextToSpeech=Текст настроек в речь
 options.enableUITextToSpeech=Экранный диктор
 options.enableOpenChatMessage=Уведомление чата
 options.darknessEffectModifier=Пульсация тьмы
+options.darknessEffectModifier.message=Отвечает за интенсивность пульсации эффекта тьмы, получаемого от хранителя или скалкового крикуна.
 
 ##  Controls Settings
 options.mouse_settings=Настройки мыши…
@@ -29,7 +30,7 @@ options.graphics.fast.tooltip=«Быстрая» графика уменьшае
 options.graphics.fancy=Детально
 options.graphics.fast=Быстро
 
-options.vsync=Использовать V-Sync
+options.vsync=V-Sync
 options.vsync.off=Выкл
 options.vsync.on=Вкл
 options.vsync.adaptive=Адаптивный режим
@@ -37,6 +38,12 @@ options.vsync.adaptive=Адаптивный режим
 options.renderClouds=Облака
 
 options.maxFramerate=Частота кадров
+
+options.renderDistance=Прорисовка
+options.renderDistanceFormat=%s чанков
+options.renderDistanceRecommendedFormat=%s чанков
+
+options.showautosaveicon=Индикатор сохранения
 
 ##  Packs
 pack.available.title=§lДоступные
@@ -131,7 +138,7 @@ gamerule.randomTickSpeed=Частота случайных тактов
 
 gamerule.category.player=§lИгрок
 gamerule.category.mobs=§lМобы
-gamerule.category.spawning=§Появление
+gamerule.category.spawning=§lПоявление
 gamerule.category.drops=§lВыпадение ресурсов
 gamerule.category.updates=§lОбновления мира
 gamerule.category.misc=§lРазное
@@ -142,8 +149,6 @@ options.language=Язык...
 options.sounds=Музыка и звуки...
 options.accessibility=Специальные возможности...
 options.videoTitle=Настройки графики
-options.renderDistance=Прорисовка
-options.renderDistanceFormat=%s чанков
 options.framerateLimit=Частота кадров
 options.framerateLimit.max=Максимум
 options.smooth_lighting=Мягкое освещение
@@ -154,7 +159,6 @@ options.gamma=Яркость
 options.gamma.max=Ярко
 options.gamma.min=Тускло
 options.particleRenderDistance=Рендер частиц
-options.showautosaveicon=Знак автосохранения
 options.resetSettings=Сбросить настройки
 options.thirdperson=Вид
 options.thirdperson.firstperson=От первого лица

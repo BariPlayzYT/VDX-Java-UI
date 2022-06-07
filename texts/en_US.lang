@@ -12,6 +12,7 @@ options.enableAutoPlatformTextToSpeech=TTS with Device
 options.enableUITextToSpeech=UI Screen Reader
 options.enableOpenChatMessage=Open Chat Message
 options.darknessEffectModifier=Darkness Pulsing
+options.darknessEffectModifier.message=Controls how much the Darkness effect pulses when a Warden or Sculk Shrieker gives it to you.
 
 ##  Controls Settings
 options.mouse_settings=Mouse Settings...
@@ -36,6 +37,12 @@ options.renderClouds=Clouds
 options.maxFramerate=Max Framerate
 
 options.fov.toggle=FOV Can Be Altered
+
+options.renderDistance=Render distance
+options.renderDistanceFormat=%s chunks
+options.renderDistanceRecommendedFormat=%s chunks
+
+options.showautosaveicon=Autosave Indicator
 
 options.thirdperson=Perspective
 options.thirdperson.firstperson=1st Person

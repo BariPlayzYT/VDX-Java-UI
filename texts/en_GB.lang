@@ -12,6 +12,7 @@ options.enableAutoPlatformTextToSpeech=TTS with Device
 options.enableUITextToSpeech=UI Screen Reader
 options.enableOpenChatMessage=Open Chat Message
 options.darknessEffectModifier=Darkness Pulsing
+options.darknessEffectModifier.message=Controls how much the Darkness effect pulses when a Warden or Sculk Shrieker gives it to you.
 
 ##  Video Settings
 options.graphics.fancy.tooltip=Fancy graphics balances performance and quality for the majority of machines. Weather, clouds and particles may not appear behind translucent blocks or water.

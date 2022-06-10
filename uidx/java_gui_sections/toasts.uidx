@@ -36,7 +36,7 @@
     ]
   },
 
-  "error_toast@toasts_java_dx.toasts_base": {
+  "notification_toast@toasts_java_dx.toasts_base": {
     "size": [ 160, 32 ],
     "variables": [
       { "requires": "($toasts_resolution = '256x')",  "$toasts_uv": [ 0, 64 ],   "$toasts_uv_size": [ 160, 32 ] },

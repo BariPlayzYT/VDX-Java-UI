@@ -19,13 +19,75 @@
         "$screen_animations": [ ],
         "$background_animations": [ ]
       }
-    ]
+    ],
+    "$screen_content": "hud_dx.hud_content"
   },
-  
+
+  /* Making Full Hive Server Compatibility (Ignoring some UI elements that are not modified by the server) */
+
+  "player_position": {
+    "ignored": true
+  },
+
+  "chat_panel": {
+    "ignored": true
+  },
+
+  "left_helpers_edu": {
+    "ignored": true
+  },
+
+  "left_helpers": {
+    "ignored": true
+  },
+
+  "right_helpers": {
+    "ignored": true
+  },
+
+  "emote_helpers": {
+    "ignored": true
+  },
+
+  "centered_gui_elements": {
+    "ignored": true
+  },
+
+  "vignette_renderer": { "layer": -10 },
+
+  "centered_gui_elements_at_bottom_middle": {
+    "ignored": true
+  },
+
+  "not_centered_gui_elements": {
+    "ignored": true
+  },
+
+  "exp_progress_bar_and_hotbar": {
+    "ignored": true
+  },
+
+  "hud_actionbar_text": {
+    "ignored": true
+  },
+
+  "hud_tip_text": {
+    "ignored": true
+  },
+
+  "auto_save": {
+    "ignored": true
+  },
+
   "hud_content": {
-    "controls": [
-      { "root_panel@hud_dx.root_panel": {} },
-      { "camera_renderer@hud.camera_renderer": {} }
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "root_panel_for_hive@hud_dx.root_panel_for_hive": { } }
+        ]
+      }
     ]
   }
 } 

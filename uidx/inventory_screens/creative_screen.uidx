@@ -563,15 +563,15 @@
     "controls": [
       {
         "creative_label@common_dx.global_label": {
+          "shadow": false,
           "color": "$vdx_container_title_text_color",
-          "layer": 4,
           "size": [ 162, 10 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "text_alignment": "left",
           "offset": [ 8, 5 ],
+          "layer": 2,
           "text": "#tab_label_text",
-          "shadow": false,
           "bindings": [
             {
               "binding_name": "#tab_label_text"

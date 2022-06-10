@@ -418,6 +418,38 @@
     "$right_button_texture": "main_button_88_java_dx.main_button_right_locked"
   },
 
+  /*//// Main Button 80 ////*/
+  
+  "main_button_80@common_buttons_dx.main_button_200": {
+    "size": [ 80, 20 ],
+    "controls": [
+      { "default@common_buttons_dx.80_default": { } },
+      { "hover@common_buttons_dx.80_hover": { } },
+      { "pressed@common_buttons_dx.80_pressed": { } },
+      { "locked@common_buttons_dx.80_locked": { } }
+    ]
+  },
+
+  "80_default@common_buttons_dx.default_base": {
+    "$left_button_texture": "main_button_80_java_dx.main_button_left_default",
+    "$right_button_texture": "main_button_80_java_dx.main_button_right_default"
+  },
+
+  "80_hover@common_buttons_dx.hover_base": {
+    "$left_button_texture": "main_button_80_java_dx.main_button_left_hover",
+    "$right_button_texture": "main_button_80_java_dx.main_button_right_hover"
+  },
+
+  "80_pressed@common_buttons_dx.pressed_base": {
+    "$left_button_texture": "main_button_80_java_dx.main_button_left_hover",
+    "$right_button_texture": "main_button_80_java_dx.main_button_right_hover"
+  },
+
+  "80_locked@common_buttons_dx.locked_base": {
+    "$left_button_texture": "main_button_80_java_dx.main_button_left_locked",
+    "$right_button_texture": "main_button_80_java_dx.main_button_right_locked"
+  },
+
   /*//// Main Button 74 ////*/
   
   "main_button_74@common_buttons_dx.main_button_200": {

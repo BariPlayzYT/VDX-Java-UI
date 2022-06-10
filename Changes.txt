@@ -2,27 +2,27 @@ v1.2.1 [07/06/2022] (1.19 Wild Update Only)
 [Additions]
 [+] More language support: -ja_JP -ko_KR -pt_PT -pt_BR -uk_UA
 [+] Added Copy coordinates tools for chat screen,
-    only enabled by creator settings. [1.19.10.21 Beta/Preview Only]
+    only enabled by creator settings. [1.19.10 Only]
 [+] Custom permission level dropdown control for realms player list.
-[+] Added reason message text for death screen.
+[+] Added reason message text for death screen. [1.19.10 Only]
 [+] Added creator settings screen, and some options from profile screen
     now have moved to desired screen.
 [+] Added tooltip message for darkness effect slider option and notification duration.
+[+] Added Hive Network UI support.
 [Changes]
-[*] Updated for v1.19.0 Release and v1.19.10.21 Beta/Preview Only.
+[*] Updated for v1.19.0 Release and v1.19.10 Beta/Preview Only.
+[*] Changed Pack Icon design.
 [*] Changed position coordinates text bg to match Java Edition Debug appearance.
 [*] Updated black button textures.
 [*] Added 1.19 new accesibility options.
 [*] The recipe book for 2x2 crafting now has a desired max page numbers.
 [*] Updated Chat Screen.
+[*] Updated Main Realms Screen and Realms World Slots to match Java Edition UI layout.
 [*] Updated safe zone menu screens, outside border now will be black background,
     while in game, will be screen background.
 [*] Replaced all UI label texts to desired global label control.
 [*] Made another revision for Sign Screen, Book Screen and Video options.
-[*] "Show Autosave Icon" option is now called "Autosave Indicator".
-[Known issues]
-[X] Toast UI in chat screen doesn't show when you copy the coordinates pressing the button,
-    even if the toast element is added in the chat screen UI.
+[*] "Show Autosave Icon" option is now called "Autosave Indicator", only for supported languages.
 
 v1.2.0 [02/04/2022]
 [Additions]

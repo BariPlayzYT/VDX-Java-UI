@@ -213,26 +213,26 @@
       },
       {
         "fill_padding": {
+          //"ignored": "$touch",
           "type": "panel",
-          "size": [ 1, "fill" ],
-          "ignored": "$touch"
+          "size": [ 1, "fill" ]
         }
       },
       { "chat_panel@hud_chat_dx.chat_panel": {} },
       {
         "bottom_padding": {
+          //"ignored": "$touch",
           "type": "panel",
-          "size": [ 1, 40 ],
-          "ignored": "$touch"
-        }
-      },
-      {
-        "bottom_fill_padding": {
-          "type": "panel",
-          "size": [ 1, "fill" ],
-          "ignored": "(not $touch)"
+          "size": [ 1, 40 ]
         }
       }/* ,
+      {
+        "bottom_fill_padding": {
+          "ignored": "(not $touch)",
+          "type": "panel",
+          "size": [ 1, "fill" ]
+        }
+      },
       {
         "tooltip_padding": {
           "type": "panel",
@@ -371,8 +371,8 @@
     "controls": [
       {
         "stack_panel": {
+          //"ignored": "$touch",
           "type": "stack_panel",
-          "ignored": "$touch",
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "factory": {
@@ -383,11 +383,11 @@
             }
           }
         }
-      },
+      }/* ,
       {
         "stack_panel_touch": {
-          "type": "stack_panel",
           "ignored": "(not $touch)",
+          "type": "stack_panel",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "factory": {
@@ -398,7 +398,7 @@
             }
           }
         }
-      }
+      } */
     ]
   }
 }

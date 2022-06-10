@@ -3,23 +3,6 @@
 {
   "namespace": "chat_dx",
 
-  /*//// Toats Popup ////*/
-
-  "popup_toast@toast_screen.popup": {
-    "layer": 100,
-    "$display_time": 0.75,
-    "$transition_in_time": 0.15,
-    "$transition_out_time": 0.15,
-    "$popup_size": [ 40, 20 ],
-    "$toast_text_offset": [ 0, 4 ],
-    "$toast_text_alignment": "center",
-    "$toast_anchor_from": "center",
-    "$toast_anchor_to": "center",
-    "$toast_font_type": "smooth",
-    "$offset_anims": [],
-    "$alpha_anims": []
-  },
-
   /*//// Chat Stack Panel ////*/
 
   "chat_stack_panel": {
@@ -30,26 +13,26 @@
     "controls": [
       {
         "fill_padding": {
+          //"ignored": "$touch",
           "type": "panel",
-          "size": [ 1, "fill" ],
-          "ignored": "$touch"
+          "size": [ 1, "fill" ]
         }
       },
       { "message_panel@chat_dx.message_panel": { } },
       {
         "bottom_padding": {
+          //"ignored": "$touch",
           "type": "panel",
-          "size": [ 1, 40 ],
-          "ignored": "$touch"
-        }
-      },
-      {
-        "bottom_fill_padding": {
-          "type": "panel",
-          "size": [ 1, "fill" ],
-          "ignored": "(not $touch)"
+          "size": [ 1, 40 ]
         }
       }/* ,
+      {
+        "bottom_fill_padding": {
+          "ignored": "(not $touch)",
+          "type": "panel",
+          "size": [ 1, "fill" ]
+        }
+      },
       {
         "tooltip_padding": {
           "type": "panel",
@@ -443,7 +426,6 @@
           "type": "stack_panel",
           "orientation": "horizontal",
           "size": [ "100%c", "100%" ],
-          "ignored": "(not $pre_release)",
           "bindings": [
             {
               "binding_name": "#cheats_on",
@@ -550,12 +532,6 @@
     "size": [ "100%-12px", 18 ],
     "controls": [
       {
-        "button@common_buttons_dx.black_button_default": {
-          "$button_content": "java_gui_common.creator_icon",
-          "size": [ 20, 20 ]
-        }
-      },
-      {
         "fill": {
           "type": "panel",
           "size": [ "fill", "100%" ]
@@ -566,6 +542,7 @@
           "type": "stack_panel",
           "orientation": "horizontal",
           "size": [ "100%c", 18 ],
+          "ignored": "(not $pre_release)",
           "bindings": [
             {
               "binding_name": "#chat_coordinate_dropdown_visible",
@@ -853,7 +830,6 @@
       {
         "popup_factory@chat_settings.popup_factory": {
           "control_ids": {
-            "toast_message": "@chat.popup_toast",
             "chat_setting_popup": "@chat_settings_dx.chat_settings_screen"
           }
         }

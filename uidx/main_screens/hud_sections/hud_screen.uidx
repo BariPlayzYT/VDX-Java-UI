@@ -183,7 +183,7 @@
 
   "exp_progress_bar_and_hotbar": {
     "type": "panel",
-    "size": [ 182, 30 ],
+    "size": [ "100%", 30 ],
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "controls": [
@@ -191,8 +191,8 @@
         "xp_bar": {
           "type": "panel",
           "size": [ 182, 5 ],
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
           "offset": [ 0, -24 ],
           "controls": [
             { "progress_text_label@hud_resources_dx.xp_number_panel": { "layer": 8 } },
@@ -223,26 +223,18 @@
       },
       { "hotbar@hud_dx.hotbar_panel": { } },
       {
-        "dx_panel": {
+        "main_panel": {
           "type": "panel",
+          "$ignore_jukebox_text|default": false,
           "controls": [
             { "hud_tip_text_factory@hud_item_text_dx.hud_tip_text_factory": { } },
-            { "hud_actionbar_text_area@hud_item_text_dx.hud_actionbar_text_area": {  } },
-            { "item_text_factory@hud_item_text_dx.item_text_factory": { } }
+            { "hud_actionbar_text_area@hud_item_text_dx.hud_actionbar_text_area": { } },
+            { "item_text_factory_without_jukebox@hud_item_text_dx.item_text_factory_without_jukebox": { "$ignored": "(not $ignore_jukebox_text)" } },
+            { "item_text_factory@hud_item_text_dx.item_text_factory": { "$ignored": "$ignore_jukebox_text" } }
           ]
         }
       }
     ]
-  },
-
-  /* Original item text factory */
-
-  "original_item_name_text@hud.item_name_text_root": { "offset": [ 0, -26 ] },
-
-  "original_jukebox_popup_text@hud.item_name_text_root": {
-    "$text_color": "$jukebox_text_color",
-    "$text_binding": "#jukebox_text",
-    "offset": [ 0, -42.5 ]
   },
 
   /*//// GUI Elements ////*/
@@ -754,6 +746,36 @@
     ]
   },
   
+  /*//// Root Panel for Hive Network ////*/
+
+  "root_panel_for_hive@hud_dx.root_panel": {
+    "$ignore_jukebox_text": true,
+    "controls": [
+      { "left_helpers@hud_dx.left_helpers": {} },
+      { "right_helpers@hud_dx.right_helpers": {} },
+      { "gui_elements@hud_dx.gui_elements": { } },
+      { "chat_stack_panel@hud_chat_dx.chat_stack_panel": {} },
+      { "boss_health_main_panel@CrisXolt_bars_dx.boss_health_main_panel": {} },
+      {
+        "gamertag_label_for_splitscreen@common_dx.global_label": {
+          "size": [ "default", "default" ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -4, 4 ],
+          "color": "$hud_gamertag_color",
+          "text_alignment": "right",
+          "text": "#gamertag",
+          "bindings": [
+            {
+              "binding_name": "#gamertag"
+            }
+          ]
+        }
+      },
+      { "auto_save@hud_resources_dx.auto_save_label": {} }
+    ]
+  },
+  
   /*//// Root Panel ////*/
   
   "root_panel": {
@@ -802,6 +824,18 @@
           }
         }
       },
+      {
+        "game_tip@game_tip.game_tip_panel": {
+          "$offset": [ 0, "-90px" ],
+          "variables": [
+            {
+              "requires": "$pocket_screen",
+              "$offset": [ 0, "-60px" ]
+            }
+          ],
+          "offset": "$offset"
+        }
+      },
       { "auto_save@hud_resources_dx.auto_save_label": {} }
     ],
     "bindings": [
@@ -820,6 +854,14 @@
         "binding_name_override": "#propagateAlpha",
         "binding_type": "global"
       }
+    ]
+  },
+  
+  "hud_content": {
+    "type": "panel",
+    "controls": [
+      { "root_panel@hud_dx.root_panel": {} },
+      { "camera_renderer@hud.camera_renderer": {} }
     ]
   }
 }

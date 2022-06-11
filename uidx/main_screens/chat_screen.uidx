@@ -676,13 +676,20 @@
       { 
         "back_button@common_buttons_dx.black_button": {
           "ignored": "(not $touch)",
-          "$button_content": "common_dx.close_icon",
+          "$button_content": "chat_dx.close_icon",
           "$pressed_button_name": "button.menu_exit",
           "focus_enabled": false,
           "size": [ 18, "100%" ]
         }
       }
     ]
+  },
+  
+  "close_icon": {
+    "type": "image",
+    "layer": 3,
+    "size": [ 16, 16 ],
+    "texture": "textures/uidx/icons/close"
   },
 
   /*//// Bottom Panel ////*/

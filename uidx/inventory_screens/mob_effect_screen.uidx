@@ -393,6 +393,13 @@
     "color": [ 0.8, 0.8, 1 ],
     "alpha": 0.5
   },
+  
+  "close_icon": {
+    "type": "image",
+    "layer": 3,
+    "size": [ 16, 16 ],
+    "texture": "textures/uidx/icons/close"
+  },
 
   "main_mob_effect_scroll_panel": {
     "type": "panel",
@@ -402,7 +409,7 @@
         "close_button@common_buttons_dx.black_button": {
           "ignored": "(not $touch)",
           "$pressed_button_name": "button.menu_exit",
-          "$button_content": "common_dx.close_icon",
+          "$button_content": "mob_effect_dx.close_icon",
           "anchor_from": "top_right",
           "anchor_to": "top_right",
           "offset": [ 20, 4 ],

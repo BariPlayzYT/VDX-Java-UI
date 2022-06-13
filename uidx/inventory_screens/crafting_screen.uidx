@@ -33,7 +33,7 @@
         "$background_image_control_name@common_dx.container_cell_images": {
           "size": [ 24, 24 ],
           "controls": [
-            { "highlight_slot_output_layer_0@crafting_dx.highlight_slot_output_layer_0": { } },
+            { "highlight_slot_output_layer_0@crafting_dx.highlight_slot_output_layer_0": { "layer": -6 } },
             { "highlight_slot_output_layer_6@crafting_dx.highlight_slot_output_layer_6": { } }
           ]
         }

@@ -529,7 +529,7 @@
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "offset": [ 0, 6 ],
-    "size": [ "100%-12px", 18 ],
+    "size": [ "100%-12px", 20 ],
     "controls": [
       {
         "fill": {
@@ -541,7 +541,7 @@
         "coordinate_dropdown_panel": {
           "type": "stack_panel",
           "orientation": "horizontal",
-          "size": [ "100%c", 18 ],
+          "size": [ "100%c", "100%" ],
           "ignored": "(not $pre_release)",
           "bindings": [
             {
@@ -619,7 +619,7 @@
             },
             {
               "copy_coordinate_button@common_buttons_dx.black_button": {
-                "size": [ 18, "100%" ],
+                "size": [ 20, "100%" ],
                 "$button_content": "chat_dx.copy_icon",
                 "$pressed_button_name": "copy_coordinates_button",
                 "$focus_id": "coordinate_copy_button_focus_id",
@@ -642,7 +642,7 @@
             },
             {
               "paste_button@common_buttons_dx.black_button": {
-                "size": [ 18, "100%" ],
+                "size": [ 20, "100%" ],
                 "$button_content": "chat_dx.paste_icon",
                 "$pressed_button_name": "paste_button",
                 "$focus_id": "paste_button_focus_id",
@@ -663,7 +663,7 @@
         "chat_settings_button@common_buttons_dx.black_button": {
           "$pressed_button_name": "button.open_chat_settings",
           "$button_content": "chat_dx.settings_image",
-          "size": [ 18, "100%" ]
+          "size": [ 20, "100%" ]
         }
       },
       {
@@ -679,7 +679,7 @@
           "$button_content": "chat_dx.close_icon",
           "$pressed_button_name": "button.menu_exit",
           "focus_enabled": false,
-          "size": [ 18, "100%" ]
+          "size": [ 20, "100%" ]
         }
       }
     ]
@@ -826,19 +826,30 @@
 
   /*//// Main ////*/
 
+  "chat_screen_content_bg": {
+    "type": "panel"
+  },
+
   "chat_screen_content": {
     "type": "panel",
     "controls": [
-      { "top_buttons@chat_dx.top_buttons": { } },
-      { "bottom_panel@chat_dx.bottom_panel": { } },
-      { "chat_stack_panel@chat_dx.chat_stack_panel": { } },
-      { "auto_complete_panel@chat_dx.auto_complete_panel": { } },
-      { "host_main_panel@host_options_dx.host_panel": { "layer": 20 } },
       {
-        "popup_factory@chat_settings.popup_factory": {
-          "control_ids": {
-            "chat_setting_popup": "@chat_settings_dx.chat_settings_screen"
-          }
+        "main_panel": {
+          "type": "panel",
+          "controls": [
+            { "top_buttons@chat_dx.top_buttons": { } },
+            { "bottom_panel@chat_dx.bottom_panel": { } },
+            { "chat_stack_panel@chat_dx.chat_stack_panel": { } },
+            { "auto_complete_panel@chat_dx.auto_complete_panel": { } },
+            { "host_main_panel@host_options_dx.host_panel": { "layer": 20 } },
+            {
+              "popup_factory@chat_settings.popup_factory": {
+                "control_ids": {
+                  "chat_setting_popup": "@chat_settings_dx.chat_settings_screen"
+                }
+              }
+            }
+          ]
         }
       }
     ]

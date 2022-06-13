@@ -441,12 +441,19 @@
     ]
   },
 
+  "main_screen_bg": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "screen_background@pause_dx.screen_background": { "layer": -10, "ignored": "$is_holographic" } }
+    ]
+  },
+
   "main_screen": {
     "type": "panel",
     "size": [ "100%", "100%" ],
     "controls": [
-      { "main_mob_effect_scroll_panel@mob_effect_dx.main_mob_effect_scroll_panel": { } },
-      { "screen_background@pause_dx.screen_background": { "layer": -10, "ignored": "$is_holographic" } }
+      { "main_mob_effect_scroll_panel@mob_effect_dx.main_mob_effect_scroll_panel": { } }
     ]
   }
 }

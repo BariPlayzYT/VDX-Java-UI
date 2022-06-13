@@ -514,34 +514,6 @@
         }
       },
       {
-        "panel_13@start_dx.stacked_row": {
-          "controls": [
-            {
-              "licensed_content_link_button@common_buttons_dx.main_button_310": {
-                "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
-                "$button_text": "options.licensed_content",
-                "$focus_override_down": "FOCUS_OVERRIDE_STOP",
-                "$pressed_button_name": "button.menu_open_uri",
-                "variables": [
-                  {
-                    "requires": "(not $nx_os)",
-                    "$licensed_content_button_url": "https://www.minecraft.net/licensed-content/?hideChrome"
-                  },
-                  {
-                    "requires": "($nx_os)",
-                    "$licensed_content_button_url": "https://aka.ms/switchcontent"
-                  }
-                ],
-                "property_bag": {
-                  "#hyperlink": "$licensed_content_button_url"
-                }
-              }
-            }
-          ]
-        }
-      },
-      {
         "categorie_licenses": {
           "type": "panel",
           "size": [ "100%", 25 ],

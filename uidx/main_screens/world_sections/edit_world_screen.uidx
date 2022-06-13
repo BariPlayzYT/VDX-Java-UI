@@ -7,25 +7,26 @@
   
   "title_label@settings_dx.base_label": {
     "text": "options.edit",
-    "offset": [ 0, 19 ]
+    "offset": [ 0, 14 ]
   },
 
   "panel_content": {
     "type": "stack_panel",
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
-    "offset": [ 0, 46 ],
-    "size": [ 200, 190 ],
+    "size": [ 200, "100%c" ],
     "controls": [
       {
-        "panel_0": {
+        "header_with_text_edit": {
           "type": "panel",
-          "size": [ "100%", 50 ],
+          "size": [ "100%", 65 ],
           "controls": [
+            { "options_label@edit_world_dx.title_label": { "layer": 2 } },
             {
               "option_text_edit_0@settings_common_dx.option_text_edit": {
-                "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [ 0, -6 ],
                 "$option_label": "selectWorld.enterName",
                 "$option_binding_name": "#world_name",
                 "$option_enabled_binding_name": "#world_name_enabled",
@@ -242,11 +243,43 @@
     ]
   },
 
+  "text_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [ "100%-4px", 10 ],
+    "controls": [
+      { "fill_panel": { "type": "panel", "size": [ "fill", 10 ] } },
+      { 
+        "seed_label@start_dx.minecraft_text": {
+          "color": [ 0.5, 0.5, 0.5 ],
+          "text": "structure_block.seed"
+        }
+      },
+      { 
+        "separator_label@start_dx.minecraft_text": {
+          "color": [ 0.5, 0.5, 0.5 ],
+          "text": " "
+        }
+      },
+      { 
+        "seed_value_label@start_dx.minecraft_text": {
+          "color": [ 0.5, 0.5, 0.5 ],
+          "text": "#world_seed",
+          "bindings": [
+            { "binding_name": "#world_seed" }
+          ]
+        }
+      }
+    ]
+  },
+
   "edit_screen_panel": {
     "type": "panel",
     "controls": [
-      { "options_label@edit_world_dx.title_label": { "layer": 2 } },
-      { "panel_content@edit_world_dx.panel_content": { "layer": 2 } }
+      { "panel_content@edit_world_dx.panel_content": { "layer": 2 } },
+      { "text_panel@edit_world_dx.text_panel": { "layer": 2 } }
     ]
   }
 }

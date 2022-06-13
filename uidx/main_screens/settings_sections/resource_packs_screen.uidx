@@ -826,6 +826,9 @@
     "controls": [
       {
         "null_navigation_tab@settings_dx.null_navigation_tab": {
+          "$unchecked_control": "common_buttons_dx.200_default",
+          "$unchecked_hover_control": "common_buttons_dx.200_hover",
+          "size": [ 200, 20 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "offset": [ 0, -12 ]

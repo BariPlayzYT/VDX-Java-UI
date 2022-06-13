@@ -175,7 +175,7 @@
         }
       },
       { "cooldown_renderer@hud.cooldown_renderer": { "layer": 10 } },
-      { "hotbar_slot_button@hud.gui_hotbar_slot_button_prototype": {} }
+      { "hotbar_slot_button@hud.gui_hotbar_slot_button_prototype": { "ignored": "(not $touch)" } }
     ]
   },
 
@@ -855,6 +855,10 @@
         "binding_type": "global"
       }
     ]
+  },
+
+  "hud_content_bg": {
+    "type": "panel"
   },
   
   "hud_content": {

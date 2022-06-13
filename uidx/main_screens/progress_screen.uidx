@@ -136,8 +136,8 @@
     "controls": [
       { "main_bg@java_gui_common.options_background": { "layer": -5 } },
       { "title_panel@progress_dx.title_stack_panel": {} },
-      { "cancel_button@progress_dx.cancel_button": { "offset": [ 0, -56 ] } },
-      { "popup_dialog_factory@progress.popup_dialog_factory": {} },
+      { "cancel_button@progress_dx.cancel_button": { "offset": [ 0, -28 ] } },
+      { "popup_dialog_factory@progress_dialog_dx.popup_dialog_factory": {} },
       { "gamepad_helpers@progress_dx.gamepad_helpers": {} }
     ]
   },
@@ -218,7 +218,7 @@
     "controls": [
       { "main_bg@java_gui_common.options_background": { "layer": -5 } },
       { "title_realms_panel@progress_dx.title_realms_panel": {} },
-      { "popup_dialog_factory@progress.popup_dialog_factory": {} },
+      { "popup_dialog_factory@progress_dialog_dx.popup_dialog_factory": {} },
       { "gamepad_helpers@progress_dx.gamepad_helpers": {} }
     ]
   },
@@ -261,7 +261,7 @@
     "layer": 4,
     "controls": [
       { "title_dimension_panel@progress_dx.title_dimension_panel": {} },
-      { "popup_dialog_factory@progress.popup_dialog_factory": {} },
+      { "popup_dialog_factory@progress_dialog_dx.popup_dialog_factory": {} },
       { "gamepad_helpers@progress_dx.gamepad_helpers": {} }
     ]
   },
@@ -353,7 +353,7 @@
     "controls": [
       { "main_bg@java_gui_common.options_background": { "layer": -5 } },
       { "title_panel@progress_dx.title_saving_panel": {} },
-      { "popup_dialog_factory@progress.popup_dialog_factory": {} }
+      { "popup_dialog_factory@progress_dialog_dx.popup_dialog_factory": {} }
     ]
   },
 

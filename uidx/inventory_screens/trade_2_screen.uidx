@@ -716,7 +716,7 @@
       { 
         "highlight_slot_layer_0@java_gui_common.highlight_slot_red": {
           "size": [ 16, 16 ],
-          "layer": 0,
+          "layer": -6,
           "bindings": [
             {
               "binding_name": "(not #item_valid)",
@@ -731,7 +731,6 @@
       { 
         "highlight_slot_layer_6@java_gui_common.highlight_slot": {
           "size": [ 16, 16 ],
-          "layer": 6,
           "bindings": [
             {
               "binding_name": "(#item_valid)",
@@ -790,7 +789,7 @@
       { 
         "highlight_slot_layer_0@java_gui_common.highlight_slot_output_red": {
           "size": [ 24, 24 ],
-          "layer": 0,
+          "layer": -6,
           "bindings": [
             {
               "binding_name": "(not #item_valid)",
@@ -805,7 +804,6 @@
       { 
         "highlight_slot_layer_6@java_gui_common.highlight_slot_output": {
           "size": [ 24, 24 ],
-          "layer": 6,
           "bindings": [
             {
               "binding_name": "(#item_valid)",

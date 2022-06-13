@@ -1,4 +1,4 @@
-v1.2.1 [07/06/2022] (1.19 Wild Update Only)
+v1.2.1 [15/06/2022] (1.19 Wild Update Only)
 [Additions]
 [+] More language support: -ja_JP -ko_KR -pt_PT -pt_BR -uk_UA
 [+] Added Copy coordinates tools for chat screen,
@@ -9,7 +9,8 @@ v1.2.1 [07/06/2022] (1.19 Wild Update Only)
     now have moved to desired screen.
 [+] Added tooltip message for darkness effect slider option and notification duration.
 [+] Added Hive Network UI support.
-[+] Added JE toast in sound.
+[+] Added JE toast "in.ogg" sound.
+[+] Added Modal screens for Progress Screen.
 [Changes]
 [*] Updated for v1.19.0 Release and v1.19.10 Beta/Preview Only.
 [*] Changed Pack Icon design.

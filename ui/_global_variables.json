@@ -5,6 +5,7 @@
 
   ////*/ Other Resource Packs Compatibility /*////
   /* By @agentms_*/
+  "$is_java_aspects": false,
   "$is_java_aspects_fidelity": false,
   "$is_java_aspects_performance": false,
   

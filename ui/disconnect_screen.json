@@ -2,6 +2,7 @@
 //(c) Don't use any code design without permission!*/
 {
   "disconnect_screen": {
+    "$is_popup_dialog_in_game": false,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
     "$background_animations": [ ],
@@ -11,6 +12,7 @@
   },
 
   "realms_disconnect_screen": {
+    "$is_popup_dialog_in_game": false,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
     "$background_animations": [ ],
@@ -20,6 +22,7 @@
   },
 
   "realms_warning_screen": {
+    "$is_popup_dialog_in_game": false,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
     "$background_animations": [ ],

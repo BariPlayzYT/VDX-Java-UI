@@ -2,6 +2,7 @@
 //(c) Don't use any code design without permission!*/
 {
   "screen_world_create": {
+    "$is_popup_dialog_in_game": false,
     "load_screen_immediately": true,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
@@ -15,6 +16,7 @@
   },
 
   "screen_template_create": {
+    "$is_popup_dialog_in_game": false,
     "load_screen_immediately": true,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
@@ -28,6 +30,7 @@
   },
 
   "screen_world_edit": {
+    "$is_popup_dialog_in_game": false,
     "load_screen_immediately": true,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
@@ -42,6 +45,7 @@
   },
 
   "screen_controls_and_settings": {
+    "$is_popup_dialog_in_game": false,
     "load_screen_immediately": true,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
@@ -54,6 +58,7 @@
   },
 
   "screen_world_controls_and_settings": {
+    "$is_popup_dialog_in_game": false,
     "load_screen_immediately": true,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
@@ -66,6 +71,7 @@
   },
 
   "screen_realm_controls_and_settings": {
+    "$is_popup_dialog_in_game": false,
     "load_screen_immediately": true,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
@@ -81,6 +87,7 @@
   },
 
   "screen_world_slot_edit": {
+    "$is_popup_dialog_in_game": false,
     "load_screen_immediately": true,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
@@ -103,6 +110,7 @@
   },
 
   "screen_realm_manage": {
+    "$is_popup_dialog_in_game": false,
     "load_screen_immediately": true,
     "$use_loading_bars": false,
     "$screen_animations": [ ],

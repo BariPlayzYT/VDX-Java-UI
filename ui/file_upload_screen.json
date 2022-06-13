@@ -1,5 +1,6 @@
 {
   "file_transmission_screen": {
+    "$is_popup_dialog_in_game": false,
     "$use_loading_bars": false,
     "$screen_animations": [ ],
     "$background_animations": [ ],

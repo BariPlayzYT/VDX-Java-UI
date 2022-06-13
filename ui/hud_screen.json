@@ -20,7 +20,8 @@
         "$background_animations": [ ]
       }
     ],
-    "$screen_content": "hud_dx.hud_content"
+    "$screen_content": "hud_dx.hud_content",
+    "$screen_bg_content": "hud_dx.hud_content_bg"
   },
 
   /* Making Full Hive Server Compatibility (Ignoring some UI elements that are not modified by the server) */

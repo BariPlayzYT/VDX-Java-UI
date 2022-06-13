@@ -23,7 +23,15 @@
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "text": "#version",
-    "bindings": [ { "binding_name": "#version" } ]
+    "bindings": [
+      {
+        "binding_name": "#version"
+      },
+      {
+        "binding_name": "(not #version = 'v1.19.0')",
+        "binding_name_override": "#visible"
+      }
+    ]
   },
 
   "text_panel": {
@@ -34,13 +42,15 @@
     "size": [ "100%-4px", 10 ],
     "controls": [
       { "minecraft_text@start_dx.minecraft_text": { } },
-      {
-        "version_panel": {
-          "type": "panel",
-          "size": [ "100%c-6px", 10 ],
-          "clips_children": true,
-          "controls": [
-            { "version_text@start_dx.version_text": { } }
+      { "version_text@start_dx.version_text": { } },
+      { 
+        "desired_version_text@start_dx.minecraft_text": {
+          "text": "1.19",
+          "bindings": [
+            {
+              "binding_name": "(#version = 'v1.19.0')",
+              "binding_name_override": "#visible"
+            }
           ]
         }
       },

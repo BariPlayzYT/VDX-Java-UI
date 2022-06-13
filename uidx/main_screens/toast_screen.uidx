@@ -250,7 +250,7 @@
       {
         "title@toast_screen_dx.toast_label": {
           "text": "#toast_title",
-          "size": [ "100%", "default" ],
+          "size": [ "100%", 20 ],
           "layer": 2,
           "anchor_from": "top_left",
           "anchor_to": "top_left",
@@ -413,7 +413,7 @@
               "title@toast_screen_dx.toast_label": {
                 "color": [ 0.98, 0.98, 0.0 ],
                 "text": "#toast_title",
-                "size": [ "100%", "default" ],
+                "size": [ "100%", 20 ],
                 "layer": 2,
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",

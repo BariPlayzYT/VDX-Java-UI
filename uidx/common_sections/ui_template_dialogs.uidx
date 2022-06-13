@@ -43,8 +43,53 @@
             },
             { 
               "options_background@java_gui_common.options_background": {
-                "layer": -10,
-                "ignored": "(not $is_pregame)"
+                "layer": -10
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "modal_dialog_popup_in_game@popup_dialog.modal_dialog_popup": {
+    "size": [ "100%", "100%" ],
+    "variables": [
+      {
+        "requires": "$three_buttons_visible",
+        "$button_panel": "common_dialogs_dx.three_buttons_panel"
+      },
+      {
+        "requires": "$destructive_three_buttons_visible",
+        "$button_panel": "common_dialogs_dx.destructive_three_buttons_panel"
+      },
+      {
+        "requires": "$two_buttons_visible",
+        "$button_panel": "common_dialogs_dx.two_buttons_panel"
+      },
+      {
+        "requires": "$destructive_two_buttons_visible",
+        "$button_panel": "common_dialogs_dx.destructive_two_buttons_panel"
+      },
+      {
+        "requires": "$single_button_visible",
+        "$button_panel": "common_dialogs_dx.single_button_panel"
+      },
+      {
+        "requires": "$no_buttons_visible",
+        "$button_panel": "common.empty_panel"
+      }
+    ],
+    "controls": [
+      {
+        "modal_input@popup_dialog.modal_input_panel": {
+          "layer": 500,
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "modal_bg_buttons@common_dialogs_dx.modal_dialog_with_buttons": {
+                "$visibility_source_control_name|default": "modal_bg_buttons",
+                "layer": 2
               }
             }
           ]
@@ -60,18 +105,24 @@
     "controls": [
       {
         "main_bg_panel": {
-          "ignored": "(not $is_pregame)",
           "type": "image",
           "layer": -12,
           "texture": "textures/uidx/global/color_base",
           "color": [ 0.0, 0.0, 0.0 ],
           "fill": true
         }
-      },
+      }
+    ]
+  },
+
+  "modal_dialog_popup_bg_in_game": {
+    "type": "panel",
+    "layer": 495,
+    "size": [ "100%", "100%" ],
+    "controls": [
       { 
         "bg_world@java_gui_common.screen_background": {
-          "layer": -12,
-          "ignored": "$is_pregame"
+          "layer": -12
         }
       }
     ]

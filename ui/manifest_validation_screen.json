@@ -1,5 +1,6 @@
 {
   "manifest_validation_screen": {
+    "$is_popup_dialog_in_game": false,
     "force_render_below": false,
     "$use_loading_bars": false,
     "$screen_animations": [ ],

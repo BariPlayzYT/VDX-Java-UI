@@ -660,7 +660,7 @@
         "reset_button@common_buttons_dx.main_button_150": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "enabled": "$is_pregame",
+          "ignored": "(not $is_pregame)",
           "$pressed_button_name": "button.reset_settings",
           "$button_text": "options.resetSettings",
           "property_bag": {
@@ -670,8 +670,20 @@
       },
       {
         "null_navigation_tab@settings_dx.null_navigation_tab": {
+          "ignored": "(not $is_pregame)",
           "anchor_from": "top_right",
           "anchor_to": "top_right",
+          "layer": 4
+        }
+      },
+      {
+        "null_navigation_tab_in_game@settings_dx.null_navigation_tab": {
+          "ignored": "($is_pregame)",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "$unchecked_control": "common_buttons_dx.200_default",
+          "$unchecked_hover_control": "common_buttons_dx.200_hover",
+          "size": [ 200, 20 ],
           "layer": 4
         }
       }

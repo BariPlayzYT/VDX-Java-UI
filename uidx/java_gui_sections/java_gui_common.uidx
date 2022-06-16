@@ -63,7 +63,7 @@
     "size": [ 26, 26 ]
   },
 
-  /*//// Highlight ////*/
+  /*//// Highlight Slot ////*/
 
   "highlight_slot": {
     "type": "image",
@@ -71,29 +71,17 @@
     "size": [ 16, 16 ]
   },
 
-  "highlight_slot_red@java_gui_common.highlight_slot": {
-    "texture": "textures/uidx/highlight/highlight_slot_red"
-  },
-
   "highlight_slot_output@java_gui_common.highlight_slot": {
     "texture": "textures/uidx/highlight/highlight_slot_output",
     "size": [ 24, 24 ]
   },
 
-  "highlight_slot_output_red@java_gui_common.highlight_slot": {
-    "texture": "textures/uidx/highlight/highlight_slot_output_red",
-    "size": [ 24, 24 ]
-  },
+  /*//// Cell Slot Red ////*/
 
   "cell_red_slot": {
     "type": "image",
     "texture": "textures/uidx/highlight/cell_red_slot",
     "size": [ 16, 16 ]
-  },
-
-  "cell_red_slot_output@java_gui_common.cell_red_slot": {
-    "texture": "textures/uidx/highlight/cell_red_slot_output",
-    "size": [ 24, 24 ]
   },
 
   "cell_red_slot_overlay": {
@@ -102,10 +90,28 @@
     "size": [ 16, 16 ]
   },
 
+  "cell_red_slot_output@java_gui_common.cell_red_slot": {
+    "texture": "textures/uidx/highlight/cell_red_slot_output",
+    "size": [ 24, 24 ]
+  },
+
   "cell_red_slot_output_overlay@java_gui_common.cell_red_slot": {
     "texture": "textures/uidx/highlight/cell_red_slot_output_overlay",
     "size": [ 24, 24 ]
   },
+
+  /*//// Highlight Slot Red ////*/
+
+  "highlight_slot_red@java_gui_common.highlight_slot": {
+    "texture": "textures/uidx/highlight/highlight_slot_red"
+  },
+
+  "highlight_slot_output_red@java_gui_common.highlight_slot": {
+    "texture": "textures/uidx/highlight/highlight_slot_output_red",
+    "size": [ 24, 24 ]
+  },
+
+  /*//// Highlight Slot Furnace ////*/
 
   "cell_furnace_slot": {
     "type": "image",
@@ -116,6 +122,63 @@
   "cell_furnace_slot_output@java_gui_common.cell_furnace_slot": {
     "texture": "textures/uidx/highlight/cell_furnace_slot_output",
     "size": [ 24, 24 ]
+  },
+
+  /*//// Highlight New (For Mixed UI) ////*/
+
+  "highlight_slot_new": {
+    "type": "image",
+    "texture": "textures/uidx/highlight_new/highlight_slot",
+    "size": [ 16, 16 ],
+    "controls": [
+      {
+        "highlight_slot_border": {
+          "type": "image",
+          "layer": 2,
+          "texture": "textures/uidx/highlight_new/highlight_slot_border",
+          "size": [ 18, 18 ]
+        }
+      }
+    ]
+  },
+
+  "highlight_slot_new_output@java_gui_common.highlight_slot": {
+    "texture": "textures/uidx/highlight_new/highlight_slot_output",
+    "size": [ 24, 24 ],
+    "controls": [
+      {
+        "highlight_slot_output_border": {
+          "type": "image",
+          "layer": 2,
+          "texture": "textures/uidx/highlight_new/highlight_slot_output_border",
+          "size": [ 26, 26 ]
+        }
+      }
+    ]
+  },
+
+  /*//// Highlight New (For Mixed UI) ////*/
+
+  "cell_red_slot_new": {
+    "type": "image",
+    "texture": "textures/uidx/highlight_new/cell_red_slot",
+    "size": [ 16, 16 ]
+  },
+
+  "cell_red_slot_new_output@java_gui_common.cell_red_slot": {
+    "texture": "textures/uidx/highlight_new/cell_red_slot_output",
+    "size": [ 24, 24 ]
+  },
+
+  /*//// Warning (For Mixed UI) ////*/
+
+  "warning_icon": {
+    "type": "image",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 1, 1 ],
+    "texture": "textures/uidx/highlight_new/warning_icon",
+    "size": [ 8, 8 ]
   },
 
   /*//// Inventory ////*/

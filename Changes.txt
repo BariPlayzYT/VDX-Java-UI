@@ -1,4 +1,4 @@
-v1.2.1 [15/06/2022] (1.19 Wild Update Only)
+v1.2.1 [19/06/2022] (1.19 Wild Update Only)
 [Additions]
 [+] More language support: -ja_JP -ko_KR -pt_PT -pt_BR -uk_UA
 [+] Added Copy coordinates tools for chat screen,
@@ -14,9 +14,12 @@ v1.2.1 [15/06/2022] (1.19 Wild Update Only)
 [Changes]
 [*] Updated for v1.19.0 Release and v1.19.10 Beta/Preview Only.
 [*] Changed Pack Icon design.
+[*] Start Screen will now be 90% accurate in layout like Java Edition.
+[*] Fixed a UI issue when the screen has base pixel height less than 216, especially adapted for mobile devices.
+[*] Touch inventory buttons (Close and quick place mode) size value now is 20x (before 16x).
 [*] Changed position coordinates text bg to match Java Edition Debug appearance.
 [*] Updated black button textures.
-[*] Added 1.19 new accesibility options.
+[*] Added 1.19 new accessibility options.
 [*] The recipe book for 2x2 crafting now has a desired max page numbers.
 [*] Updated Chat Screen.
 [*] Updated Main Realms Screen and Realms World Slots to match Java Edition UI layout.

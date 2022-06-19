@@ -176,6 +176,8 @@
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "$place_holder_control": "common_dx.text_edit_box_place_holder_label",
+          "constrain_to_rect": false,
+          "max_length": 500,
           "controls": [
             { "custom_panel@common_dx.custom_text_edit_panel": { } }
           ],
@@ -424,10 +426,6 @@
     "$text_edit_visible_binding_collection_name": "book_pages",
     "$text_edit_visible_binding_type|default": "collection",
     "$enable_profanity_filter": true
-  },
-
-  "text_edit_hover_image@book.text_edit_hover_image": {
-    "size": [ "100%+2px", "100%+2px" ]
   },
 
   /*//// Buttons ////*/

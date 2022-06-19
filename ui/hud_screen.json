@@ -81,14 +81,10 @@
   },
 
   "hud_content": {
-    "modifications": [
-      {
-        "array_name": "controls",
-        "operation": "insert_front",
-        "value": [
-          { "root_panel_for_hive@hud_dx.root_panel_for_hive": { } }
-        ]
-      }
+    "controls": [
+      { "root_panel_for_hive@hud_dx.root_panel_for_hive": { } },
+      { "root_panel@hud.root_panel": {} },
+      { "camera_renderer@camera_renderer": {} }
     ]
   }
 } 

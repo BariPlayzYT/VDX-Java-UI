@@ -73,8 +73,7 @@
               }
             },
             {
-              "more_world_options_button@create_world_dx.more_world_options_button": {
-                "$button_text": "createWorldScreen.advanced",
+              "world_advanced_button@create_world_dx.world_advanced_button": {
                 "$unchecked_control": "common_buttons_dx.98_default",
                 "$unchecked_hover_control": "common_buttons_dx.98_hover",
 

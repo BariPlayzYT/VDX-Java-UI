@@ -30,8 +30,8 @@
         "normal_place_tab@common_touch_dx.normal_place_tab": {
           "anchor_from": "top_right",
           "anchor_to": "top_right",
-          "offset": [ 20, 28 ],
-          "size": [ 16, 16 ],
+          "offset": [ 24, 32 ],
+          "size": [ 20, 20 ],
           "bindings": [
             {
               "binding_type": "view",
@@ -46,8 +46,8 @@
         "auto_place_tab@common_touch_dx.auto_place_tab": {
           "anchor_from": "top_right",
           "anchor_to": "top_right",
-          "offset": [ 20, 28 ],
-          "size": [ 16, 16 ],
+          "offset": [ 24, 32 ],
+          "size": [ 20, 20 ],
           "bindings": [
             {
               "binding_type": "view",
@@ -62,7 +62,7 @@
   },
 
   "mode_toggle@common_toggles_dx.toggle_panel": {
-    "size": [ 16, 16 ],
+    "size": [ 20, 20 ],
     "$toggle_name": "mode_toggle",
 
     "$unchecked_control": "common_buttons_dx.black_button_default",

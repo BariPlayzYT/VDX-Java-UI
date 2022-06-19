@@ -186,17 +186,16 @@
             },
             {
               "content": {
-                "type": "panel",
-                "size": [ 194, 36 ],
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ "100%-4px", 32 ],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
+                "offset": [ 2, 2 ],
                 "controls": [
                   {
                     "icon_image@resource_packs.icon_image": {
                       "layer": 3,
-                      "anchor_from": "top_left",
-                      "anchor_to": "top_left",
-                      "offset": [ 2, 2 ],
                       "size": [ 32, 32 ],
                       "texture": "$default_item_texture",
                       "texture_file_system": "$default_item_file_system",
@@ -218,26 +217,39 @@
                     }
                   },
                   {
-                    "pack_name_label@common_dx.global_label": {
-                      "layer": 3,
-                      "anchor_from": "top_left",
-                      "anchor_to": "top_left",
-                      "offset": [ 36, 2 ],
-                      "size": [ 155, 10 ],
-                      "shadow": true,
-                      "text": "$default_pack_name"
+                    "padding": {
+                      "type": "panel",
+                      "size": [ 2, "100%" ]
                     }
                   },
                   {
-                    "pack_description_label@common_dx.global_label": {
-                      "layer": 3,
-                      "anchor_from": "top_left",
-                      "anchor_to": "top_left",
-                      "offset": [ 36, 13 ],
-                      "size": [ 155, 20 ],
-                      "shadow": true,
-                      "color": [ 0.5, 0.5, 0.5 ],
-                      "text": "$default_pack_description"
+                    "text_panel": {
+                      "type": "panel",
+                      "size": [ "fill", "100%" ],
+                      "controls": [
+                        {
+                          "pack_name_label@common_dx.global_label": {
+                            "size": [ "100%", 10 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "shadow": true,
+                            "layer": 5,
+                            "text": "$default_pack_name"
+                          }
+                        },
+                        {
+                          "pack_description_label@common_dx.global_label": {
+                            "size": [ "100%", 20 ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "offset": [ 0, 11 ],
+                            "shadow": true,
+                            "layer": 5,
+                            "color": [ 0.5, 0.5, 0.5 ],
+                            "text": "$default_pack_description"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -545,7 +557,7 @@
             },
             {
               "selected_pack_direction_buttons@resource_packs.input_button_panel": {
-                "size": [ 194, 36 ],
+                "size": [ "100%", 36 ],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "controls": [
@@ -629,7 +641,7 @@
         "content": {
           "type": "stack_panel",
           "orientation": "horizontal",
-          "size": [ 189, 32 ],
+          "size": [ "100%-4px", 32 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [ 2, 2 ],
@@ -735,52 +747,33 @@
   /*//// Middle Content ////*/
 
   "resource_pack_middle_content": {
-    "type": "stack_panel",
+    "type": "panel",
     "size": [ "100%", "100%" ],
-    "orientation": "horizontal",
     "controls": [
       {
         "padding_left": {
-          "type": "panel",
-          "size": [ "fill", "100%" ],
+          "type": "stack_panel",
+          "size": [ "100%", "100%" ],
+          "max_size": [ 408, "100%" ], //408
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "orientation": "horizontal",
           "controls": [
+            { "middle_panel_left@common_menus_dx.middle_panel": { "size": [ "fill", "100%" ] } },
             { 
-              "bg@$bg": {
-                "size": [ "100%", "100%" ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left"
+              "padding_middle": {
+                "type": "panel",
+                "size": [ 8, "100%" ],
+                "controls": [
+                  { 
+                    "bg@$bg": {
+                      "size": [ "100%", "100%" ]
+                    }
+                  }
+                ]
               }
-            }
-          ]
-        }
-      },
-      { "middle_panel_left@common_menus_dx.middle_panel": { "size": [ 200, "100%" ] } },
-      { 
-        "padding_middle": {
-          "type": "panel",
-          "size": [ 8, "100%" ],
-          "controls": [
-            { 
-              "bg@$bg": {
-                "size": [ "100%", "100%" ]
-              }
-            }
-          ]
-        }
-      },
-      { "middle_panel_right@common_menus_dx.middle_panel": { "size": [ 200, "100%" ] , "$scrolling_content": "$scrolling_content_right" } },
-      {
-        "padding_right": {
-          "type": "panel",
-          "size": [ "fill", "100%" ],
-          "controls": [
-            {
-              "bg@$bg": {
-                "size": [ "100%", "100%" ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left"
-              }
-            }
+            },
+            { "middle_panel_right@common_menus_dx.middle_panel": { "size": [ "fill", "100%" ] , "$scrolling_content": "$scrolling_content_right" } }
           ]
         }
       }

@@ -189,13 +189,6 @@
         }
       },
       { "furnace_panel@furnace_dx.furnace_panel": { } }
-    ],
-    "bindings": [
-      {
-        "binding_type": "global",
-        "binding_name": "(not #is_creative_mode)",
-        "binding_name_override": "#visible"
-      }
     ]
   },
 

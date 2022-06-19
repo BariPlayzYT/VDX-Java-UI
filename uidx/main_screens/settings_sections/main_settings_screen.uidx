@@ -242,9 +242,9 @@
 
   "panel_content": {
     "type": "panel",
-    "anchor_from": "top_middle",
-    "anchor_to": "top_middle",
-    "offset": [ 0, "12%" ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -66 ],
     "size": [ 310, 146 ],
     "controls": [
       /* Top Buttons */
@@ -395,16 +395,6 @@
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right"
         }
-      },
-      /* Done Button */
-      { 
-        "done_button@common_buttons_dx.main_button_200": {
-          "offset": [ 0, 180 ],
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "$pressed_button_name": "button.menu_exit",
-          "$button_text": "gui.done"
-        }
       }
     ]
   },
@@ -517,7 +507,40 @@
       { "extra_buttons_panel@settings_dx.extra_buttons": {} },
       { "text_panel@settings_dx.text_panel": { } },
       { "options_label@settings_dx.options_label": { } },
-      { "panel_content@settings_dx.panel_content": { } }
+      {
+        "main_content": {
+          "type": "panel",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [ "100%", "100%" ],
+          "min_size": [ "100%", 240 ],
+          "max_size": [ "100%", 272 ],
+          "controls": [
+            { "panel_content@settings_dx.panel_content": { } }
+          ]
+        }
+      },
+      {
+        "main_button_content": {
+          "type": "panel",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [ "100%", "100%" ],
+          "max_size": [ "100%", 272 ],
+          "controls": [
+            /* Done Button */
+            { 
+              "done_button@common_buttons_dx.main_button_200": {
+                "offset": [ 0, -14 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "$pressed_button_name": "button.menu_exit",
+                "$button_text": "gui.done"
+              }
+            }
+          ]
+        }
+      }
     ]
   },
 

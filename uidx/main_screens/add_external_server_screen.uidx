@@ -14,9 +14,23 @@
     "type": "stack_panel",
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
-    "offset": [ 0, 52 ],
-    "size": [ 202, "100%c" ],
+    "size": [ 202, "100%" ],
+    "max_size": [ 202, 230 ],
     "controls": [
+      {
+        "header": {
+          "type": "panel",
+          "size": [ "100%", "fill" ],
+          "controls": [
+            { 
+              "options_label@add_external_server_dx.title_label": {
+                "offset": [ 0, "36.56846154%" ],
+                "layer": 2
+              }
+            }
+          ]
+        }
+      },
       {
         "panel_0": {
           "type": "panel",
@@ -33,14 +47,6 @@
                 "$text_box_name": "#name_text_box"
               }
             }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "page_2_tab_toggle",
-              "source_property_name": "(not #toggle_state)",
-              "target_property_name": "#visible"
-            }
           ]
         }
       },
@@ -52,61 +58,24 @@
           "controls": [
             {
               "option_text_edit_1@settings_common_dx.option_text_edit": {
-                "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
+                "size" : [ "100%-54px", 35 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
                 "$option_label": "addExternalServerScreen.ipTextBoxLabel",
                 "$option_place_holder_text": "",
                 "$option_binding_name": "#ip_text_box_content",
                 "$text_box_name": "#ip_text_box"
               }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "page_2_tab_toggle",
-              "source_property_name": "(not #toggle_state)",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "panel_2": {
-          "type": "panel",
-          "size": [ 202, 41 ],
-          "$max_text_edit_length": 6,
-          "controls": [
+            },
             {
               "option_text_edit_2@settings_common_dx.option_text_edit": {
-                "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
+                "size" : [ 50, 35 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
                 "$option_label": "addExternalServerScreen.portTextBoxLabel",
                 "$option_binding_name": "#port_text_box_content",
                 "$text_box_name": "#port_text_box"
               }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "page_2_tab_toggle",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "panel_3": {
-          "type": "panel",
-          "size": [ 202, 39 ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "page_2_tab_toggle",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
             }
           ]
         }
@@ -172,7 +141,7 @@
       {
         "panel_5": {
           "type": "panel",
-          "size": [ 202, 20 ],
+          "size": [ 202, 32 ],
           "controls": [
             {
               "cancel_button@common_buttons_dx.main_button_200": {
@@ -210,50 +179,6 @@
     "type": "panel",
     "controls": [
       { "options_background@java_gui_common.options_background": { "layer": -10, "ignored": "(not $is_holographic)" } },
-      { "options_label@add_external_server_dx.title_label": { "layer": 2 } },
-      {
-        "page_navigation_panel": {
-          "type": "panel",
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [ 0, 52 ],
-          "size": [ 202, 166 ],
-          "controls": [
-            {
-              "page_1_tab@settings_dx.button_tab": {
-                "size": [ 20, 20 ],
-                "$unchecked_control": "common_buttons_dx.20_default",
-                "$checked_control": "common_buttons_dx.20_locked",
-                "$unchecked_hover_control": "common_buttons_dx.20_hover",
-                "$checked_hover_control": "common_buttons_dx.20_locked",
-                "$button_text": "<",
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "offset": [ -22, 14 ],
-                "$toggle_name": "external_server_page_tab",
-                "$tab_view_binding_name": "page_1_tab_toggle",
-                "$toggle_group_forced_index": 0
-              }
-            },
-            {
-              "page_2_tab@settings_dx.button_tab": {
-                "size": [ 20, 20 ],
-                "$unchecked_control": "common_buttons_dx.20_default",
-                "$checked_control": "common_buttons_dx.20_locked",
-                "$unchecked_hover_control": "common_buttons_dx.20_hover",
-                "$checked_hover_control": "common_buttons_dx.20_locked",
-                "$button_text": ">",
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "offset": [ 22, 14 ],
-                "$toggle_name": "external_server_page_tab",
-                "$tab_view_binding_name": "page_2_tab_toggle",
-                "$toggle_group_forced_index": 1
-              }
-            }
-          ]
-        }
-      },
       { "panel_content@add_external_server_dx.panel_content": { "layer": 2 } },
       { "options_background@java_gui_common.options_background": { "layer": -10, "ignored": "$is_holographic"  } }
     ]

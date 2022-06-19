@@ -329,7 +329,6 @@
       "type": "panel",
       "anchor_from": "top_middle",
       "anchor_to": "top_middle",
-      "offset": [ 0, 46 ],
       "size": [ 310, 159 ],
       "controls": [
         {
@@ -423,11 +422,10 @@
       ]
     },
 
-    "panel_content": {
+    "main_content": {
       "type": "panel",
       "anchor_from": "top_middle",
       "anchor_to": "top_middle",
-      "offset": [ 0, 46 ],
       "size": [ 202, 159 ],
       "controls": [
         {
@@ -693,20 +691,73 @@
       ]
     },
 
-    "more_world_options_screen_panel": {
-      "type": "panel",
+    "panel_content": {
+      "type": "stack_panel",
+      "anchor_from": "top_middle",
+      "anchor_to": "top_middle",
+      "size": [ 310, "100%" ],
+      "max_size": [ 310, 237 ],
       "controls": [
-        { "options_label@create_world_dx.title_label": { "layer": 2, "ignored": "$is_edit_screen" } },
-        { "options_label_edit@edit_world_dx.title_label": { "layer": 2, "ignored": "(not $is_edit_screen)" } },
-        { "more_world_options_panel_content@create_world_dx.more_world_options_panel_content": { "layer": 2 } },
-        { "bottom_panel_content@create_world_dx.bottom_panel_content": { "layer": 2 } }
+        {
+          "header": {
+            "type": "panel",
+            "size": [ "100%", "fill" ],
+            "controls": [
+              { 
+                "options_label@create_world_dx.title_label": {
+                  "offset": [ 0, "41.30434783%" ],
+                  "layer": 2
+                }
+              }
+            ]
+          }
+        },
+        {
+          "options": {
+            "type": "panel",
+            "size": [ "100%", 159 ],
+            "controls": [
+              { 
+                "main_content@create_world_dx.main_content": {
+                  "layer": 2,
+                  "bindings": [
+                    {
+                      "binding_type": "view",
+                      "source_control_name": "more_world_options_button_toggle",
+                      "source_property_name": "(not #toggle_state)",
+                      "target_property_name": "#visible"
+                    }
+                  ]
+                }
+              },
+              { 
+                "more_world_options_panel_content@create_world_dx.more_world_options_panel_content": {
+                  "layer": 2,
+                  "bindings": [
+                    {
+                      "binding_type": "view",
+                      "source_control_name": "more_world_options_button_toggle",
+                      "source_property_name": "#toggle_state",
+                      "target_property_name": "#visible"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "bottom_padding": {
+            "type": "panel",
+            "size": [ "100%", 32 ]
+          }
+        }
       ]
     },
 
     "main_screen_panel": {
       "type": "panel",
       "controls": [
-        { "options_label@create_world_dx.title_label": { "layer": 2 } },
         { "panel_content@create_world_dx.panel_content": { "layer": 2 } },
         { "bottom_panel_content@create_world_dx.bottom_panel_content": { "layer": 2 } }
       ]
@@ -803,7 +854,38 @@
               },
               {
                 "binding_type": "view",
-                "source_control_name": "more_world_options_button_toggle",
+                "source_control_name": "world_advanced_button_toggle",
+                "source_property_name": "(not #toggle_state)",
+                "target_property_name": "#visible"
+              },
+              {
+                "binding_type": "view",
+                "source_control_name": "resource_packs_button_toggle",
+                "source_property_name": "(not #toggle_state)",
+                "target_property_name": "#visible"
+              },
+              {
+                "binding_type": "view",
+                "source_control_name": "behavior_packs_button_toggle",
+                "source_property_name": "(not #toggle_state)",
+                "target_property_name": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "edit_control@edit_world_dx.edit_screen_panel": {
+            "ignored": "(not $is_edit_screen)",
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "gamerule_button_toggle",
+                "source_property_name": "(not #toggle_state)",
+                "target_property_name": "#visible"
+              },
+              {
+                "binding_type": "view",
+                "source_control_name": "world_advanced_button_toggle",
                 "source_property_name": "(not #toggle_state)",
                 "target_property_name": "#visible"
               },
@@ -835,86 +917,13 @@
           }
         },
         {
-          "edit_control@edit_world_dx.edit_screen_panel": {
-            "ignored": "(not $is_edit_screen)",
+          "world_advanced@world_advanced_dx.world_advanced_screen_panel": {
             "bindings": [
               {
                 "binding_type": "view",
-                "source_control_name": "gamerule_button_toggle",
-                "source_property_name": "(not #toggle_state)",
-                "target_property_name": "#visible"
-              },
-              {
-                "binding_type": "view",
-                "source_control_name": "more_world_options_button_toggle",
-                "source_property_name": "(not #toggle_state)",
-                "target_property_name": "#visible"
-              },
-              {
-                "binding_type": "view",
-                "source_control_name": "resource_packs_button_toggle",
-                "source_property_name": "(not #toggle_state)",
-                "target_property_name": "#visible"
-              },
-              {
-                "binding_type": "view",
-                "source_control_name": "behavior_packs_button_toggle",
-                "source_property_name": "(not #toggle_state)",
-                "target_property_name": "#visible"
-              }
-            ]
-          }
-        },
-        {
-          "edit_world_advanced@world_advanced_dx.world_advanced_screen_panel": {
-            "$bottom_content": "world_advanced_dx.edit_world_advanced_done_button",
-            "ignored": "(not $is_edit_screen)",
-            "bindings": [
-              {
-                "binding_type": "view",
-                "source_control_name": "more_world_options_button_toggle",
+                "source_control_name": "world_advanced_button_toggle",
                 "source_property_name": "#toggle_state",
                 "target_property_name": "#visible"
-              }
-            ]
-          }
-        },
-        {
-          "more_panel": {
-            "type": "panel",
-            "ignored": "$is_edit_screen",
-            "bindings": [
-              {
-                "binding_type": "view",
-                "source_control_name": "more_world_options_button_toggle",
-                "source_property_name": "#toggle_state",
-                "target_property_name": "#visible"
-              }
-            ],
-            "controls": [
-              {
-                "more_world_options@create_world_dx.more_world_options_screen_panel": {
-                  "bindings": [
-                    {
-                      "binding_type": "view",
-                      "source_control_name": "world_advanced_button_toggle",
-                      "source_property_name": "(not #toggle_state)",
-                      "target_property_name": "#visible"
-                    }
-                  ]
-                }
-              },
-              {
-                "world_advanced@world_advanced_dx.world_advanced_screen_panel": {
-                  "bindings": [
-                    {
-                      "binding_type": "view",
-                      "source_control_name": "world_advanced_button_toggle",
-                      "source_property_name": "#toggle_state",
-                      "target_property_name": "#visible"
-                    }
-                  ]
-                }
               }
             ]
           }

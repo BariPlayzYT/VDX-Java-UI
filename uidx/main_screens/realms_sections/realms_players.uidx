@@ -386,6 +386,7 @@
           "$button_type_panel": "permissions.permission_level_dropdown_state_content",
           "$options_dropdown_toggle_label_binding": "#realm_default_permission_dropdown_toggle_label",
           "$option_enabled_binding_name": "#realm_default_permission_dropdown_enabled",
+          "$dropdown_scroll_content_size": [ "100%", 45 ],
           "$show_option_label": true,
           "$is_world_settings": true,
           "bindings": [

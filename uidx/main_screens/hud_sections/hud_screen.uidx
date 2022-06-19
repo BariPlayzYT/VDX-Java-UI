@@ -433,7 +433,7 @@
       {
         "centered_panel": {
           "type": "stack_panel",
-          "size": [ 182, "100%" ],
+          "size": [ "100%", "100%" ],
           "controls": [
             {
               "fill_panel": {

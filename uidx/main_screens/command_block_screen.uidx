@@ -171,7 +171,7 @@
   "help_text_stack_panel": {
     "type": "stack_panel",
     "size": [ 300, 47 ],
-    "offset": [ 4, 73 ],
+    "offset": [ 4, 35 ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "controls": [
@@ -212,7 +212,7 @@
 
   "show_output_toggle@settings_common_dx.option_toggle_20": {
     "size": [ 20, 20 ],
-    "offset": [ -4, 135 ],
+    "offset": [ -4, 96 ],
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "$toggle_off_text": "O",
@@ -229,7 +229,7 @@
     "controls": [
       {
         "command_input_text@command_block_dx.base_label": {
-          "offset": [ 4, 124 ],
+          "offset": [ 4, 85 ],
           "text": "advMode.previousOutput"
         }
       },
@@ -238,7 +238,7 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "size": [ 278, 22 ],
-          "offset": [ 3, 134 ],
+          "offset": [ 3, 95 ],
           "$pressed_button_name": "unset",
           "controls": [
             { "default@java_gui_common.text_input_java": { "layer": 1 } },
@@ -278,22 +278,11 @@
     "type": "panel",
     "controls": [
       { 
-        "minus_button@common_buttons_dx.main_button_20": {
-          "size": [ 20, 20 ],
-          "offset": [ -4, 14 ],
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
-          "$button_text": "-",
-          "$pressed_button_name": "command_block.input_minimize",
-          "$button_content": "common_buttons_dx.button_label"
-        }
-      },
-      { 
         "command_block_comands_text_large@command_block_dx.command_text_edit_box_base": {
           "enabled_newline": false,
           "$text_edit_clipping_panel_size": [ "100%-8px", "100%-8px" ],
-          "offset": [ 3, 49 ],
-          "size": [ 302, 121 ]
+          "offset": [ 3, 10 ],
+          "size": [ 302, 93 ]
         }
       },
       {
@@ -377,19 +366,8 @@
         "command_block_comands_text@command_block_dx.command_text_edit_box_base": {
           "enabled_newline": false,
           "$text_edit_clipping_panel_size": [ "100%-8px", 10 ],
-          "offset": [ 3, 49 ],
+          "offset": [ 3, 10 ],
           "size": [ 302, 22 ]
-        }
-      },
-      { 
-        "plus_button@common_buttons_dx.main_button_20": {
-          "size": [ 20, 20 ],
-          "offset": [ -4, 14 ],
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
-          "$button_text": "+",
-          "$pressed_button_name": "command_block.input_maximize",
-          "$button_content": "common_buttons_dx.button_label"
         }
       },
       { "help_text_stack_panel@command_block_dx.help_text_stack_panel": {} },
@@ -397,37 +375,18 @@
       { "show_output_toggle@command_block_dx.show_output_toggle": {} },
       { 
         "block_type_option@command_block_dx.block_type_option": {
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [ 0, 165 ]
-        }
-      },
-      { 
-        "condition_mode_option@command_block_dx.condition_mode_option": {
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [ 0, 165 ]
-        }
-      },
-      { 
-        "redstone_mode_option@command_block_dx.redstone_mode_option": {
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
-          "offset": [ 0, 165 ]
-        }
-      },
-      { 
-        "done_button@common_buttons_dx.main_button_150": {
-          "$pressed_button_name": "button.menu_exit",
-          "$button_text": "gui.done",
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left"
         }
       },
       { 
-        "cancel_button@common_buttons_dx.main_button_150": {
-          "$pressed_button_name": "button.menu_leave_screen",
-          "$button_text": "gui.cancel",
+        "condition_mode_option@command_block_dx.condition_mode_option": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+        }
+      },
+      { 
+        "redstone_mode_option@command_block_dx.redstone_mode_option": {
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right"
         }
@@ -443,29 +402,127 @@
 
   /*//// Screen ////*/
 
-  "command_block_screen_content": {
-    "type": "panel",
-    "size": [ 308, 213 ],
+  "main_panel_content": {
+    "type": "stack_panel",
+    "size": [ 308, "100%" ],
+    "max_size": [ 308, 221 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "controls": [
       {
-        "command_block_title@command_block_dx.base_label": {
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "offset": [ 0, 19 ],
-          "text": "commandBlock.genericName",
-          "color": [ 1, 1, 1 ]
+        "header": {
+          "type": "panel",
+          "size": [ "100%", "fill" ],
+          "controls": [
+            {
+              "command_block_title@command_block_dx.base_label": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, 19 ],
+                "text": "commandBlock.genericName",
+                "color": [ 1, 1, 1 ]
+              }
+            },
+            {
+              "normal": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_name": "(not #maximized_input_visible)",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  { 
+                    "plus_button@common_buttons_dx.main_button_20": {
+                      "size": [ 20, 20 ],
+                      "offset": [ -4, 14 ],
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "$button_text": "+",
+                      "$pressed_button_name": "command_block.input_maximize",
+                      "$button_content": "common_buttons_dx.button_label"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "maximized": {
+                "type": "panel",
+                "bindings": [
+                  {
+                    "binding_name": "#maximized_input_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  { 
+                    "minus_button@common_buttons_dx.main_button_20": {
+                      "size": [ 20, 20 ],
+                      "offset": [ -4, 14 ],
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "$button_text": "-",
+                      "$pressed_button_name": "command_block.input_minimize",
+                      "$button_content": "common_buttons_dx.button_label"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
         }
       },
       {
-        "command_input_text@command_block_dx.base_label": {
-          "offset": [ 4, 39 ],
-          "text": "advMode.command"
+        "options": {
+          "type": "panel",
+          "size": [ "100%", 146 ],
+          "controls": [
+            {
+              "command_input_text@command_block_dx.base_label": {
+                "offset": [ 4, 0 ],
+                "text": "advMode.command"
+              }
+            },
+            { "main_options@command_block_dx.main_options": { } },
+            { "maximized_options@command_block_dx.maximized_options": { } }
+          ]
         }
       },
-      { "main_options@command_block_dx.main_options": { } },
-      { "maximized_options@command_block_dx.maximized_options": { } }
+      {
+        "bottom_panel": {
+          "type": "panel",
+          "size": [ "100%", 36 ],
+          "controls": [
+            { 
+              "done_button@common_buttons_dx.main_button_150": {
+                "$pressed_button_name": "button.menu_exit",
+                "$button_text": "gui.done",
+                "offset": [ 0, -8 ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left"
+              }
+            },
+            { 
+              "cancel_button@common_buttons_dx.main_button_150": {
+                "$pressed_button_name": "button.menu_leave_screen",
+                "$button_text": "gui.cancel",
+                "offset": [ 0, -8 ],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "command_block_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "main_panel_content@command_block_dx.main_panel_content": { } }
     ]
   }
 }

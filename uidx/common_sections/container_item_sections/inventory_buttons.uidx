@@ -15,8 +15,8 @@
           "$button_content": "inventory_buttons_dx.close_icon",
           "anchor_from": "top_right",
           "anchor_to": "top_right",
-          "offset": [ 20, 4 ],
-          "size": [ 16, 16 ],
+          "offset": [ 24, 4 ],
+          "size": [ 20, 20 ],
           "bindings": [
             {
               "binding_name": "#close_button_visible",

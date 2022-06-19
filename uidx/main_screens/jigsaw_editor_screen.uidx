@@ -3,6 +3,20 @@
 {
   "namespace": "jigsaw_editor_dx",
 
+  "text_change_toggle@common_toggles.light_text_toggle": {
+    "$unchecked_control": "settings_common_dx.toggle_unchecked",
+    "$checked_control": "settings_common_dx.toggle_checked",
+    "$unchecked_hover_control": "settings_common_dx.toggle_unchecked_hover",
+    "$checked_hover_control": "settings_common_dx.toggle_checked_hover",
+    
+    "$unchecked_locked_control": "settings_common_dx.toggle_unchecked_locked",
+    "$unchecked_locked_hover_control": "settings_common_dx.toggle_unchecked_locked",
+    "$checked_locked_control": "settings_common_dx.toggle_checked_locked",
+    "$checked_locked_hover_control": "settings_common_dx.toggle_checked_locked",
+
+    "$button_content": "settings_common_dx.button_label_with_value"
+  },
+
   "data_item_title_and_toggle": {
     "type": "panel",
     "size": [ 308, 20 ],
@@ -19,12 +33,16 @@
         }
       },
       {
-        "data_toggle@settings_common_dx.option_toggle_240": {
+        "data_toggle@jigsaw_editor_dx.text_change_toggle": {
+          "$toggle_texture_default": "common_buttons_dx.240_default",
+          "$toggle_texture_hover": "common_buttons_dx.240_hover",
+          "$toggle_texture_locked": "common_buttons_dx.240_locked",
+
           "$only_value": true,
           "anchor_from": "top_right",
           "anchor_to": "top_right",
           "size": [ 240, 20 ],
-          "offset": [ -5, 0 ],
+          "offset": [ -4, 0 ],
           "$toggle_off_text": "#joint_type_toggle_text",
           "$toggle_on_text": "#joint_type_toggle_text",
           "$button_text_binding_type": "global",
@@ -74,9 +92,10 @@
     ]
   },
 
-  "jigsaw_editor_content": {
+  "main_panel_content": {
     "type": "panel",
-    "size": [ 308, 230 ],
+    "size": [ 308, "100%" ],
+    "max_size": [ 308, 242 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "$option_binding_name": "unset",
@@ -117,7 +136,7 @@
         "joint_type_title_and_toggle@jigsaw_editor_dx.data_item_title_and_toggle": {
           "offset": [ 0, 150 ],
           "$data_title": "jigsaw.title.joint_type",
-          "$toggle_name": "toggle.joint_type_toggle,",
+          "$toggle_name": "toggle.joint_type_toggle",
           "$toggle_state_binding_name": "#joint_type_toggle_state"
         }
       },
@@ -126,6 +145,7 @@
           "size": [ 150, 20 ],
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
+          "offset": [ -1, -12 ],
           "$button_text": "jigsaw.exit.done",
           "$pressed_button_name": "button.exit_done"
         }
@@ -135,10 +155,18 @@
           "size": [ 150, 20 ],
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
+          "offset": [ -4, -12 ],
           "$button_text": "jigsaw.exit.cancel",
           "$pressed_button_name": "button.menu_exit"
         }
       }
+    ]
+  },
+
+  "jigsaw_editor_content": {
+    "type": "panel",
+    "controls": [
+      { "main_panel_content@jigsaw_editor_dx.main_panel_content": { } }
     ]
   }
 }

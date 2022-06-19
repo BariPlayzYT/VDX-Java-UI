@@ -599,6 +599,21 @@
     ]
   },
 
+  "dropdown_scroll_box": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 10,
+    "texture": "textures/uidx/menus/java_scroll_box"
+  },
+
+  "dropdown_scroll_track": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/uidx/menus/java_scroll_track"
+  },
+
   "main_dropdown@common.dropdown": {
     "$dropdown_content_controls": [
       {
@@ -614,8 +629,8 @@
                 "size": [ "100%-4px", "100%-4px" ],
                 "$scrolling_pane_size": [ "100%", "100%" ],
                 "$scroll_view_port_size": [ "100%-6px", "100%" ],
-                "$scroll_box_image_control": "common_menus_dx.java_scroll_box",
-                "$scroll_track_image_control": "common_menus_dx.java_scroll_track",
+                "$scroll_box_image_control": "settings_common_dx.dropdown_scroll_box",
+                "$scroll_track_image_control": "settings_common_dx.dropdown_scroll_track",
                 "$scroll_size": [ 6, "100%" ],
                 "$show_background": false,
                 "layer": 4,

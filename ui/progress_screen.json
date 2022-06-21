@@ -41,5 +41,10 @@
   "realms_loading_progress_screen": {
     "$screen_bg_content": "progress_dx.main_progress_screen_background",
     "$screen_content": "progress_dx.realms_progress_screen_content"
+  },
+
+  "modal_progress_screen": {
+    "$screen_bg_content": "modal_progress_dx.modal_progress_screen_background",
+    "$screen_content": "modal_progress_dx.modal_progress_screen_content"
   }
 }

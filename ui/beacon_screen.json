@@ -4,6 +4,7 @@
       {
         "requires": "$desktop_screen",
         "$screen_content": "beacon_dx.center_screen",
+        "$screen_center_content": "beacon_dx.no_safezone_center_screen",
         "$screen_bg_content": "beacon_dx.full_screen"
       },
       {

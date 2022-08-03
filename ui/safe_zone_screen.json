@@ -1,6 +1,17 @@
 {
   "safe_zone_screen": {
+    "$is_popup_dialog_in_game": false,
     "controls": [
+      //{ "screen_background@java_gui_common.options_background": { "layer": -10 } },
+      {
+        "main_bg_panel": {
+          "type": "image",
+          "layer": -12,
+          "texture": "textures/uidx/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "fill": true
+        }
+      },
       {
         "safe_zone_bounds_markers": {
           "type": "panel",

@@ -102,7 +102,7 @@
 
   /*//// Stack panels ////*/
   
-  "panel_cotent": {
+  "panel_content": {
     "type": "stack_panel",
     "size": [ 220, "100%c" ],
     "$categorie_shadow": true,
@@ -583,6 +583,7 @@
       {
         "panel_14@start_dx.stacked_row": {
           "ignored": "$education_edition",
+          "$is_last_button": true,
           "controls": [
             {
               "command_blocks_enabled_toggle@settings_common_dx.option_toggle_alt": {
@@ -603,28 +604,6 @@
             }
           ]
         }
-      },
-      {
-        "education_panel@start_dx.stacked_row": {
-          "ignored": "$education_edition",
-          "$is_last_button": true,
-          "controls": [
-            {
-              "education_toggle@settings_common_dx.option_toggle_alt": {
-                "$gamerule_command_text": "Education",
-                "size": [ 220, 20 ],
-                "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
-                "$tts_section_header": "createWorldScreen.cheatSettings",
-                "$option_label": "createWorldScreen.educationtoggle",
-                "$option_binding_name": "#education_toggle",
-                "$option_enabled_binding_name": "#education_toggle_enabled",
-                "$toggle_name": "education_toggle",
-                "$focus_override_right": "FOCUS_OVERRIDE_STOP"
-              }
-            }
-          ]
-        }
       }
     ]
   },
@@ -640,7 +619,7 @@
     "$scroll_view_port_size": [ 256, "100%" ],
     "$top_content_size": [ "100%", 43 ],
     "$top_content": "gamerule_dx.gamerule_label",
-    "$scrolling_content": "gamerule_dx.panel_cotent",
+    "$scrolling_content": "gamerule_dx.panel_content",
     "$bottom_content": "gamerule_dx.done_panel"
   },
 

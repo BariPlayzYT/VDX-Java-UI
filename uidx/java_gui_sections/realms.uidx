@@ -60,6 +60,14 @@
     "texture": "assets/realms/textures/gui/realms/slot_frame"
   },
 
+  /* Slot frame */
+
+  "checkmark": {
+    "type": "image",
+    "size": [ 9, 8 ],
+    "texture": "assets/realms/textures/gui/realms/checkmark"
+  },
+
   /* Cross Player Icon button */
 
   "cross_player_icon_default@realms_java_dx.realms_texture_base": {
@@ -187,32 +195,6 @@
       { "requires": "($restore_icon_resolution = '8x')",  "$realms_uv": [ 0, 224 ], "$realms_uv_size": [ 184, 224 ] },
       { "requires": "($restore_icon_resolution = '16x')", "$realms_uv": [ 0, 448 ], "$realms_uv_size": [ 368, 448 ] },
       { "requires": "($restore_icon_resolution = '32x')", "$realms_uv": [ 0, 896 ], "$realms_uv_size": [ 736, 896 ] }
-    ]
-  },
-
-  /* Question mark button */
-
-  "questionmark_default@realms_java_dx.realms_texture_base": {
-    "texture": "assets/realms/textures/gui/realms/questionmark",
-    "size": [ 20, 20 ],
-    "variables": [
-      { "requires": "($questionmark_resolution = '1x')",  "$realms_uv_size": [ 20, 20 ] },
-      { "requires": "($questionmark_resolution = '2x')",  "$realms_uv_size": [ 40, 40 ] },
-      { "requires": "($questionmark_resolution = '4x')",  "$realms_uv_size": [ 80, 80 ] },
-      { "requires": "($questionmark_resolution = '8x')",  "$realms_uv_size": [ 160, 160 ] },
-      { "requires": "($questionmark_resolution = '16x')", "$realms_uv_size": [ 320, 320 ] },
-      { "requires": "($questionmark_resolution = '32x')", "$realms_uv_size": [ 640, 640 ] }
-    ]
-  },
-
-  "questionmark_hover@realms_java_dx.questionmark_default": {
-    "variables": [
-      { "requires": "($questionmark_resolution = '1x')",  "$realms_uv": [ 20, 0 ],  "$realms_uv_size": [ 20, 20 ] },
-      { "requires": "($questionmark_resolution = '2x')",  "$realms_uv": [ 40, 0 ],  "$realms_uv_size": [ 40, 40 ] },
-      { "requires": "($questionmark_resolution = '4x')",  "$realms_uv": [ 80, 0 ],  "$realms_uv_size": [ 80, 80 ] },
-      { "requires": "($questionmark_resolution = '8x')",  "$realms_uv": [ 160, 0 ], "$realms_uv_size": [ 160, 160 ] },
-      { "requires": "($questionmark_resolution = '16x')", "$realms_uv": [ 320, 0 ], "$realms_uv_size": [ 320, 320 ] },
-      { "requires": "($questionmark_resolution = '32x')", "$realms_uv": [ 640, 0 ], "$realms_uv_size": [ 640, 640 ] }
     ]
   },
 

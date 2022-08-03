@@ -73,7 +73,7 @@
         "durability_bar_hold": {
           "type": "panel",
           "size": [ 16, 16 ],
-          "ignored": "($custom_durability_bar or $is_java_aspects)",
+          "ignored": "($custom_durability_bar or $is_java_aspects_fidelity)",
           "controls": [
             { 
               "durability_bar@common_durability_dx.original_durability_bar": {
@@ -91,7 +91,7 @@
         "custom_durability_bar_hold": {
           "type": "panel",
           "size": [ 16, 16 ],
-          "visible": "($custom_durability_bar or $is_java_aspects)",
+          "visible": "($custom_durability_bar or $is_java_aspects_fidelity)",
           "controls": [
             { "durability_bar@common_durability_dx.durability_bar": { } }
           ]
@@ -110,7 +110,7 @@
         "durability_bar_hold": {
           "type": "panel",
           "size": [ 16, 16 ],
-          "ignored": "($custom_durability_bar or $is_java_aspects)",
+          "ignored": "($custom_durability_bar or $is_java_aspects_fidelity)",
           "controls": [
             { 
               "durability_bar_grabbed@common_durability_dx.original_durability_bar_grabbed": {
@@ -128,7 +128,7 @@
         "custom_durability_bar_hold": {
           "type": "panel",
           "size": [ 16, 16 ],
-          "visible": "($custom_durability_bar or $is_java_aspects)",
+          "visible": "($custom_durability_bar or $is_java_aspects_fidelity)",
           "controls": [
             { 
               "durability_bar_grabbed@common_durability_dx.durability_bar": {

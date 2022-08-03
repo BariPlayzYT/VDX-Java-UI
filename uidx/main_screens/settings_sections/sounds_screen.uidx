@@ -184,19 +184,11 @@
                 "$option_enabled_binding_name": "#sound_volume_enabled",
                 "$label_bindings": [ { "binding_name": "#sound_volume_slider_label" } ]
               }
-            }
-          ]
-        }
-      },
-      {
-        "panel_6": {
-          "type": "panel",
-          "size": [ 310, 25 ],
-          "controls": [
+            },
             {
               "reset_button@common_buttons_dx.main_button_150": {
-                "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
                 "enabled": "$is_pregame",
                 "$pressed_button_name": "button.reset_settings",
                 "$button_text": "options.resetSettings",
@@ -239,7 +231,6 @@
   "sounds_screen_panel": {
     "type": "panel",
     "controls": [
-      { "main_bg_panel@settings_dx.bg_panel": { } },
       { "panel_content@sounds_dx.panel_content": { } }
     ]
   }

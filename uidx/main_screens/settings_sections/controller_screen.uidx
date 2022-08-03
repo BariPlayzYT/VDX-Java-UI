@@ -5,14 +5,24 @@
 
   /*//// Button tab ////*/
   
-  "more_options_button@settings_dx.button_tab": {
+  "joystick_settings_button@settings_dx.button_tab": {
     "size": [ 150, 20 ],
-    "$button_text": "options.controllerSettings",
+    "$button_text": "options.joystick_settings",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "$toggle_name": "gamepad_options",
-    "$tab_view_binding_name": "gamepad_more_toggle",
+    "$tab_view_binding_name": "joystick_settings_toggle",
     "$toggle_group_forced_index": 1
+  },
+  
+  "key_binds_button@settings_dx.button_tab": {
+    "size": [ 150, 20 ],
+    "$button_text": "controls.keybinds",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "$toggle_name": "gamepad_options",
+    "$tab_view_binding_name": "gamepad_key_binds_toggle",
+    "$toggle_group_forced_index": 2
   },
 
   "main_options_button@settings_dx.button_tab": {
@@ -73,8 +83,7 @@
     "size": [ 336, 20 ],
     "controls": [
       {
-        "keymapping_label_control": {
-          "type": "label",
+        "keymapping_label_control@common_dx.global_label": {
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "offset": [ 5, -2 ],
@@ -170,7 +179,7 @@
     ]
   },
 
-  "more_stack_panel": {
+  "joystick_settings_stack_panel": {
     "type": "stack_panel",
     "orientation": "vertical",
     "anchor_from": "top_middle",
@@ -219,7 +228,7 @@
           "size": [ 310, 25 ],
           "controls": [
             {
-              "gamepad_cursor_sensitivity_option_slider@settings_common_dx.option_slider_310": {
+              "gamepad_cursor_sensitivity_option_slider@settings_common_dx.option_slider_150": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "$option_label": "#gamepad_cursor_sensitivity_slider_label",
@@ -234,19 +243,11 @@
                   }
                 ]
               }
-            }
-          ]
-        }
-      },
-      {
-        "panel_2": {
-          "type": "panel",
-          "size": [ 310, 25 ],
-          "controls": [
+            },
             {
-              "option_slider_damen@settings_common_dx.option_slider_310": {
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
+              "option_slider_damen@settings_common_dx.option_slider_150": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
                 "$option_label": "#spyglass_gamepad_dampening_slider_label",
                 "$slider_name": "spyglass_gamepad_dampening",
                 "$slider_value_binding_name": "#spyglass_gamepad_dampening",
@@ -261,80 +262,6 @@
             }
           ]
         }
-      },
-      {
-        "panel_3": {
-          "type": "panel",
-          "size": [ 310, 25 ],
-          "controls": [
-            {
-              "option_toggle9@settings_common_dx.option_toggle_150": {
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "$option_label": "options.hidetooltips",
-                "$option_binding_name": "#hide_tooltips",
-                "$option_enabled_binding_name": "#hide_tooltips_enabled",
-                "$toggle_name": "hide_tooltips"
-              }
-            },
-            {
-              "option_toggle10@settings_common_dx.option_toggle_150": {
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "$option_label": "options.hidegamepadcursor",
-                "$option_binding_name": "#hide_gamepad_cursor",
-                "$option_enabled_binding_name": "#hide_gamepad_cursor_enabled",
-                "$toggle_name": "hide_gamepad_cursor"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "panel_4": {
-          "type": "panel",
-          "size": [ 310, 25 ],
-          "controls": [
-            {
-              "gamepad_swap_ab@settings_common_dx.option_toggle_150": {
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "$option_label": "options.swapGamepadAB",
-                "$option_binding_name": "#swap_gamepad_ab_buttons",
-                "$option_enabled_binding_name": "#swap_gamepad_ab_buttons_enabled",
-                "$toggle_name": "swap_gamepad_ab_buttons"
-              }
-            },
-            {
-              "gamepad_swap_xy@settings_common_dx.option_toggle_150": {
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "$option_label": "options.swapGamepadXY",
-                "$option_binding_name": "#swap_gamepad_xy_buttons",
-                "$option_enabled_binding_name": "#swap_gamepad_xy_buttons_enabled",
-                "$toggle_name": "swap_gamepad_xy_buttons"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "panel_5": {
-          "type": "panel",
-          "size": [ 310, 25 ],
-          "controls": [
-            {
-              "option_toggle_11@settings_common_dx.option_toggle_150": {
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "$option_label": "options.clearhotbar",
-                "$option_binding_name": "#controller_clear_hotbar",
-                "$option_enabled_binding_name": "#controller_clear_hotbar_enabled",
-                "$toggle_name": "controller_clear_hotbar"
-              }
-            }
-          ]
-        }
       }
     ]
   },
@@ -345,15 +272,114 @@
     "type": "panel",
     "controls": [
       {
-        "main@common_menus_dx.java_edition_menu_panel_template": {
-          "$top_content": "gamepad_dx.controller_top_content",
-          "$top_content_size": [ "100%", 43 ],
-          "$scrolling_content": "gamepad_dx.controller_stack_panel",
-          "$bottom_content": "gamepad_dx.controller_bottom_content",
+        "main": {
+          "type": "panel",
+          "controls": [
+            {
+              "keyboard_and_mouse_label@settings_dx.base_label": {
+                "text": "options.controller",
+                "offset": [ 0, 14 ]
+              }
+            },
+            {
+              "panel": {
+                "type": "panel",
+                "size": [ 310, 116 ],
+                "offset": [ 0, 28 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "controls": [
+                  { "joystick_settings_button@gamepad_dx.joystick_settings_button": { } },
+                  { "key_binds_button@gamepad_dx.key_binds_button": { } },
+                  {
+                    "option_toggle_1@settings_common_dx.option_toggle_150": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 0, 24 ],
+                      "$option_label": "options.autojump",
+                      "$option_binding_name": "#controller_autojump",
+                      "$option_enabled_binding_name": "#controller_autojump_enabled",
+                      "$toggle_name": "controller_autojump"
+                    }
+                  },
+                  {
+                    "option_toggle_11@settings_common_dx.option_toggle_150": {
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "offset": [ 0, 24 ],
+                      "$option_label": "options.clearhotbar",
+                      "$option_binding_name": "#controller_clear_hotbar",
+                      "$option_enabled_binding_name": "#controller_clear_hotbar_enabled",
+                      "$toggle_name": "controller_clear_hotbar"
+                    }
+                  },
+                  {
+                    "gamepad_swap_ab@settings_common_dx.option_toggle_150": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 0, 48 ],
+                      "$option_label": "options.swapGamepadAB",
+                      "$option_binding_name": "#swap_gamepad_ab_buttons",
+                      "$option_enabled_binding_name": "#swap_gamepad_ab_buttons_enabled",
+                      "$toggle_name": "swap_gamepad_ab_buttons"
+                    }
+                  },
+                  {
+                    "gamepad_swap_xy@settings_common_dx.option_toggle_150": {
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "offset": [ 0, 48 ],
+                      "$option_label": "options.swapGamepadXY",
+                      "$option_binding_name": "#swap_gamepad_xy_buttons",
+                      "$option_enabled_binding_name": "#swap_gamepad_xy_buttons_enabled",
+                      "$toggle_name": "swap_gamepad_xy_buttons"
+                    }
+                  },
+                  {
+                    "option_toggle9@settings_common_dx.option_toggle_150": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [ 0, 72 ],
+                      "$option_label": "options.hidetooltips",
+                      "$option_binding_name": "#hide_tooltips",
+                      "$option_enabled_binding_name": "#hide_tooltips_enabled",
+                      "$toggle_name": "hide_tooltips"
+                    }
+                  },
+                  {
+                    "option_toggle10@settings_common_dx.option_toggle_150": {
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "offset": [ 0, 72 ],
+                      "$option_label": "options.hidegamepadcursor",
+                      "$option_binding_name": "#hide_gamepad_cursor",
+                      "$option_enabled_binding_name": "#hide_gamepad_cursor_enabled",
+                      "$toggle_name": "hide_gamepad_cursor"
+                    }
+                  },
+                  {
+                    "null_navigation_tab@settings_dx.null_navigation_tab": {
+                      "$unchecked_control": "common_buttons_dx.200_default",
+                      "$unchecked_hover_control": "common_buttons_dx.200_hover",
+                      "size": [ 200, 20 ],
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
           "bindings": [
             {
               "binding_type": "view",
-              "source_control_name": "gamepad_more_toggle",
+              "source_control_name": "joystick_settings_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "gamepad_key_binds_toggle",
               "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
             }
@@ -361,15 +387,31 @@
         }
       },
       {
-        "more@common_menus_dx.java_edition_menu_panel_template": {
-          "$top_content": "gamepad_dx.more_label",
+        "key_binds@common_menus_dx.java_edition_menu_panel_template": {
+          "$top_content": "gamepad_dx.key_binds_label",
+          "$top_content_size": [ "100%", 20 ],
+          "$scrolling_content": "gamepad_dx.controller_stack_panel",
+          "$bottom_content": "gamepad_dx.key_binds_bottom_content",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "gamepad_key_binds_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "joystick_settings@common_menus_dx.java_edition_menu_panel_template": {
+          "$top_content": "gamepad_dx.joystick_settings_label",
           "$top_content_size": [ "100%", 32 ],
-          "$scrolling_content": "gamepad_dx.more_stack_panel",
+          "$scrolling_content": "gamepad_dx.joystick_settings_stack_panel",
           "$bottom_content": "gamepad_dx.main_options_button",
           "bindings": [
             {
               "binding_type": "view",
-              "source_control_name": "gamepad_more_toggle",
+              "source_control_name": "joystick_settings_toggle",
               "source_property_name": "#toggle_state",
               "target_property_name": "#visible"
             }
@@ -378,45 +420,18 @@
       }
     ]
   },
-
-  "controller_top_content": {
-    "type": "panel",
-    "anchor_from": "top_middle",
-    "anchor_to": "top_middle",
-    "size": [ 310, 62 ],
-    "controls": [
-      {
-        "controller_label@settings_dx.base_label": {
-          "text": "options.controller",
-          "offset": [ 0, 7 ]
-        }
-      },
-      {
-        "panel": {
-          "type": "panel",
-          "size": [ 310, 20 ],
-          "offset": [ 0, 18 ],
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "controls": [
-            { "more_options_button@gamepad_dx.more_options_button": {} },
-            {
-              "option_toggle_1@settings_common_dx.option_toggle_150": {
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "$option_label": "options.autojump",
-                "$option_binding_name": "#controller_autojump",
-                "$option_enabled_binding_name": "#controller_autojump_enabled",
-                "$toggle_name": "controller_autojump"
-              }
-            }
-          ]
-        }
-      }
-    ]
+  
+  "joystick_settings_label@settings_dx.base_label": {
+    "text": "options.joystick_settings.title",
+    "offset": [ 0, 4 ]
+  },
+  
+  "key_binds_label@settings_dx.base_label": {
+    "text": "controls.keybinds.title",
+    "offset": [ 0, 7 ]
   },
 
-  "controller_bottom_content": {
+  "key_binds_bottom_content": {
     "type": "panel",
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
@@ -432,17 +447,15 @@
         }
       },
       {
-        "null_navigation_tab@settings_dx.null_navigation_tab": {
+        "null_navigation_tab@gamepad_dx.main_options_button": {
+          "offset": [ 0, 0 ],
+          "$unchecked_control": "common_buttons_dx.150_default",
+          "$unchecked_hover_control": "common_buttons_dx.150_hover",
           "size": [ 150, 20 ],
           "anchor_from": "top_right",
           "anchor_to": "top_right"
         }
       }
     ]
-  },
-
-  "more_label@settings_dx.base_label": {
-    "text": "options.controllerSettings",
-    "offset": [ 0, 4 ]
   }
 }

@@ -23,6 +23,13 @@
     ]
   },
 
+  "button_label_for_slider@common_dx.global_label": {
+    "shadow": true,
+    "size": [ "default", 10 ],
+    "color": "$text_color",
+    "text": "$button_text"
+  },
+
   "slider_content": {
     "type": "panel",
     "controls": [
@@ -39,7 +46,7 @@
           ],
           "controls": [
             {
-              "option_label_locked@common_buttons_dx.button_label": {
+              "option_label_locked@common_slider_dx.button_label_for_slider": {
                 "layer": 4,
                 "text": "$option_label",
                 "color": "$main_menu_button_locked_color",
@@ -85,7 +92,7 @@
           ],
           "controls": [
             {
-              "option_label_default@common_buttons_dx.button_label": {
+              "option_label_default@common_slider_dx.button_label_for_slider": {
                 "layer": 5,
                 "text": "$option_label",
                 "bindings": "$label_bindings"

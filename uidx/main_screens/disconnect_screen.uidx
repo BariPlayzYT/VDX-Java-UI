@@ -79,8 +79,6 @@
   },
 
   "disconnect_title_text@disconnect_dx.disconnect_screen_text": {
-    "size": [ "default", 20 ],
-    "max_size": [ "100% - 20px", 20 ],
     "text": "#title_text",
     "bindings": [
       {
@@ -110,7 +108,9 @@
           "controls": [
             { 
               "disconnect_title_text@disconnect_dx.disconnect_title_text": {
+                "text_alignment": "center",
                 "size": [ "default", 10 ],
+                "max_size": [ "100% - 20px", 10 ],
                 "shadow": true
               }
             }
@@ -120,16 +120,20 @@
       {
         "padding_0": {
           "type": "panel",
-          "size": [ "100%", 8 ]
+          "size": [ "100%", 9 ]
         }
       },
       {
         "text_panel": {
           "type": "panel",
-          "size": [ "100%", "100%c+8px" ],
+          "size": [ "100%", "100%c+9px" ],
           "controls": [
             { 
               "disconnect_text@disconnect_dx.disconnect_text": {
+                "line_padding": -0.9999,
+                "text_alignment": "center",
+                "size": [ "default", "default" ],
+                "max_size": [ "100% - 54px", "default" ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "color": "$loading_text_color",
@@ -154,9 +158,25 @@
 
   /*///// Screen /////*/
 
+  "disconnect_screen_bg": {
+    "type": "panel",
+    "controls": [
+      {
+        "main_bg_panel": {
+          "type": "image",
+          "layer": -12,
+          "texture": "textures/uidx/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "fill": true
+        }
+      }
+    ]
+  },
+
   "disconnect_screen_content": {
     "type": "panel",
     "controls": [
+      { "main_bg@java_gui_common.options_background": { "layer": -8 } },
       { "main_panel@disconnect_dx.main_panel": {} },
       { "gamepad_helpers@progress_deluxe.gamepad_helpers": {} }
     ]

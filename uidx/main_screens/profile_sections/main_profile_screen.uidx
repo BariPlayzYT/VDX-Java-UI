@@ -7,7 +7,7 @@
 
   "bg_image_base": {
     "type": "image",
-    "texture": "textures/uidx/global/white"
+    "texture": "textures/uidx/global/color_base"
   },
 
   "base_label": {

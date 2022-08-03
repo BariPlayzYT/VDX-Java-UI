@@ -1,3 +1,5 @@
+map.position=Block: %s %s %s
+
 ##  Start
 menu.play=Play Game
 menu.options=Options...
@@ -9,6 +11,17 @@ options.enableChatTextToSpeech=TTS For Chat
 options.enableAutoPlatformTextToSpeech=TTS with Device
 options.enableUITextToSpeech=UI Screen Reader
 options.enableOpenChatMessage=Open Chat Message
+options.darknessEffectModifier=Darkness Pulsing
+options.darknessEffectModifier.message=Controls how much the Darkness effect pulses when a Warden or Sculk Shrieker gives it to you.
+
+##  Controls Settings
+options.mouse_settings=Mouse Settings...
+options.mouse_settings.title=Mouse Settings
+controls.keybinds=Key Binds...
+controls.keybinds.title=Key Binds
+
+options.joystick_settings=Joystick Settings...
+options.joystick_settings.title=Joystick Settings
 
 ##  Video Settings
 options.graphics.fancy.tooltip=Fancy graphics balances performance and quality for the majority of machines. Weather, clouds and particles may not appear behind translucent blocks or water.
@@ -24,6 +37,12 @@ options.renderClouds=Clouds
 options.maxFramerate=Max Framerate
 
 options.fov.toggle=FOV Can Be Altered
+
+options.renderDistance=Render distance
+options.renderDistanceFormat=%s chunks
+options.renderDistanceRecommendedFormat=%s chunks
+
+options.showautosaveicon=Autosave Indicator
 
 options.thirdperson=Perspective
 options.thirdperson.firstperson=1st Person
@@ -88,7 +107,7 @@ inventory.binSlot=Destroy Item
 merchant.deprecated=Villagers restock up to two times per day
 
 ##  Worlds
-selectWorld.tooltip.beta=Don't forget to backup this world before you load it in this beta.
+selectWorld.tooltip.beta=Don't forget to backup this world before you load it in this Beta/Preview.
 
 ##  Realms
 mco.selectServer.popup=Realms is a safe, simple way to enjoy an online Minecraft world with up to ten friends at a time.   It supports loads of minigames and plenty of custom worlds! Only the owner of the realm needs to pay.
@@ -140,13 +159,17 @@ gamerule.category.misc=§lMiscellaneous
 
 ##  Raid Texts Input
 raid.name=Raid	#
-raid.progress=Mobs remaining:	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
 
 ##  Raid Texts Output
 bar.event.raid.name=Raid	#
-bar.event.raid.remaining.2=Raid - Mobs remaining: 2	#
-bar.event.raid.remaining.1=Raid - Mobs remaining: 1	#
-bar.event.raid.remaining.0=Raid - Mobs remaining: 0	#
+bar.event.raid.remaining.2=Raid - Raiders Remaining: 2	#
+bar.event.raid.remaining.1=Raid - Raiders Remaining: 1	#
+bar.event.raid.remaining.0=Raid - Raiders Remaining: 0	#
+bar.event.raid.victory=Raid - Victory	#
+bar.event.raid.defeat=Raid - Defeat	#
 
 ##  Audio Settings
 soundCategory.ambient=Ambient/Environment

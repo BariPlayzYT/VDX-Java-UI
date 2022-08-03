@@ -205,12 +205,22 @@
     "anchor_to": "top_middle",
     "size": [ "100%", "100%" ],
     "alpha": 0.25,
-    "texture": "textures/uidx/global/white"
+    "texture": "textures/uidx/global/color_base"
   },
 
   /*////// Content List Stack Panel  //////*/
 
-  "content_panel": {
+  "right_content_panel": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      { "main_stack_panel@permissions_dx.main_stack_panel": { } }
+    ]
+  },
+
+  "main_stack_panel": {
     "type": "stack_panel",
     "size": [ 220, "100%c" ],
     "controls": [
@@ -252,12 +262,28 @@
         "dropdown_panel": {
           "type": "panel",
           "size": [ "100%", 25 ],
-          "controls": [
+          "controls": [/* 
             {
               "permission_option@permissions_dx.permission_option": {
                 "layer": 4,
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle"
+              }
+            } */
+            {
+              "permission_level_dropdown@settings_common_dx.option_dropdown_220": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$option_dropdown_type": "common.dropdown_no_scrollpanel",
+                "$option_label": "permissions.level",
+                "$dropdown_content": "permissions.permission_level_dropdown_content",
+                "$dropdown_area": "permissions_options_scrolling_panel",
+                "$dropdown_name": "permission_level_dropdown",
+                "$button_type_panel": "permissions.permission_level_dropdown_state_content",
+                "$option_enabled_binding_name": "#can_edit_permissions",
+                "$options_dropdown_toggle_label_binding": "#permission_level_dropdown_label",
+                "$default_focus_precedence": 2,
+                "$focus_override_up": "back_button"
               }
             }
           ]
@@ -363,6 +389,7 @@
                 "color": [ 1.0, 1.0, 1.0 ],
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
+                "text_alignment": "left",
                 "size": [ "100%-46px", "default" ],
                 "layer": 10,
                 "shadow": false,
@@ -446,12 +473,6 @@
     "size": [ "100%", "100%-64px" ],
     "controls": [
       {
-        "left_safezone": {
-          "type": "panel",
-          "size": "$left_horizontal_safezone_size"
-        }
-      },
-      {
         "left_separator": {
           "type": "panel",
           "size": [ 10, "100%" ]
@@ -503,9 +524,10 @@
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "$bg_middle": "java_gui_common.options_background_middle",
-                "$scrolling_content": "permissions_dx.content_panel",
+                "$scrolling_content": "permissions_dx.right_content_panel",
                 "clips_children": true,
                 "$middle_clips_children": true,
+                "$scroll_bar_contained": false,
                 "controls": [
                   { "middle_panel@common_menus_dx.middle_panel": { "layer": 6 } },
                   { "bg@$bg_middle": { "layer": 4 } }
@@ -520,17 +542,27 @@
           "type": "panel",
           "size": [ 10, "100%" ]
         }
-      },
-      {
-        "right_safezone": {
-          "type": "panel",
-          "size": "$right_horizontal_safezone_size"
-        }
       }
     ]
   },
 
   /*////// Screen  //////*/
+
+  "permissions_screen_bg": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "main_bg_panel": {
+          "type": "image",
+          "layer": -12,
+          "texture": "textures/uidx/global/color_base",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "fill": true
+        }
+      }
+    ]
+  },
 
   "permissions_screen_content": {
     "type": "panel",

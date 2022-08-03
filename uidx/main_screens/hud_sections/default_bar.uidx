@@ -76,13 +76,17 @@
 
   "040@CrisXolt_default_bar_dx.bar_control_base": { "$next": "041", "$default_name": "Raid" },
   
-  "041@CrisXolt_default_bar_dx.bar_control_base": { "$next": "042", "$default_name": "Raid - Mobs remaining: 2" },
+  "041@CrisXolt_default_bar_dx.bar_control_base": { "$next": "042", "$default_name": "Raid - Raiders remaining: 2" },
 
-  "042@CrisXolt_default_bar_dx.bar_control_base": { "$next": "043", "$default_name": "Raid - Mobs remaining: 1" },
+  "042@CrisXolt_default_bar_dx.bar_control_base": { "$next": "043", "$default_name": "Raid - Raiders remaining: 1" },
   
-  "043@CrisXolt_default_bar_dx.bar_control_base": { "$next": "044", "$default_name": "Raid - Mobs remaining: 0" },
+  "043@CrisXolt_default_bar_dx.bar_control_base": { "$next": "044", "$default_name": "Raid - Raiders remaining: 0" },
 
-  "044": {
+  "044@CrisXolt_default_bar_dx.bar_control_base": { "$next": "045", "$default_name": "Raid - Victory" },
+  
+  "045@CrisXolt_default_bar_dx.bar_control_base": { "$next": "046", "$default_name": "Raid - Defeat" },
+
+  "046": {
     "type": "panel",
     "controls": [
       { "bar_name@CrisXolt_bars_dx.bar_name": { } },

@@ -174,13 +174,21 @@
                 "size": [ "fill", "100%" ],
                 "controls": [
                   {
-                    "top_text@play.local_world_name": {
+                    "top_text@common_dx.global_label": {
                       "size": [ "100%", 10 ],
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "$text_color": [ 1.0, 1.0, 1.0 ],
                       "shadow": false,
-                      "layer": 5
+                      "layer": 5,
+                      "text": "#local_world_name",
+                      "bindings": [
+                        {
+                          "binding_name": "#local_world_name",
+                          "binding_type": "collection",
+                          "binding_collection_name": "local_worlds"
+                        }
+                      ]
                     }
                   },
                   {
@@ -193,15 +201,22 @@
                       "offset": [ 0, 11 ],
                       "controls": [
                         {
-                          "local_world_name@play.local_world_name": {
+                          "local_world_name@common_dx.global_label": {
                             "size": [ "default", 9 ],
                             "color": [ 0.75, 0.75, 0.75 ],
-                            "layer": 5
+                            "layer": 5,
+                            "text": "#local_world_name",
+                            "bindings": [
+                              {
+                                "binding_name": "#local_world_name",
+                                "binding_type": "collection",
+                                "binding_collection_name": "local_worlds"
+                              }
+                            ]
                           }
                         },
                         {
-                          "label_0": {
-                            "type": "label",
+                          "label_0@common_dx.global_label": {
                             "color": [ 0.75, 0.75, 0.75 ],
                             "layer": 5,
                             "text": " (",
@@ -209,15 +224,22 @@
                           }
                         },
                         {
-                          "local_world_date@play.local_world_date": {
+                          "local_world_date@common_dx.global_label": {
                             "size": [ "default", 9 ],
                             "color": [ 0.75, 0.75, 0.75 ],
-                            "layer": 5
+                            "layer": 5,
+                            "text": "#local_world_date",
+                            "bindings": [
+                              {
+                                "binding_name": "#local_world_date",
+                                "binding_type": "collection",
+                                "binding_collection_name": "local_worlds"
+                              }
+                            ]
                           }
                         },
                         {
-                          "label_0": {
-                            "type": "label",
+                          "label_0@common_dx.global_label": {
                             "color": [ 0.75, 0.75, 0.75 ],
                             "layer": 5,
                             "text": ")",
@@ -237,8 +259,7 @@
                       "offset": [ 0, 20 ],
                       "controls": [
                         {
-                          "label_0": {
-                            "type": "label",
+                          "label_0@common_dx.global_label": {
                             "color": [ 0.75, 0.75, 0.75 ],
                             "layer": 5,
                             "text": "selectWorld.gameMode",
@@ -246,8 +267,7 @@
                           }
                         },
                         {
-                          "label_1": {
-                            "type": "label",
+                          "label_1@common_dx.global_label": {
                             "color": [ 0.75, 0.75, 0.75 ],
                             "layer": 5,
                             "text": ": ",
@@ -255,15 +275,22 @@
                           }
                         },
                         {
-                          "local_world_game_mode@play.local_world_game_mode": {
+                          "local_world_game_mode@common_dx.global_label": {
                             "size": [ "default", 9 ],
                             "color": [ 0.75, 0.75, 0.75 ],
-                            "layer": 5
+                            "layer": 5,
+                            "text": "#local_world_game_mode",
+                            "bindings": [
+                              {
+                                "binding_name": "#local_world_game_mode",
+                                "binding_type": "collection",
+                                "binding_collection_name": "local_worlds"
+                              }
+                            ]
                           }
                         },
                         {
-                          "label_1": {
-                            "type": "label",
+                          "label_1@common_dx.global_label": {
                             "color": [ 0.75, 0.75, 0.75 ],
                             "layer": 5,
                             "text": ", ",
@@ -271,8 +298,7 @@
                           }
                         },
                         {
-                          "label_1": {
-                            "type": "label",
+                          "label_1@common_dx.global_label": {
                             "color": [ 0.75, 0.75, 0.75 ],
                             "layer": 5,
                             "text": "dr.categories.size",
@@ -280,8 +306,7 @@
                           }
                         },
                         {
-                          "label_1": {
-                            "type": "label",
+                          "label_1@common_dx.global_label": {
                             "color": [ 0.75, 0.75, 0.75 ],
                             "layer": 5,
                             "text": " ",
@@ -289,10 +314,18 @@
                           }
                         },
                         {
-                          "local_world_filesize@play.local_world_filesize": {
+                          "local_world_filesize@common_dx.global_label": {
                             "size": [ "default", 9 ],
                             "color": [ 0.75, 0.75, 0.75 ],
-                            "layer": 5
+                            "layer": 5,
+                            "text": "#local_worldfile_size",
+                            "bindings": [
+                              {
+                                "binding_name": "#local_worldfile_size",
+                                "binding_type": "collection",
+                                "binding_collection_name": "local_worlds"
+                              }
+                            ]
                           }
                         }
                       ]

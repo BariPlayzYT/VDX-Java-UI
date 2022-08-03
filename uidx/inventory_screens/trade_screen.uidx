@@ -86,7 +86,7 @@
             },
             {
               "hover_text@common.hover_text": {
-                "ignored": "$hover_text_shadow",
+                "ignored": "($hover_text_shadow)",
                 "layer": 200,
                 "bindings": [
                   {
@@ -162,7 +162,7 @@
     "anchor_to": "top_left",
     "size": [ 18, 18 ],
     "$background_images": "java_gui_common.cell_image",
-    "$highlight_control": "common_dx.highlight_slot_panel",
+    "$highlight_control": "item_highlight_dx.highlight_slot_panel",
     "controls": [
       {
         "container_item@container_item_dx.container_item": {
@@ -216,7 +216,7 @@
     "$recipe_collection": "sell_item",
     "$cell_overlay_ref": "trade_dx.greyed_item_panel",
     "$background_images": "java_gui_common.cell_image_output",
-    "$highlight_slot_image": "java_gui_common.highlight_slot_output"
+    "$highlight_control": "item_highlight_dx.highlight_slot_output_panel"
   },
 
   "greyed_item_panel": {
@@ -321,7 +321,7 @@
   
   "trade_panel@common_dx.root_panel": {
     "controls": [
-      { "close_button_panel@inventory_dx.close_button_panel": { } },
+      { "main_buttons_panel@inventory_buttons_dx.main_inventory_buttons_panel": { } },
       { "dialog_bg_trade@villager_java_dx.dialog_bg_trade": { "layer": 1 } },
       { "trade_panel_top_half@trade_dx.trade_panel_top_half": { } },
       {
@@ -341,6 +341,7 @@
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
     "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
+      { "flying_item_renderer@common.flying_item_renderer": { "layer": 18, "ignored": "$ignore_flying_item" } },
       { "inventory_selected_icon_button@selected_icon_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
       { "trade_panel@trade_dx.trade_panel": { } }
@@ -348,6 +349,13 @@
   },
   
   /*//// Screen ////*/
+
+  "no_safezone_center_screen": {
+    "type": "panel",
+    "controls": [
+      { "main_screen_content@trade_dx.main_screen_content": { } }
+    ]
+  },
 
   "center_screen": {
     "type": "panel",
@@ -360,7 +368,6 @@
   "full_screen": {
     "type": "panel",
     "controls": [
-      { "main_screen_content@trade_dx.main_screen_content": { } },
       { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "$is_holographic" } }
     ]
   }

@@ -18,6 +18,8 @@
     "controls": [
       {
         "button_label@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
+          "max_size": [ "fill", 10 ],
           "ignored": "$only_value",
           "text": "$option_label",
           "color": "$option_label_text_color"
@@ -25,18 +27,24 @@
       },
       {
         "colon@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
+          "max_size": [ "default", 10 ],
           "ignored": "($only_value or (not $colon_needed))",
           "text": ": "
         }
       },
       {
         "separator@common_buttons_dx.button_label": {
-          "ignored": "$colon_needed",
+          "size": [ "default", 10 ],
+          "max_size": [ "default", 10 ],
+          "ignored": "($only_value or $colon_needed)",
           "text": " "
         }
       },
       {
         "value_label@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
+          "max_size": [ "fill", 10 ],
           "$radio_label_font_type|default": "default",
           "font_type": "smooth",
           "text": "$toggle_value_text",
@@ -76,7 +84,7 @@
       {
         "noto_sans@settings_common_dx.dropdown_radio_150": {
           "$toggle_state_binding_name": "#typeface_radio_notoSans",
-          "$radio_label_text": "typeface.mojangles",
+          "$radio_label_text": "createWorldScreen.gameMode.serverDefault",
           "$toggle_value_text": "$radio_label_text",
           "bindings": [
             {
@@ -195,6 +203,8 @@
     "controls": [
       {
         "button_label@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
+          "max_size": [ "fill", 10 ],
           "ignored": "$only_value",
           "text": "$option_label",
           "color": "$option_label_text_color"
@@ -202,12 +212,16 @@
       },
       {
         "separator@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
+          "max_size": [ "default", 10 ],
           "ignored": "$only_value",
           "text": ": "
         }
       },
       {
         "value_label@common_buttons_dx.button_label": {
+          "size": [ "default", 10 ],
+          "max_size": [ "fill", 10 ],
           "color": "$value_color",
           "text": "$toggle_value_text",
           "bindings": [
@@ -216,45 +230,6 @@
             }
           ]
         }
-      }
-    ]
-  },
-
-  /*////// CHAT COLOR SECTIONS //////*/
-  
-  "colors_dropdown_base@settings_common_dx.option_dropdown_no_scroll": {
-    "$dropdown_area": "chat_settings_content_area",
-    "$dropdown_name": "($color_prefix + '_color_dropdown')",
-    "$option_enabled_binding_name": "('#' + $color_prefix + '_color_dropdown_enabled')",
-    "$options_dropdown_toggle_label_binding": "('#' + $color_prefix + '_color_dropdown_label')",
-    "$option_dropdown_size": [ "100%", 22 ],
-    "$options_dropdown_toggle_button_state_content": [ "100%", "100%" ],
-    "$options_dropdown_toggle_left_padding": [ 3, "100%" ],
-    "$options_dropdown_toggle_prelabel_content": "chat_settings.paintbrush",
-    "$options_dropdown_toggle_prelabel_content_size": [ "100%y", "100%" ],
-    "$options_dropdown_toggle_prelabel_content_padding": [ 3, "100%" ],
-    "$dropdown_content": "chat_settings.chat_color_dropdown_content",
-    "$no_radio_content": false,
-    "$radio_content_control": "chat_settings.colored_icon_panel",
-    "$icon_texture": "textures/ui/text_color_paintbrush",
-    "$icon_overlay_texture": "textures/ui/text_color_paintbrush_overlay",
-    "$icon_color_binding": "#font_color",
-    "$icon_color_binding_type": "collection",
-    "$icon_color_collection_name": "font_colors",
-    "$radio_label_text": "#font_color_label",
-    "$radio_label_color": "#font_color",
-    "$options_dropdown_toggle_label_shadow": true,
-    "$radio_label_bindings": [
-      {
-        "binding_name": "$radio_label_text",
-        "binding_collection_name": "$icon_color_collection_name",
-        "binding_type": "collection"
-      },
-      {
-        "binding_name": "$radio_label_color",
-        "binding_collection_name": "$icon_color_collection_name",
-        "binding_name_override": "#color",
-        "binding_type": "collection"
       }
     ]
   },
@@ -279,13 +254,11 @@
         }
       },
       {
-        "chat_tts_toggle@settings_common_dx.option_toggle_150": {
+        "chat_color_option@chat_settings_dx.color_option_base": {
+          "$option_label": "chat.settings.chatColor",
+          "$color_prefix": "chat",
           "anchor_from": "top_right",
-          "anchor_to": "top_right",
-          "size": [ 150, 20 ],
-          "$option_label": "chat.settings.tts",
-          "$option_binding_name": "#toggle_tts",
-          "$toggle_name": "toggle_tts"
+          "anchor_to": "top_right"
         }
       },
       {
@@ -296,10 +269,19 @@
         }
       },
       {
-        "font_size_slider@settings_common_dx.option_slider_150": {
+        "mentions_color_option@chat_settings_dx.color_option_base": {
+          "$option_label": "chat.settings.mentionsColor",
+          "$color_prefix": "mentions",
           "anchor_from": "top_right",
           "anchor_to": "top_right",
-          "offset": [ 0, 24 ],
+          "offset": [ 0, 24 ]
+        }
+      },
+      {
+        "font_size_slider@settings_common_dx.option_slider_150": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 48 ],
           "size": [ 150, 20 ],
           "$option_label": "#chat_font_size_custom_label",
           "$slider_name": "chat_font_size",
@@ -327,21 +309,43 @@
         }
       },
       {
-        "chat_color_option@chat_settings_dx.color_option_base": {
-          "$option_label": "chat.settings.chatColor",
-          "$color_prefix": "chat",
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [ 0, 48 ]
+        "line_spacing_slider@settings_common_dx.option_slider_150": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ 0, 48 ],
+          "size": [ 150, 20 ],
+          "$option_label": "#chat_line_spacing_slider_label",
+          "$slider_name": "chat_line_spacing",
+          "$slider_value_binding_name": "#chat_line_spacing",
+          "$option_enabled_binding_name": "#chat_line_spacing_enabled",
+          "$slider_tts_text_value": "#chat_line_spacing_text_value",
+      
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label",
+              "binding_condition": "visible"
+            },
+            {
+              "binding_name": "$slider_tts_text_value"
+            }
+          ]
         }
       },
       {
-        "mentions_color_option@chat_settings_dx.color_option_base": {
-          "$option_label": "chat.settings.mentionsColor",
-          "$color_prefix": "mentions",
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
-          "offset": [ 0, 48 ]
+        "chat_tts_toggle@settings_common_dx.option_toggle_310": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0, 72 ],
+          "size": [ 310, 20 ],
+          "$option_label": "chat.settings.tts",
+          "$option_binding_name": "#toggle_tts",
+          "$toggle_name": "toggle_tts",
+          "bindings": [
+            {
+              "binding_name": "(not #hide_chat)",
+              "binding_name_override": "#enabled"
+            }
+          ]
         }
       }
     ]

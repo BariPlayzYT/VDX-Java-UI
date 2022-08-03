@@ -35,8 +35,8 @@
     "$middle_clips_children|default": true,
 
     "controls": [
-      { "java_menu_stack_panel@common_menus_dx.java_menu_stack_panel": { "layer": 3 } },
-      { "bg@$bg": { "layer": -20, "ignored": "(not $middle_clips_children)" } }
+      { "java_menu_stack_panel@common_menus_dx.java_menu_stack_panel": { "layer": 10 } },
+      { "bg@$bg": { "layer": 1, "ignored": "(not $middle_clips_children)" } }
     ]
   },
 
@@ -45,12 +45,33 @@
     "size": [ "100%", "100%" ],
     "controls": [
       {
-        "top@$bg": {
+        "top": {
+          "type": "panel",
           "size": "$top_content_size",
           "layer": 40,
           "controls": [
-            { "horizontal_stack_panel@common_screens_dx.horizontal_safezone_screen": { "$panel_content": "$top_content", "layer": 45 } },
-            { "panel_toggle@common_menus_dx.panel_toggle": {} }
+            {
+              "black_panel": {
+                "ignored": "($middle_clips_children)",
+                "layer": -1,
+                "type": "image",
+                "texture": "textures/uidx/global/color_base",
+                "color": [ 0.0, 0.0, 0.0 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "size": [ "100%", 32 ],
+                "offset": [ 0, -32 ]
+              }
+            },
+            { "top_content@$top_content": { "layer": 45 } },
+            { "bg@$bg": { "ignored": "($middle_clips_children)" } },
+            { 
+              "panel_toggle@common_menus_dx.panel_toggle": {
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "size": [ "100%", "100%+32px" ]
+              }
+            }
           ]
         }
       },
@@ -65,12 +86,33 @@
         }
       },
       {
-        "bottom@$bg": {
+        "bottom": {
+          "type": "panel",
           "size": "$bottom_content_size",
           "layer": 40,
           "controls": [
-            { "horizontal_stack_panel@common_screens_dx.horizontal_safezone_screen": { "$panel_content": "$bottom_content", "layer": 45 } },
-            { "panel_toggle@common_menus_dx.panel_toggle": {} }
+            {
+              "black_panel": {
+                "ignored": "($middle_clips_children)",
+                "layer": -1,
+                "type": "image",
+                "texture": "textures/uidx/global/color_base",
+                "color": [ 0.0, 0.0, 0.0 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "size": [ "100%", 32 ],
+                "offset": [ 0, 32 ]
+              }
+            },
+            { "top_content@$bottom_content": { "layer": 45 } },
+            { "bg@$bg": { "ignored": "($middle_clips_children)" } },
+            { 
+              "panel_toggle@common_menus_dx.panel_toggle": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "size": [ "100%", "100%+32px" ]
+              }
+            }
           ]
         }
       }
@@ -81,7 +123,6 @@
     "type": "panel",
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
-    "clips_children": "$middle_clips_children",
     "size": [ "100%", "100%" ],
     "controls": [
       {
@@ -158,8 +199,7 @@
             },
             {
               "stack_panel": {
-                "type": "stack_panel",
-                "orientation": "horizontal",
+                "type": "panel",
                 "ignored": "$scroll_bar_contained",
                 "anchor_to": "top_left",
                 "anchor_from": "top_left",
@@ -169,7 +209,10 @@
                     "scrolling_view_port": {
                       "layer": 1,
                       "type": "panel",
-                      "size": [ "fill", "100%" ],
+                      "size": [ "100%-6px", "100%" ],
+                      "anchor_to": "top_left",
+                      "anchor_from": "top_left",
+                      "clips_children": "$middle_clips_children",
                       "controls": [
                         {
                           "scrolling_content@$bg_middle": {
@@ -182,8 +225,8 @@
                             "controls": [
                               {
                                 "content@$scrolling_content": {
-                                  "anchor_from": "top_middle",
-                                  "anchor_to": "top_middle"
+                                  "anchor_to": "top_middle",
+                                  "anchor_from": "top_middle"
                                 }
                               }
                             ]
@@ -213,6 +256,7 @@
           "anchor_to": "top_left",
           "offset": "$scroll_view_port_offset",
           "size": [ "100%", "100%" ],
+          "clips_children": "$middle_clips_children",
           "controls": [
             {
               "scrolling_content@$bg_middle": {
@@ -244,7 +288,6 @@
     "size": "$scroll_view_port_size",
     "anchor_from": "center",
     "anchor_to": "center",
-    "clips_children": false,
     "controls": [
       {
         "fill_panel": {
@@ -285,32 +328,31 @@
   "scroll_bar_and_track_contained": {
     "type": "panel",
     "size": [ 6, "100%" ],
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "clips_children": false,
+    "anchor_to": "top_right",
+    "anchor_from": "top_right",
     "controls": [
       {
         "centered_panel": {
           "type": "panel",
-          "size": [ 7, "100%" ],
+          "size": [ 8, "100%" ],
           "clips_children": true,
-          "anchor_from": "right_middle",
-          "anchor_to": "right_middle",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
           "controls": [
             {
               "track@common.scrollbar_track": {
                 "size": [ 6, "100%" ],
                 "layer": 20,
-                "anchor_from": "left_middle",
-                "anchor_to": "left_middle"
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
               }
             },
             {
               "scroll_box@common.scroll_box": {
                 "size": [ 6, "100%" ],
                 "layer": 25,
-                "anchor_from": "left_middle",
-                "anchor_to": "left_middle"
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
               }
             }
           ]

@@ -177,16 +177,28 @@
 
   "game_panel_content": {
     "type": "stack_panel",
-    "orientation": "vertical",
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
-    "offset": [ 0, 28 ],
-    "size": [ 310, "100%c" ],
+    "size": [ 200, "100%c" ],
     "controls": [
+      {
+        "header_with_text_edit": {
+          "type": "panel",
+          "size": [ "100%", 41 ],
+          "controls": [
+            {
+              "options_label@game_world_dx.title_label": {
+                "layer": 2,
+                "ignored": false
+              }
+            }
+          ]
+        }
+      },
       {
         "panel_1": {
           "type": "panel",
-          "size": [ 310, 25 ],
+          "size": [ "100%", 24 ],
           "controls": [
             { 
               "world_gamemode_option@game_world_dx.world_gamemode_option": {
@@ -201,7 +213,7 @@
       {
         "personal_gamemode_panel": {
           "type": "panel",
-          "size": [ 310, 25 ],
+          "size": [ "100%", 24 ],
           "controls": [
             { 
               "player_gamemode_option@game_world_dx.player_gamemode_option": {
@@ -216,13 +228,35 @@
       {
         "permission_panel": {
           "type": "panel",
-          "size": [ 310, 25 ],
-          "controls": [
+          "size": [ "100%", 24 ],
+          "controls": [/* 
             { 
               "permission_option@game_world_dx.permission_option": {
                 "size": [ 200, 20 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle"
+              }
+            } */
+            {
+              "option_dropdown_permissions@settings_common_dx.option_dropdown_200": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$tts_section_header": "createWorldScreen.worldPreferences",
+                "$option_label": "permissions.title",
+                "$dropdown_content": "permissions.permission_level_dropdown_content",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "player_permissions_dropdown",
+                "$button_type_panel": "permissions.permission_level_dropdown_state_content",
+                "$options_dropdown_toggle_label_binding": "#player_permissions_dropdown_toggle_label",
+                "$option_enabled_binding_name": "#player_permissions_dropdown_enabled",
+                "$is_world_settings": true,
+                "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                "variables": [
+                  {
+                    "requires": "$education_edition",
+                    "$option_label": "permissions.title.settings.edu"
+                  }
+                ]
               }
             }
           ],
@@ -237,7 +271,7 @@
       {
         "panel_2": {
           "type": "panel",
-          "size": [ 310, 25 ],
+          "size": [ "100%", 24 ],
           "controls": [
             {
               "allow_cheats_toggle@settings_common_dx.option_toggle_200": {
@@ -258,10 +292,27 @@
       {
         "gamerule_button_panel": {
           "type": "panel",
-          "size": [ 310, 25 ],
+          "size": [ "100%", 24 ],
           "controls": [
             {
               "gamerules_button@create_world_dx.gamerules_button": {
+                "$unchecked_control": "common_buttons_dx.200_default",
+                "$unchecked_hover_control": "common_buttons_dx.200_hover",
+                "size": [ 200, 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "done_panel": {
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "controls": [
+            {
+              "null_navigation_tab@settings_dx.null_navigation_tab": {
                 "$unchecked_control": "common_buttons_dx.200_default",
                 "$unchecked_hover_control": "common_buttons_dx.200_hover",
                 "size": [ 200, 20 ],
@@ -278,24 +329,8 @@
   "game_main_panel": {
     "type": "panel",
     "controls": [
-      {
-        "options_label@game_world_dx.title_label": {
-          "layer": 2,
-          "ignored": false
-        }
-      },
-      {
-        "game_panel_content@game_world_dx.game_panel_content": {
-          "layer": 2
-        }
-      },
-      {
-        "null_navigation_tab@settings_dx.null_navigation_tab": {
-          "anchor_from": "bottom_middle",
-          "anchor_to": "bottom_middle",
-          "offset": [ 0, -12 ]
-        }
-      }
+      { "game_panel_content@game_world_dx.game_panel_content": { } },
+      { "text_panel@edit_world_dx.text_panel": { "layer": 2 } }
     ]
   },
 
@@ -304,22 +339,6 @@
   "game_world_screen_content": {
     "type": "panel",
     "controls": [
-      {
-        "game_main_bg_panel@java_gui_common.screen_background": {
-          "size": [ "100%+128px", "100%+64px" ],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [ -64, -32 ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "gamerule_button_toggle",
-              "source_property_name": "(not #toggle_state)",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
       {
         "game_main_panel@game_world_dx.game_main_panel": {
           "bindings": [

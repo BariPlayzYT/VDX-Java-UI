@@ -5,7 +5,7 @@
 
   /*//// Buttons Assets ////*/
 
-  "return_from_sub_command_button@chat_dx.black_button": {
+  "return_from_sub_command_button@common_buttons_dx.black_button": {
     "size": [ "100%", 20 ],
     "$button_label_offset": [ 30, 0 ],
     "$button_content": "host_options_dx.button_content",
@@ -78,7 +78,7 @@
     "size": [ "100%", 22 ],
     "controls": [
       {
-        "host_option_banner@chat_dx.black_button": {
+        "host_option_banner@common_buttons_dx.black_button": {
           "anchor_from": "center",
           "anchor_to": "center",
           "size": [ "100%-2px", 20 ],
@@ -168,7 +168,7 @@
     "size": [ "100%", 22 ],
     "controls": [
       {
-        "player_banner@chat_dx.black_button": {
+        "player_banner@common_buttons_dx.black_button": {
           "anchor_from": "center",
           "anchor_to": "center",
           "size": [ "100%-2px", 20 ],
@@ -203,10 +203,10 @@
           "anchor_to": "top_middle",
           "size": [ "100%", 20 ],
 
-          "$unchecked_control": "chat_dx.black_button_default",
-          "$checked_control": "chat_dx.black_button_pressed",
-          "$unchecked_hover_control": "chat_dx.black_button_hover",
-          "$checked_hover_control": "chat_dx.black_button_hover",
+          "$unchecked_control": "common_buttons_dx.black_button_default",
+          "$checked_control": "common_buttons_dx.black_button_pressed",
+          "$unchecked_hover_control": "common_buttons_dx.black_button_hover",
+          "$checked_hover_control": "common_buttons_dx.black_button_hover",
 
           "$button_label_offset": [ 10, 0 ],
           "$button_content": "host_options_dx.button_content",
@@ -239,7 +239,7 @@
         }
       },
       {
-        "host_option_button@chat_dx.black_button": {
+        "host_option_button@common_buttons_dx.black_button": {
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "size": [ "100%", 20 ],
@@ -285,7 +285,7 @@
     "size": [ "100%", 22 ],
     "controls": [
       {
-        "host_option_banner@chat_dx.black_button": {
+        "host_option_banner@common_buttons_dx.black_button": {
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "size": [ "100%", 20 ],
@@ -348,6 +348,21 @@
   },
 
   /*//// Main Host Panel ////*/
+
+  "main_scroll_box": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 10,
+    "texture": "textures/uidx/menus/java_scroll_box"
+  },
+
+  "main_scroll_track": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/uidx/menus/java_scroll_track"
+  },
 
   "host_panel": {
     "type": "panel",
@@ -425,9 +440,9 @@
                       "$scrolling_pane_offset": [ 2, 2 ],
                       "anchor_from": "bottom_left",
                       "anchor_to": "bottom_left",
-                      "$scroll_track_image_control": "common_menus_dx.java_scroll_track",
-                      "$scroll_box_mouse_image_control": "common_menus_dx.java_scroll_box",
-                      "$scroll_box_touch_image_control": "common_menus_dx.java_scroll_box",
+                      "$scroll_track_image_control": "host_options_dx.main_scroll_track",
+                      "$scroll_box_mouse_image_control": "host_options_dx.main_scroll_box",
+                      "$scroll_box_touch_image_control": "host_options_dx.main_scroll_box",
                       "$scrolling_content": "host_options_dx.host_friends_tab",
                       "offset": "$offset_second_sub_tabs"
                     }
@@ -470,9 +485,9 @@
                             "$scrolling_pane_offset": [ 2, 2 ],
                             "anchor_from": "bottom_left",
                             "anchor_to": "bottom_left",
-                            "$scroll_track_image_control": "common_menus_dx.java_scroll_track",
-                            "$scroll_box_mouse_image_control": "common_menus_dx.java_scroll_box",
-                            "$scroll_box_touch_image_control": "common_menus_dx.java_scroll_box",
+                            "$scroll_track_image_control": "host_options_dx.main_scroll_track",
+                            "$scroll_box_mouse_image_control": "host_options_dx.main_scroll_box",
+                            "$scroll_box_touch_image_control": "host_options_dx.main_scroll_box",
                             "$scrolling_content": "host_options.host_grid",
                             "$grid_dimension_binding": "#host_time_grid_dimension",
                             "$grid_collection_name": "host_time_collection",

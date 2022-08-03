@@ -386,11 +386,43 @@
     ]
   },
 
+  "scroll_box": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/uidx/global/color_base",
+    "color": [ 0.8, 0.8, 1 ],
+    "alpha": 0.5
+  },
+  
+  "close_icon": {
+    "type": "image",
+    "layer": 3,
+    "size": [ 16, 16 ],
+    "texture": "textures/uidx/icons/close"
+  },
+
   "main_mob_effect_scroll_panel": {
     "type": "panel",
     "size": [ 180, 160 ],
     "controls": [
-      { "bg@chat_dx.chat_bg": { } },
+      {
+        "close_button@common_buttons_dx.black_button": {
+          "ignored": "(not $touch)",
+          "$pressed_button_name": "button.menu_exit",
+          "$button_content": "mob_effect_dx.close_icon",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ 20, 4 ],
+          "size": [ 16, 16 ],
+          "bindings": [
+            {
+              "binding_name": "#close_button_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { "bg@common_buttons_dx.black_bg": { } },
       {
         "scrolling_panel@common_scroll_dx.scrolling_panel": {
           "layer": 10,
@@ -400,7 +432,7 @@
           "$scroll_view_port_size": [ "100%", "100%" ],
           "$scroll_view_port_size_touch": [ "100%", "100%" ],
           "$scrolling_pane_offset": [ 0, 0 ],
-          "$scroll_box_image_control": "chat_dx.scroll_box",
+          "$scroll_box_image_control": "mob_effect_dx.scroll_box",
           "$scrolling_content": "mob_effect_dx.mob_effect_grid_panel",
           "$jump_to_bottom_on_update": true,
           "$always_handle_scrolling": true
@@ -409,13 +441,19 @@
     ]
   },
 
+  "main_screen_bg": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "screen_background@pause_dx.screen_background": { "layer": -10, "ignored": "$is_holographic" } }
+    ]
+  },
+
   "main_screen": {
     "type": "panel",
     "size": [ "100%", "100%" ],
     "controls": [
-      { "top_buttons@chat_dx.top_buttons": { } },
-      { "main_mob_effect_scroll_panel@mob_effect_dx.main_mob_effect_scroll_panel": { } },
-      { "screen_background@pause_dx.screen_background": { "layer": -10, "ignored": "$is_holographic" } }
+      { "main_mob_effect_scroll_panel@mob_effect_dx.main_mob_effect_scroll_panel": { } }
     ]
   }
 }

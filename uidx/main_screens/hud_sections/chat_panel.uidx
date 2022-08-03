@@ -32,7 +32,8 @@
                 ],
                 "controls": [
                   {
-                    "hud_player": {
+                    "hud_player_alt": {
+                      "ignored": "$show_hud_while_inventory",
                       "type": "custom",
                       "renderer": "hud_player_renderer",
                       "layer": 1,
@@ -43,6 +44,20 @@
                         "@common.screen_entrance_size_animation_push",
                         "@common.screen_entrance_size_animation_pop"
                       ],
+                      "bindings": [
+                        {
+                          "binding_name": "#paper_doll_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "hud_player": {
+                      "ignored": "(not $show_hud_while_inventory)",
+                      "type": "custom",
+                      "renderer": "hud_player_renderer",
+                      "layer": 1,
                       "bindings": [
                         {
                           "binding_name": "#paper_doll_visible",
@@ -81,7 +96,8 @@
                 ],
                 "controls": [
                   {
-                    "hud_player": {
+                    "hud_player_alt": {
+                      "ignored": "$show_hud_while_inventory",
                       "type": "custom",
                       "renderer": "hud_player_renderer",
                       "layer": 1,
@@ -92,6 +108,20 @@
                         "@common.screen_entrance_size_animation_push",
                         "@common.screen_entrance_size_animation_pop"
                       ],
+                      "bindings": [
+                        {
+                          "binding_name": "#paper_doll_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "hud_player": {
+                      "ignored": "(not $show_hud_while_inventory)",
+                      "type": "custom",
+                      "renderer": "hud_player_renderer",
+                      "layer": 1,
                       "bindings": [
                         {
                           "binding_name": "#paper_doll_visible",
@@ -132,30 +162,40 @@
         }
       },
       {
-        "player_position": {
-          "type": "image",
-          "size": [ "100%c + 6px", "100%c + 2px" ],
-          "texture": "textures/uidx/global/white",
-          "color": [ 0.0, 0.0, 0.0 ],
-          "alpha": 0.7,
+        "player_position_panel": {
+          "type": "panel",
+          "size": [ "100%", 9 ],
           "controls": [
             {
-              "player_position_text@common_dx.global_label": {
-                "anchor_from": "bottom_middle",
-                "anchor_to": "bottom_middle",
-                "layer": 1,
-      
-                "enable_profanity_filter": false,
-                "color": "$chat_text_color",
-                "text": "#text",
-                "shadow": true,
-      
-                "bindings": [
+              "player_position": {
+                "type": "image",
+                "size": [ "100%c+1px", 9 ],
+                "texture": "textures/uidx/hud/debug_text_bg",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 1, 0 ],
+                "controls": [
                   {
-                    "binding_name": "#player_position_text",
-                    "binding_name_override": "#text",
-                    "binding_condition": "always_when_visible",
-                    "binding_type": "global"
+                    "player_position_text@common_dx.global_label": {
+                      "size": [ "default", 10 ],
+                      "offset": [ 1, 0 ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "layer": 1,
+            
+                      "enable_profanity_filter": false,
+                      "color": "$chat_text_color",
+                      "text": "#player_position_text",
+                      "shadow": false,
+                      
+                      "bindings": [
+                        {
+                          "binding_name": "#player_position_text",
+                          "binding_condition": "always_when_visible",
+                          "binding_type": "global"
+                        }
+                      ]
+                    }
                   }
                 ]
               }
@@ -173,26 +213,26 @@
       },
       {
         "fill_padding": {
+          //"ignored": "$touch",
           "type": "panel",
-          "size": [ 1, "fill" ],
-          "ignored": "$touch"
+          "size": [ 1, "fill" ]
         }
       },
       { "chat_panel@hud_chat_dx.chat_panel": {} },
       {
         "bottom_padding": {
+          //"ignored": "$touch",
           "type": "panel",
-          "size": [ 1, 40 ],
-          "ignored": "$touch"
-        }
-      },
-      {
-        "bottom_fill_padding": {
-          "type": "panel",
-          "size": [ 1, "fill" ],
-          "ignored": "(not $touch)"
+          "size": [ 1, 40 ]
         }
       }/* ,
+      {
+        "bottom_fill_padding": {
+          "ignored": "(not $touch)",
+          "type": "panel",
+          "size": [ 1, "fill" ]
+        }
+      },
       {
         "tooltip_padding": {
           "type": "panel",
@@ -226,17 +266,75 @@
             "@hud_chat_dx.anim_chat_bg_wait"
           ],
           "controls": [
+            { "label_type@$label_type": { } }
+          ],
+          "variables": [
             {
-              "chat_text@hud.chat_label": {
-                "layer": 3,
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "line_padding": -1,
-                "offset": [ 2, 0.5 ]
-              }
+              "requires": "($chat_font_type = default)",
+              "$label_type": "hud_chat_dx.default_chat_text"
+            },
+            {
+              "requires": "($chat_font_type = smooth)",
+              "$label_type": "hud_chat_dx.smooth_chat_text"
             }
           ]
         }
+      }
+    ]
+  },
+  
+  "default_chat_text@common_dx.global_label": {
+    "layer": 3,
+    "text": "#text",
+    "size": [ "100%", "default" ],
+    "shadow": true,
+    "localize": false,
+    "color": "$chat_text_color",
+    "font_scale_factor": "$chat_font_scale_factor",
+    "$chat_fixed_line_padding": 2.025,
+    "line_padding": "($chat_line_spacing - $chat_fixed_line_padding)",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [ 2, 0.669 ],
+    "anims": [
+      "@hud.anim_chat_txt_wait"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#chat_text",
+        "binding_name_override": "#text",
+        "binding_type": "collection",
+        "binding_collection_name": "chat_text_grid",
+        "binding_condition": "once"
+      }
+    ]
+  },
+  
+  "smooth_chat_text": {
+    "type": "label",
+    "layer": 3,
+    "text": "#text",
+    "size": [ "100%", "default" ],
+    "shadow": true,
+    "localize": false,
+    "color": "$chat_text_color",
+    "font_type": "$chat_font_type",
+    "font_scale_factor": "$chat_font_scale_factor",
+    "$chat_fixed_line_padding": 2.025,
+    "line_padding": "($chat_line_spacing - $chat_fixed_line_padding)",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [ 2, 0.669 ],
+    "anims": [
+      "@hud.anim_chat_txt_wait"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#chat_text",
+        "binding_name_override": "#text",
+        "binding_type": "collection",
+        "binding_collection_name": "chat_text_grid",
+        "binding_condition": "once"
       }
     ]
   },
@@ -262,11 +360,19 @@
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
     "size": "$chat_size",
+    "propagate_alpha": true,/* 
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ], */
     "controls": [
       {
         "stack_panel": {
+          //"ignored": "$touch",
           "type": "stack_panel",
-          "ignored": "$touch",
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "factory": {
@@ -277,11 +383,11 @@
             }
           }
         }
-      },
+      }/* ,
       {
         "stack_panel_touch": {
-          "type": "stack_panel",
           "ignored": "(not $touch)",
+          "type": "stack_panel",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "factory": {
@@ -292,7 +398,7 @@
             }
           }
         }
-      }
+      } */
     ]
   }
 }

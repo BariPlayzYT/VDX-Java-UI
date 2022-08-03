@@ -117,6 +117,22 @@
           ]
         }
       },
+      { 
+        "raid_defeat_bar@CrisXolt_bars_bindings_dx.raid_defeat_bindings": {
+          "controls": [
+            { "bar_name@CrisXolt_bars_dx.bar_name": { "text": "bar.event.raid.defeat" } },
+            { "raid_panel@$raid_bar_panel_control": { } }
+          ]
+        }
+      },
+      { 
+        "raid_victory_bar@CrisXolt_bars_bindings_dx.raid_victory_bindings": {
+          "controls": [
+            { "bar_name@CrisXolt_bars_dx.bar_name": { "text": "bar.event.raid.victory" } },
+            { "raid_panel@$raid_bar_panel_control": { } }
+          ]
+        }
+      },
       { "default_bar_control@CrisXolt_default_bar_dx.001": { } }
     ],
     "bindings": [
@@ -135,10 +151,27 @@
     "offset": [ 0, 12 ],
     "size": [ 182, 5 ],
     "controls": [
-      { "magenta_bar_empty@bars_java_dx.magenta_bar_empty": { "layer": 1, "size": [ 182, 5 ] } },
+      { "bar_empty@$ender_dragon_bar_empty_texture": { "layer": 1, "size": [ 182, 5 ] } },
+      { "nub_bar_empty@$ender_dragon_nub_bar_empty_texture": { "layer": 2, "size": [ 182, 5 ] } },
       { 
-        "magenta_bar_full@bars_java_dx.magenta_bar_full": {
-          "layer": 2,
+        "bar_full@$ender_dragon_bar_full_texture": {
+          "layer": 3,
+          "size": [ 182, 5 ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      },
+      { 
+        "nub_bar_full@$ender_dragon_nub_bar_full_texture": {
+          "layer": 4,
           "size": [ 182, 5 ],
           "clip_direction": "left",
           "clip_pixelperfect": true,
@@ -161,10 +194,27 @@
     "offset": [ 0, 12 ],
     "size": [ 182, 5 ],
     "controls": [
-      { "purple_bar_empty@bars_java_dx.purple_bar_empty": { "layer": 1, "size": [ 182, 5 ] } },
+      { "bar_empty@$wither_bar_empty_texture": { "layer": 1, "size": [ 182, 5 ] } },
+      { "nub_bar_empty@$wither_nub_bar_empty_texture": { "layer": 2, "size": [ 182, 5 ] } },
       { 
-        "purple_bar_full@bars_java_dx.purple_bar_full": {
-          "layer": 2,
+        "bar_full@$wither_bar_full_texture": {
+          "layer": 3,
+          "size": [ 182, 5 ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      },
+      { 
+        "nub_bar_full@$wither_nub_bar_full_texture": {
+          "layer": 4,
           "size": [ 182, 5 ],
           "clip_direction": "left",
           "clip_pixelperfect": true,
@@ -188,9 +238,10 @@
     "size": [ 182, 5 ],
     "layer": 10,
     "controls": [
-      { "red_bar_empty@bars_java_dx.red_bar_empty": { "layer": 1, "size": [ 182, 5 ] } },
+      { "bar_empty@$raid_bar_empty_texture": { "layer": 1, "size": [ 182, 5 ] } },
+      { "nub_bar_empty@$raid_nub_bar_empty_texture": { "layer": 2, "size": [ 182, 5 ] } },
       { 
-        "red_bar_full@bars_java_dx.red_bar_full": {
+        "bar_full@$raid_bar_full_texture": {
           "layer": 3,
           "size": [ 182, 5 ],
           "clip_direction": "left",
@@ -205,9 +256,8 @@
           ]
         }
       },
-      { "nub_bar_10_empty@bars_java_dx.nub_bar_10_empty": { "layer": 2, "size": [ 182, 5 ] } },
       { 
-        "nub_bar_10_full@bars_java_dx.nub_bar_10_full": {
+        "nub_bar_full@$raid_nub_bar_full_texture": {
           "layer": 4,
           "size": [ 182, 5 ],
           "clip_direction": "left",
@@ -232,10 +282,50 @@
     "size": [ 182, 5 ],
     "layer": 10,
     "controls": [
-      { "blue_bar_empty@bars_java_dx.blue_bar_empty": { "layer": 1, "size": [ 182, 5 ] } },
       { 
-        "blue_bar_full@bars_java_dx.blue_bar_full": {
+        "bar_empty@$default_event_bar_empty_texture": {
+          "layer": 1,
+          "size": [ 182, 5 ],
+          "color": "#color",
+          "bindings": [
+            {
+              "ignored": "(not $has_default_event_bar_custom_color)",
+              "binding_name": "#bar_color",
+              "binding_name_override": "#color",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      },
+      { "nub_bar_empty@$default_event_nub_bar_empty_texture": { "layer": 2, "size": [ 182, 5 ] } },
+      { 
+        "bar_full@$default_event_bar_full_texture": {
           "layer": 3,
+          "size": [ 182, 5 ],
+          "clip_direction": "left",
+          "clip_pixelperfect": true,
+          "color": "#color",
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            },
+            {
+              "ignored": "(not $has_default_event_bar_custom_color)",
+              "binding_name": "#bar_color",
+              "binding_name_override": "#color",
+              "binding_type": "collection",
+              "binding_collection_name": "$progress_bar_collection"
+            }
+          ]
+        }
+      },
+      { 
+        "nub_bar_full@$default_event_nub_bar_full_texture": {
+          "layer": 4,
           "size": [ 182, 5 ],
           "clip_direction": "left",
           "clip_pixelperfect": true,

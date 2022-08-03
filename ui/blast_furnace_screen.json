@@ -7,8 +7,8 @@
       {
         "requires": "$desktop_screen",
         "$is_blast_furnace": true,
-        "$recipe_book_content": "blast_furnace_recipe_book_dx.recipe_book_panel",
         "$screen_content": "furnace_dx.center_screen",
+        "$screen_center_content": "furnace_dx.no_safezone_center_screen",
         "$screen_bg_content": "furnace_dx.full_screen",
         "$gamepad_cursor": true
       },

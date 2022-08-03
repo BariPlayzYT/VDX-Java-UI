@@ -258,6 +258,38 @@
     "$right_button_texture": "main_button_120_java_dx.main_button_right_locked"
   },
 
+  /*//// Main Button 108 ////*/
+  
+  "main_button_108@common_buttons_dx.main_button_200": {
+    "size": [ 108, 20 ],
+    "controls": [
+      { "default@common_buttons_dx.108_default": { } },
+      { "hover@common_buttons_dx.108_hover": { } },
+      { "pressed@common_buttons_dx.108_pressed": { } },
+      { "locked@common_buttons_dx.108_locked": { } }
+    ]
+  },
+
+  "108_default@common_buttons_dx.default_base": {
+    "$left_button_texture": "main_button_108_java_dx.main_button_left_default",
+    "$right_button_texture": "main_button_108_java_dx.main_button_right_default"
+  },
+
+  "108_hover@common_buttons_dx.hover_base": {
+    "$left_button_texture": "main_button_108_java_dx.main_button_left_hover",
+    "$right_button_texture": "main_button_108_java_dx.main_button_right_hover"
+  },
+
+  "108_pressed@common_buttons_dx.pressed_base": {
+    "$left_button_texture": "main_button_108_java_dx.main_button_left_hover",
+    "$right_button_texture": "main_button_108_java_dx.main_button_right_hover"
+  },
+
+  "108_locked@common_buttons_dx.locked_base": {
+    "$left_button_texture": "main_button_108_java_dx.main_button_left_locked",
+    "$right_button_texture": "main_button_108_java_dx.main_button_right_locked"
+  },
+
   /*//// Main Button 100 ////*/
   
   "main_button_100@common_buttons_dx.main_button_200": {
@@ -384,6 +416,38 @@
   "88_locked@common_buttons_dx.locked_base": {
     "$left_button_texture": "main_button_88_java_dx.main_button_left_locked",
     "$right_button_texture": "main_button_88_java_dx.main_button_right_locked"
+  },
+
+  /*//// Main Button 80 ////*/
+  
+  "main_button_80@common_buttons_dx.main_button_200": {
+    "size": [ 80, 20 ],
+    "controls": [
+      { "default@common_buttons_dx.80_default": { } },
+      { "hover@common_buttons_dx.80_hover": { } },
+      { "pressed@common_buttons_dx.80_pressed": { } },
+      { "locked@common_buttons_dx.80_locked": { } }
+    ]
+  },
+
+  "80_default@common_buttons_dx.default_base": {
+    "$left_button_texture": "main_button_80_java_dx.main_button_left_default",
+    "$right_button_texture": "main_button_80_java_dx.main_button_right_default"
+  },
+
+  "80_hover@common_buttons_dx.hover_base": {
+    "$left_button_texture": "main_button_80_java_dx.main_button_left_hover",
+    "$right_button_texture": "main_button_80_java_dx.main_button_right_hover"
+  },
+
+  "80_pressed@common_buttons_dx.pressed_base": {
+    "$left_button_texture": "main_button_80_java_dx.main_button_left_hover",
+    "$right_button_texture": "main_button_80_java_dx.main_button_right_hover"
+  },
+
+  "80_locked@common_buttons_dx.locked_base": {
+    "$left_button_texture": "main_button_80_java_dx.main_button_left_locked",
+    "$right_button_texture": "main_button_80_java_dx.main_button_right_locked"
   },
 
   /*//// Main Button 74 ////*/
@@ -691,8 +755,91 @@
 
   "button_label@common_dx.global_label": {
     "shadow": true,
-    "size": [ "default", "default" ],
+    "size": [ "default", 10 ],
+    "max_size": "$button_label_max_size",
+    "$button_label_max_size|default": [ "100%+2px", 10 ],
     "color": "$text_color",
     "text": "$button_text"
+  },
+
+  /*//// Black BG ////*/
+
+  "black_bg": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/uidx/option_controls/black_button_bg"
+  },
+
+  "black_bg_hover": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/uidx/option_controls/black_button_bg_hover"
+  },
+
+  /*//// Black Button ////*/
+
+  "black_button_label@common_dx.global_label": {
+    "text": "$button_text",
+    "offset": "$text_offset",
+    "shadow": false,
+    "color": "$text_color",
+    "size": [ "default", 10 ],
+    "max_size": "$button_label_max_size",
+    "$button_label_max_size|default": [ "100%+2px", 10 ]
+  },
+  
+  "black_button_default": {
+    "type": "image",
+    "size": "$black_button_size",
+    "$black_button_size|default": [ "100%", "100%" ],
+    "texture": "textures/uidx/option_controls/black_button_bg",
+    "$text_color": "$main_menu_button_default_color",
+    "$text_offset|default": [ 0, 0 ],
+    "$button_text|default": "",
+    "$button_content|default": "common_buttons_dx.black_button_label",
+    "controls": [
+      {
+        "button_content@$button_content": {
+          "layer": 4,
+          "anchor_from": "center",
+          "anchor_to": "center"
+        }
+      }
+    ]
+  },
+
+  "black_button_hover@common_buttons_dx.black_button_default": {
+    "texture": "textures/uidx/option_controls/black_button_bg_hover",
+    "$text_color": "$main_menu_button_hover_color"
+  },
+  
+  "black_button_pressed@common_buttons_dx.black_button_default": {
+    "texture": "textures/uidx/option_controls/black_button_bg_pressed",
+    "$text_color": "$main_menu_button_preesed_color"
+  },
+
+  "black_button_locked@common_buttons_dx.black_button_default": {
+    "texture": "textures/uidx/option_controls/black_button_bg_locked",
+    "$text_color": "$main_menu_button_locked_color"
+  },
+
+  "black_button@common.button": {
+    "locked_control": "locked",
+    "controls": [
+      { "default@common_buttons_dx.black_button_default": {} },
+      { "hover@common_buttons_dx.black_button_hover": {} },
+      { "pressed@common_buttons_dx.black_button_pressed": {} },
+      { "locked@common_buttons_dx.black_button_locked": {} }
+    ]
+  },
+
+  "black_button_checked@common_buttons_dx.black_button_default": {
+    "texture": "textures/uidx/option_controls/black_button_bg_checked",
+    "$text_color": "$main_menu_button_hover_color"
+  },
+
+  "black_button_checked_hover@common_buttons_dx.black_button_default": {
+    "texture": "textures/uidx/option_controls/black_button_bg_checked_hover",
+    "$text_color": "$main_menu_button_hover_color"
   }
 }

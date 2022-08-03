@@ -175,7 +175,7 @@
         }
       },
       { "cooldown_renderer@hud.cooldown_renderer": { "layer": 10 } },
-      { "hotbar_slot_button@hud.gui_hotbar_slot_button_prototype": {} }
+      { "hotbar_slot_button@hud.gui_hotbar_slot_button_prototype": { "ignored": "(not $touch)" } }
     ]
   },
 
@@ -183,7 +183,7 @@
 
   "exp_progress_bar_and_hotbar": {
     "type": "panel",
-    "size": [ 182, 30 ],
+    "size": [ "100%", 30 ],
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "controls": [
@@ -191,8 +191,8 @@
         "xp_bar": {
           "type": "panel",
           "size": [ 182, 5 ],
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
           "offset": [ 0, -24 ],
           "controls": [
             { "progress_text_label@hud_resources_dx.xp_number_panel": { "layer": 8 } },
@@ -201,7 +201,7 @@
           ],
           "bindings": [
             {
-              "binding_name": "#is_not_creative_mode",
+              "binding_name": "#show_survival_ui",
               "binding_name_override": "#visible"
             }
           ]
@@ -223,26 +223,18 @@
       },
       { "hotbar@hud_dx.hotbar_panel": { } },
       {
-        "dx_panel": {
+        "main_panel": {
           "type": "panel",
+          "$ignore_jukebox_text|default": false,
           "controls": [
             { "hud_tip_text_factory@hud_item_text_dx.hud_tip_text_factory": { } },
-            { "hud_actionbar_text_area@hud_item_text_dx.hud_actionbar_text_area": {  } },
-            { "item_text_factory@hud_item_text_dx.item_text_factory": { } }
+            { "hud_actionbar_text_area@hud_item_text_dx.hud_actionbar_text_area": { } },
+            { "item_text_factory_without_jukebox@hud_item_text_dx.item_text_factory_without_jukebox": { "$ignored": "(not $ignore_jukebox_text)" } },
+            { "item_text_factory@hud_item_text_dx.item_text_factory": { "$ignored": "$ignore_jukebox_text" } }
           ]
         }
       }
     ]
-  },
-
-  /* Original item text factory */
-
-  "original_item_name_text@hud.item_name_text_root": { "offset": [ 0, -26 ] },
-
-  "original_jukebox_popup_text@hud.item_name_text_root": {
-    "$text_color": "$jukebox_text_color",
-    "$text_binding": "#jukebox_text",
-    "offset": [ 0, -42.5 ]
   },
 
   /*//// GUI Elements ////*/
@@ -254,76 +246,101 @@
     "anchor_to": "bottom_middle",
     "controls": [
       {
-        "heart_rend@hud.heart_renderer": {
-          "layer": 1,
-          "offset": [ 0, -38 ],
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left"
-        }
-      },
-      {
-        "hunger_rend@hud.hunger_renderer": {
-          "offset": [ 0, -38 ],
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right"
-        }
-      },
-      {
-        "armor_rend@hud.armor_renderer": {
-          "layer": 1,
-          "offset": [ 0, -38 ],
-          "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left"
-        }
-      },
-      {
-        "horse_heart_rend_0@hud.horse_heart_renderer": {
-          "offset": [ 0, -55 ],
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
+        "creative_mode": {
+          "type": "panel",
           "bindings": [
             {
               "binding_name": "#is_creative_mode",
               "binding_name_override": "#visible"
             }
-          ]
-        }
-      },
-      {
-        "horse_heart_rend_1@hud.horse_heart_renderer": {
-          "offset": [ 0, -48 ],
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
-          "bindings": [
+          ],
+          "controls": [
             {
-              "binding_name": "#is_not_creative_mode",
-              "binding_name_override": "#visible"
+              "horse_heart_rend@hud.horse_heart_renderer": {
+                "offset": [ 0, -46 ],
+                "size": [ 1, 9 ],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "bindings": [
+                  {
+                    "binding_name": "#is_creative_mode",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
             }
           ]
         }
       },
       {
-        "bubbles_rend_0@hud.bubbles_renderer": {
-          "offset": [ 0, -48 ],
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
+        "survival_mode": {
+          "type": "panel",
           "bindings": [
             {
-              "binding_name": "#is_not_riding",
+              "binding_name": "#show_survival_ui",
               "binding_name_override": "#visible"
             }
-          ]
-        }
-      },
-      {
-        "bubbles_rend_1@hud.bubbles_renderer": {
-          "offset": [ 0, -58 ],
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
-          "bindings": [
+          ],
+          "controls": [
             {
-              "binding_name": "#is_riding",
-              "binding_name_override": "#visible"
+              "heart_rend@hud.heart_renderer": {
+                "offset": [ 0, -30 ],
+                "size": [ 1, 9 ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left"
+              }
+            },
+            {
+              "armor_rend@hud.armor_renderer": {
+                "offset": [ 0, -30 ],
+                "size": [ 1, 9 ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left"
+              }
+            },
+            {
+              "hunger_rend@hud.hunger_renderer": {
+                "offset": [ 0, -30 ],
+                "size": [ 1, 9 ],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right"
+              }
+            },
+            {
+              "horse_heart_rend@hud.horse_heart_renderer": {
+                "offset": [ 0, -40 ],
+                "size": [ 1, 9 ],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right"
+              }
+            },
+            {
+              "bubbles_rend_0@hud.bubbles_renderer": {
+                "offset": [ 0, -40 ],
+                "size": [ 1, 9 ],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "bindings": [
+                  {
+                    "binding_name": "#is_not_riding",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "bubbles_rend_1@hud.bubbles_renderer": {
+                "offset": [ 0, -60 ],
+                "size": [ 1, 9 ],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "bindings": [
+                  {
+                    "binding_name": "#is_riding",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
             }
           ]
         }
@@ -416,7 +433,7 @@
       {
         "centered_panel": {
           "type": "stack_panel",
-          "size": [ 182, "100%" ],
+          "size": [ "100%", "100%" ],
           "controls": [
             {
               "fill_panel": {
@@ -463,9 +480,6 @@
     "$tooltip_anchor": "left_middle",
     "anchor_from": "$tooltip_anchor",
     "anchor_to": "$tooltip_anchor",
-
-    "$tip_description_font|default": "default",
-    "font_type": "$tip_description_font",
 
     "text": "#helper_description",
 
@@ -529,7 +543,20 @@
                 "anchor_from": "bottom_middle",
                 "anchor_to": "bottom_middle",
                 "offset": [ 0, -3 ],
-                "shadow": true
+                "shadow": true,
+                "controls": [
+                  {
+                    "text_bg": {
+                      "type": "image",
+                      "size": [ "100% + 5px", 12 ],
+                      "offset": [ -0.5, 0 ],
+                      "texture": "textures/uidx/global/color_base",
+                      "layer": -1,
+                      "color": [ 0, 0, 0 ],
+                      "alpha": 0.5
+                    }
+                  }
+                ]
               }
             }
           ]
@@ -642,7 +669,7 @@
         "stack_panel": {
           "type": "stack_panel",
           "size": [ "100%cm", "100%c" ],
-          "min_size": [ 75, "100%c" ],
+          "min_size": [ 26, "100%c" ],
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
 
@@ -719,6 +746,36 @@
     ]
   },
   
+  /*//// Root Panel for Hive Network ////*/
+
+  "root_panel_for_hive@hud_dx.root_panel": {
+    "$ignore_jukebox_text": true,
+    "controls": [
+      { "left_helpers@hud_dx.left_helpers": {} },
+      { "right_helpers@hud_dx.right_helpers": {} },
+      { "gui_elements@hud_dx.gui_elements": { } },
+      { "chat_stack_panel@hud_chat_dx.chat_stack_panel": {} },
+      { "boss_health_main_panel@CrisXolt_bars_dx.boss_health_main_panel": {} },
+      {
+        "gamertag_label_for_splitscreen@common_dx.global_label": {
+          "size": [ "default", "default" ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -4, 4 ],
+          "color": "$hud_gamertag_color",
+          "text_alignment": "right",
+          "text": "#gamertag",
+          "bindings": [
+            {
+              "binding_name": "#gamertag"
+            }
+          ]
+        }
+      },
+      { "auto_save@hud_resources_dx.auto_save_label": {} }
+    ]
+  },
+  
   /*//// Root Panel ////*/
   
   "root_panel": {
@@ -728,7 +785,7 @@
       { "right_helpers@hud_dx.right_helpers": {} },
       //{ "bottom_helpers@hud_dx.bottom_helpers": {} },
       { "gui_elements@hud_dx.gui_elements": { } },
-      { "vignette_rend@hud.vignette_renderer": {} },
+      { "vignette_rend@hud.vignette_renderer": { "layer": -10 } },
       { "cursor_rend@hud.cursor_renderer": {} },
       { "mob_effects_renderer@hud.mob_effects_renderer": { "size": [ "100%", "75%" ], "offset": [ 0, 24 ], "anchor_from": "center", "anchor_to": "center" } },
       { "sidebar@scoreboard.scoreboard_sidebar": {} },
@@ -740,8 +797,7 @@
         }
       },
       {
-        "gamertag_label_for_splitscreen": {
-          "type": "label",
+        "gamertag_label_for_splitscreen@common_dx.global_label": {
           "size": [ "default", "default" ],
           "anchor_from": "top_right",
           "anchor_to": "top_right",
@@ -763,12 +819,24 @@
           "factory": {
             "name": "hud_title_text_factory",
             "control_ids": {
-              "hud_title_text": "hud_title_text@hud.hud_title_text"
+              "hud_title_text": "hud_title_text@hud_item_text_dx.hud_title_text"
             }
           }
         }
       },
-      { "auto_save@hud_resources_dx.auto_save": {} }
+      {
+        "game_tip@game_tip.game_tip_panel": {
+          "$offset": [ 0, "-90px" ],
+          "variables": [
+            {
+              "requires": "$pocket_screen",
+              "$offset": [ 0, "-60px" ]
+            }
+          ],
+          "offset": "$offset"
+        }
+      },
+      { "auto_save@hud_resources_dx.auto_save_label": {} }
     ],
     "bindings": [
       {
@@ -786,6 +854,18 @@
         "binding_name_override": "#propagateAlpha",
         "binding_type": "global"
       }
+    ]
+  },
+
+  "hud_content_bg": {
+    "type": "panel"
+  },
+  
+  "hud_content": {
+    "type": "panel",
+    "controls": [
+      { "root_panel@hud_dx.root_panel": {} },
+      { "camera_renderer@hud.camera_renderer": {} }
     ]
   }
 }

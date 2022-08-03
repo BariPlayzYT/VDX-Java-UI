@@ -3,6 +3,61 @@
 {
   "namespace": "play_realms_dx",
 
+  /*////// JOIN CODE //////*/
+
+  "popup_dialog_join_by_code@popup_dialog.modal_input_panel": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "options_background@java_gui_common.options_background": { "layer": -1 } },
+      {
+        "main_panel": {
+          "type": "panel",
+          "size": [ 202, 212 ],
+          "layer": 4,
+          "controls": [
+            {
+              "title_label@settings_dx.base_label": {
+                "text": "networkWorld.joinByCode",
+                "offset": [ 0, "19px" ]
+              }
+            },
+            {
+              "option_text_edit_1@settings_common_dx.option_text_edit": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, "99px" ],
+                "$option_label": "networkWorld.realmsHashPlaceholder",
+                "$option_place_holder_text": "",
+                "$max_text_edit_length": 11,
+                "$option_binding_name": "#text_box_item_name",
+                "$text_box_name": "#join_by_code_text_edit"
+              }
+            },
+            {
+              "join_button@common_buttons_dx.main_button_200": {
+                "size": [ 200, 20 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [ 0, "-24px" ],
+                "$pressed_button_name": "button.menu_network_join_by_code_popup_join",
+                "$button_text": "networkWorld.join"
+              }
+            },
+            {
+              "cancel_button@common_buttons_dx.main_button_200": {
+                "size": [ 200, 20 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "$pressed_button_name": "button.menu_network_join_by_code_close",
+                "$button_text": "gui.cancel"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   /*////// STACK PANEL CONTENT //////*/
   
   "realms_stack_panel@play_dx.scroll_stack_panel_base": {
@@ -137,13 +192,15 @@
                 "size": [ "fill", "100%" ],
                 "controls": [
                   {
-                    "top_text@play.realms_world_header": {
+                    "top_text@play_realms_dx.realms_list_text": {
                       "size": [ "100%", 10 ],
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "$text_color": [ 1.0, 1.0, 1.0 ],
                       "shadow": false,
-                      "layer": 5
+                      "layer": 5,
+                      "$text": "#realms_world_header",
+                      "$text_binding_type": "collection"
                     }
                   },
                   {
@@ -156,7 +213,7 @@
                       "offset": [ 0, 11 ],
                       "controls": [
                         {
-                          "realms_world_player_count@play.world_list_text": {
+                          "realms_world_player_count@common_dx.global_label": {
                             "text": "#realms_world_player_count",
                             "color": [ 0.42, 0.42, 0.42 ],
                             "size": [ "default", "default" ],
@@ -183,9 +240,11 @@
                       "offset": [ 0, 20 ],
                       "controls": [
                         {
-                          "realms_world_details@play.realms_world_details": {
+                          "realms_world_details@play_realms_dx.realms_list_text": {
                             "layer": 5,
-                            "color": [ 0.29, 0.29, 0.29 ]
+                            "color": [ 0.29, 0.29, 0.29 ],
+                            "$text": "#realms_world_details",
+                            "$text_binding_type": "collection"
                           }
                         }
                       ]
@@ -232,6 +291,7 @@
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "layer": 9,
+                      "sound_volume": 0.0,
                       "controls": [
                         {
                           "default@common.empty_panel": {
@@ -295,6 +355,7 @@
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
                       "layer": 9,
+                      "sound_volume": 0.0,
                       "controls": [
                         {
                           "default@common.empty_panel": {
@@ -339,6 +400,25 @@
             }
           ]
         }
+      }
+    ]
+  },
+
+  "realms_list_text@common_dx.global_label": {
+    "color": "$text_color",
+    "shadow": false,
+    "text": "$text",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$text_binding_type|default": "none",
+    "$realms_worlds_collection_name|default": "",
+    "$text_binding_condition|default": "none",
+    "bindings": [
+      {
+        "binding_condition": "$text_binding_condition",
+        "binding_name": "$text",
+        "binding_type": "$text_binding_type",
+        "binding_collection_name": "$realms_worlds_collection_name"
       }
     ]
   },
@@ -709,7 +789,7 @@
       {
         "bg": {
           "type": "image",
-          "texture": "textures/uidx/global/white",
+          "texture": "textures/uidx/global/color_base",
           "color": "@play_realms_dx.bg_color",
           "size": [ "100% - 2px", "100% - 2px" ],
           "layer": 1
@@ -845,11 +925,9 @@
               }
             },
             {
-              "realms_desc_label": {
-                "type": "label",
+              "realms_desc_label@common_dx.global_label": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
-                "font_type": "normal",
                 "font_scale_factor": 1.0,
                 "line_padding": 0.0,
                 "layer": 152,
@@ -912,11 +990,12 @@
           "anchor_from": "top_right",
           "anchor_to": "top_right",
           "offset": [ -17, 6 ],
-          "size": [ 20, 20 ],
-          "$unchecked_control": "realms_java_dx.questionmark_default",
-          "$checked_control": "realms_java_dx.questionmark_default",
-          "$unchecked_hover_control": "realms_java_dx.questionmark_hover",
-          "$checked_hover_control": "realms_java_dx.questionmark_hover",
+          "size": [ 80, 20 ], 
+          "$button_text": "createWorldUpsell.button.world",
+          "$unchecked_control": "common_buttons_dx.80_default",
+          "$checked_control": "common_buttons_dx.80_default",
+          "$unchecked_hover_control": "common_buttons_dx.80_hover",
+          "$checked_hover_control": "common_buttons_dx.80_hover",
           "$toggle_name": "realms_popup_button",
           "$tab_view_binding_name": "what_is_realms_popup_toggle",
           "$toggle_group_forced_index": 1

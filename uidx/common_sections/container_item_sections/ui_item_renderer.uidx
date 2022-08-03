@@ -12,7 +12,7 @@
     "controls": [
       {
         "item_renderer": {
-          "ignored": "$is_java_aspects",
+          "ignored": "$is_java_aspects_fidelity",
           "type": "custom",
           "renderer": "inventory_item_renderer",
           "$item_renderer_binding_condition|default": "none",
@@ -97,7 +97,7 @@
           "size": [ 16, 16 ],
           "$icon_size": [ 16, 16 ],
           "$use_item_icons|default": true,
-          "ignored": "(not $is_java_aspects)",
+          "ignored": "(not $is_java_aspects_fidelity)",
           "variables": [
             {
               "requires": "$is_multipixel_bedrock",
@@ -136,7 +136,7 @@
     "controls": [
       {
         "item_renderer_selected_icon": {
-          "ignored": "$is_java_aspects",
+          "ignored": "$is_java_aspects_fidelity",
           "type": "custom",
           "renderer": "inventory_item_renderer",
           "size": [ 16, 16 ],
@@ -180,8 +180,7 @@
           "size": [ 16, 16 ],
           "$icon_size": [ 16, 16 ],
           "$selected_size": [ 16, 16 ],
-          "$use_item_icons|default": true,
-          "ignored": "(not $is_java_aspects)",
+          "ignored": "(not $is_java_aspects_fidelity)",
           "variables": [
             {
               "requires": "$is_multipixel_bedrock",
@@ -189,7 +188,35 @@
             }
           ],
           "controls": [
-            { "selected_item_icon@common.inventory_selected_icon": { "layer": 0, "offset": [ 0.5, 0.5 ], "min_size": [ 16, 16 ] } }
+            { "selected_item_icon@common.inventory_selected_icon": { "$use_item_icons|default": true, "layer": 0, "offset": [ 0.5, 0.5 ], "min_size": [ 16, 16 ] } }
+          ]
+        }
+      }
+    ]
+  },
+
+  ////*/ Item Renderer For Auto Complete in Chat Screen /*////
+
+  "auto_complete_item_renderer": {
+    "type": "panel",
+    "size": [ 8, 8 ],
+    "controls": [
+      {
+        "auto_complete_item_renderer": {
+          "type": "custom",
+          "renderer": "inventory_item_renderer",
+          "size": [ 8, 8 ],
+          "offset": [ 2, 0 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#auto_complete_item",
+              "binding_type": "collection",
+              "binding_name_override": "#item_id_aux",
+              "binding_collection_name": "auto_complete"
+            }
           ]
         }
       }
@@ -204,7 +231,7 @@
     "controls": [
       {
         "item_renderer": {
-          "ignored": "$is_java_aspects",
+          "ignored": "$is_java_aspects_fidelity",
           "type": "custom",
           "renderer": "inventory_item_renderer",
           "$item_renderer_binding_condition|default": "none",
@@ -293,7 +320,7 @@
           "size": [ 16, 16 ],
           "$icon_size": [ 16, 16 ],
           "$use_item_icons|default": true,
-          "ignored": "(not $is_java_aspects)",
+          "ignored": "(not $is_java_aspects_fidelity)",
           "$item_collection_name": "$hotbar_collection_name",
           "property_bag": {
             "force_update": true
@@ -336,7 +363,7 @@
     "controls": [
       {
         "item_renderer": {
-          "ignored": "$is_java_aspects",
+          "ignored": "$is_java_aspects_fidelity",
           "type": "custom",
           "renderer": "inventory_item_renderer",
           "size": [ 16, 16 ],
@@ -356,7 +383,7 @@
           "size": [ 16, 16 ],
           "$icon_size": [ 16, 16 ],
           "$use_item_icons|default": true,
-          "ignored": "(not $is_java_aspects)",
+          "ignored": "(not $is_java_aspects_fidelity)",
           "property_bag": {
             "force_update": true
           },
@@ -448,7 +475,7 @@
       {
         "item_renderer": {
           "type": "custom",
-          "ignored": "$is_java_aspects",
+          "ignored": "$is_java_aspects_fidelity",
           "renderer": "inventory_item_renderer",
           "size": [ 16, 16 ],
           "bindings": [
@@ -482,7 +509,7 @@
           "size": [ 16, 16 ],
           "$icon_size": [ 16, 16 ],
           "$use_item_icons|default": true,
-          "ignored": "(not $is_java_aspects)",
+          "ignored": "(not $is_java_aspects_fidelity)",
           "variables": [
             {
               "requires": "$is_multipixel_bedrock",
@@ -491,7 +518,7 @@
           ],
           "controls": [
             { "specific_trade_icon_renderer@trade2.specific_trade_icon_renderer": { "layer": 0 } },
-            { "regular_glass_pane_icon@trade2.regular_glass_pane_icon": { "layer": 0 } }
+            { "glass_pane_icon@trade2.glass_pane_icon": { "layer": 0 } }
           ]
         }
       }
@@ -507,7 +534,7 @@
       {
         "item_renderer": {
           "type": "custom",
-          //"ignored": "$is_java_aspects",
+          //"ignored": "$is_java_aspects_fidelity",
           "renderer": "inventory_item_renderer",
           "size": [ 16, 16 ],
           "bindings": [
@@ -530,7 +557,7 @@
       {
         "item_renderer": {
           "type": "custom",
-          //"ignored": "$is_java_aspects",
+          //"ignored": "$is_java_aspects_fidelity",
           "renderer": "inventory_item_renderer",
           "size": [ 16, 16 ],
           "bindings": [

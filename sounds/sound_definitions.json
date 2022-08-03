@@ -16,5 +16,11 @@
         "volume": 0.75
       }
     ]
+  },
+  "random.toast": {
+    "category": "ui",
+    "sounds": [
+      "sounds/ui/toast/in"
+    ]
   }
 }

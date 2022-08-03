@@ -76,14 +76,14 @@
               "icon@item_renderer_dx.item_renderer_selected_icon": {
                 "anchor_to": "top_left",
                 "anchor_from": "top_left",
-                "layer": 50
+                "layer": 60
               }
             },
             { 
               "selected_item_lock_overlay@common.inventory_selected_item_lock_overlay": {
                 "anchor_to": "top_left",
                 "anchor_from": "top_left",
-                "layer": 54,
+                "layer": 64,
                 "size": [ 24, 24 ]
               }
             },
@@ -91,7 +91,7 @@
               "durability_bar_selected_icon@common_durability_dx.durability_bar_selected_icon": {
                 "anchor_to": "top_left",
                 "anchor_from": "top_left",
-                "layer": 52
+                "layer": 62
               }
             }
           ]
@@ -103,24 +103,13 @@
           "offset": [ 1, 2 ],
           "anchor_to": "bottom_right",
           "anchor_from": "bottom_right",
-          "layer": 53,
+          "layer": 63,
           "shadow": true,
           "text": "#inventory_selected_item_stack_count",
           "bindings": [
             {
               "binding_name": "#inventory_selected_item_stack_count",
               "binding_condition": "always_when_visible"
-            }
-          ]
-        }
-      },
-      {
-        "hover_text@common.hover_text": {
-          "layer": 59,
-          "bindings": [
-            {
-              "binding_name": "#using_touch",
-              "binding_name_override": "#visible"
             }
           ]
         }

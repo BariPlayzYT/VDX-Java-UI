@@ -1,11 +1,13 @@
 {
-  /* Vanilla DX: Java UI Tweaks */
+  /* Vanilla DX UI Tweaks */
 
   /* (c) CrisXolt. Don't use any code without authorization! */
 
   ////*/ Other Resource Packs Compatibility /*////
   /* By @agentms_*/
   "$is_java_aspects": false,
+  "$is_java_aspects_fidelity": false,
+  "$is_java_aspects_performance": false,
   
   /* By @ZouChenyunfei*/
   "$is_multipixel": false,
@@ -25,6 +27,34 @@
   "$ignore_scoreboard_scores": false,
   "$scoreboard_text_shadow": false,
   "$player_score_color": [ 1.0, 0.333, 0.333, 1.0 ],
+  /*
+  Recommended if you use "Screen Animations" enabled in settings.
+  But it is not recommended when the texture of the chat message
+  you are going to use is transparent or clear.
+  */
+  "$show_hud_while_inventory": true,
+
+  //Ender Dragon Bar
+  "$ender_dragon_bar_empty_texture": "bars_java_dx.magenta_bar_empty",
+  "$ender_dragon_bar_full_texture": "bars_java_dx.magenta_bar_full",
+  "$ender_dragon_nub_bar_empty_texture": "bars_java_dx.nub_bar_0_empty",
+  "$ender_dragon_nub_bar_full_texture": "bars_java_dx.nub_bar_0_full",
+  //Wither Bar
+  "$wither_bar_empty_texture": "bars_java_dx.purple_bar_empty",
+  "$wither_bar_full_texture": "bars_java_dx.purple_bar_full",
+  "$wither_nub_bar_empty_texture": "bars_java_dx.nub_bar_0_empty",
+  "$wither_nub_bar_full_texture": "bars_java_dx.nub_bar_0_full",
+  //Raid Bar
+  "$raid_bar_empty_texture": "bars_java_dx.red_bar_empty",
+  "$raid_bar_full_texture": "bars_java_dx.red_bar_full",
+  "$raid_nub_bar_empty_texture": "bars_java_dx.nub_bar_10_empty",
+  "$raid_nub_bar_full_texture": "bars_java_dx.nub_bar_10_full",
+  //Defaut Event Bar
+  "$default_event_bar_empty_texture": "bars_java_dx.white_bar_empty",
+  "$default_event_bar_full_texture": "bars_java_dx.white_bar_full",
+  "$default_event_nub_bar_empty_texture": "bars_java_dx.nub_bar_0_empty",
+  "$default_event_nub_bar_full_texture": "bars_java_dx.nub_bar_0_full",
+  "$has_default_event_bar_custom_color": true, //Only recommended if the bar is white.
 
   //////// Anvil ////////
   //For java text colors.
@@ -37,6 +67,9 @@
   "$enchanting_runes_locked_color": [ 0.2, 0.18, 0.14 ],
   "$enchanting_cost_locked_color": [ 0.25, 0.5, 0.06 ],
 
+  //////// Furnace, Blast Furnace and Smoker ////////
+  "$enable_furnace_recipe_book_concept": true,
+
   //////// Sign ////////
   "$sign_edit_text_color": [ 1, 1, 1 ],
 
@@ -45,8 +78,11 @@
 
   //////// Container ////////
   
+  "$ignore_flying_item": true,
   "$vdx_inventory_title_text_color": [ 0.3, 0.3, 0.3 ],
   "$vdx_container_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_2x2_crafting_title_text_color": [ 0.3, 0.3, 0.3 ],
+  "$vdx_3x3_crafting_title_text_color": [ 0.3, 0.3, 0.3 ],
 
   "$custom_durability_bar": true,
 

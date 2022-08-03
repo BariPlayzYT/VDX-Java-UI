@@ -7,6 +7,8 @@
     "type": "panel",
     "$tab_size|default": [ "100%", "100%" ],
     "$sound_name|default": "random.click",
+    "$sound_volume|default": 1.0,
+    "$sound_pitch|default": 1.0,
     "size": [ "100%", "100%" ],
     "$radio_toggle_group": true,
     "$toggle_focus_enabled": true,
@@ -34,6 +36,8 @@
       {
         "$tab_view_binding_name@common.toggle": {
           "sound_name": "$sound_name",
+          "sound_volume": "$sound_volume",
+          "sound_pitch": "$sound_pitch",
           "size": "$tab_size",
           "button_mappings": [
             {

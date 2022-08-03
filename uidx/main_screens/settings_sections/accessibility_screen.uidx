@@ -3,6 +3,28 @@
 {
   "namespace": "accessibility_dx",
 
+  /*//// Hover Text Panels ////*/
+
+  "darkness_hover_text@common_dx.hover_text_label": {
+    "line_padding": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 4, 2 ],
+    "size": [ 200, "default" ],
+    "text": "options.darknessEffectModifier.message"
+  },
+
+  "notification_hover_text@common_dx.hover_text_label": {
+    "line_padding": 1.0,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 4, 2 ],
+    "size": [ 200, "default" ],
+    "text": "options.notificationDuration.message"
+  },
+
+  /*//// Main ////*/
+
   "accessibility_stack_panel": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -22,31 +44,7 @@
           "size": [ 310, 25 ],
           "controls": [
             {
-              "text_background_opacity_slider@settings_common_dx.option_slider_310": {
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "$option_label": "#text_background_opacity_slider_label",
-                "$slider_name": "text_background_opacity",
-                "$slider_value_binding_name": "#text_background_opacity",
-                "$slider_tts_text_value": "#text_background_opacity_text_value",
-                "$option_enabled_binding_name": "#text_background_opacity_enabled",
-                "$label_bindings": [
-                  {
-                    "binding_name": "$option_label"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "panel_1": {
-          "type": "panel",
-          "size": [ 310, 25 ],
-          "controls": [
-            {
-              "tts_volume_slider@settings_common_dx.option_slider_310": {
+              "tts_volume_slider@settings_common_dx.option_slider_150": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "$option_label": "#texttospeech_volume_slider_label",
@@ -60,6 +58,52 @@
                   }
                 ]
               }
+            },
+            {
+              "option_toggle1@settings_common_dx.option_toggle_150": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "enabled": "$supports_flite_tts",
+                "$option_label": "options.enableUITextToSpeech",
+                "$option_binding_name": "#enable_ui_text_to_speech",
+                "$option_enabled_binding_name": "#enable_ui_text_to_speech_enabled",
+                "$toggle_name": "enable_ui_text_to_speech"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel_1": {
+          "type": "panel",
+          "size": [ 310, 25 ],
+          "controls": [
+            {
+              "text_background_opacity_slider@settings_common_dx.option_slider_150": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "$option_label": "#text_background_opacity_slider_label",
+                "$slider_name": "text_background_opacity",
+                "$slider_value_binding_name": "#text_background_opacity",
+                "$slider_tts_text_value": "#text_background_opacity_text_value",
+                "$option_enabled_binding_name": "#text_background_opacity_enabled",
+                "$label_bindings": [
+                  {
+                    "binding_name": "$option_label"
+                  }
+                ]
+              }
+            },
+            {
+              "option_toggle0@settings_common_dx.option_toggle_150": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "enabled": "$supports_flite_tts",
+                "$option_label": "options.enableAutoPlatformTextToSpeech",
+                "$option_binding_name": "#enable_auto_text_to_speech",
+                "$option_enabled_binding_name": "#enable_auto_text_to_speech_enabled",
+                "$toggle_name": "enable_auto_text_to_speech"
+              }
             }
           ]
         }
@@ -70,25 +114,25 @@
           "size": [ 310, 25 ],
           "controls": [
             {
-              "option_toggle0@settings_common_dx.option_toggle_150": {
+              "option_toggle2@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
-                "enabled": "$text_to_speech_supported",
-                "$option_label": "options.enableAutoPlatformTextToSpeech",
-                "$option_binding_name": "#enable_auto_text_to_speech",
-                "$option_enabled_binding_name": "#enable_auto_text_to_speech_enabled",
-                "$toggle_name": "enable_auto_text_to_speech"
+                "enabled": "$supports_flite_tts",
+                "$option_label": "options.enableChatTextToSpeech",
+                "$option_binding_name": "#enable_chat_text_to_speech",
+                "$option_enabled_binding_name": "#enable_chat_text_to_speech_enabled",
+                "$toggle_name": "enable_chat_text_to_speech"
               }
             },
             {
-              "option_toggle1@settings_common_dx.option_toggle_150": {
+              "option_toggle3@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
-                "enabled": "$text_to_speech_supported",
-                "$option_label": "options.enableUITextToSpeech",
-                "$option_binding_name": "#enable_ui_text_to_speech",
-                "$option_enabled_binding_name": "#enable_ui_text_to_speech_enabled",
-                "$toggle_name": "enable_ui_text_to_speech"
+                "enabled": "$supports_flite_tts",
+                "$option_label": "options.enableOpenChatMessage",
+                "$option_binding_name": "#enable_open_chat_message",
+                "$option_enabled_binding_name": "#enable_open_chat_message_enabled",
+                "$toggle_name": "enable_open_chat_message"
               }
             }
           ]
@@ -100,25 +144,32 @@
           "size": [ 310, 25 ],
           "controls": [
             {
-              "option_toggle2@settings_common_dx.option_toggle_150": {
+              "darkness_slider@settings_common_dx.option_slider_150": {
+                "$hover_content": "common_dx.hover_text_panel",
+                "$hover_text_label_control": "accessibility_dx.darkness_hover_text",
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
-                "enabled": "$text_to_speech_supported",
-                "$option_label": "options.enableChatTextToSpeech",
-                "$option_binding_name": "#enable_chat_text_to_speech",
-                "$option_enabled_binding_name": "#enable_chat_text_to_speech_enabled",
-                "$toggle_name": "enable_chat_text_to_speech"
+                "$option_label": "#darkness_slider_label",
+                "$slider_name": "darkness",
+                "$slider_value_binding_name": "#darkness",
+                "$slider_tts_text_value": "#darkness_text_value",
+                "$option_enabled_binding_name": "#darkness_enabled",
+                "$label_bindings": [
+                  {
+                    "binding_name": "$option_label"
+                  }
+                ]
               }
             },
             {
-              "option_toggle3@settings_common_dx.option_toggle_150": {
+              "camera_shake_toggle@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
-                "enabled": "$text_to_speech_supported",
-                "$option_label": "options.enableOpenChatMessage",
-                "$option_binding_name": "#enable_open_chat_message",
-                "$option_enabled_binding_name": "#enable_open_chat_message_enabled",
-                "$toggle_name": "enable_open_chat_message"
+                "enabled": "(not $is_holographic and not $is_reality_mode and $is_pregame)",
+                "$option_label": "options.screenShake",
+                "$option_binding_name": "#camera_shake",
+                "$option_enabled_binding_name": "#camera_shake_enabled",
+                "$toggle_name": "camera_shake"
               }
             }
           ]
@@ -130,17 +181,27 @@
           "size": [ 310, 25 ],
           "controls": [
             {
-              "camera_shake_toggle@settings_common_dx.option_toggle_150": {
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "enabled": "(not $is_holographic and not $is_reality_mode and $is_pregame)",
-                "$option_label": "options.screenShake",
-                "$option_binding_name": "#camera_shake",
-                "$option_enabled_binding_name": "#camera_shake_enabled",
-                "$toggle_name": "camera_shake"
+              "notification_duration_dropdown@settings_common_dx.option_dropdown_310": {
+                "$hover_content": "common_dx.hover_text_panel",
+                "$hover_text_label_control": "accessibility_dx.notification_hover_text",
+                "$option_dropdown_type": "settings_common_dx.dropdown_no_scrollpanel",
+                "ignored": "($is_holographic and $is_reality_mode)",
+                "$option_label": "options.notificationDuration",
+                "$dropdown_content": "general_section.notification_duration_dropdown_content",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "notification_duration_dropdown",
+                "$option_enabled_binding_name": "#notification_duration_dropdown_enabled",
+                "$options_dropdown_toggle_label_binding": "#notification_duration_dropdown_toggle_label",
+                "$dropdown_scroll_content_size": [ "100%", "200%" ]
               }
             }
           ]
+        }
+      },
+      {
+        "panel_5": {
+          "type": "panel",
+          "size": [ 310, 50 ]
         }
       }
     ]

@@ -43,134 +43,6 @@
 
   /*////// BUTTONS //////*/
 
-  "visitor_icon_default": {
-    "type": "panel",
-    "size": [ 8, 7 ],
-    "controls": [
-      { "cross_player_icon_default@realms_java_dx.cross_player_icon_default": { "layer": 2 } },
-      { "user_icon_default@realms_java_dx.user_icon_default": { "layer": 1 } }
-    ]
-  },
-
-  "visitor_icon_hover": {
-    "type": "panel",
-    "size": [ 8, 7 ],
-    "controls": [
-      {
-        "hover_text_panel@common_dx.hover_text_panel": {
-          "anchor_from": "top_right",
-          "anchor_to": "top_right"
-        }
-      },
-      { "cross_player_icon_hover@realms_java_dx.cross_player_icon_hover": { "layer": 2 } },
-      { "user_icon_hover@realms_java_dx.user_icon_hover": { "layer": 1 } }
-    ]
-  },
-
-  "user_icon_hover": {
-    "type": "panel",
-    "size": [ 8, 7 ],
-    "controls": [
-      {
-        "hover_text_panel@common_dx.hover_text_panel": {
-          "anchor_from": "top_right",
-          "anchor_to": "top_right"
-        }
-      },
-      { "user_icon_hover@realms_java_dx.user_icon_hover": { "layer": 1 } }
-    ]
-  },
-
-  "op_icon_hover": {
-    "type": "panel",
-    "size": [ 8, 7 ],
-    "controls": [
-      {
-        "hover_text_panel@common_dx.hover_text_panel": {
-          "anchor_from": "top_right",
-          "anchor_to": "top_right"
-        }
-      },
-      { "op_icon_hover@realms_java_dx.op_icon_hover": { "layer": 1 } }
-    ]
-  },
-
-  "member_type_panel": {
-    "type": "dropdown",
-    "$dropdown_area": "friends_panel",
-    "$dropdown_name": "player_permissions_dropdown",
-    "anchor_from": "top_right",
-    "anchor_to": "top_right",
-    "offset": [ -3, 4 ],
-    "size": [ 8, 7 ],
-    "$hover_text_texture": "textures/uidx/hover_text/text_panel",
-    "$hover_text_offset": [ -8, 7 ],
-    "$hover_anchor_from": "top_right",
-    "$hover_anchor_to": "top_right",
-    "$toggle_binding_type": "collection",
-    "$toggle_grid_collection_name": "$collection_binding_name",
-    "controls": [
-      {
-        "visitor@common_toggles_dx.toggle_panel": {
-          "$toggle_name": "#permission_level_radio_visitor",
-          "$unchecked_control": "realms_java_dx.op_icon_default",
-          "$unchecked_hover_control": "realms_players_dx.op_icon_hover",
-          "$checked_control": "realms_java_dx.op_icon_default",
-          "$checked_hover_control": "realms_players_dx.op_icon_hover",
-          "$hover_panel_text": "permissions.level.operator",
-          "bindings": [
-            {
-              "binding_name": "#permission_level_radio_operator",
-              "binding_name_override": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "member@common_toggles_dx.toggle_panel": {
-          "$radio_toggle_group": false,
-          "$toggle_name": "#permission_level_radio_member",
-          "$unchecked_control": "realms_players_dx.visitor_icon_default",
-          "$unchecked_hover_control": "realms_players_dx.visitor_icon_hover",
-          "$checked_control": "realms_players_dx.visitor_icon_default",
-          "$checked_hover_control": "realms_players_dx.visitor_icon_hover",
-          "$hover_panel_text": "permissions.level.visitor",
-          "bindings": [
-            {
-              "binding_name": "#permission_level_radio_visitor",
-              "binding_name_override": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "operator@common_toggles_dx.toggle_panel": {
-          "$radio_toggle_group": false,
-          "$toggle_name": "#permission_level_radio_operator",
-          "$unchecked_control": "realms_java_dx.user_icon_default",
-          "$unchecked_hover_control": "realms_players_dx.user_icon_hover",
-          "$checked_control": "realms_java_dx.user_icon_default",
-          "$checked_hover_control": "realms_players_dx.user_icon_hover",
-          "$hover_panel_text": "permissions.level.member",
-          "bindings": [
-            {
-              "binding_name": "#permission_level_radio_member",
-              "binding_name_override": "#visible"
-            }
-          ]
-        }
-      }
-    ],
-    "bindings": [
-      {
-        "binding_name": "#permission_collection_dropdown_visible",
-        "binding_name_override": "#visible",
-        "binding_type": "collection",
-        "binding_collection_name": "$collection_binding_name"
-      }
-    ]
-  },
-
   "gamer_grid_item": {
     "type": "panel",
     "size": [ "100%", 14 ],
@@ -249,7 +121,7 @@
           ]
         }
       },
-      /*{ "member_type_panel@realms_players_dx.member_type_panel": { } }*/
+      { "member_type_panel@realms_permissions_dx.member_type_panel": { } },/* 
       {
         "member_permissions@realms_allowlist.permissions_dropdown": {
           "ignored": "$is_uninvited",
@@ -309,7 +181,7 @@
             }
           ]
         }
-      },
+      }, */
       {
         "invite_add_button@common.button": {
           "size": [ 15, 14 ],
@@ -319,6 +191,7 @@
           "$hover_text_offset": [ -8, 7 ],
           "$hover_anchor_from": "top_right",
           "$hover_anchor_to": "top_right",
+          "locked_control": "locked",
           "controls": [
             {
               "default@common.empty_panel": {
@@ -368,6 +241,21 @@
                   }
                 ]
               }
+            },
+            {
+              "locked@common.empty_panel": {
+                "layer": 2,
+                "controls": [
+                  {
+                    "plus_icon_default@realms_java_dx.plus_icon_default": {
+                      "alpha": 0.5,
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "layer": 1
+                    }
+                  }
+                ]
+              }
             }
           ],
           "button_mappings": [
@@ -402,14 +290,16 @@
       }
     ]
   },
+
   "cross_button@common.button": {
     "size": [ 8, 7 ],
-    "offset": [ -35, 4 ],
+    "offset": [ -14, 4 ],
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "$hover_text_offset": [ -8, 7 ],
     "$hover_anchor_from": "top_right",
     "$hover_anchor_to": "top_right",
+    "locked_control": "locked",
     "controls": [
       {
         "default@common.empty_panel": {
@@ -440,11 +330,19 @@
             { "cross_player_icon_hover@realms_java_dx.cross_player_icon_hover": { "layer": 1 } }
           ]
         }
+      },
+      { 
+        "locked@common.empty_panel": {
+          "layer": 2,
+          "controls": [
+            { "cross_player_icon_default@realms_java_dx.cross_player_icon_default": { "layer": 1, "alpha": 0.5 } }
+          ]
+        }
       }
     ]
   },
 
-  "panel_cotent": {
+  "panel_content": {
     "type": "panel",
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
@@ -462,10 +360,48 @@
       { "uninvited_friends_panel@realms_allowlist_dx.uninvited_friends_panel": {} },
       { "blocked_friends_panel@realms_allowlist_dx.blocked_friends_panel": {} },
       {
+        "option_text_edit_0@settings_common_dx.option_text_edit": {
+          "size": [ 160, 35 ],
+          "offset": [ 1, -50 ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "$option_label": "realmsInvitationScreen.playerFilterTitle",
+          "$option_binding_name": "unset",
+          "$option_place_holder_text": "realmsSettingsScreen.searchBox",
+          "$text_box_name": "#player_filter_text_box",
+          "$allow_data_binding": true,
+          "$max_text_edit_length": 30
+        }
+      },
+      {
+        "option_dropdown_permissions@settings_common_dx.option_dropdown_158": {
+          "size": [ 158, 20 ],
+          "offset": [ 0, -25 ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "$option_label": "accessibility.pause.permissions",
+          "$dropdown_content": "permissions.permission_level_dropdown_content",
+          "$dropdown_area": "friends_panel",
+          "$dropdown_name": "realm_default_permission_dropdown",
+          "$button_type_panel": "permissions.permission_level_dropdown_state_content",
+          "$options_dropdown_toggle_label_binding": "#realm_default_permission_dropdown_toggle_label",
+          "$option_enabled_binding_name": "#realm_default_permission_dropdown_enabled",
+          "$dropdown_scroll_content_size": [ "100%", 45 ],
+          "$show_option_label": true,
+          "$is_world_settings": true,
+          "bindings": [
+            {
+              "binding_name": "#permission_dropdown_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
         "main_done_button@manage_realm_dx.main_done_button": {
-          "$unchecked_control": "common_buttons_dx.74_default",
-          "$unchecked_hover_control": "common_buttons_dx.74_hover",
-          "size": [ 74, 20 ],
+          "$unchecked_control": "common_buttons_dx.158_default",
+          "$unchecked_hover_control": "common_buttons_dx.158_hover",
+          "size": [ 158, 20 ],
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right"
         }
@@ -576,7 +512,7 @@
   "players_panel": {
     "type": "panel",
     "controls": [
-      { "panel_content@realms_players_dx.panel_cotent": { "layer": 2 } },
+      { "panel_content@realms_players_dx.panel_content": { "layer": 2 } },
       {
         "popup_dialog_factory": {
           "type": "factory",
@@ -591,14 +527,6 @@
           "control_ids": {
             "options_modal": "@realms_allowlist.popup_dialog__options"
           }
-        }
-      },
-      {
-        "game_main_bg_panel@java_gui_common.options_background": {
-          "size": [ "100%+128px", "100%+64px" ],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": [ -64, -32 ]
         }
       }
     ]

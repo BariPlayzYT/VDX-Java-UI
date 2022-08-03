@@ -1,4 +1,6 @@
-﻿##  Start
+﻿map.position=Block: %s %s %s
+
+##  Start
 menu.play=Play Game
 menu.options=Options...
 menu.quit=Quit Game
@@ -9,6 +11,8 @@ options.enableChatTextToSpeech=TTS For Chat
 options.enableAutoPlatformTextToSpeech=TTS with Device
 options.enableUITextToSpeech=UI Screen Reader
 options.enableOpenChatMessage=Open Chat Message
+options.darknessEffectModifier=Darkness Pulsing
+options.darknessEffectModifier.message=Controls how much the Darkness effect pulses when a Warden or Sculk Shrieker gives it to you.
 
 ##  Video Settings
 options.graphics.fancy.tooltip=Fancy graphics balances performance and quality for the majority of machines. Weather, clouds and particles may not appear behind translucent blocks or water.
@@ -35,13 +39,13 @@ pack.available.title=§lAvailable
 pack.selected.title=§lSelected
 
 resourcePack.title=Select Resource Packs
-dataPack.title=Select Data Packs
+behaviorPack.title=Select Data Packs
 
 selectWorld.resourcePack=Resource
-selectWorld.dataPack=Data
+selectWorld.behaviorPack=Data
 
 pack.resources.dropInfo=Drag and drop files into "resource_packs" folder directory to add Packs
-pack.data.dropInfo=Drag and drop files into "behavior_packs" folder directory to add Packs
+pack.behavior.dropInfo=Drag and drop files into "behavior_packs" folder directory to add Packs
 
 ##  Recipe Book
 gui.recipebook.search_hint=§oSearch...
@@ -133,10 +137,14 @@ gamerule.category.misc=§lMiscellaneous
 
 ##  Raid Texts Input
 raid.name=Raid	#
-raid.progress=Mobs remaining:	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
 
 ##  Raid Texts Output
 bar.event.raid.name=Raid	#
-bar.event.raid.remaining.2=Raid - Mobs remaining: 2	#
-bar.event.raid.remaining.1=Raid - Mobs remaining: 1	#
-bar.event.raid.remaining.0=Raid - Mobs remaining: 0	#
+bar.event.raid.remaining.2=Raid - Raiders Remaining: 2	#
+bar.event.raid.remaining.1=Raid - Raiders Remaining: 1	#
+bar.event.raid.remaining.0=Raid - Raiders Remaining: 0	#
+bar.event.raid.victory=Raid - Victory	#
+bar.event.raid.defeat=Raid - Defeat	#

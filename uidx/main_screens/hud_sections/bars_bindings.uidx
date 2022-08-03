@@ -54,7 +54,7 @@
       {
         "binding_type": "view",
         "source_control_name": "$bar_name_control",
-        "source_property_name": "(#bossName = 'Raid - Mobs remaining: 2')",
+        "source_property_name": "(#bossName = 'Raid - Raiders remaining: 2')",
         "target_property_name": "#visible",
         "resolve_sibling_scope": true
       }
@@ -68,7 +68,7 @@
       {
         "binding_type": "view",
         "source_control_name": "$bar_name_control",
-        "source_property_name": "(#bossName = 'Raid - Mobs remaining: 1')",
+        "source_property_name": "(#bossName = 'Raid - Raiders remaining: 1')",
         "target_property_name": "#visible",
         "resolve_sibling_scope": true
       }
@@ -82,7 +82,35 @@
       {
         "binding_type": "view",
         "source_control_name": "$bar_name_control",
-        "source_property_name": "(#bossName = 'Raid - Mobs remaining: 0')",
+        "source_property_name": "(#bossName = 'Raid - Raiders remaining: 0')",
+        "target_property_name": "#visible",
+        "resolve_sibling_scope": true
+      }
+    ]
+  },
+
+  "raid_defeat_bindings": {
+    "type": "panel",
+    "visible": false,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$bar_name_control",
+        "source_property_name": "(#bossName = 'Raid - Defeat')",
+        "target_property_name": "#visible",
+        "resolve_sibling_scope": true
+      }
+    ]
+  },
+
+  "raid_victory_bindings": {
+    "type": "panel",
+    "visible": false,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$bar_name_control",
+        "source_property_name": "(#bossName = 'Raid - Victory')",
         "target_property_name": "#visible",
         "resolve_sibling_scope": true
       }

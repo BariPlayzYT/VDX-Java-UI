@@ -14,6 +14,10 @@
     "$cell_image_size|default": [ 18, 18 ],
     "$cell_overlay_ref|default": "common.cell_overlay",
     "$button_ref|default": "common.container_slot_button_prototype",
+    "$button_ref_sound_name|default": "random.click",
+    "$button_ref_sound_volume|default": 0.0,
+    "$button_ref_sound_pitch|default": 0.0,
+    "$auto_place_mode_button_name|default": "button.container_auto_place",
     "$stack_count_required|default": true,
     "$durability_bar_required|default": true,
     "$item_renderer|default": "item_renderer_dx.item_renderer",
@@ -102,19 +106,92 @@
         }
       },
       {
-        "item_selected_image@common.slot_selected": {
-          "texture": "$slot_selected_texture",
-          "$slot_selected_texture|default": "textures/ui/pocket_ui_highlight_selected_slot",
-          "layer": 4
-        }
-      },
-      {
-        "item_button_ref@$button_ref": {
-          "consume_hover_events": false,
-          "tts_ignore_count": true,
-          "tts_skip_message": true,
-          "tts_inherit_siblings": true,
-          "layer": 5
+        "item_button_ref": {
+          "type": "panel",
+          "layer": 5,
+          "controls": [
+            {
+              "main@$button_ref": { 
+                "sound_name": "$button_ref_sound_name",
+                "sound_volume": "$button_ref_sound_volume",
+                "sound_pitch": "$button_ref_sound_pitch",
+                "default_control": "default",
+                "hover_control": "hover",
+                "pressed_control": "pressed",
+                "ignored": "($touch)",
+                "consume_hover_events": false,
+                "tts_ignore_count": true,
+                "tts_skip_message": true,
+                "tts_inherit_siblings": true
+              }
+            },
+            {
+              "normal_place": {
+                "type": "panel",
+                "ignored": "(not $touch)",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "normal_place_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  { 
+                    "button@$button_ref": {
+                      "sound_name": "$button_ref_sound_name",
+                      "sound_volume": "$button_ref_sound_volume",
+                      "sound_pitch": "$button_ref_sound_pitch",
+                      "consume_hover_events": false,
+                      "tts_ignore_count": true,
+                      "tts_skip_message": true,
+                      "tts_inherit_siblings": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "auto_place": {
+                "type": "panel",
+                "ignored": "(not $touch)",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "auto_place_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  { 
+                    "button@$button_ref": {
+                      "sound_name": "$button_ref_sound_name",
+                      "sound_volume": "$button_ref_sound_volume",
+                      "sound_pitch": "$button_ref_sound_pitch",
+                      "consume_hover_events": false,
+                      "tts_ignore_count": true,
+                      "tts_skip_message": true,
+                      "tts_inherit_siblings": true,
+                      "button_mappings": [
+                        {
+                          "from_button_id": "button.menu_select",
+                          "to_button_id": "$auto_place_mode_button_name",
+                          "mapping_type": "pressed"
+                        },
+                        {
+                          "from_button_id": "button.menu_ok",
+                          "to_button_id": "$auto_place_mode_button_name",
+                          "mapping_type": "pressed"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
         }
       },
       {
@@ -142,6 +219,10 @@
 
   "inventory_container_item@container_item_dx.container_item": {
     "$button_ref|default": "crafting.inventory_container_slot_button",
+    "$button_ref_sound_name|default": "random.click",
+    "$button_ref_sound_volume|default": 0.0,
+    "$button_ref_sound_pitch|default": 0.0,
+    "$auto_place_mode_button_name|default": "button.container_auto_place",
     "$background_images|default": "crafting.container_cell_images",
 
     "$overlay_images|default": "crafting.container_overlay_images",
@@ -218,18 +299,86 @@
         }
       },
       {
-        "item_selected_image@common.slot_selected": {
-          "texture": "$slot_selected_texture",
-          "$slot_selected_texture|default": "textures/ui/pocket_ui_highlight_selected_slot",
-          "layer": 4
-        }
-      },
-      {
-        "item_button_ref@$button_ref": {
-          "tts_ignore_count": true,
-          "tts_skip_message": true,
-          "tts_inherit_siblings": true,
-          "layer": 5
+        "item_button_ref": {
+          "type": "panel",
+          "layer": 5,
+          "controls": [
+            {
+              "main@$button_ref": {
+                "sound_name": "$button_ref_sound_name",
+                "sound_volume": "$button_ref_sound_volume",
+                "sound_pitch": "$button_ref_sound_pitch",
+                "ignored": "($touch)",
+                "tts_ignore_count": true,
+                "tts_skip_message": true,
+                "tts_inherit_siblings": true
+              }
+            },
+            {
+              "normal_place": {
+                "type": "panel",
+                "ignored": "(not $touch)",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "normal_place_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  { 
+                    "button@$button_ref": {
+                      "sound_name": "$button_ref_sound_name",
+                      "sound_volume": "$button_ref_sound_volume",
+                      "sound_pitch": "$button_ref_sound_pitch",
+                      "tts_ignore_count": true,
+                      "tts_skip_message": true,
+                      "tts_inherit_siblings": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "auto_place": {
+                "type": "panel",
+                "ignored": "(not $touch)",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "auto_place_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  { 
+                    "button@$button_ref": {
+                      "sound_name": "$button_ref_sound_name",
+                      "sound_volume": "$button_ref_sound_volume",
+                      "sound_pitch": "$button_ref_sound_pitch",
+                      "tts_ignore_count": true,
+                      "tts_skip_message": true,
+                      "tts_inherit_siblings": true,
+                      "button_mappings": [
+                        {
+                          "from_button_id": "button.menu_select",
+                          "to_button_id": "$auto_place_mode_button_name",
+                          "mapping_type": "pressed"
+                        },
+                        {
+                          "from_button_id": "button.menu_ok",
+                          "to_button_id": "$auto_place_mode_button_name",
+                          "mapping_type": "pressed"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
         }
       },
       {

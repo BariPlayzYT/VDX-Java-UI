@@ -91,10 +91,14 @@ gamerule.category.misc=§lРазни 	#
 
 ##  Raid Texts Input
 raid.name=Raid	#
-raid.progress=Mobs remaining:	#
+raid.progress=Raiders remaining:	#
+raid.victory=Victory	#
+raid.defeat=Defeat	#
 
 ##  Raid Texts Output
-bar.event.raid.name=Нашествие	#
-bar.event.raid.remaining.2=Нашествие - Оставащи мобове: 2	#
-bar.event.raid.remaining.1=Нашествие - Оставащи мобове: 1	#
-bar.event.raid.remaining.0=Нашествие - Оставащи мобове: 0	#
+bar.event.raid.name=Нападение	#
+bar.event.raid.remaining.2=Нападение - Оставащи нападатели: 2	#
+bar.event.raid.remaining.1=Нападение - Оставащи нападатели: 1	#
+bar.event.raid.remaining.0=Нападение - Оставащи нападатели: 0	#
+bar.event.raid.victory=Нападение - Победа	#
+bar.event.raid.defeat=Нападение - Загуба	#

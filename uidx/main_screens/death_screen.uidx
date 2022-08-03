@@ -31,10 +31,24 @@
     "font_size": "large"
   },
 
+  "death_reason_label@common_dx.global_label": {
+    "color": "$death_text_color",
+    "offset": [ 0, -31 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 2,
+    "text": "#death_reason_text",
+    "shadow": true,
+    "bindings": [
+      { "binding_name": "#death_reason_text" }
+    ]
+  },
+
   "death_screen_content": {
     "type": "panel",
     "controls": [
       { "you_died_label@death_dx.you_died_label": {} },
+      { "death_reason_label@death_dx.death_reason_label": {} },
       {
         "score_stack_panel": {
           "type": "stack_panel",
@@ -186,14 +200,21 @@
   "center_screen": {
     "type": "panel",
     "controls": [
-      { "background_gradient@death.background_gradient": { "layer": -10 } }
+      { "death_screen_content@death_dx.death_screen_content": { } }
     ]
   },
 
   "full_screen": {
     "type": "panel",
     "controls": [
-      { "death_screen_content@death_dx.death_screen_content": { } }
+      {
+        "background_gradient": {
+          "type": "image",
+          "fill": true,
+          "layer": -10,
+          "texture": "textures/uidx/death_screen_background"
+        }
+      }
     ]
   }
 }

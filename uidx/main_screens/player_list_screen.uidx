@@ -47,7 +47,7 @@
                 "anchor_to": "top_middle",
                 "size": [ 111, 8 ],
                 "alpha": 0.25,
-                "texture": "textures/uidx/global/white"
+                "texture": "textures/uidx/global/color_base"
               }
             }
           ] */
@@ -238,8 +238,7 @@
           "size": [ "100%", 11 ],
           "controls": [
             {
-              "players_label": {
-                "type": "label",
+              "players_label@common_dx.global_label": {
                 "text": "#worldname",
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
@@ -485,8 +484,7 @@
           "size": [ "100%c", 8 ],
           "controls": [
             {
-              "player_rank": {
-                "type": "label",
+              "player_rank@common_dx.global_label": {
                 "color": "$player_list_rank_color",
                 "anchor_to": "top_left",
                 "anchor_from": "top_left",
@@ -513,8 +511,7 @@
           "ignored": "(not $has_score)",
           "controls": [
             {
-              "separator": {
-                "type": "label",
+              "separator@common_dx.global_label": {
                 "color": "$player_list_rank_color",
                 "anchor_to": "top_left",
                 "anchor_from": "top_left",

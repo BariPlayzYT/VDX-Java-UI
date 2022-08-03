@@ -460,8 +460,8 @@
     ]
   },
 
-  "middle_main_panel": {
-    "type": "panel",
+  "middle_main_panel@common.base_screen": {
+  "type": "screen",
     "size": [ "100%", "100%" ],
     "controls":[
       { "extra_buttons_panel@settings_dx.extra_buttons": {} },
@@ -627,8 +627,8 @@
     ]
   },
 
-  "main_panel": {
-    "type": "panel",
+  "main_panel@common.base_screen": {
+    "type": "screen",
     "layer": 5,
     "controls": [
       { "main_screen_panel@settings_dx.main_screen_panel": { } },

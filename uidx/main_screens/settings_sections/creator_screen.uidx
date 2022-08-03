@@ -69,7 +69,6 @@
       },
       { 
         "chat_categorie_label@controls_dx.categories_text_panel": {
-          "ignored": "(not $pre_release)",
           "$categorie_text": "chat.title",
           "$categorie_color|default": [ 1.0, 1.0, 0.33 ],
           "$categorie_text_offset": [ 0, 8 ],
@@ -80,7 +79,6 @@
         "panel_0": {
           "type": "panel",
           "size": [ "100%", 25 ],
-          "ignored": "(not $pre_release)",
           "controls": [
             {
               "option_content_file_log@settings_common_dx.option_toggle_alt": {

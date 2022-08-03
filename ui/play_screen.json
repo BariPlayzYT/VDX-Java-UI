@@ -2,6 +2,7 @@
 //(c) Don't use any code design without permission!*/
 {
   "play_screen": {
+    "$is_popup_dialog_in_game": false,
     "load_screen_immediately": true,
     "$use_loading_bars": false,
     "$screen_animations": [ ],

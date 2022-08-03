@@ -606,6 +606,7 @@
             { "more_options_button@video_dx.more_options_button": { } },
             {
               "more_options_button_locked@common_buttons_dx.150_locked": {
+                "size": [ 150, 20 ],
                 "ignored":"($win10_edition)",
                 "$button_text": "hbui.CreateNewWorldSideMenu.advancedTabLabel",
                 "anchor_from": "top_right",

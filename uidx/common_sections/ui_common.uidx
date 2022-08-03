@@ -297,8 +297,10 @@
     "anchor_to": "bottom_left",
     "offset": [ 7, -7 ],
     "$with_label|default": true,
-    "$background_images": "java_gui_common.cell_image",
     "$highlight_control": "item_highlight_dx.highlight_slot_panel",
+    "$inventory_background_images": "java_gui_common.cell_image",
+    "$hotbar_background_images": "java_gui_common.cell_image",
+    "$inventory_label_content": "common.empty_panel",
     "controls": [
       {
         "inventory_label@common_dx.global_label": {
@@ -308,7 +310,10 @@
           "anchor_to": "top_left",
           "offset": [ 1, 0 ],
           "layer": 2,
-          "text": "container.inventory"
+          "text": "container.inventory",
+          "controls": [
+            { "inventory_label_content@$inventory_label_content": { } }
+          ]
         }
       },
       {
@@ -319,6 +324,7 @@
           "anchor_to": "bottom_left",
           "offset": [ 0, -22 ],
           "grid_dimensions": [ 9, 3 ],
+          "$background_images": "$inventory_background_images",
           "grid_item_template": "common_dx.grid_item_for_inventory",
           "layer": 2,
           "collection_name": "inventory_items"
@@ -331,6 +337,7 @@
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
           "grid_dimensions": [ 9, 1 ],
+          "$background_images": "$hotbar_background_images",
           "grid_item_template": "common_dx.grid_item_for_hotbar",
           "layer": 2,
           "collection_name": "hotbar_items"
@@ -353,7 +360,7 @@
     "offset": [ 4, 3 ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "layer": 155,
+    "layer": 255,
     "color": "$hover_panel_text_color",
     "$hover_panel_text_color|default": [ 1.0, 1.0, 1.0 ],
     "text": "$hover_panel_text",
@@ -377,7 +384,7 @@
     "$hover_text_alpha|default": 0.9375,
     "alpha": "$hover_text_alpha",
     "texture": "$hover_text_texture",
-    "layer": 150,
+    "layer": 250,
     "anchor_from": "$hover_anchor_from",
     "anchor_to": "$hover_anchor_to",
     "$hover_anchor_from|default": "top_left",

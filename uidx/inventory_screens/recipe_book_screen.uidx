@@ -474,9 +474,29 @@
     "size": [ 32, 26 ],
     "controls": [
       { 
-        "tab_icon@$tab_icon": {
+        "tab_icon_front@$tab_icon": {
+          "offset": [ 9, 5 ],
           "anchor_from": "top_left",
-          "anchor_to": "top_left"
+          "anchor_to": "top_left",
+          "bindings": [
+            {
+              "binding_name": "($tab_icon_binding)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "tab_icon_back@$tab_icon": {
+          "offset": [ 11, 5 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "bindings": [
+            {
+              "binding_name": "(not $tab_icon_binding)",
+              "binding_name_override": "#visible"
+            }
+          ]
         }
       }
     ]
@@ -484,7 +504,6 @@
 
   "icon_image": {
     "type": "image",
-    "layer": 16,
     "size": [ 16, 16 ],
     "offset": [ 9, 5 ]
   },
@@ -492,7 +511,6 @@
   "item_renderer": {
     "type": "custom",
     "renderer": "inventory_item_renderer",
-    "layer": 16,
     "size": [ 16, 16 ],
     "offset": [ 9, 5 ],
     "$number_aux_index": 65536,
@@ -527,24 +545,18 @@
 
   "equipment_recipe_icon": {
     "type": "panel",
-    "size": [ 27, 16 ],
-    "offset": [ 5, 5 ],
-    "layer": 16,
+    "size": [ 16, 16 ],
     "controls": [
       {
         "equipment_alt_icon@recipe_book_dx.equipment_alt_icon": {
-          "offset": [ 0, 0 ],
-          "layer": 2,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left"
+          "offset": [ -5, 0 ],
+          "layer": 1
         }
       },
       {
         "equipment_icon@recipe_book_dx.equipment_icon": {
-          "offset": [ 0, 0 ],
-          "layer": 1,
-          "anchor_from": "top_right",
-          "anchor_to": "top_right"
+          "offset": [ 5, 0 ],
+          "layer": 3
         }
       }
     ]
@@ -552,7 +564,6 @@
   
   "survival_inv_icon@recipe_book_dx.item_renderer": {
     "offset": [ 9, 5 ],
-    "layer": 16,
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "$object_item_id": 54, //  Chest - ID: 54
@@ -571,17 +582,41 @@
   },
 
   "tab_icon_navigation_panel@recipe_book_dx.tab_front_navigation_panel": {
-    "layer": -2,
     "controls": [
-      { "search_tab@recipe_book_dx.tab_icon": { "$tab_icon": "recipe_book_dx.search_icon" } },
+      { 
+        "search_tab@recipe_book_dx.tab_icon": {
+          "$tab_icon_binding": "#is_left_tab_search",
+          "$tab_icon": "recipe_book_dx.search_icon"
+        }
+      },
       { "fill_panel_0": { "type": "panel", "size": [ "100%", 1 ] } },
-      { "construction_tab@recipe_book_dx.tab_icon": { "$tab_icon": "recipe_book_dx.construction_icon" } },
+      { 
+        "construction_tab@recipe_book_dx.tab_icon": {
+          "$tab_icon_binding": "#is_left_tab_construct",
+          "$tab_icon": "recipe_book_dx.construction_icon"
+        }
+      },
       { "fill_panel_1": { "type": "panel", "size": [ "100%", 1 ] } },
-      { "equipment_tab@recipe_book_dx.tab_icon": { "$tab_icon": "recipe_book_dx.equipment_recipe_icon" } },
+      { 
+        "equipment_tab@recipe_book_dx.tab_icon": {
+          "$tab_icon_binding": "#is_left_tab_equipment",
+          "$tab_icon": "recipe_book_dx.equipment_recipe_icon"
+        }
+      },
       { "fill_panel_2": { "type": "panel", "size": [ "100%", 1 ] } },
-      { "items_tab@recipe_book_dx.tab_icon": { "$tab_icon": "recipe_book_dx.miscellaneous_icon" } },
+      { 
+        "items_tab@recipe_book_dx.tab_icon": {
+          "$tab_icon_binding": "#is_left_tab_items",
+          "$tab_icon": "recipe_book_dx.miscellaneous_icon"
+        }
+      },
       { "fill_panel_3": { "type": "panel", "size": [ "100%", 1 ] } },
-      { "nature_tab@recipe_book_dx.tab_icon": { "$tab_icon": "recipe_book_dx.nature_icon" } }
+      { 
+        "nature_tab@recipe_book_dx.tab_icon": {
+          "$tab_icon_binding": "#is_left_tab_nature",
+          "$tab_icon": "recipe_book_dx.nature_icon"
+        }
+      }
     ]
   },
 
@@ -795,7 +830,7 @@
             { "locked_filter_panel@recipe_book_dx.locked_filter_panel": { } },
             { "header_text_panel@recipe_book_dx.header_text_panel": { } },
             { "tab_front_navigation_panel@recipe_book_dx.tab_front_navigation_panel": { "layer": 1 } },
-            { "tab_icon_navigation_panel@recipe_book_dx.tab_icon_navigation_panel": { "layer": 2 } },
+            { "tab_icon_navigation_panel@recipe_book_dx.tab_icon_navigation_panel": { "layer": 5 } },
             { "tab_gamepad_helper_panel@recipe_book_dx.tab_gamepad_helper_panel": { } },
             { "recipe_item_pages@$recipe_book_pages_type": { "layer": 4 } }
           ]

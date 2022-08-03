@@ -238,8 +238,7 @@
       {
         "result_item_slot@container_item_dx.container_item": {
           "$background_images": "java_gui_common.cell_image_output",
-          "$highlight_control": "item_highlight_dx.highlight_slot_panel",
-          "$highlight_slot_image": "java_gui_common.highlight_slot_output",
+          "$highlight_control": "item_highlight_dx.highlight_slot_output_panel",
           "size": [ 26, 26 ],
           "offset": [ -10, 34 ],
           "anchor_from": "top_right",

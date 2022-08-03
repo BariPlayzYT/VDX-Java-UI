@@ -5,31 +5,31 @@
 
   /*//// Text Panel ////*/
 
-  "minecraft_text@common_dx.global_label": {
+  "botttom_text_label@common_dx.global_label": {
     "color": "$main_header_text_color",
-    "shadow": true,
-    "text": "Minecraft "
+    "shadow": true
   },
 
-  "copyright_text@start_dx.minecraft_text": {
+  "copyright_text@start_dx.botttom_text_label": {
     "text": "Copyright Mojang AB. Do not distribute!"
   },
 
-  "project_text@start_dx.minecraft_text": {
+  "project_text@start_dx.botttom_text_label": {
     "text": "/VDX: Java UI"
   },
 
-  "version_text@start_dx.minecraft_text": {
+  "main_text@start_dx.botttom_text_label": {
     "anchor_from": "top_right",
     "anchor_to": "top_right",
-    "text": "#version",
+    "text": "#text",
     "bindings": [
       {
         "binding_name": "#version"
       },
       {
-        "binding_name": "(not #version = 'v1.19.0')",
-        "binding_name_override": "#visible"
+        "binding_type": "view",
+        "source_property_name": "('Minecraft ' + (#version) - 'v')",
+        "target_property_name": "#text"
       }
     ]
   },
@@ -42,19 +42,7 @@
     "offset": [ 0, -1 ],
     "size": [ "100%-4px", 10 ],
     "controls": [
-      { "minecraft_text@start_dx.minecraft_text": { } },
-      { "version_text@start_dx.version_text": { } },
-      { 
-        "desired_version_text@start_dx.minecraft_text": {
-          "text": "1.19",
-          "bindings": [
-            {
-              "binding_name": "(#version = 'v1.19.0')",
-              "binding_name_override": "#visible"
-            }
-          ]
-        }
-      },
+      { "main_text@start_dx.main_text": { } },
       //{ "project_text@start_dx.project_text": { } },
       { "fill": { "type": "panel", "size": [ "fill", 10 ] } },
       { "copyright_text@start_dx.copyright_text": { } }

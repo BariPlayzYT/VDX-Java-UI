@@ -174,8 +174,7 @@
             {
               "work_bench_output@container_item_dx.inventory_container_item": {
                 "$background_images": "crafting_dx.crafting_cell_images_output",
-                "$highlight_control": "item_highlight_dx.highlight_slot_panel",
-                "$highlight_slot_image": "crafting_dx.highlight_slot_output_image",
+                "$highlight_control": "item_highlight_dx.highlight_slot_output_panel",
                 "size": [ 26, 26 ],
                 "$cell_image_size": [ 26, 26 ],
                 "$item_collection_name": "crafting_output_items",

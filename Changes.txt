@@ -1,12 +1,19 @@
+v1.2.2 [17/07/2022] (1.19.10 Only)
+[Additions]
+[+] Added partial support for custom crafting UI from other add-ons.
+[Changes]
+[*] Updated for v1.19.10 Only.
+[*] Chat screen scrollbar is now positioned to right.
+[*] The recipe book tab icons offset is now fixed in case the desired tab is selected or not.
+[*] Updated language support: -zh_CN -zh_TW
+
 v1.2.1 [19/06/2022] (1.19 Wild Update Only)
 [Additions]
 [+] More language support: -ja_JP -ko_KR -pt_PT -pt_BR -uk_UA
-[+] Added Copy coordinates tools for chat screen,
-    only enabled by creator settings. [1.19.10 Only]
+[+] Added Copy coordinates tools for chat screen, only enabled by creator settings. [1.19.10 Only]
 [+] Custom permission level dropdown control for realms player list.
 [+] Added reason message text for death screen. [1.19.10 Only]
-[+] Added creator settings screen, and some options from profile screen
-    now have moved to desired screen.
+[+] Added creator settings screen, and some options from profile screen now have moved to desired screen.
 [+] Added tooltip message for darkness effect slider option and notification duration.
 [+] Added Hive Network UI support.
 [+] Added JE toast "in.ogg" sound.
@@ -23,8 +30,7 @@ v1.2.1 [19/06/2022] (1.19 Wild Update Only)
 [*] The recipe book for 2x2 crafting now has a desired max page numbers.
 [*] Updated Chat Screen.
 [*] Updated Main Realms Screen and Realms World Slots to match Java Edition UI layout.
-[*] Updated safe zone menu screens, outside border now will be black background,
-    while in game, will be screen background.
+[*] Updated safe zone menu screens, outside border now will be black background, while in game, will be screen background.
 [*] Replaced all UI label texts to desired global label control.
 [*] Made another revision for Sign Screen, Book Screen and Video options.
 [*] "Show Autosave Icon" option is now called "Autosave Indicator", only for supported languages.

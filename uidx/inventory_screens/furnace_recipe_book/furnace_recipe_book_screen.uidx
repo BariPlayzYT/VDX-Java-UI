@@ -169,6 +169,43 @@
 
   /*//// Tabs Icons ////*/
 
+  "tab_icon": {
+    "type": "panel",
+    "size": [ 32, 26 ],
+    "controls": [
+      { 
+        "tab_icon_front@$tab_icon": {
+          "offset": [ 9, 5 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$tab_icon_binding",
+              "source_property_name": "(#toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      { 
+        "tab_icon_back@$tab_icon": {
+          "offset": [ 11, 5 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$tab_icon_binding",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   /* Main Furnace */
 
   "food_icon@recipe_book_dx.item_renderer": {
@@ -181,25 +218,20 @@
 
   "materials_recipe_icon": {
     "type": "panel",
-    "size": [ 27, 16 ],
-    "offset": [ 5, 5 ],
+    "size": [ 16, 16 ],
     "controls": [
       {
         "equipment_alt_icon@recipe_book_dx.item_renderer": {
           "$object_item_id": 363, //  Lava Bucket - ID: 363
-          "offset": [ 0, 0 ],
-          "layer": 15,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left"
+          "offset": [ -6, 0 ],
+          "layer": 1
         }
       },
       {
         "equipment_icon@recipe_book_dx.item_renderer": {
           "$object_item_id": 512, //  Emerald - ID: 512
-          "offset": [ 0, 0 ],
-          "layer": 14,
-          "anchor_from": "top_right",
-          "anchor_to": "top_right"
+          "offset": [ 5, 0 ],
+          "layer": 3
         }
       }
     ]
@@ -213,25 +245,20 @@
 
   "blast_furnace_materials_recipe_icon": {
     "type": "panel",
-    "size": [ 27, 16 ],
-    "offset": [ 5, 5 ],
+    "size": [ 16, 16 ],
     "controls": [
       {
         "equipment_alt_icon@recipe_book_dx.item_renderer": {
           "$object_item_id": 296, //  Iron Shovel - ID: 296
-          "offset": [ 0, 0 ],
-          "layer": 15,
-          "anchor_from": "top_left",
-          "anchor_to": "top_left"
+          "offset": [ -6, 0 ],
+          "layer": 1
         }
       },
       {
         "equipment_icon@recipe_book_dx.item_renderer": {
           "$object_item_id": 353, //  Gold Leggings - ID: 353
-          "offset": [ 0, 0 ],
-          "layer": 14,
-          "anchor_from": "top_right",
-          "anchor_to": "top_right"
+          "offset": [ 5, 0 ],
+          "layer": 3
         }
       }
     ]
@@ -240,17 +267,52 @@
   /* Navigtion Tab */
 
   "tab_icon_navigation_panel@recipe_book_dx.tab_front_navigation_panel": {
-    "layer": -2,
+    "layer": 16,
     "controls": [
-      { "search_tab@recipe_book_dx.tab_icon": { "$tab_icon": "recipe_book_dx.search_icon" } },
+      { 
+        "search_tab@furnace_recipe_book_dx.tab_icon": {
+          "$tab_icon_binding": "all_tab_toggle",
+          "$tab_icon": "recipe_book_dx.search_icon"
+        }
+      },
       { "fill_panel_0": { "type": "panel", "size": [ "100%", 1 ] } },
-      { "food_tab@recipe_book_dx.tab_icon": { "$tab_icon": "furnace_recipe_book_dx.food_icon", "ignored": "$is_blast_furnace" } },
+      { 
+        "food_tab@furnace_recipe_book_dx.tab_icon": {
+          "$tab_icon_binding": "food_tab_toggle",
+          "$tab_icon": "furnace_recipe_book_dx.food_icon",
+          "ignored": "$is_blast_furnace"
+        }
+      },
       { "fill_panel_1": { "type": "panel", "size": [ "100%", 1 ] } },
-      { "stone_tab@recipe_book_dx.tab_icon": { "$tab_icon": "furnace_recipe_book_dx.stone_icon", "ignored": "($is_smoker or $is_blast_furnace)" } },
-      { "blast_furnace_stone_tab@recipe_book_dx.tab_icon": { "$tab_icon": "furnace_recipe_book_dx.blast_furnace_stone_icon", "ignored": "($is_smoker or not $is_blast_furnace)" } },
+      { 
+        "stone_tab@furnace_recipe_book_dx.tab_icon": {
+          "$tab_icon_binding": "stone_tab_toggle",
+          "$tab_icon": "furnace_recipe_book_dx.stone_icon",
+          "ignored": "($is_smoker or $is_blast_furnace)"
+        }
+      },
+      { 
+        "blast_furnace_stone_tab@furnace_recipe_book_dx.tab_icon": {
+          "$tab_icon_binding": "stone_tab_toggle",
+          "$tab_icon": "furnace_recipe_book_dx.blast_furnace_stone_icon",
+          "ignored": "($is_smoker or not $is_blast_furnace)"
+        }
+      },
       { "fill_panel_2": { "type": "panel", "size": [ "100%", 1 ] } },
-      { "materials_tab@recipe_book_dx.tab_icon": { "$tab_icon": "furnace_recipe_book_dx.materials_recipe_icon", "ignored": "($is_smoker or $is_blast_furnace)" } },
-      { "blast_furnace_materials_tab@recipe_book_dx.tab_icon": { "$tab_icon": "furnace_recipe_book_dx.blast_furnace_materials_recipe_icon", "ignored": "($is_smoker or not $is_blast_furnace)" } }
+      { 
+        "materials_tab@furnace_recipe_book_dx.tab_icon": {
+          "$tab_icon_binding": "materials_tab_toggle",
+          "$tab_icon": "furnace_recipe_book_dx.materials_recipe_icon",
+          "ignored": "($is_smoker or $is_blast_furnace)"
+        }
+      },
+      { 
+        "blast_furnace_materials_tab@furnace_recipe_book_dx.tab_icon": {
+          "$tab_icon_binding": "materials_tab_toggle",
+          "$tab_icon": "furnace_recipe_book_dx.blast_furnace_materials_recipe_icon",
+          "ignored": "($is_smoker or not $is_blast_furnace)"
+        }
+      }
     ]
   },
 

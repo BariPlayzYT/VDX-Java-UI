@@ -86,7 +86,7 @@
             },
             {
               "hover_text@common.hover_text": {
-                "ignored": "$hover_text_shadow",
+                "ignored": "($hover_text_shadow)",
                 "layer": 200,
                 "bindings": [
                   {
@@ -216,7 +216,7 @@
     "$recipe_collection": "sell_item",
     "$cell_overlay_ref": "trade_dx.greyed_item_panel",
     "$background_images": "java_gui_common.cell_image_output",
-    "$highlight_slot_image": "java_gui_common.highlight_slot_output"
+    "$highlight_control": "item_highlight_dx.highlight_slot_output_panel"
   },
 
   "greyed_item_panel": {

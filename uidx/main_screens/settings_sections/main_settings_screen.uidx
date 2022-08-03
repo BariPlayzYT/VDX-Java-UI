@@ -549,11 +549,12 @@
     "orientation": "horizontal",
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
+    "offset": [ 0, -1 ],
     "size": [ "100%-4px", 10 ],
     "controls": [
-      { "pack_label@start_dx.minecraft_text": { "color": [ 0.5, 0.5, 0.5 ], "text": "Vanilla DX: Java UI v1.2.1" } },
+      { "pack_label@start_dx.botttom_text_label": { "color": [ 0.5, 0.5, 0.5 ], "text": "Vanilla DX: Java UI v1.2.2" } },
       { "fill_panel": { "type": "panel", "size": [ "fill", 10 ] } },
-      { "author_label@start_dx.minecraft_text": { "color": [ 0.5, 0.5, 0.5 ], "text": "\u0042y @\u0043ris\u0058olt" } }
+      { "author_label@start_dx.botttom_text_label": { "color": [ 0.5, 0.5, 0.5 ], "text": "\u0042y @\u0043ris\u0058olt" } }
     ]
   },
 

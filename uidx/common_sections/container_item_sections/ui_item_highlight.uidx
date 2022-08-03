@@ -23,6 +23,7 @@
     "offset": "$item_renderer_offset",
     "$highlight_slot_image|default": "java_gui_common.highlight_slot",
     "$hover_text_alpha": 0.9375,
+    "size": [ 18, 18 ],
     "controls": [
       { "highlight_slot_image@$highlight_slot_image": { "layer": 6 } },
       {
@@ -55,8 +56,8 @@
             },
             {
               "hover_text@common.hover_text": {
-                "ignored": "$hover_text_shadow",
-                "layer": 29,
+                "ignored": "($hover_text_shadow)",
+                "layer": 200,
                 "$hover_text_binding_name|default": "#hover_text",
                 "bindings": [
                   {
@@ -72,5 +73,10 @@
         }
       }
     ]
+  },
+
+  "highlight_slot_output_panel@item_highlight_dx.highlight_slot_panel": {
+    "$highlight_slot_image": "java_gui_common.highlight_slot_output",
+    "size": [ 26, 26 ]
   }
 }

@@ -107,7 +107,7 @@
             },
             {
               "hover_text@common.hover_text": {
-                "ignored": "$hover_text_shadow",
+                "ignored": "($hover_text_shadow)",
                 "bindings": [
                   {
                     "binding_name": "#hover_text",

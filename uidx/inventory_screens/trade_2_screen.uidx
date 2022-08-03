@@ -202,7 +202,7 @@
                               },
                               {
                                 "hover_text@common.hover_text": {
-                                  "ignored": "$hover_text_shadow",
+                                  "ignored": "($hover_text_shadow)",
                                   "layer": 200,
                                   "bindings": [
                                     {
@@ -857,7 +857,6 @@
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "layer": 5,
-    "$highlight_control": "item_highlight_dx.highlight_slot_panel",
     "controls": [
       {
         "villager_name_label@common_dx.global_label": {
@@ -878,17 +877,19 @@
       { "exp_progress_bar@trade2_dx.exp_progress_bar": { } },
       {
         "ingredient_1_item_slot@trade2_dx.ingredient_1_item_slot": {
+          "$highlight_control": "item_highlight_dx.highlight_slot_panel",
           "offset": [ 35, 36 ]
         }
       },
       {
         "ingredient_2_item_slot@trade2_dx.ingredient_2_item_slot": {
+          "$highlight_control": "item_highlight_dx.highlight_slot_panel",
           "offset": [ 61, 36 ]
         }
       },
       {
         "result_item_slot@trade2_dx.result_item_slot": {
-          "$highlight_slot_image": "trade2_dx.highlight_slot_output_image",
+          "$highlight_control": "item_highlight_dx.highlight_slot_output_panel",
           "size": [ 26, 26 ],
           "offset": [ 115, 33 ]
         }

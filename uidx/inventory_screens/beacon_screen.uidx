@@ -23,7 +23,7 @@
           "type": "panel",
           "ignored": "(not $is_effect_buttons)",
           "controls": [
-            { "hover_text@beacon.hover_text": { "ignored": "$hover_text_shadow" } },
+            { "hover_text@beacon.hover_text": { "ignored": "($hover_text_shadow or (not $touch))" } },
             {
               "effect_hover_text@common_dx.hover_text_panel": {
                 "ignored": "(not $hover_text_shadow)",

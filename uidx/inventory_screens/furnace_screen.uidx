@@ -7,6 +7,7 @@
   
   "furnace_ingredient_item@container_item_dx.container_item": {
     "$background_images": "java_gui_common.cell_image",
+    "$highlight_control": "item_highlight_dx.highlight_slot_panel",
     "size": [ 18, 18 ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
@@ -21,6 +22,7 @@
 
   "furnace_fuel_item@container_item_dx.container_item": {
     "$background_images": "java_gui_common.cell_image",
+    "$highlight_control": "item_highlight_dx.highlight_slot_panel",
     "size": [ 18, 18 ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
@@ -35,7 +37,7 @@
   
   "furnace_output_item@container_item_dx.container_item": {
     "$background_images": "java_gui_common.cell_image_output",
-    "$highlight_slot_image": "java_gui_common.highlight_slot_output",
+    "$highlight_control": "item_highlight_dx.highlight_slot_output_panel",
     "size": [ 26, 26 ],
     "anchor_from": "top_right",
     "anchor_to": "top_right",
@@ -51,7 +53,6 @@
   "furnace_panel_top_half": {
     "type": "panel",
     "layer": 8,
-    "$highlight_control": "item_highlight_dx.highlight_slot_panel",
     "controls": [
       { 
         "furnace_label@common_dx.global_label": {

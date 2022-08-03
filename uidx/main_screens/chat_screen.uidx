@@ -68,7 +68,7 @@
       {
         "auto_complete_grid": {
           "type": "grid",
-          "grid_item_template": "chat_dx.je_auto_complete_panel_contents_with_item",
+          "grid_item_template": "chat_dx.je_auto_complete_panel_content",
           "grid_fill_direction": "vertical",
           "collection_name": "auto_complete",
           "anchor_from": "bottom_left",
@@ -86,7 +86,7 @@
     ]
   },
 
-  "je_auto_complete_panel_contents_with_item": {
+  "je_auto_complete_panel_content": {
     "type": "panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
@@ -174,9 +174,7 @@
   "scroll_box": {
     "type": "image",
     "size": [ "100%", "100%" ],
-    "texture": "textures/uidx/global/color_base",
-    "color": [ 0.8, 0.8, 1 ],
-    "alpha": 0.5
+    "texture": "textures/uidx/chat/chat_box"
   },
 
   "message_panel": {
@@ -215,10 +213,10 @@
         "scrolling_panel@common_scroll_dx.scrolling_panel": {
           "layer": 10,
           "size": [ "100%", "100%" ],
-          "$scroll_size": [ 1, "100%" ],
+          "$scroll_size": [ 4, "100%" ],
           "$scrolling_pane_size": [ "100%", "100%" ],
           "$scrolling_pane_offset": [ 0, 0 ],
-          "$bar_side": "scroll_left",
+          "$bar_side": "scroll_right",
           "$scroll_box_image_control": "chat_dx.scroll_box",
           "$scrolling_content": "chat_dx.messages_stack_panel",
           "$jump_to_bottom_on_update": true,
@@ -542,7 +540,6 @@
           "type": "stack_panel",
           "orientation": "horizontal",
           "size": [ "100%c", "100%" ],
-          "ignored": "(not $pre_release)",
           "bindings": [
             {
               "binding_name": "#chat_coordinate_dropdown_visible",
